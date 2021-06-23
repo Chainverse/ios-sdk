@@ -1,0 +1,1478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		3A9F02C2267AE64F008F4C1B /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3A9F02C3267AE64F008F4C1B /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				3A9F02CE267AE70F008F4C1B /* ShellScript */,
+			);
+			dependencies = (
+				3A9F03C0267AF5C5008F4C1B /* PBXTargetDependency */,
+				3A9F03C2267AF5C5008F4C1B /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		3A3D7C3A26819DAB003A0DC4 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C2C26819DAB003A0DC4 /* AFSecurityPolicy.h */; };
+		3A3D7C3B26819DAB003A0DC4 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C2D26819DAB003A0DC4 /* AFNetworkReachabilityManager.h */; };
+		3A3D7C3C26819DAB003A0DC4 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C2E26819DAB003A0DC4 /* AFURLSessionManager.h */; };
+		3A3D7C3D26819DAB003A0DC4 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C2F26819DAB003A0DC4 /* AFURLRequestSerialization.h */; };
+		3A3D7C3E26819DAB003A0DC4 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3026819DAB003A0DC4 /* AFURLResponseSerialization.m */; };
+		3A3D7C3F26819DAB003A0DC4 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3026819DAB003A0DC4 /* AFURLResponseSerialization.m */; };
+		3A3D7C4026819DAB003A0DC4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3126819DAB003A0DC4 /* AFHTTPSessionManager.m */; };
+		3A3D7C4126819DAB003A0DC4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3126819DAB003A0DC4 /* AFHTTPSessionManager.m */; };
+		3A3D7C4226819DAB003A0DC4 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C3226819DAB003A0DC4 /* AFURLResponseSerialization.h */; };
+		3A3D7C4326819DAB003A0DC4 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3326819DAB003A0DC4 /* AFURLSessionManager.m */; };
+		3A3D7C4426819DAB003A0DC4 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3326819DAB003A0DC4 /* AFURLSessionManager.m */; };
+		3A3D7C4526819DAB003A0DC4 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3426819DAB003A0DC4 /* AFURLRequestSerialization.m */; };
+		3A3D7C4626819DAB003A0DC4 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3426819DAB003A0DC4 /* AFURLRequestSerialization.m */; };
+		3A3D7C4726819DAB003A0DC4 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C3526819DAB003A0DC4 /* AFNetworking.h */; };
+		3A3D7C4826819DAB003A0DC4 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3626819DAB003A0DC4 /* AFNetworkReachabilityManager.m */; };
+		3A3D7C4926819DAB003A0DC4 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3626819DAB003A0DC4 /* AFNetworkReachabilityManager.m */; };
+		3A3D7C4A26819DAB003A0DC4 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3726819DAB003A0DC4 /* AFSecurityPolicy.m */; };
+		3A3D7C4B26819DAB003A0DC4 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3726819DAB003A0DC4 /* AFSecurityPolicy.m */; };
+		3A3D7C4C26819DAB003A0DC4 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C3826819DAB003A0DC4 /* AFCompatibilityMacros.h */; };
+		3A3D7C4D26819DAB003A0DC4 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C3926819DAB003A0DC4 /* AFHTTPSessionManager.h */; };
+		3A97474B2682D5B1003E53C8 /* CVSDKRPCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9747492682D5B1003E53C8 /* CVSDKRPCClient.h */; };
+		3A97474C2682D5B1003E53C8 /* CVSDKRPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A97474A2682D5B1003E53C8 /* CVSDKRPCClient.m */; };
+		3A97474D2682D5B1003E53C8 /* CVSDKRPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A97474A2682D5B1003E53C8 /* CVSDKRPCClient.m */; };
+		3A97476F2682F34D003E53C8 /* CVSDKBaseBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A97476D2682F34D003E53C8 /* CVSDKBaseBlocks.h */; };
+		3A9747B226830E94003E53C8 /* ContractManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9747B026830E94003E53C8 /* ContractManager.h */; };
+		3A9747B326830E94003E53C8 /* ContractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9747B126830E94003E53C8 /* ContractManager.m */; };
+		3A9747B426830E94003E53C8 /* ContractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9747B126830E94003E53C8 /* ContractManager.m */; };
+		3A9F00CB26730258008F4C1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F00CA26730258008F4C1B /* AppDelegate.m */; };
+		3A9F00CE26730258008F4C1B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F00CD26730258008F4C1B /* SceneDelegate.m */; };
+		3A9F00D126730258008F4C1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F00D026730258008F4C1B /* ViewController.m */; };
+		3A9F00D426730258008F4C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F00D226730258008F4C1B /* Main.storyboard */; };
+		3A9F00D626730259008F4C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F00D526730259008F4C1B /* Assets.xcassets */; };
+		3A9F00D926730259008F4C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F00D726730259008F4C1B /* LaunchScreen.storyboard */; };
+		3A9F00DC26730259008F4C1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F00DB26730259008F4C1B /* main.m */; };
+		3A9F00E626730259008F4C1B /* Chainverse_SDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F00E526730259008F4C1B /* Chainverse_SDKTests.m */; };
+		3A9F00F126730259008F4C1B /* Chainverse_SDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F00F026730259008F4C1B /* Chainverse_SDKUITests.m */; };
+		3A9F0116267302B7008F4C1B /* ChainverseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0115267302B7008F4C1B /* ChainverseTests.m */; };
+		3A9F036C267AF462008F4C1B /* Chainverse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A9F0369267AF462008F4C1B /* Chainverse.h */; };
+		3A9F03A3267AF531008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F037D267AF531008F4C1B /* CVSDKChooseWLViewDialog.m */; };
+		3A9F03A4267AF531008F4C1B /* CVSDKChooseWLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F037E267AF531008F4C1B /* CVSDKChooseWLView.m */; };
+		3A9F03A5267AF531008F4C1B /* TestScreenViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0380267AF531008F4C1B /* TestScreenViewDialog.m */; };
+		3A9F03A6267AF531008F4C1B /* TestScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0382267AF531008F4C1B /* TestScreenView.m */; };
+		3A9F03A7267AF531008F4C1B /* CVSDKBaseSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0387267AF531008F4C1B /* CVSDKBaseSocketManager.m */; };
+		3A9F03A8267AF531008F4C1B /* CVSDKBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F038B267AF531008F4C1B /* CVSDKBaseView.m */; };
+		3A9F03A9267AF531008F4C1B /* CVSDKBaseResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F038D267AF531008F4C1B /* CVSDKBaseResource.m */; };
+		3A9F03AA267AF531008F4C1B /* CVSDKBaseViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0390267AF531008F4C1B /* CVSDKBaseViewDialog.m */; };
+		3A9F03AB267AF531008F4C1B /* CVSDKTrustTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */; };
+		3A9F03AC267AF531008F4C1B /* CVSDKTrustConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */; };
+		3A9F03AD267AF531008F4C1B /* CVSDKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F039B267AF531008F4C1B /* CVSDKUtils.m */; };
+		3A9F03AE267AF531008F4C1B /* ChainverseSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F039D267AF531008F4C1B /* ChainverseSDK.m */; };
+		3A9F03AF267AF531008F4C1B /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A1267AF531008F4C1B /* Starscream.xcframework */; };
+		3A9F03B0267AF531008F4C1B /* SocketIO.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */; };
+		3A9F03D3267AF681008F4C1B /* CVSDKBaseSocketManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0388267AF531008F4C1B /* CVSDKBaseSocketManager.h */; };
+		3A9F03D4267AF681008F4C1B /* CVSDKBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F038A267AF531008F4C1B /* CVSDKBaseView.h */; };
+		3A9F03D7267AF681008F4C1B /* CVSDKBaseResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F038E267AF531008F4C1B /* CVSDKBaseResource.h */; };
+		3A9F03D9267AF681008F4C1B /* CVSDKBaseViewDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0391267AF531008F4C1B /* CVSDKBaseViewDialog.h */; };
+		3A9F03DA267AF681008F4C1B /* ChainverseSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F039C267AF531008F4C1B /* ChainverseSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A9F03DC267AF681008F4C1B /* ChainverseSDKCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F039E267AF531008F4C1B /* ChainverseSDKCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A9F03DD267AF681008F4C1B /* CVSDKUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F039A267AF531008F4C1B /* CVSDKUtils.h */; };
+		3A9F03E0267AF681008F4C1B /* CVSDKChooseWLViewDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F037B267AF531008F4C1B /* CVSDKChooseWLViewDialog.h */; };
+		3A9F03E1267AF681008F4C1B /* CVSDKChooseWLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F037C267AF531008F4C1B /* CVSDKChooseWLView.h */; };
+		3A9F03E7267AF681008F4C1B /* TestScreenViewDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0383267AF531008F4C1B /* TestScreenViewDialog.h */; };
+		3A9F03E8267AF681008F4C1B /* TestScreenView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0384267AF531008F4C1B /* TestScreenView.h */; };
+		3A9F03E9267AF681008F4C1B /* CVSDKTrustConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0395267AF531008F4C1B /* CVSDKTrustConnect.h */; };
+		3A9F03EB267AF681008F4C1B /* CVSDKTrustTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0397267AF531008F4C1B /* CVSDKTrustTransfer.h */; };
+		3A9F03ED267AF681008F4C1B /* Chainverse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0369267AF462008F4C1B /* Chainverse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A9F04B4267B022E008F4C1B /* ChainverseSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F039D267AF531008F4C1B /* ChainverseSDK.m */; };
+		3A9F04C4267B02A6008F4C1B /* CVSDKBaseSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0387267AF531008F4C1B /* CVSDKBaseSocketManager.m */; };
+		3A9F04CB267B02AA008F4C1B /* CVSDKBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F038B267AF531008F4C1B /* CVSDKBaseView.m */; };
+		3A9F04D2267B02AF008F4C1B /* CVSDKBaseResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F038D267AF531008F4C1B /* CVSDKBaseResource.m */; };
+		3A9F04D9267B02B3008F4C1B /* CVSDKBaseViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0390267AF531008F4C1B /* CVSDKBaseViewDialog.m */; };
+		3A9F04E0267B02B8008F4C1B /* CVSDKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F039B267AF531008F4C1B /* CVSDKUtils.m */; };
+		3A9F04E7267B02C0008F4C1B /* TestScreenViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0380267AF531008F4C1B /* TestScreenViewDialog.m */; };
+		3A9F04EE267B02C2008F4C1B /* TestScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0382267AF531008F4C1B /* TestScreenView.m */; };
+		3A9F04F5267B02C6008F4C1B /* CVSDKTrustTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */; };
+		3A9F04FC267B02C9008F4C1B /* CVSDKTrustConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */; };
+		3A9F0503267B02E5008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F037D267AF531008F4C1B /* CVSDKChooseWLViewDialog.m */; };
+		3A9F050A267B02E7008F4C1B /* CVSDKChooseWLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F037E267AF531008F4C1B /* CVSDKChooseWLView.m */; };
+		3A9F0511267B0373008F4C1B /* SocketIO.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */; };
+		3A9F0512267B0373008F4C1B /* SocketIO.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A9F0519267B0375008F4C1B /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A1267AF531008F4C1B /* Starscream.xcframework */; };
+		3A9F051A267B0375008F4C1B /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A1267AF531008F4C1B /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A9F0545267B06AE008F4C1B /* TestScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F0381267AF531008F4C1B /* TestScreenView.xib */; };
+		3A9F054C267B06B7008F4C1B /* TestScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F0381267AF531008F4C1B /* TestScreenView.xib */; };
+		3A9F0553267B06BD008F4C1B /* CVSDKChooseWLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */; };
+		3A9F055A267B06BE008F4C1B /* CVSDKChooseWLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A9F00E226730259008F4C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9F00BE26730258008F4C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A9F00C526730258008F4C1B;
+			remoteInfo = "Chainverse-SDK";
+		};
+		3A9F00ED26730259008F4C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9F00BE26730258008F4C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A9F00C526730258008F4C1B;
+			remoteInfo = "Chainverse-SDK";
+		};
+		3A9F0112267302B7008F4C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9F00BE26730258008F4C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A9F00C526730258008F4C1B;
+			remoteInfo = "Chainverse-SDK";
+		};
+		3A9F03BF267AF5C5008F4C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9F00BE26730258008F4C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A9F0366267AF462008F4C1B;
+			remoteInfo = CVSDK;
+		};
+		3A9F03C1267AF5C5008F4C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9F00BE26730258008F4C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A9F02862679AC40008F4C1B;
+			remoteInfo = ChainverseBundle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A9F0120267302B7008F4C1B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A9F051A267B0375008F4C1B /* Starscream.xcframework in Embed Frameworks */,
+				3A9F0512267B0373008F4C1B /* SocketIO.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F0365267AF462008F4C1B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				3A9F036C267AF462008F4C1B /* Chainverse.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A3D7C2C26819DAB003A0DC4 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		3A3D7C2D26819DAB003A0DC4 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		3A3D7C2E26819DAB003A0DC4 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		3A3D7C2F26819DAB003A0DC4 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		3A3D7C3026819DAB003A0DC4 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		3A3D7C3126819DAB003A0DC4 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		3A3D7C3226819DAB003A0DC4 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		3A3D7C3326819DAB003A0DC4 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		3A3D7C3426819DAB003A0DC4 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		3A3D7C3526819DAB003A0DC4 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		3A3D7C3626819DAB003A0DC4 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		3A3D7C3726819DAB003A0DC4 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		3A3D7C3826819DAB003A0DC4 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
+		3A3D7C3926819DAB003A0DC4 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		3A9747492682D5B1003E53C8 /* CVSDKRPCClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKRPCClient.h; sourceTree = "<group>"; };
+		3A97474A2682D5B1003E53C8 /* CVSDKRPCClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKRPCClient.m; sourceTree = "<group>"; };
+		3A97476D2682F34D003E53C8 /* CVSDKBaseBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseBlocks.h; sourceTree = "<group>"; };
+		3A9747B026830E94003E53C8 /* ContractManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContractManager.h; sourceTree = "<group>"; };
+		3A9747B126830E94003E53C8 /* ContractManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContractManager.m; sourceTree = "<group>"; };
+		3A9F00C626730258008F4C1B /* Chainverse-SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chainverse-SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9F00C926730258008F4C1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3A9F00CA26730258008F4C1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3A9F00CC26730258008F4C1B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		3A9F00CD26730258008F4C1B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		3A9F00CF26730258008F4C1B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3A9F00D026730258008F4C1B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3A9F00D326730258008F4C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A9F00D526730259008F4C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A9F00D826730259008F4C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A9F00DA26730259008F4C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A9F00DB26730259008F4C1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A9F00E126730259008F4C1B /* Chainverse-SDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chainverse-SDKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9F00E526730259008F4C1B /* Chainverse_SDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chainverse_SDKTests.m; sourceTree = "<group>"; };
+		3A9F00E726730259008F4C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A9F00EC26730259008F4C1B /* Chainverse-SDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chainverse-SDKUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9F00F026730259008F4C1B /* Chainverse_SDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chainverse_SDKUITests.m; sourceTree = "<group>"; };
+		3A9F00F226730259008F4C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A9F010E267302B7008F4C1B /* ChainverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChainverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9F0115267302B7008F4C1B /* ChainverseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainverseTests.m; sourceTree = "<group>"; };
+		3A9F0117267302B7008F4C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A9F02872679AC40008F4C1B /* ChainverseBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChainverseBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9F02892679AC40008F4C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A9F0367267AF462008F4C1B /* libChainverse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChainverse.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9F0369267AF462008F4C1B /* Chainverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chainverse.h; sourceTree = "<group>"; };
+		3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVSDKChooseWLView.xib; sourceTree = "<group>"; };
+		3A9F037B267AF531008F4C1B /* CVSDKChooseWLViewDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKChooseWLViewDialog.h; sourceTree = "<group>"; };
+		3A9F037C267AF531008F4C1B /* CVSDKChooseWLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKChooseWLView.h; sourceTree = "<group>"; };
+		3A9F037D267AF531008F4C1B /* CVSDKChooseWLViewDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKChooseWLViewDialog.m; sourceTree = "<group>"; };
+		3A9F037E267AF531008F4C1B /* CVSDKChooseWLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKChooseWLView.m; sourceTree = "<group>"; };
+		3A9F0380267AF531008F4C1B /* TestScreenViewDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScreenViewDialog.m; sourceTree = "<group>"; };
+		3A9F0381267AF531008F4C1B /* TestScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestScreenView.xib; sourceTree = "<group>"; };
+		3A9F0382267AF531008F4C1B /* TestScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScreenView.m; sourceTree = "<group>"; };
+		3A9F0383267AF531008F4C1B /* TestScreenViewDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScreenViewDialog.h; sourceTree = "<group>"; };
+		3A9F0384267AF531008F4C1B /* TestScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScreenView.h; sourceTree = "<group>"; };
+		3A9F0387267AF531008F4C1B /* CVSDKBaseSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKBaseSocketManager.m; sourceTree = "<group>"; };
+		3A9F0388267AF531008F4C1B /* CVSDKBaseSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseSocketManager.h; sourceTree = "<group>"; };
+		3A9F038A267AF531008F4C1B /* CVSDKBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseView.h; sourceTree = "<group>"; };
+		3A9F038B267AF531008F4C1B /* CVSDKBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKBaseView.m; sourceTree = "<group>"; };
+		3A9F038D267AF531008F4C1B /* CVSDKBaseResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKBaseResource.m; sourceTree = "<group>"; };
+		3A9F038E267AF531008F4C1B /* CVSDKBaseResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseResource.h; sourceTree = "<group>"; };
+		3A9F0390267AF531008F4C1B /* CVSDKBaseViewDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKBaseViewDialog.m; sourceTree = "<group>"; };
+		3A9F0391267AF531008F4C1B /* CVSDKBaseViewDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseViewDialog.h; sourceTree = "<group>"; };
+		3A9F0392267AF531008F4C1B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A9F0395267AF531008F4C1B /* CVSDKTrustConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKTrustConnect.h; sourceTree = "<group>"; };
+		3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKTrustTransfer.m; sourceTree = "<group>"; };
+		3A9F0397267AF531008F4C1B /* CVSDKTrustTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKTrustTransfer.h; sourceTree = "<group>"; };
+		3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKTrustConnect.m; sourceTree = "<group>"; };
+		3A9F039A267AF531008F4C1B /* CVSDKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKUtils.h; sourceTree = "<group>"; };
+		3A9F039B267AF531008F4C1B /* CVSDKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKUtils.m; sourceTree = "<group>"; };
+		3A9F039C267AF531008F4C1B /* ChainverseSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseSDK.h; sourceTree = "<group>"; };
+		3A9F039D267AF531008F4C1B /* ChainverseSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainverseSDK.m; sourceTree = "<group>"; };
+		3A9F039E267AF531008F4C1B /* ChainverseSDKCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseSDKCallback.h; sourceTree = "<group>"; };
+		3A9F03A1267AF531008F4C1B /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Starscream.xcframework; sourceTree = "<group>"; };
+		3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SocketIO.xcframework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A9F00C326730258008F4C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F0519267B0375008F4C1B /* Starscream.xcframework in Frameworks */,
+				3A9F0511267B0373008F4C1B /* SocketIO.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F00DE26730259008F4C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F00E926730259008F4C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F010B267302B7008F4C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F02842679AC40008F4C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F0364267AF462008F4C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F03B0267AF531008F4C1B /* SocketIO.xcframework in Frameworks */,
+				3A9F03AF267AF531008F4C1B /* Starscream.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A3D7C2B26819DAB003A0DC4 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D7C2C26819DAB003A0DC4 /* AFSecurityPolicy.h */,
+				3A3D7C2D26819DAB003A0DC4 /* AFNetworkReachabilityManager.h */,
+				3A3D7C2E26819DAB003A0DC4 /* AFURLSessionManager.h */,
+				3A3D7C2F26819DAB003A0DC4 /* AFURLRequestSerialization.h */,
+				3A3D7C3026819DAB003A0DC4 /* AFURLResponseSerialization.m */,
+				3A3D7C3126819DAB003A0DC4 /* AFHTTPSessionManager.m */,
+				3A3D7C3226819DAB003A0DC4 /* AFURLResponseSerialization.h */,
+				3A3D7C3326819DAB003A0DC4 /* AFURLSessionManager.m */,
+				3A3D7C3426819DAB003A0DC4 /* AFURLRequestSerialization.m */,
+				3A3D7C3526819DAB003A0DC4 /* AFNetworking.h */,
+				3A3D7C3626819DAB003A0DC4 /* AFNetworkReachabilityManager.m */,
+				3A3D7C3726819DAB003A0DC4 /* AFSecurityPolicy.m */,
+				3A3D7C3826819DAB003A0DC4 /* AFCompatibilityMacros.h */,
+				3A3D7C3926819DAB003A0DC4 /* AFHTTPSessionManager.h */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		3A3D7C542681A025003A0DC4 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D7C2B26819DAB003A0DC4 /* AFNetworking */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		3A9747482682D50E003E53C8 /* RPC */ = {
+			isa = PBXGroup;
+			children = (
+				3A9747492682D5B1003E53C8 /* CVSDKRPCClient.h */,
+				3A97474A2682D5B1003E53C8 /* CVSDKRPCClient.m */,
+			);
+			path = RPC;
+			sourceTree = "<group>";
+		};
+		3A97476C2682F32C003E53C8 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				3A97476D2682F34D003E53C8 /* CVSDKBaseBlocks.h */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		3A9747A826830E42003E53C8 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3A9747AF26830E82003E53C8 /* Contract */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		3A9747AF26830E82003E53C8 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				3A9747B026830E94003E53C8 /* ContractManager.h */,
+				3A9747B126830E94003E53C8 /* ContractManager.m */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		3A9F00BD26730258008F4C1B = {
+			isa = PBXGroup;
+			children = (
+				3A9F00C826730258008F4C1B /* Chainverse-SDK */,
+				3A9F00E426730259008F4C1B /* Chainverse-SDKTests */,
+				3A9F00EF26730259008F4C1B /* Chainverse-SDKUITests */,
+				3A9F0114267302B7008F4C1B /* ChainverseTests */,
+				3A9F02882679AC40008F4C1B /* ChainverseBundle */,
+				3A9F0368267AF462008F4C1B /* Chainverse */,
+				3A9F00C726730258008F4C1B /* Products */,
+				3A9F04BB267B0282008F4C1B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3A9F00C726730258008F4C1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F00C626730258008F4C1B /* Chainverse-SDK.app */,
+				3A9F00E126730259008F4C1B /* Chainverse-SDKTests.xctest */,
+				3A9F00EC26730259008F4C1B /* Chainverse-SDKUITests.xctest */,
+				3A9F010E267302B7008F4C1B /* ChainverseTests.xctest */,
+				3A9F02872679AC40008F4C1B /* ChainverseBundle.bundle */,
+				3A9F0367267AF462008F4C1B /* libChainverse.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A9F00C826730258008F4C1B /* Chainverse-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F00C926730258008F4C1B /* AppDelegate.h */,
+				3A9F00CA26730258008F4C1B /* AppDelegate.m */,
+				3A9F00CC26730258008F4C1B /* SceneDelegate.h */,
+				3A9F00CD26730258008F4C1B /* SceneDelegate.m */,
+				3A9F00CF26730258008F4C1B /* ViewController.h */,
+				3A9F00D026730258008F4C1B /* ViewController.m */,
+				3A9F00D226730258008F4C1B /* Main.storyboard */,
+				3A9F00D526730259008F4C1B /* Assets.xcassets */,
+				3A9F00D726730259008F4C1B /* LaunchScreen.storyboard */,
+				3A9F00DA26730259008F4C1B /* Info.plist */,
+				3A9F00DB26730259008F4C1B /* main.m */,
+			);
+			path = "Chainverse-SDK";
+			sourceTree = "<group>";
+		};
+		3A9F00E426730259008F4C1B /* Chainverse-SDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F00E526730259008F4C1B /* Chainverse_SDKTests.m */,
+				3A9F00E726730259008F4C1B /* Info.plist */,
+			);
+			path = "Chainverse-SDKTests";
+			sourceTree = "<group>";
+		};
+		3A9F00EF26730259008F4C1B /* Chainverse-SDKUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F00F026730259008F4C1B /* Chainverse_SDKUITests.m */,
+				3A9F00F226730259008F4C1B /* Info.plist */,
+			);
+			path = "Chainverse-SDKUITests";
+			sourceTree = "<group>";
+		};
+		3A9F0114267302B7008F4C1B /* ChainverseTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F0115267302B7008F4C1B /* ChainverseTests.m */,
+				3A9F0117267302B7008F4C1B /* Info.plist */,
+			);
+			path = ChainverseTests;
+			sourceTree = "<group>";
+		};
+		3A9F02882679AC40008F4C1B /* ChainverseBundle */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F02892679AC40008F4C1B /* Info.plist */,
+			);
+			path = ChainverseBundle;
+			sourceTree = "<group>";
+		};
+		3A9F0368267AF462008F4C1B /* Chainverse */ = {
+			isa = PBXGroup;
+			children = (
+				3A9747A826830E42003E53C8 /* Manager */,
+				3A3D7C542681A025003A0DC4 /* Library */,
+				3A9F03A0267AF531008F4C1B /* Frameworks */,
+				3A9F0385267AF531008F4C1B /* Base */,
+				3A9F0399267AF531008F4C1B /* Commons */,
+				3A9F0393267AF531008F4C1B /* WL */,
+				3A9F0377267AF531008F4C1B /* UI */,
+				3A9F0369267AF462008F4C1B /* Chainverse.h */,
+				3A9F039C267AF531008F4C1B /* ChainverseSDK.h */,
+				3A9F039D267AF531008F4C1B /* ChainverseSDK.m */,
+				3A9F039E267AF531008F4C1B /* ChainverseSDKCallback.h */,
+				3A9F0392267AF531008F4C1B /* Info.plist */,
+			);
+			path = Chainverse;
+			sourceTree = "<group>";
+		};
+		3A9F0377267AF531008F4C1B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F0378267AF531008F4C1B /* Screen */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3A9F0378267AF531008F4C1B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F0379267AF531008F4C1B /* ChooseWL */,
+				3A9F037F267AF531008F4C1B /* TestScreen */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3A9F0379267AF531008F4C1B /* ChooseWL */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */,
+				3A9F037B267AF531008F4C1B /* CVSDKChooseWLViewDialog.h */,
+				3A9F037C267AF531008F4C1B /* CVSDKChooseWLView.h */,
+				3A9F037D267AF531008F4C1B /* CVSDKChooseWLViewDialog.m */,
+				3A9F037E267AF531008F4C1B /* CVSDKChooseWLView.m */,
+			);
+			path = ChooseWL;
+			sourceTree = "<group>";
+		};
+		3A9F037F267AF531008F4C1B /* TestScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F0380267AF531008F4C1B /* TestScreenViewDialog.m */,
+				3A9F0381267AF531008F4C1B /* TestScreenView.xib */,
+				3A9F0382267AF531008F4C1B /* TestScreenView.m */,
+				3A9F0383267AF531008F4C1B /* TestScreenViewDialog.h */,
+				3A9F0384267AF531008F4C1B /* TestScreenView.h */,
+			);
+			path = TestScreen;
+			sourceTree = "<group>";
+		};
+		3A9F0385267AF531008F4C1B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3A97476C2682F32C003E53C8 /* Block */,
+				3A9747482682D50E003E53C8 /* RPC */,
+				3A9F0386267AF531008F4C1B /* SocketIO */,
+				3A9F0389267AF531008F4C1B /* View */,
+				3A9F038C267AF531008F4C1B /* Resource */,
+				3A9F038F267AF531008F4C1B /* ViewDialog */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3A9F0386267AF531008F4C1B /* SocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F0387267AF531008F4C1B /* CVSDKBaseSocketManager.m */,
+				3A9F0388267AF531008F4C1B /* CVSDKBaseSocketManager.h */,
+			);
+			path = SocketIO;
+			sourceTree = "<group>";
+		};
+		3A9F0389267AF531008F4C1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F038A267AF531008F4C1B /* CVSDKBaseView.h */,
+				3A9F038B267AF531008F4C1B /* CVSDKBaseView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A9F038C267AF531008F4C1B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F038D267AF531008F4C1B /* CVSDKBaseResource.m */,
+				3A9F038E267AF531008F4C1B /* CVSDKBaseResource.h */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3A9F038F267AF531008F4C1B /* ViewDialog */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F0390267AF531008F4C1B /* CVSDKBaseViewDialog.m */,
+				3A9F0391267AF531008F4C1B /* CVSDKBaseViewDialog.h */,
+			);
+			path = ViewDialog;
+			sourceTree = "<group>";
+		};
+		3A9F0393267AF531008F4C1B /* WL */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F0394267AF531008F4C1B /* trust */,
+			);
+			path = WL;
+			sourceTree = "<group>";
+		};
+		3A9F0394267AF531008F4C1B /* trust */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F0395267AF531008F4C1B /* CVSDKTrustConnect.h */,
+				3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */,
+				3A9F0397267AF531008F4C1B /* CVSDKTrustTransfer.h */,
+				3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */,
+			);
+			path = trust;
+			sourceTree = "<group>";
+		};
+		3A9F0399267AF531008F4C1B /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F039A267AF531008F4C1B /* CVSDKUtils.h */,
+				3A9F039B267AF531008F4C1B /* CVSDKUtils.m */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		3A9F03A0267AF531008F4C1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F03A1267AF531008F4C1B /* Starscream.xcframework */,
+				3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A9F04BB267B0282008F4C1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3A9F03D1267AF651008F4C1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3D7C3C26819DAB003A0DC4 /* AFURLSessionManager.h in Headers */,
+				3A97474B2682D5B1003E53C8 /* CVSDKRPCClient.h in Headers */,
+				3A9F03ED267AF681008F4C1B /* Chainverse.h in Headers */,
+				3A9F03DA267AF681008F4C1B /* ChainverseSDK.h in Headers */,
+				3A97476F2682F34D003E53C8 /* CVSDKBaseBlocks.h in Headers */,
+				3A3D7C4D26819DAB003A0DC4 /* AFHTTPSessionManager.h in Headers */,
+				3A9F03DC267AF681008F4C1B /* ChainverseSDKCallback.h in Headers */,
+				3A9F03D3267AF681008F4C1B /* CVSDKBaseSocketManager.h in Headers */,
+				3A9F03D4267AF681008F4C1B /* CVSDKBaseView.h in Headers */,
+				3A9F03D7267AF681008F4C1B /* CVSDKBaseResource.h in Headers */,
+				3A9F03D9267AF681008F4C1B /* CVSDKBaseViewDialog.h in Headers */,
+				3A3D7C3A26819DAB003A0DC4 /* AFSecurityPolicy.h in Headers */,
+				3A3D7C4226819DAB003A0DC4 /* AFURLResponseSerialization.h in Headers */,
+				3A9747B226830E94003E53C8 /* ContractManager.h in Headers */,
+				3A9F03DD267AF681008F4C1B /* CVSDKUtils.h in Headers */,
+				3A3D7C3B26819DAB003A0DC4 /* AFNetworkReachabilityManager.h in Headers */,
+				3A9F03E0267AF681008F4C1B /* CVSDKChooseWLViewDialog.h in Headers */,
+				3A3D7C4C26819DAB003A0DC4 /* AFCompatibilityMacros.h in Headers */,
+				3A3D7C3D26819DAB003A0DC4 /* AFURLRequestSerialization.h in Headers */,
+				3A3D7C4726819DAB003A0DC4 /* AFNetworking.h in Headers */,
+				3A9F03E1267AF681008F4C1B /* CVSDKChooseWLView.h in Headers */,
+				3A9F03E7267AF681008F4C1B /* TestScreenViewDialog.h in Headers */,
+				3A9F03E8267AF681008F4C1B /* TestScreenView.h in Headers */,
+				3A9F03E9267AF681008F4C1B /* CVSDKTrustConnect.h in Headers */,
+				3A9F03EB267AF681008F4C1B /* CVSDKTrustTransfer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3A9F00C526730258008F4C1B /* Chainverse-SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9F00F526730259008F4C1B /* Build configuration list for PBXNativeTarget "Chainverse-SDK" */;
+			buildPhases = (
+				3A9F00C226730258008F4C1B /* Sources */,
+				3A9F00C326730258008F4C1B /* Frameworks */,
+				3A9F00C426730258008F4C1B /* Resources */,
+				3A9F0120267302B7008F4C1B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chainverse-SDK";
+			productName = "Chainverse-SDK";
+			productReference = 3A9F00C626730258008F4C1B /* Chainverse-SDK.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A9F00E026730259008F4C1B /* Chainverse-SDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9F00F826730259008F4C1B /* Build configuration list for PBXNativeTarget "Chainverse-SDKTests" */;
+			buildPhases = (
+				3A9F00DD26730259008F4C1B /* Sources */,
+				3A9F00DE26730259008F4C1B /* Frameworks */,
+				3A9F00DF26730259008F4C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A9F00E326730259008F4C1B /* PBXTargetDependency */,
+			);
+			name = "Chainverse-SDKTests";
+			productName = "Chainverse-SDKTests";
+			productReference = 3A9F00E126730259008F4C1B /* Chainverse-SDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A9F00EB26730259008F4C1B /* Chainverse-SDKUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9F00FB26730259008F4C1B /* Build configuration list for PBXNativeTarget "Chainverse-SDKUITests" */;
+			buildPhases = (
+				3A9F00E826730259008F4C1B /* Sources */,
+				3A9F00E926730259008F4C1B /* Frameworks */,
+				3A9F00EA26730259008F4C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A9F00EE26730259008F4C1B /* PBXTargetDependency */,
+			);
+			name = "Chainverse-SDKUITests";
+			productName = "Chainverse-SDKUITests";
+			productReference = 3A9F00EC26730259008F4C1B /* Chainverse-SDKUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3A9F010D267302B7008F4C1B /* ChainverseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9F0121267302B7008F4C1B /* Build configuration list for PBXNativeTarget "ChainverseTests" */;
+			buildPhases = (
+				3A9F010A267302B7008F4C1B /* Sources */,
+				3A9F010B267302B7008F4C1B /* Frameworks */,
+				3A9F010C267302B7008F4C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A9F0113267302B7008F4C1B /* PBXTargetDependency */,
+			);
+			name = ChainverseTests;
+			productName = ChainverseTests;
+			productReference = 3A9F010E267302B7008F4C1B /* ChainverseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A9F02862679AC40008F4C1B /* ChainverseBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9F028A2679AC40008F4C1B /* Build configuration list for PBXNativeTarget "ChainverseBundle" */;
+			buildPhases = (
+				3A9F02832679AC40008F4C1B /* Sources */,
+				3A9F02842679AC40008F4C1B /* Frameworks */,
+				3A9F02852679AC40008F4C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChainverseBundle;
+			productName = ChainverseBundle;
+			productReference = 3A9F02872679AC40008F4C1B /* ChainverseBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		3A9F0366267AF462008F4C1B /* Chainverse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9F036D267AF462008F4C1B /* Build configuration list for PBXNativeTarget "Chainverse" */;
+			buildPhases = (
+				3A9F03D1267AF651008F4C1B /* Headers */,
+				3A9F0363267AF462008F4C1B /* Sources */,
+				3A9F0364267AF462008F4C1B /* Frameworks */,
+				3A9F0365267AF462008F4C1B /* CopyFiles */,
+				3A9F07D2267B4FB5008F4C1B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chainverse;
+			productName = CVSDK;
+			productReference = 3A9F0367267AF462008F4C1B /* libChainverse.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A9F00BE26730258008F4C1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3A9F00C526730258008F4C1B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3A9F00E026730259008F4C1B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3A9F00C526730258008F4C1B;
+					};
+					3A9F00EB26730259008F4C1B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3A9F00C526730258008F4C1B;
+					};
+					3A9F010D267302B7008F4C1B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3A9F00C526730258008F4C1B;
+					};
+					3A9F02862679AC40008F4C1B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3A9F02C2267AE64F008F4C1B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3A9F0366267AF462008F4C1B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 3A9F00C126730258008F4C1B /* Build configuration list for PBXProject "Chainverse-SDK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A9F00BD26730258008F4C1B;
+			productRefGroup = 3A9F00C726730258008F4C1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A9F00C526730258008F4C1B /* Chainverse-SDK */,
+				3A9F00E026730259008F4C1B /* Chainverse-SDKTests */,
+				3A9F00EB26730259008F4C1B /* Chainverse-SDKUITests */,
+				3A9F010D267302B7008F4C1B /* ChainverseTests */,
+				3A9F02862679AC40008F4C1B /* ChainverseBundle */,
+				3A9F02C2267AE64F008F4C1B /* Framework */,
+				3A9F0366267AF462008F4C1B /* Chainverse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A9F00C426730258008F4C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F055A267B06BE008F4C1B /* CVSDKChooseWLView.xib in Resources */,
+				3A9F00D926730259008F4C1B /* LaunchScreen.storyboard in Resources */,
+				3A9F00D626730259008F4C1B /* Assets.xcassets in Resources */,
+				3A9F054C267B06B7008F4C1B /* TestScreenView.xib in Resources */,
+				3A9F00D426730258008F4C1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F00DF26730259008F4C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F00EA26730259008F4C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F010C267302B7008F4C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F02852679AC40008F4C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F0553267B06BD008F4C1B /* CVSDKChooseWLView.xib in Resources */,
+				3A9F0545267B06AE008F4C1B /* TestScreenView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A9F02CE267AE70F008F4C1B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=\"Chainverse\"\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}/DependentBuilds\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n\necho \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\"\necho \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/${SF_TARGET_NAME}\"\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\"  -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/${SF_TARGET_NAME}\"\n\nrm \"${BUILT_PRODUCTS_DIR}/ChainverseBundle.bundle/Info.plist\"\n";
+		};
+		3A9F07D2267B4FB5008F4C1B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n#\n# /bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n# /bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n# /bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A9F00C226730258008F4C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F0503267B02E5008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */,
+				3A3D7C4026819DAB003A0DC4 /* AFHTTPSessionManager.m in Sources */,
+				3A3D7C4A26819DAB003A0DC4 /* AFSecurityPolicy.m in Sources */,
+				3A9F00D126730258008F4C1B /* ViewController.m in Sources */,
+				3A97474C2682D5B1003E53C8 /* CVSDKRPCClient.m in Sources */,
+				3A9F04FC267B02C9008F4C1B /* CVSDKTrustConnect.m in Sources */,
+				3A9F04CB267B02AA008F4C1B /* CVSDKBaseView.m in Sources */,
+				3A3D7C4326819DAB003A0DC4 /* AFURLSessionManager.m in Sources */,
+				3A9F00CB26730258008F4C1B /* AppDelegate.m in Sources */,
+				3A9F04E0267B02B8008F4C1B /* CVSDKUtils.m in Sources */,
+				3A9F00DC26730259008F4C1B /* main.m in Sources */,
+				3A9F04D9267B02B3008F4C1B /* CVSDKBaseViewDialog.m in Sources */,
+				3A9F050A267B02E7008F4C1B /* CVSDKChooseWLView.m in Sources */,
+				3A9747B326830E94003E53C8 /* ContractManager.m in Sources */,
+				3A9F04F5267B02C6008F4C1B /* CVSDKTrustTransfer.m in Sources */,
+				3A3D7C4526819DAB003A0DC4 /* AFURLRequestSerialization.m in Sources */,
+				3A3D7C3E26819DAB003A0DC4 /* AFURLResponseSerialization.m in Sources */,
+				3A9F04EE267B02C2008F4C1B /* TestScreenView.m in Sources */,
+				3A9F04D2267B02AF008F4C1B /* CVSDKBaseResource.m in Sources */,
+				3A9F04B4267B022E008F4C1B /* ChainverseSDK.m in Sources */,
+				3A9F00CE26730258008F4C1B /* SceneDelegate.m in Sources */,
+				3A9F04C4267B02A6008F4C1B /* CVSDKBaseSocketManager.m in Sources */,
+				3A3D7C4826819DAB003A0DC4 /* AFNetworkReachabilityManager.m in Sources */,
+				3A9F04E7267B02C0008F4C1B /* TestScreenViewDialog.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F00DD26730259008F4C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F00E626730259008F4C1B /* Chainverse_SDKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F00E826730259008F4C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F00F126730259008F4C1B /* Chainverse_SDKUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F010A267302B7008F4C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F0116267302B7008F4C1B /* ChainverseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F02832679AC40008F4C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F0363267AF462008F4C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F03A5267AF531008F4C1B /* TestScreenViewDialog.m in Sources */,
+				3A9F03A8267AF531008F4C1B /* CVSDKBaseView.m in Sources */,
+				3A9F03A3267AF531008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */,
+				3A9F03AA267AF531008F4C1B /* CVSDKBaseViewDialog.m in Sources */,
+				3A9F03A9267AF531008F4C1B /* CVSDKBaseResource.m in Sources */,
+				3A9F03A4267AF531008F4C1B /* CVSDKChooseWLView.m in Sources */,
+				3A9F03AD267AF531008F4C1B /* CVSDKUtils.m in Sources */,
+				3A3D7C4B26819DAB003A0DC4 /* AFSecurityPolicy.m in Sources */,
+				3A9F03AC267AF531008F4C1B /* CVSDKTrustConnect.m in Sources */,
+				3A3D7C4426819DAB003A0DC4 /* AFURLSessionManager.m in Sources */,
+				3A3D7C4926819DAB003A0DC4 /* AFNetworkReachabilityManager.m in Sources */,
+				3A9F03A6267AF531008F4C1B /* TestScreenView.m in Sources */,
+				3A9F03A7267AF531008F4C1B /* CVSDKBaseSocketManager.m in Sources */,
+				3A9747B426830E94003E53C8 /* ContractManager.m in Sources */,
+				3A3D7C4626819DAB003A0DC4 /* AFURLRequestSerialization.m in Sources */,
+				3A9F03AB267AF531008F4C1B /* CVSDKTrustTransfer.m in Sources */,
+				3A3D7C4126819DAB003A0DC4 /* AFHTTPSessionManager.m in Sources */,
+				3A3D7C3F26819DAB003A0DC4 /* AFURLResponseSerialization.m in Sources */,
+				3A9F03AE267AF531008F4C1B /* ChainverseSDK.m in Sources */,
+				3A97474D2682D5B1003E53C8 /* CVSDKRPCClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A9F00E326730259008F4C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A9F00C526730258008F4C1B /* Chainverse-SDK */;
+			targetProxy = 3A9F00E226730259008F4C1B /* PBXContainerItemProxy */;
+		};
+		3A9F00EE26730259008F4C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A9F00C526730258008F4C1B /* Chainverse-SDK */;
+			targetProxy = 3A9F00ED26730259008F4C1B /* PBXContainerItemProxy */;
+		};
+		3A9F0113267302B7008F4C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A9F00C526730258008F4C1B /* Chainverse-SDK */;
+			targetProxy = 3A9F0112267302B7008F4C1B /* PBXContainerItemProxy */;
+		};
+		3A9F03C0267AF5C5008F4C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A9F0366267AF462008F4C1B /* Chainverse */;
+			targetProxy = 3A9F03BF267AF5C5008F4C1B /* PBXContainerItemProxy */;
+		};
+		3A9F03C2267AF5C5008F4C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A9F02862679AC40008F4C1B /* ChainverseBundle */;
+			targetProxy = 3A9F03C1267AF5C5008F4C1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A9F00D226730258008F4C1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A9F00D326730258008F4C1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A9F00D726730259008F4C1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A9F00D826730259008F4C1B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A9F00F326730259008F4C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A9F00F426730259008F4C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A9F00F626730259008F4C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 armv7";
+				INFOPLIST_FILE = "Chainverse-SDK/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A9F00F726730259008F4C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "Chainverse-SDK/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3A9F00F926730259008F4C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				INFOPLIST_FILE = "Chainverse-SDKTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmosdk.test.Chainverse-SDKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chainverse-SDK.app/Chainverse-SDK";
+			};
+			name = Debug;
+		};
+		3A9F00FA26730259008F4C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				INFOPLIST_FILE = "Chainverse-SDKTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmosdk.test.Chainverse-SDKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chainverse-SDK.app/Chainverse-SDK";
+			};
+			name = Release;
+		};
+		3A9F00FC26730259008F4C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				INFOPLIST_FILE = "Chainverse-SDKUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmosdk.test.Chainverse-SDKUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chainverse-SDK";
+			};
+			name = Debug;
+		};
+		3A9F00FD26730259008F4C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				INFOPLIST_FILE = "Chainverse-SDKUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmosdk.test.Chainverse-SDKUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chainverse-SDK";
+			};
+			name = Release;
+		};
+		3A9F0122267302B7008F4C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				INFOPLIST_FILE = ChainverseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test.ChainverseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chainverse-SDK.app/Chainverse-SDK";
+			};
+			name = Debug;
+		};
+		3A9F0123267302B7008F4C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				INFOPLIST_FILE = ChainverseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test.ChainverseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chainverse-SDK.app/Chainverse-SDK";
+			};
+			name = Release;
+		};
+		3A9F028B2679AC40008F4C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				INFOPLIST_FILE = ChainverseBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test.ChainverseBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3A9F028C2679AC40008F4C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				INFOPLIST_FILE = ChainverseBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test.ChainverseBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		3A9F02C4267AE64F008F4C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A9F02C5267AE64F008F4C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3A9F036E267AF462008F4C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A9F036F267AF462008F4C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6CV7UNHJKY;
+				EXCLUDED_ARCHS = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A9F00C126730258008F4C1B /* Build configuration list for PBXProject "Chainverse-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F00F326730259008F4C1B /* Debug */,
+				3A9F00F426730259008F4C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9F00F526730259008F4C1B /* Build configuration list for PBXNativeTarget "Chainverse-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F00F626730259008F4C1B /* Debug */,
+				3A9F00F726730259008F4C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9F00F826730259008F4C1B /* Build configuration list for PBXNativeTarget "Chainverse-SDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F00F926730259008F4C1B /* Debug */,
+				3A9F00FA26730259008F4C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9F00FB26730259008F4C1B /* Build configuration list for PBXNativeTarget "Chainverse-SDKUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F00FC26730259008F4C1B /* Debug */,
+				3A9F00FD26730259008F4C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9F0121267302B7008F4C1B /* Build configuration list for PBXNativeTarget "ChainverseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F0122267302B7008F4C1B /* Debug */,
+				3A9F0123267302B7008F4C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9F028A2679AC40008F4C1B /* Build configuration list for PBXNativeTarget "ChainverseBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F028B2679AC40008F4C1B /* Debug */,
+				3A9F028C2679AC40008F4C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9F02C3267AE64F008F4C1B /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F02C4267AE64F008F4C1B /* Debug */,
+				3A9F02C5267AE64F008F4C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9F036D267AF462008F4C1B /* Build configuration list for PBXNativeTarget "Chainverse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F036E267AF462008F4C1B /* Debug */,
+				3A9F036F267AF462008F4C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A9F00BE26730258008F4C1B /* Project object */;
+}
