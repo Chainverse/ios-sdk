@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (CVSDKRPCClient *) shared;
 
 - (void)connect:(NSMutableArray*) params method:(NSString *)method completeBlock:(CVSDKRPCResponeBlock) complete;
-+ (NSMutableArray *)createParams:(NSMutableDictionary *)obj;
++ (NSMutableArray *)createParams:( nullable NSMutableDictionary *)obj;
 @end
 
 NS_ASSUME_NONNULL_END

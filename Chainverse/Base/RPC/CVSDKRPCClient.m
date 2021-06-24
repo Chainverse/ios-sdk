@@ -24,9 +24,9 @@
     
 }
 
-+ (NSMutableArray *)createParams:(NSMutableDictionary *)obj{
++ (NSMutableArray *)createParams:( nullable NSMutableDictionary *)obj{
     NSMutableArray *params = [[NSMutableArray alloc] init];
-    if([obj count] > 0){
+    if(obj != nil){
         [params addObject:obj];
     }
     return params;
