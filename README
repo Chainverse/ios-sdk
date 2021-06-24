@@ -1,1 +1,43 @@
-CVS iOS SDK
+### 1. Mô hình
+![Authentication Model](https://i.imgur.com/0nXfikL.png)
+
+### 2. CÁC HÀM API MỞ RA ĐỂ DEV GỌI
+- API init:
+   + iOS:`[[ChainverseSDK shared] init:@"developerAddress" gameAddress:@"gameAddress"];`
+   + Android:`ChainverseSDK.getInstance().init("developerAddress", "gameAddress");`
+- API Connect với Trust Wallet:
+   + iOS:`[[ChainverseSDK shared] connectTrust];`
+   + Android:`ChainverseSDK.getInstance().connectTrust();`
+- API Transfer với Trust Wallet:
+   + iOS:`[[ChainverseSDK shared] transferTrust:@"asset"
+                                       to:@"to"
+                                   amount:@"amount"
+                                 feePrice:@"feePrice"
+                                 feeLimit:@"feeLimit"];`
+   + Android:`ChainverseSDK.getInstance().transferTrust("asset","to","amount","feePrice","feeLimit");`
+- API để hứng callback từ Trust Wallet:
+   + iOS:`[[ChainverseSDK shared] scene:scene openURLContexts:URLContexts];`
+   + Android:`ChainverseSDK.getInstance().handleResult(intent);`
+
+### 3. SCHEMA
+#### 3.1. Connect với Trust Wallet
+##### 3.1.1 SDK Connect với Trust Wallet bẳng scheme url
+- URL: trust://sdk_get_accounts?coins.0={COINS.0}&coins.1={COINS.0}&app={APP_SCHEME}&callback={CALLBACK}&id=1
+- `APP_SCHEME`: Khai báo app scheme để Trust Wallet callback lại app.
+- `COINS.0, COINS.1`: Mạng lưới blockchain (BCS, ETH)
+- `CALLBACK`: Loại callback Trust Wallet sẽ trả về
+
+##### 3.1.2 Trust Wallet open (callback) Game bẳng scheme url
+- URL: `{APP_SCHEME}://sdk_sign_result?accounts={DATA_ACCOUNT}&id=1`
+- `APP_SCHEME`: Khai báo app scheme để Trust Wallet callback lại app.
+- `DATA_ACCOUNT`: Data từ Trust Wallet trả về
+
+#### 3.2. Transfer với Trust Wallet
+##### 3.2.1 SDK transfer với Trust Wallet bẳng scheme url
+- URL: trust://sdk_transaction?action=transfer&amount={AMOUNT}&asset={ASSET}&confirm_type=sign&fee_limit={FEE_LIMIT}&fee_price={FEE_PRICE}&nonce=447&to={TO}&app={APP_SCHEME}&callback=sdk_sign_result&id=3
+- `AMOUNT`: Số coin cần chuyển.
+- `ASSET`: Mạng lưới blockchain (BCS, ETH)
+- `FEE_LIMIT`: Phí.
+- `FEE_PRICE`: Phí.
+- `TO`: Địa chỉ chuyển coin.
+- `APP_SCHEME`: Khai báo app scheme để Trust Wallet callback lại app.
