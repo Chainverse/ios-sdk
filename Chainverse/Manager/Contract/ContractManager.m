@@ -13,17 +13,13 @@
 }
 
 - (void)checkDeveloperContract:(CVSDKContractStatusBlock) complete{
-    NSMutableArray *params = [[NSMutableArray alloc] init];
-    NSMutableDictionary *dt = [NSMutableDictionary dictionary];
-       dt[@"developerAddress"] = self.developerAddress;
-    //[params addObject:dt];
-    
-    NSLog(@"nampv_request1 %@",params);
-    [[CVSDKRPCClient shared] connect:params method:@"eth_blockNumber" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
+    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+    //obj[@"developerAddress"] = self.developerAddress;
+    [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_blockNumber" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
         if (!error) {
             BOOL isCheck = YES;
             if(isCheck){
-                [self checkGameContract:complete];
+                //[self checkGameContract:complete];
             }
             NSLog(@"Reply JSON: %@", responseObject);
         }
@@ -31,13 +27,10 @@
 }
 
 - (void)checkGameContract:(CVSDKContractStatusBlock) complete{
-    NSMutableArray *params = [[NSMutableArray alloc] init];
-    NSMutableDictionary *dt = [NSMutableDictionary dictionary];
-       dt[@"gameAddress"] = self.gameAddress;
-    //[params addObject:dt];
+    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+    obj[@"gameAddress"] = self.gameAddress;
     
-    NSLog(@"nampv_request1 %@",params);
-    [[CVSDKRPCClient shared] connect:params method:@"eth_blockNumber" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
+    [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_blockNumber" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
         if (!error) {
             BOOL isCheck = YES;
             if(isCheck){
@@ -49,13 +42,10 @@
 }
 
 - (void)checkGamePaused:(CVSDKContractStatusBlock) complete{
-    NSMutableArray *params = [[NSMutableArray alloc] init];
-    NSMutableDictionary *dt = [NSMutableDictionary dictionary];
-       dt[@"gameAddress"] = self.gameAddress;
-    //[params addObject:dt];
+    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+    obj[@"gameAddress"] = self.gameAddress;
     
-    NSLog(@"nampv_request1 %@",params);
-    [[CVSDKRPCClient shared] connect:params method:@"eth_blockNumber" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
+    [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_blockNumber" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
         if (!error) {
             BOOL isCheck = YES;
             if(isCheck){
@@ -67,13 +57,9 @@
 }
 
 - (void)checkDeveloperPaused:(CVSDKContractStatusBlock) complete{
-    NSMutableArray *params = [[NSMutableArray alloc] init];
-    NSMutableDictionary *dt = [NSMutableDictionary dictionary];
-       dt[@"gameAddress"] = self.gameAddress;
-    //[params addObject:dt];
-    
-    NSLog(@"nampv_request1 %@",params);
-    [[CVSDKRPCClient shared] connect:params method:@"eth_blockNumber" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
+    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+    obj[@"gameAddress"] = self.gameAddress;
+    [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_blockNumber" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
         if (!error) {
             BOOL isCheck = YES;
             complete(isCheck);

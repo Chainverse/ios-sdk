@@ -24,6 +24,14 @@
     
 }
 
++ (NSMutableArray *)createParams:(NSMutableDictionary *)obj{
+    NSMutableArray *params = [[NSMutableArray alloc] init];
+    if([obj count] > 0){
+        [params addObject:obj];
+    }
+    return params;
+}
+
 - (NSString *)createRequestRaw:(NSString *)method params:(NSMutableArray*) params{
     NSError *writeError = nil;
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:[self createPayload:method params:params] options:NSJSONWritingPrettyPrinted error:&writeError];
