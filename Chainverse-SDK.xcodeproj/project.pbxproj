@@ -109,6 +109,9 @@
 		3A9F054C267B06B7008F4C1B /* TestScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F0381267AF531008F4C1B /* TestScreenView.xib */; };
 		3A9F0553267B06BD008F4C1B /* CVSDKChooseWLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */; };
 		3A9F055A267B06BE008F4C1B /* CVSDKChooseWLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */; };
+		3AB58F4F268579F800DFDBEA /* CVSDKRESTfulClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AB58F4D268579F800DFDBEA /* CVSDKRESTfulClient.h */; };
+		3AB58F50268579F800DFDBEA /* CVSDKRESTfulClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB58F4E268579F800DFDBEA /* CVSDKRESTfulClient.m */; };
+		3AB58F51268579F800DFDBEA /* CVSDKRESTfulClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB58F4E268579F800DFDBEA /* CVSDKRESTfulClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,6 +252,8 @@
 		3A9F039E267AF531008F4C1B /* ChainverseSDKCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseSDKCallback.h; sourceTree = "<group>"; };
 		3A9F03A1267AF531008F4C1B /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Starscream.xcframework; sourceTree = "<group>"; };
 		3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SocketIO.xcframework; sourceTree = "<group>"; };
+		3AB58F4D268579F800DFDBEA /* CVSDKRESTfulClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKRESTfulClient.h; sourceTree = "<group>"; };
+		3AB58F4E268579F800DFDBEA /* CVSDKRESTfulClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKRESTfulClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +452,7 @@
 		3A9F0368267AF462008F4C1B /* Chainverse */ = {
 			isa = PBXGroup;
 			children = (
+				3AB58F4B2685795400DFDBEA /* Network */,
 				3A9747A826830E42003E53C8 /* Manager */,
 				3A3D7C542681A025003A0DC4 /* Library */,
 				3A9F03A0267AF531008F4C1B /* Frameworks */,
@@ -508,7 +514,6 @@
 			isa = PBXGroup;
 			children = (
 				3A97476C2682F32C003E53C8 /* Block */,
-				3A9747482682D50E003E53C8 /* RPC */,
 				3A9F0386267AF531008F4C1B /* SocketIO */,
 				3A9F0389267AF531008F4C1B /* View */,
 				3A9F038C267AF531008F4C1B /* Resource */,
@@ -597,6 +602,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3AB58F4B2685795400DFDBEA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3AB58F4C2685796A00DFDBEA /* RESTful */,
+				3A9747482682D50E003E53C8 /* RPC */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3AB58F4C2685796A00DFDBEA /* RESTful */ = {
+			isa = PBXGroup;
+			children = (
+				3AB58F4D268579F800DFDBEA /* CVSDKRESTfulClient.h */,
+				3AB58F4E268579F800DFDBEA /* CVSDKRESTfulClient.m */,
+			);
+			path = RESTful;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -629,6 +652,7 @@
 				3A9F03E8267AF681008F4C1B /* TestScreenView.h in Headers */,
 				3A9F03E9267AF681008F4C1B /* CVSDKTrustConnect.h in Headers */,
 				3A9F03EB267AF681008F4C1B /* CVSDKTrustTransfer.h in Headers */,
+				3AB58F4F268579F800DFDBEA /* CVSDKRESTfulClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,6 +930,7 @@
 				3A3D7C4526819DAB003A0DC4 /* AFURLRequestSerialization.m in Sources */,
 				3A3D7C3E26819DAB003A0DC4 /* AFURLResponseSerialization.m in Sources */,
 				3A9F04EE267B02C2008F4C1B /* TestScreenView.m in Sources */,
+				3AB58F50268579F800DFDBEA /* CVSDKRESTfulClient.m in Sources */,
 				3A9F04D2267B02AF008F4C1B /* CVSDKBaseResource.m in Sources */,
 				3A9F04B4267B022E008F4C1B /* ChainverseSDK.m in Sources */,
 				3A9F00CE26730258008F4C1B /* SceneDelegate.m in Sources */,
@@ -962,6 +987,7 @@
 				3A3D7C4426819DAB003A0DC4 /* AFURLSessionManager.m in Sources */,
 				3A3D7C4926819DAB003A0DC4 /* AFNetworkReachabilityManager.m in Sources */,
 				3A9F03A6267AF531008F4C1B /* TestScreenView.m in Sources */,
+				3AB58F51268579F800DFDBEA /* CVSDKRESTfulClient.m in Sources */,
 				3A9F03A7267AF531008F4C1B /* CVSDKBaseSocketManager.m in Sources */,
 				3A9747B426830E94003E53C8 /* ContractManager.m in Sources */,
 				3A3D7C4626819DAB003A0DC4 /* AFURLRequestSerialization.m in Sources */,
