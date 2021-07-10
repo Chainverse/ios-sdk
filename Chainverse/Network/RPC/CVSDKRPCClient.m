@@ -36,12 +36,13 @@
     NSError *writeError = nil;
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:[self createPayload:method params:params] options:NSJSONWritingPrettyPrinted error:&writeError];
     NSString* raw = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSLog(@"nampv_fuc %@",raw);
     return raw;
 }
 
 - (NSMutableURLRequest *) createRequest:(NSString *)raw{
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.101.144:8545"] cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:120];
-
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://data-seed-prebsc-1-s1.binance.org:8545"] cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:120];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody: [raw dataUsingEncoding:NSUTF8StringEncoding]];
     return request;
@@ -49,6 +50,7 @@
 
 - (NSMutableDictionary *) createPayload:(NSString *)method params:(NSMutableArray*) params{
     NSMutableDictionary *payload = [NSMutableDictionary dictionary];
+        [params addObject: @"latest"];
        payload[@"jsonrpc"] = @"2.0";
        payload[@"method"] = method;
        payload[@"params"] = params;
