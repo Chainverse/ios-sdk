@@ -6,7 +6,7 @@
 //
 
 #import "CVSDKUtils.h"
-
+#import "UIKit/UIKit.h"
 @implementation CVSDKUtils
 + (NSString *)getValueFromQueryParam:(NSURL *)url withParam:(NSString *)param{
     NSLog(@"CVSDK_getValueFromQueryParam %@",url);
@@ -23,5 +23,18 @@
         }
     }
     return value;
+}
+
++ (void)openURL:(NSURL *)url{
+    if (@available(iOS 10.0, *)){
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+              [[UIApplication sharedApplication]
+                          openURL:url options:@{}
+                          completionHandler:nil];
+          }
+    } else {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+
 }
 @end

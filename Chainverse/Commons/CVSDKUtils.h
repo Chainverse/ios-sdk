@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CVSDKUtils : NSObject
 + (NSString *)getValueFromQueryParam:(NSURL *)url withParam:(NSString *)param;
++ (void)openURL:(NSURL *)url;
 @end
 
 NS_ASSUME_NONNULL_END

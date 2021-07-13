@@ -6,7 +6,7 @@
 //
 
 #import "CVSDKTrustConnect.h"
-#import "UIKit/UIKit.h"
+#import "CVSDKUtils.h"
 @implementation CVSDKTrustConnect
 
 - (NSURL *)build{
@@ -26,9 +26,7 @@
 }
 
 - (void)connect{
-    if ([[UIApplication sharedApplication] canOpenURL:[self build]]) {
-        [[UIApplication sharedApplication] openURL:[self build] options:@{} completionHandler:nil];
-    }
+    [CVSDKUtils openURL:[self build]];
     
 }
 @end

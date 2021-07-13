@@ -43,6 +43,9 @@
 		3A3D7C4B26819DAB003A0DC4 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7C3726819DAB003A0DC4 /* AFSecurityPolicy.m */; };
 		3A3D7C4C26819DAB003A0DC4 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C3826819DAB003A0DC4 /* AFCompatibilityMacros.h */; };
 		3A3D7C4D26819DAB003A0DC4 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C3926819DAB003A0DC4 /* AFHTTPSessionManager.h */; };
+		3A5EF6EB269D77B80035A10C /* CVSDKTrustSignMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5EF6E9269D77B80035A10C /* CVSDKTrustSignMessage.h */; };
+		3A5EF6EC269D77B80035A10C /* CVSDKTrustSignMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5EF6EA269D77B80035A10C /* CVSDKTrustSignMessage.m */; };
+		3A5EF6ED269D77B80035A10C /* CVSDKTrustSignMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5EF6EA269D77B80035A10C /* CVSDKTrustSignMessage.m */; };
 		3A97474B2682D5B1003E53C8 /* CVSDKRPCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9747492682D5B1003E53C8 /* CVSDKRPCClient.h */; };
 		3A97474C2682D5B1003E53C8 /* CVSDKRPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A97474A2682D5B1003E53C8 /* CVSDKRPCClient.m */; };
 		3A97474D2682D5B1003E53C8 /* CVSDKRPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A97474A2682D5B1003E53C8 /* CVSDKRPCClient.m */; };
@@ -192,6 +195,8 @@
 		3A3D7C3726819DAB003A0DC4 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
 		3A3D7C3826819DAB003A0DC4 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		3A3D7C3926819DAB003A0DC4 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		3A5EF6E9269D77B80035A10C /* CVSDKTrustSignMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKTrustSignMessage.h; sourceTree = "<group>"; };
+		3A5EF6EA269D77B80035A10C /* CVSDKTrustSignMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKTrustSignMessage.m; sourceTree = "<group>"; };
 		3A9747492682D5B1003E53C8 /* CVSDKRPCClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKRPCClient.h; sourceTree = "<group>"; };
 		3A97474A2682D5B1003E53C8 /* CVSDKRPCClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKRPCClient.m; sourceTree = "<group>"; };
 		3A97476D2682F34D003E53C8 /* CVSDKBaseBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseBlocks.h; sourceTree = "<group>"; };
@@ -458,7 +463,7 @@
 				3A9F03A0267AF531008F4C1B /* Frameworks */,
 				3A9F0385267AF531008F4C1B /* Base */,
 				3A9F0399267AF531008F4C1B /* Commons */,
-				3A9F0393267AF531008F4C1B /* WL */,
+				3A9F0393267AF531008F4C1B /* Wallet */,
 				3A9F0377267AF531008F4C1B /* UI */,
 				3A9F0369267AF462008F4C1B /* Chainverse.h */,
 				3A9F039C267AF531008F4C1B /* ChainverseSDK.h */,
@@ -558,12 +563,12 @@
 			path = ViewDialog;
 			sourceTree = "<group>";
 		};
-		3A9F0393267AF531008F4C1B /* WL */ = {
+		3A9F0393267AF531008F4C1B /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
 				3A9F0394267AF531008F4C1B /* trust */,
 			);
-			path = WL;
+			path = Wallet;
 			sourceTree = "<group>";
 		};
 		3A9F0394267AF531008F4C1B /* trust */ = {
@@ -573,6 +578,8 @@
 				3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */,
 				3A9F0397267AF531008F4C1B /* CVSDKTrustTransfer.h */,
 				3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */,
+				3A5EF6E9269D77B80035A10C /* CVSDKTrustSignMessage.h */,
+				3A5EF6EA269D77B80035A10C /* CVSDKTrustSignMessage.m */,
 			);
 			path = trust;
 			sourceTree = "<group>";
@@ -638,6 +645,7 @@
 				3A9F03D4267AF681008F4C1B /* CVSDKBaseView.h in Headers */,
 				3A9F03D7267AF681008F4C1B /* CVSDKBaseResource.h in Headers */,
 				3A9F03D9267AF681008F4C1B /* CVSDKBaseViewDialog.h in Headers */,
+				3A5EF6EB269D77B80035A10C /* CVSDKTrustSignMessage.h in Headers */,
 				3A3D7C3A26819DAB003A0DC4 /* AFSecurityPolicy.h in Headers */,
 				3A3D7C4226819DAB003A0DC4 /* AFURLResponseSerialization.h in Headers */,
 				3A9747B226830E94003E53C8 /* ContractManager.h in Headers */,
@@ -935,6 +943,7 @@
 				3A9F04B4267B022E008F4C1B /* ChainverseSDK.m in Sources */,
 				3A9F00CE26730258008F4C1B /* SceneDelegate.m in Sources */,
 				3A9F04C4267B02A6008F4C1B /* CVSDKBaseSocketManager.m in Sources */,
+				3A5EF6EC269D77B80035A10C /* CVSDKTrustSignMessage.m in Sources */,
 				3A3D7C4826819DAB003A0DC4 /* AFNetworkReachabilityManager.m in Sources */,
 				3A9F04E7267B02C0008F4C1B /* TestScreenViewDialog.m in Sources */,
 			);
@@ -990,6 +999,7 @@
 				3AB58F51268579F800DFDBEA /* CVSDKRESTfulClient.m in Sources */,
 				3A9F03A7267AF531008F4C1B /* CVSDKBaseSocketManager.m in Sources */,
 				3A9747B426830E94003E53C8 /* ContractManager.m in Sources */,
+				3A5EF6ED269D77B80035A10C /* CVSDKTrustSignMessage.m in Sources */,
 				3A3D7C4626819DAB003A0DC4 /* AFURLRequestSerialization.m in Sources */,
 				3A9F03AB267AF531008F4C1B /* CVSDKTrustTransfer.m in Sources */,
 				3A3D7C4126819DAB003A0DC4 /* AFHTTPSessionManager.m in Sources */,

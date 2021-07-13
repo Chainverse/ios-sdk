@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Open URI-scheme for iOS 13 and above
  */
-- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts;
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts NS_AVAILABLE_IOS(13_0);
 
 /**
  Return SDK Version

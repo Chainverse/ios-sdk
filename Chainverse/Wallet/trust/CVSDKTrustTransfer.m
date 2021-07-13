@@ -6,7 +6,7 @@
 //
 
 #import "CVSDKTrustTransfer.h"
-#import "UIKit/UIKit.h"
+#import "CVSDKUtils.h"
 @implementation CVSDKTrustTransfer
 
 - (NSURL *)build{
@@ -31,8 +31,6 @@
     return url;
 }
 - (void)transfer{
-    if ([[UIApplication sharedApplication] canOpenURL:[self build]]) {
-        [[UIApplication sharedApplication] openURL:[self build] options:@{} completionHandler:nil];
-    }
+    [CVSDKUtils openURL:[self build]];
 }
 @end

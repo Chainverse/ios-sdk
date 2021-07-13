@@ -9,6 +9,7 @@
 #import "UIKit/UIKit.h"
 #import "CVSDKTrustConnect.h"
 #import "CVSDKTrustTransfer.h"
+#import "CVSDKTrustSignMessage.h"
 #import "CVSDKUtils.h"
 #import "CVSDKChooseWLViewDialog.h"
 #import "CVSDKBaseSocketManager.h"
@@ -62,18 +63,26 @@
 - (BOOL)application:(UIApplication *)app
               openURL:(NSURL *)url
               options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
-    NSString *accounts = [CVSDKUtils getValueFromQueryParam:url withParam:@"accounts"];
-    if([[ChainverseSDK shared].delegate respondsToSelector:@selector(didConnectWallet:)]){
-        [[ChainverseSDK shared].delegate didConnectWallet:accounts];
-    }
+    [self handleCallbackFromWallet:url];
     return true;
 }
 
-- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts{
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts NS_AVAILABLE_IOS(13_0){
     UIOpenURLContext *context = URLContexts.allObjects.firstObject;
-    NSString *accounts = [CVSDKUtils getValueFromQueryParam:context.URL withParam:@"accounts"];
+    [self handleCallbackFromWallet:context.URL];
+}
+
+- (void)handleCallbackFromWallet :(NSURL *)url{
+    if(![[CVSDKUtils getValueFromQueryParam:url withParam:@"accounts"] isEqualToString:@""]){
+        CVSDKTrustSignMessage *signMessage = [[CVSDKTrustSignMessage alloc] init];
+        [signMessage signMessage:@""];
+    }else if(![[CVSDKUtils getValueFromQueryParam:url withParam:@"signature"] isEqualToString:@""]){
+        NSString *signature = [CVSDKUtils getValueFromQueryParam:url withParam:@"signature"];
+        NSLog(@"nampv_sig %@",signature);
+    }
+    
     if([[ChainverseSDK shared].delegate respondsToSelector:@selector(didConnectWallet:)]){
-        [[ChainverseSDK shared].delegate didConnectWallet:accounts];
+        [[ChainverseSDK shared].delegate didConnectWallet:[CVSDKUtils getValueFromQueryParam:url withParam:@"accounts"]];
     }
 }
 
