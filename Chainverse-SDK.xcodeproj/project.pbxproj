@@ -566,12 +566,12 @@
 		3A9F0393267AF531008F4C1B /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				3A9F0394267AF531008F4C1B /* trust */,
+				3A9F0394267AF531008F4C1B /* Trust */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
 		};
-		3A9F0394267AF531008F4C1B /* trust */ = {
+		3A9F0394267AF531008F4C1B /* Trust */ = {
 			isa = PBXGroup;
 			children = (
 				3A9F0395267AF531008F4C1B /* CVSDKTrustConnect.h */,
@@ -581,7 +581,7 @@
 				3A5EF6E9269D77B80035A10C /* CVSDKTrustSignMessage.h */,
 				3A5EF6EA269D77B80035A10C /* CVSDKTrustSignMessage.m */,
 			);
-			path = trust;
+			path = Trust;
 			sourceTree = "<group>";
 		};
 		3A9F0399267AF531008F4C1B /* Commons */ = {
