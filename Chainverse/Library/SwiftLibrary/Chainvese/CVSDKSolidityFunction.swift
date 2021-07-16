@@ -7,7 +7,7 @@
 
 import Foundation
 
-@objc public class ObjcSolidityFunction : NSObject {
+@objc public class CVSDKSolidityFunction : NSObject {
     override init() {}
     
     @objc(encode::)

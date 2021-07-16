@@ -1,21 +1,23 @@
 //
-//  CVSDKTrustSignMessage.m
+//  TrustWLConnect.m
 //  Chainverse-SDK
 //
-//  Created by pham nam on 13/07/2021.
+//  Created by pham nam on 11/06/2021.
 //
 
-#import "CVSDKTrustSignMessage.h"
+#import "CVSDKTrustConnect.h"
 #import "CVSDKUtils.h"
-@implementation CVSDKTrustSignMessage
+#import "ChainverseSDK.h"
+@implementation CVSDKTrustConnect
+
 - (NSURL *)build{
     NSURLComponents *components = [NSURLComponents new];
     [components setScheme:@"trust"];
-    [components setHost:@"sdk_sign_message"];
+    [components setHost:@"sdk_get_accounts"];
     components.queryItems = @[
-        [NSURLQueryItem queryItemWithName:@"coin" value:@"60"],
-        [NSURLQueryItem queryItemWithName:@"data" value:@"b0379d0047424de9fa43620fd073532a0135cf4a85e8d7bc9ca8aae9bcd8cc4c"],
-        [NSURLQueryItem queryItemWithName:@"app" value:@"trustsdk"],
+        [NSURLQueryItem queryItemWithName:@"coins.0" value:@"60"],
+        [NSURLQueryItem queryItemWithName:@"coins.1" value:@"714"],
+        [NSURLQueryItem queryItemWithName:@"app" value:[ChainverseSDK shared].scheme],
         [NSURLQueryItem queryItemWithName:@"callback" value:@"sdk_sign_result"],
         [NSURLQueryItem queryItemWithName:@"id" value:@"1"]
     ];
@@ -24,7 +26,8 @@
     return url;
 }
 
-- (void)signMessage:(NSString *)message{
+- (void)connect{
     [CVSDKUtils openURL:[self build]];
+    
 }
 @end

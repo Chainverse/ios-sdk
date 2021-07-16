@@ -10,6 +10,7 @@
 #import "Chainverse_SDK-Swift.h"
 #import "CVSDKUtils.h"
 #import <PromiseKit/PromiseKit.h>
+#import "CVSDKConstant.h"
 @implementation ContractManager
 - (void)check:(CVSDKContractStatusBlock) complete{
     PMKJoin(@[[self isDeveloperContractPromise],
@@ -27,17 +28,9 @@
     
     if([responseObject count] > 0){
         NSDictionary *resultGameContract = (NSDictionary *)responseObject[0];
-        NSLog(@"Reply1 JSON: %@", resultGameContract[@"result"]);
-        
         NSDictionary *resultDevContract = (NSDictionary *)responseObject[1];
-        NSLog(@"Reply2 JSON: %@", resultDevContract[@"result"]);
-        
-        
         NSDictionary *resultGamePaused = (NSDictionary *)responseObject[2];
-        NSLog(@"Reply3 JSON: %@", resultGamePaused[@"result"]);
-        
         NSDictionary *resultDevPaused = (NSDictionary *)responseObject[3];
-        NSLog(@"Reply4 JSON: %@", resultDevPaused[@"result"]);
         
         int isGameContract = [CVSDKUtils convertHexToDecimal:resultGameContract[@"result"]];
         
@@ -60,10 +53,10 @@
 {
     
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
-        ObjcSolidityFunction *function = [[ObjcSolidityFunction alloc] init];
+        CVSDKSolidityFunction *function = [[CVSDKSolidityFunction alloc] init];
         NSString *encode = [function encode:@"isDeveloperContract()" :[NSArray array]];
         NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        obj[@"to"] = @"0x690FDdc2a98050f924Bd7Ec5900f2D2F49b6aEC7";
+        obj[@"to"] = self.developerAddress;
         obj[@"data"] = encode;
         
         [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
@@ -79,11 +72,11 @@
 {
     
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
-        ObjcSolidityFunction *function = [[ObjcSolidityFunction alloc] init];
+        CVSDKSolidityFunction *function = [[CVSDKSolidityFunction alloc] init];
         NSString *encode = [function encode:@"isGameContract()" :[NSArray array]];
         
         NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        obj[@"to"] = @"0x3F57BF31E55de54306543863E079aD234f477b88";
+        obj[@"to"] = self.gameAddress;
         obj[@"data"] = encode;
         
         [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
@@ -99,14 +92,14 @@
 {
     
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
-        W3Address *gameContractAddress = [[W3Address alloc] initWithString:@"0x3F57BF31E55de54306543863E079aD234f477b88"];
+        W3Address *gameContractAddress = [[W3Address alloc] initWithString:self.gameAddress];
         
-        ObjcSolidityFunction *function = [[ObjcSolidityFunction alloc] init];
+        CVSDKSolidityFunction *function = [[CVSDKSolidityFunction alloc] init];
         NSString *encode = [function encode:@"isGamePaused(address)" :@[gameContractAddress]];
 
         
         NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        obj[@"to"] = @"0xd786Db6012d7A542e7531068b0f987Da6414C54B";
+        obj[@"to"] = chainverseFactoryAddress;
         obj[@"data"] = encode;
         
         [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
@@ -122,16 +115,13 @@
 {
     
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
-        W3Address *developerContractAddress = [[W3Address alloc] initWithString:@"0x3F57BF31E55de54306543863E079aD234f477b88"];
+        W3Address *developerContractAddress = [[W3Address alloc] initWithString:self.developerAddress];
         
-        ObjcSolidityFunction *function = [[ObjcSolidityFunction alloc] init];
+        CVSDKSolidityFunction *function = [[CVSDKSolidityFunction alloc] init];
         NSString *encode = [function encode:@"isDeveloperPaused(address)" :@[developerContractAddress]];
         
-        NSLog(@"nampv_hic %@",encode);
-        
-        
         NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        obj[@"to"] = @"0xd786Db6012d7A542e7531068b0f987Da6414C54B";
+        obj[@"to"] = chainverseFactoryAddress;
         obj[@"data"] = encode;
         [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
             if (!error) {

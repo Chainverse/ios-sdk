@@ -455,12 +455,9 @@
 		3ACEF440269E95CF00EBDAF1 /* Migration-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF354269E95CF00EBDAF1 /* Migration-iOS.swift */; };
 		3ACEF441269E95CF00EBDAF1 /* BlockExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF356269E95CF00EBDAF1 /* BlockExplorer.swift */; };
 		3ACEF442269E95CF00EBDAF1 /* BlockExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF356269E95CF00EBDAF1 /* BlockExplorer.swift */; };
-		3AEA5D06269ECF2600A270E2 /* CVSDKContractABI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AEA5D04269ECF2600A270E2 /* CVSDKContractABI.h */; };
-		3AEA5D0D269FCCA500A270E2 /* CVSDKBaseWeb3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AEA5D0B269FCCA500A270E2 /* CVSDKBaseWeb3.h */; };
-		3AEA5D0E269FCCA500A270E2 /* CVSDKBaseWeb3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D0C269FCCA500A270E2 /* CVSDKBaseWeb3.m */; };
-		3AEA5D0F269FCCA500A270E2 /* CVSDKBaseWeb3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D0C269FCCA500A270E2 /* CVSDKBaseWeb3.m */; };
-		3AEA5D1126A07A0B00A270E2 /* ObjcSolidityFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1026A07A0B00A270E2 /* ObjcSolidityFunction.swift */; };
-		3AEA5D1226A07A0B00A270E2 /* ObjcSolidityFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1026A07A0B00A270E2 /* ObjcSolidityFunction.swift */; };
+		3AEA5D06269ECF2600A270E2 /* CVSDKConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AEA5D04269ECF2600A270E2 /* CVSDKConstant.h */; };
+		3AEA5D1126A07A0B00A270E2 /* CVSDKSolidityFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1026A07A0B00A270E2 /* CVSDKSolidityFunction.swift */; };
+		3AEA5D1226A07A0B00A270E2 /* CVSDKSolidityFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1026A07A0B00A270E2 /* CVSDKSolidityFunction.swift */; };
 		3AEA5D1426A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */; };
 		3AEA5D1526A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */; };
 /* End PBXBuildFile section */
@@ -814,10 +811,8 @@
 		3ACEF353269E95CF00EBDAF1 /* W3TxPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = W3TxPool.swift; sourceTree = "<group>"; };
 		3ACEF354269E95CF00EBDAF1 /* Migration-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Migration-iOS.swift"; sourceTree = "<group>"; };
 		3ACEF356269E95CF00EBDAF1 /* BlockExplorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockExplorer.swift; sourceTree = "<group>"; };
-		3AEA5D04269ECF2600A270E2 /* CVSDKContractABI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKContractABI.h; sourceTree = "<group>"; };
-		3AEA5D0B269FCCA500A270E2 /* CVSDKBaseWeb3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseWeb3.h; sourceTree = "<group>"; };
-		3AEA5D0C269FCCA500A270E2 /* CVSDKBaseWeb3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKBaseWeb3.m; sourceTree = "<group>"; };
-		3AEA5D1026A07A0B00A270E2 /* ObjcSolidityFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcSolidityFunction.swift; sourceTree = "<group>"; };
+		3AEA5D04269ECF2600A270E2 /* CVSDKConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKConstant.h; sourceTree = "<group>"; };
+		3AEA5D1026A07A0B00A270E2 /* CVSDKSolidityFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSDKSolidityFunction.swift; sourceTree = "<group>"; };
 		3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSDKKeccak256.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1028,7 +1023,6 @@
 		3A9F0368267AF462008F4C1B /* Chainverse */ = {
 			isa = PBXGroup;
 			children = (
-				3AEA5CF8269ECE0500A270E2 /* Contract */,
 				3AB58F4B2685795400DFDBEA /* Network */,
 				3A9747A826830E42003E53C8 /* Manager */,
 				3A3D7C542681A025003A0DC4 /* Library */,
@@ -1090,7 +1084,6 @@
 		3A9F0385267AF531008F4C1B /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				3AEA5D0A269FCC8300A270E2 /* Web3 */,
 				3A97476C2682F32C003E53C8 /* Block */,
 				3A9F0386267AF531008F4C1B /* SocketIO */,
 				3A9F0389267AF531008F4C1B /* View */,
@@ -1147,12 +1140,10 @@
 		3A9F0394267AF531008F4C1B /* Trust */ = {
 			isa = PBXGroup;
 			children = (
-				3A9F0395267AF531008F4C1B /* CVSDKTrustConnect.h */,
+				3AEA5D1926A181AB00A270E2 /* SignMessage */,
+				3AEA5D1826A181A000A270E2 /* Connect */,
 				3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */,
 				3A9F0397267AF531008F4C1B /* CVSDKTrustTransfer.h */,
-				3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */,
-				3A5EF6E9269D77B80035A10C /* CVSDKTrustSignMessage.h */,
-				3A5EF6EA269D77B80035A10C /* CVSDKTrustSignMessage.m */,
 			);
 			path = Trust;
 			sourceTree = "<group>";
@@ -1160,8 +1151,8 @@
 		3A9F0399267AF531008F4C1B /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				3A9F039A267AF531008F4C1B /* CVSDKUtils.h */,
-				3A9F039B267AF531008F4C1B /* CVSDKUtils.m */,
+				3AEA5D04269ECF2600A270E2 /* CVSDKConstant.h */,
+				3AEA5D1726A17CB400A270E2 /* Utils */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -1208,14 +1199,13 @@
 		3ACEE9F2269E821300EBDAF1 /* SwiftLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				3AEA5D1626A131D800A270E2 /* Chainvese */,
 				3ACEF2CC269E95CF00EBDAF1 /* web3swift */,
 				3ACEF2CA269E955800EBDAF1 /* factorial */,
 				3ACEF0E1269E952900EBDAF1 /* keccak */,
 				3ACEF170269E952A00EBDAF1 /* scrypt */,
 				3ACEF0B2269E952900EBDAF1 /* secp256k1 */,
 				3ACEE9F5269E823800EBDAF1 /* Test.swift */,
-				3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */,
-				3AEA5D1026A07A0B00A270E2 /* ObjcSolidityFunction.swift */,
 				3ACEE9F3269E823800EBDAF1 /* Chainverse-SDK-Bridging-Header.h */,
 				3ACEE9F4269E823800EBDAF1 /* Chainverse-Bridging-Header.h */,
 			);
@@ -1620,29 +1610,40 @@
 			path = Deprecated;
 			sourceTree = "<group>";
 		};
-		3AEA5CF8269ECE0500A270E2 /* Contract */ = {
+		3AEA5D1626A131D800A270E2 /* Chainvese */ = {
 			isa = PBXGroup;
 			children = (
-				3AEA5CF9269ECE1100A270E2 /* ABI */,
+				3AEA5D1026A07A0B00A270E2 /* CVSDKSolidityFunction.swift */,
+				3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */,
 			);
-			path = Contract;
+			path = Chainvese;
 			sourceTree = "<group>";
 		};
-		3AEA5CF9269ECE1100A270E2 /* ABI */ = {
+		3AEA5D1726A17CB400A270E2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3AEA5D04269ECF2600A270E2 /* CVSDKContractABI.h */,
+				3A9F039A267AF531008F4C1B /* CVSDKUtils.h */,
+				3A9F039B267AF531008F4C1B /* CVSDKUtils.m */,
 			);
-			path = ABI;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		3AEA5D0A269FCC8300A270E2 /* Web3 */ = {
+		3AEA5D1826A181A000A270E2 /* Connect */ = {
 			isa = PBXGroup;
 			children = (
-				3AEA5D0B269FCCA500A270E2 /* CVSDKBaseWeb3.h */,
-				3AEA5D0C269FCCA500A270E2 /* CVSDKBaseWeb3.m */,
+				3A9F0395267AF531008F4C1B /* CVSDKTrustConnect.h */,
+				3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */,
 			);
-			path = Web3;
+			path = Connect;
+			sourceTree = "<group>";
+		};
+		3AEA5D1926A181AB00A270E2 /* SignMessage */ = {
+			isa = PBXGroup;
+			children = (
+				3A5EF6E9269D77B80035A10C /* CVSDKTrustSignMessage.h */,
+				3A5EF6EA269D77B80035A10C /* CVSDKTrustSignMessage.m */,
+			);
+			path = SignMessage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1689,11 +1690,10 @@
 				3ACEF1B7269E952A00EBDAF1 /* eckey.h in Headers */,
 				3ACEF1A5269E952A00EBDAF1 /* scalar_low_impl.h in Headers */,
 				3ACEF2B3269E952A00EBDAF1 /* getopt.h in Headers */,
-				3AEA5D06269ECF2600A270E2 /* CVSDKContractABI.h in Headers */,
+				3AEA5D06269ECF2600A270E2 /* CVSDKConstant.h in Headers */,
 				3A3D7C3A26819DAB003A0DC4 /* AFSecurityPolicy.h in Headers */,
 				3A3D7C4226819DAB003A0DC4 /* AFURLResponseSerialization.h in Headers */,
 				3A9747B226830E94003E53C8 /* ContractManager.h in Headers */,
-				3AEA5D0D269FCCA500A270E2 /* CVSDKBaseWeb3.h in Headers */,
 				3A9F03DD267AF681008F4C1B /* CVSDKUtils.h in Headers */,
 				3ACEF1AE269E952A00EBDAF1 /* scalar_4x64_impl.h in Headers */,
 				3ACEF2AE269E952A00EBDAF1 /* asprintf.h in Headers */,
@@ -2044,7 +2044,7 @@
 				3ACEF3AF269E95CF00EBDAF1 /* Web3+Infura.swift in Sources */,
 				3A3D7C4326819DAB003A0DC4 /* AFURLSessionManager.m in Sources */,
 				3ACEF367269E95CF00EBDAF1 /* Digest.swift in Sources */,
-				3AEA5D1126A07A0B00A270E2 /* ObjcSolidityFunction.swift in Sources */,
+				3AEA5D1126A07A0B00A270E2 /* CVSDKSolidityFunction.swift in Sources */,
 				3ACEF373269E95CF00EBDAF1 /* KeyDerivation.swift in Sources */,
 				3ACEF361269E95CF00EBDAF1 /* Utilities.swift in Sources */,
 				3A9F00CB26730258008F4C1B /* AppDelegate.m in Sources */,
@@ -2149,7 +2149,6 @@
 				3ACEF381269E95CF00EBDAF1 /* ContractProtocol.swift in Sources */,
 				3ACEF3EC269E95CF00EBDAF1 /* BIP39.swift in Sources */,
 				3ACEF410269E95CF00EBDAF1 /* NativeTypesEncoding+Extensions.swift in Sources */,
-				3AEA5D0E269FCCA500A270E2 /* CVSDKBaseWeb3.m in Sources */,
 				3ACEF3A3269E95CF00EBDAF1 /* Web3+Contract.swift in Sources */,
 				3A3D7C4826819DAB003A0DC4 /* AFNetworkReachabilityManager.m in Sources */,
 				3ACEF3EE269E95CF00EBDAF1 /* BIP32HDNode.swift in Sources */,
@@ -2226,7 +2225,7 @@
 				3ACEF35E269E95CF00EBDAF1 /* scrypt.swift in Sources */,
 				3ACEF394269E95CF00EBDAF1 /* JsonRpcRequest.swift in Sources */,
 				3A9F03A8267AF531008F4C1B /* CVSDKBaseView.m in Sources */,
-				3AEA5D1226A07A0B00A270E2 /* ObjcSolidityFunction.swift in Sources */,
+				3AEA5D1226A07A0B00A270E2 /* CVSDKSolidityFunction.swift in Sources */,
 				3ACEF429269E95CF00EBDAF1 /* W3UInt.swift in Sources */,
 				3ACEF398269E95CF00EBDAF1 /* AnyReader.swift in Sources */,
 				3ACEF3BF269E95CF00EBDAF1 /* EIP681.swift in Sources */,
@@ -2250,7 +2249,6 @@
 				3ACEF396269E95CF00EBDAF1 /* JEncodable.swift in Sources */,
 				3ACEF3AE269E95CF00EBDAF1 /* Web3+TransactionIntermediate.swift in Sources */,
 				3A9F03A3267AF531008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */,
-				3AEA5D0F269FCCA500A270E2 /* CVSDKBaseWeb3.m in Sources */,
 				3ACEF43C269E95CF00EBDAF1 /* W3Eth.swift in Sources */,
 				3ACEF3B8269E95CF00EBDAF1 /* Web3+JsonRpcRequest.swift in Sources */,
 				3ACEF388269E95CF00EBDAF1 /* SecurityToken.swift in Sources */,

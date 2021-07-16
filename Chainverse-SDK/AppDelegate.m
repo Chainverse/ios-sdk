@@ -15,9 +15,13 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //[[ChainverseSDK shared] configure:@"trustsdk"];
-    [[ChainverseSDK shared] init:@"0x690FDdc2a98050f924Bd7Ec5900f2D2F49b6aEC7" gameAddress:@"0x3F57BF31E55de54306543863E079aD234f477b88"];
+    
+    [ChainverseSDK shared].developerAddress = @"0x690FDdc2a98050f924Bd7Ec5900f2D2F49b6aEC7";
+    [ChainverseSDK shared].gameAddress = @"0x3F57BF31E55de54306543863E079aD234f477b88";
+    [ChainverseSDK shared].scheme = @"trustsdk";
     [ChainverseSDK shared].delegate = self;
+    [[ChainverseSDK shared] start];
+    
     NSLog(@"ChainverSDK Verison %@",[[ChainverseSDK shared] getVersion]);
     
     return YES;
@@ -34,14 +38,14 @@
     NSLog(@"nampv_socket_callback");
 }
 
+
 - (BOOL)application:(UIApplication *)app
                     openURL:(NSURL *)url
                     options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
 {
-    NSLog(@"nampv_url");
-    /*return [ChainverseSDK application:(UIApplication *)app
+    return [[ChainverseSDK shared] handleOpenUrl:(UIApplication *)app
                               openURL:(NSURL *)url
-                              options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options];*/
+                              options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options];
     return true;
 }
 

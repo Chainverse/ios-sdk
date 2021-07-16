@@ -54,7 +54,7 @@
 }
 
  - (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts { 
-     [[ChainverseSDK shared] scene:scene openURLContexts:URLContexts];
+     [[ChainverseSDK shared] handleOpenUrl:scene openURLContexts:URLContexts];
  }
     
 @end

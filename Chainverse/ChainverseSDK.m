@@ -16,9 +16,6 @@
 #import "CVSDKRPCClient.h"
 #import "ContractManager.h"
 #import "Chainverse_SDK-Swift.h"
-#import "CVSDKContractABI.h"
-@import BigInt;
-
 @interface ChainverseSDK()
 @property (nonatomic, nonatomic) CVSDKBaseSocketManager *manager;
 @end
@@ -33,63 +30,42 @@
     return _shared;
 }
 
-- (void)init:(NSString *)developerAddress gameAddress:(NSString *)gameAddress{
-    
+- (void)start{
     ContractManager *contractManager = [[ContractManager alloc] init];
-    contractManager.developerAddress = developerAddress;
-    contractManager.gameAddress = gameAddress;
+    contractManager.developerAddress = self.developerAddress;
+    contractManager.gameAddress = self.gameAddress;
     [contractManager check:^(BOOL isChecked){
         if(isChecked){
             [self doInit];
         }
     }];
-    
-    
 }
 
 - (void)doInit{
     NSLog(@"sdk_init");
 }
 
-
-- (void)testSocket{
-    self.manager = [[CVSDKBaseSocketManager alloc] init];
-    [self.manager on:@"connect" callback:^(NSArray* data, SocketAckEmitter* ack) {
-        NSLog(@"socket_x connected");
-        [self.manager on:@"server-to-client" callback:^(NSArray* data, SocketAckEmitter* ack){
-            NSLog(@"socket_x connected %@",data);
-            if([[ChainverseSDK shared].delegate respondsToSelector:@selector(didSocketCallback:)]){
-                [[ChainverseSDK shared].delegate didSocketCallback:data];
-            }
-        }];
-    }];
-    
-    [self.manager connect];
-}
-- (BOOL)application:(UIApplication *)app
+- (BOOL)handleOpenUrl:(UIApplication *)app
               openURL:(NSURL *)url
               options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
-    [self handleCallbackFromWallet:url];
+    [self doHandleOpenUrl:url];
     return true;
 }
 
-- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts NS_AVAILABLE_IOS(13_0){
+- (void)handleOpenUrl:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts NS_AVAILABLE_IOS(13_0){
     UIOpenURLContext *context = URLContexts.allObjects.firstObject;
-    [self handleCallbackFromWallet:context.URL];
+    [self doHandleOpenUrl:context.URL];
 }
 
-- (void)handleCallbackFromWallet :(NSURL *)url{
+- (void)doHandleOpenUrl :(NSURL *)url{
+    //Callback get account from Trust Wallet
     if(![[CVSDKUtils getValueFromQueryParam:url withParam:@"accounts"] isEqualToString:@""]){
-        NSString *accounts = [CVSDKUtils getValueFromQueryParam:url withParam:@"accounts"];
-        NSArray *tmp = [accounts componentsSeparatedByString:@","];
-        NSString *xUserAddress = tmp[0];
-        NSLog(@"nampv_wallet %@",xUserAddress);
-        CVSDKTrustSignMessage *signMessage = [[CVSDKTrustSignMessage alloc] init];
-        
+        CVSDKTrustSignMessage *trust = [[CVSDKTrustSignMessage alloc] init];
         CVSDKKeccak256 *keccak256 = [[CVSDKKeccak256 alloc] init];
-        [signMessage signMessage:[keccak256 keccak256:xUserAddress]];
-        
+        trust.data = [keccak256 keccak256:_gameAddress];
+        [trust signMessage];
     }else if(![[CVSDKUtils getValueFromQueryParam:url withParam:@"signature"] isEqualToString:@""]){
+        //Callback Signature from Trust Wallet
         NSString *signature = [CVSDKUtils getValueFromQueryParam:url withParam:@"signature"];
         NSLog(@"nampv_sig %@",signature);
     }
@@ -109,7 +85,6 @@
 
 - (void)connectTrust{
     CVSDKTrustConnect *trust = [[CVSDKTrustConnect alloc] init];
-    trust.scheme = @"trustsdk";
     [trust connect];
 }
 

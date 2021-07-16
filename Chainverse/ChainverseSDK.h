@@ -23,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, strong) NSString * scheme;
 
+@property(nonatomic, strong) NSString * gameAddress;
+
+@property(nonatomic, strong) NSString * developerAddress;
+
 /**
  @return The singleton instance of ChainverseSDK
  */
@@ -30,11 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Hàm init
- @param developerAddress địa chỉ contract của developer
- @param gameAddress Địa chỉ contract của game
  */
-- (void)init:(NSString *)developerAddress
- gameAddress:(NSString *)gameAddress;
+- (void)start;
 
 /**
  Open URI-scheme for iOS 9 and above
@@ -42,14 +43,14 @@ NS_ASSUME_NONNULL_BEGIN
  @param url url
  @param options options
  */
-- (BOOL)application:(UIApplication *)app
+- (BOOL)handleOpenUrl:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options;
 
 /**
  Open URI-scheme for iOS 13 and above
  */
-- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts NS_AVAILABLE_IOS(13_0);
+- (void)handleOpenUrl:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts NS_AVAILABLE_IOS(13_0);
 
 /**
  Return SDK Version

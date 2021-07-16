@@ -7,11 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import "CVSDKBaseBlocks.h"
-#import "CVSDKBaseWeb3.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ContractManager : NSObject
-@property (nonatomic, nonatomic) CVSDKBaseWeb3 *web3;
 @property(nonatomic, strong) NSString * developerAddress;
 @property(nonatomic, strong) NSString * gameAddress;
 - (void)check:(CVSDKContractStatusBlock) complete;
