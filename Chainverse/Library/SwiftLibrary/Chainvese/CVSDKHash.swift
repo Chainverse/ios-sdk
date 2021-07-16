@@ -7,7 +7,7 @@
 
 import Foundation
 
-@objc public class CVSDKKeccak256 : NSObject {
+@objc public class CVSDKHash : NSObject {
     override init() {}
     @objc(keccak256:)
     public func keccak256(_ input: String) -> String {

@@ -61,8 +61,8 @@
     //Callback get account from Trust Wallet
     if(![[CVSDKUtils getValueFromQueryParam:url withParam:@"accounts"] isEqualToString:@""]){
         CVSDKTrustSignMessage *trust = [[CVSDKTrustSignMessage alloc] init];
-        CVSDKKeccak256 *keccak256 = [[CVSDKKeccak256 alloc] init];
-        trust.data = [keccak256 keccak256:_gameAddress];
+        CVSDKHash *hash = [[CVSDKHash alloc] init];
+        trust.data = [hash keccak256:_gameAddress];
         [trust signMessage];
     }else if(![[CVSDKUtils getValueFromQueryParam:url withParam:@"signature"] isEqualToString:@""]){
         //Callback Signature from Trust Wallet

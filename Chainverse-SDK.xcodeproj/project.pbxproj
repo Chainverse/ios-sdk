@@ -458,8 +458,8 @@
 		3AEA5D06269ECF2600A270E2 /* CVSDKConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AEA5D04269ECF2600A270E2 /* CVSDKConstant.h */; };
 		3AEA5D1126A07A0B00A270E2 /* CVSDKSolidityFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1026A07A0B00A270E2 /* CVSDKSolidityFunction.swift */; };
 		3AEA5D1226A07A0B00A270E2 /* CVSDKSolidityFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1026A07A0B00A270E2 /* CVSDKSolidityFunction.swift */; };
-		3AEA5D1426A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */; };
-		3AEA5D1526A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */; };
+		3AEA5D1426A12DCB00A270E2 /* CVSDKHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1326A12DCB00A270E2 /* CVSDKHash.swift */; };
+		3AEA5D1526A12DCB00A270E2 /* CVSDKHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1326A12DCB00A270E2 /* CVSDKHash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -813,7 +813,7 @@
 		3ACEF356269E95CF00EBDAF1 /* BlockExplorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockExplorer.swift; sourceTree = "<group>"; };
 		3AEA5D04269ECF2600A270E2 /* CVSDKConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKConstant.h; sourceTree = "<group>"; };
 		3AEA5D1026A07A0B00A270E2 /* CVSDKSolidityFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSDKSolidityFunction.swift; sourceTree = "<group>"; };
-		3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSDKKeccak256.swift; sourceTree = "<group>"; };
+		3AEA5D1326A12DCB00A270E2 /* CVSDKHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSDKHash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1614,7 +1614,7 @@
 			isa = PBXGroup;
 			children = (
 				3AEA5D1026A07A0B00A270E2 /* CVSDKSolidityFunction.swift */,
-				3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */,
+				3AEA5D1326A12DCB00A270E2 /* CVSDKHash.swift */,
 			);
 			path = Chainvese;
 			sourceTree = "<group>";
@@ -2009,7 +2009,7 @@
 			files = (
 				3ACEF3FE269E95CF00EBDAF1 /* Guides.swift in Sources */,
 				3ACEF3B7269E95CF00EBDAF1 /* Web3+JsonRpcRequest.swift in Sources */,
-				3AEA5D1426A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */,
+				3AEA5D1426A12DCB00A270E2 /* CVSDKHash.swift in Sources */,
 				3A9F0503267B02E5008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */,
 				3ACEF2B5269E952A00EBDAF1 /* humansize.c in Sources */,
 				3ACEF3F4269E95CF00EBDAF1 /* EthereumKeystoreV3.swift in Sources */,
@@ -2347,7 +2347,7 @@
 				3ACEF3CD269E95CF00EBDAF1 /* ABIv2.swift in Sources */,
 				3ACEF3E9269E95CF00EBDAF1 /* KeystoreManager.swift in Sources */,
 				3ACEF386269E95CF00EBDAF1 /* ERC888.swift in Sources */,
-				3AEA5D1526A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */,
+				3AEA5D1526A12DCB00A270E2 /* CVSDKHash.swift in Sources */,
 				3ACEF3F9269E95CF00EBDAF1 /* EthereumAddress.swift in Sources */,
 				3ACEF2C9269E952A00EBDAF1 /* asprintf.c in Sources */,
 				3ACEF37E269E95CF00EBDAF1 /* ComparisonExtensions.swift in Sources */,
