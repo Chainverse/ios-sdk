@@ -37,4 +37,11 @@
     }
 
 }
+
++ (int)convertHexToDecimal:(NSString *)hex{
+    unsigned value = 0;
+    NSScanner *scanner = [NSScanner scannerWithString:hex];
+    [scanner scanHexInt:&value];
+    return (int)value;
+}
 @end

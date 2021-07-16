@@ -15,6 +15,10 @@
 #import "CVSDKBaseSocketManager.h"
 #import "CVSDKRPCClient.h"
 #import "ContractManager.h"
+#import "Chainverse_SDK-Swift.h"
+#import "CVSDKContractABI.h"
+@import BigInt;
+
 @interface ChainverseSDK()
 @property (nonatomic, nonatomic) CVSDKBaseSocketManager *manager;
 @end
@@ -39,10 +43,12 @@
             [self doInit];
         }
     }];
+    
+    
 }
 
 - (void)doInit{
-    NSLog(@"nampv_init");
+    NSLog(@"sdk_init");
 }
 
 

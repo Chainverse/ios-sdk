@@ -7,69 +7,140 @@
 
 #import "ContractManager.h"
 #import "CVSDKRPCClient.h"
+#import "Chainverse_SDK-Swift.h"
+#import "CVSDKUtils.h"
+#import <PromiseKit/PromiseKit.h>
 @implementation ContractManager
 - (void)check:(CVSDKContractStatusBlock) complete{
-    [self checkDeveloperContract:complete];
-}
-
-- (void)checkDeveloperContract:(CVSDKContractStatusBlock) complete{
-    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-    obj[@"to"] = @"0x690FDdc2a98050f924Bd7Ec5900f2D2F49b6aEC7";
-    obj[@"data"] = @"0x61f718bb";
+    PMKJoin(@[[self isDeveloperContractPromise],
+              [self isGameContractPromise],
+              [self isGamePausedPromise],
+              [self isDeveloperPausedPromise]
+            ]).then(^(id responseObject) {
+        return [self checkContract:responseObject complete:complete];
+    }).catch(^(NSError* error){
     
-    [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
-        if (!error) {
-            BOOL isCheck = YES;
-            if(isCheck){
-                [self checkGameContract:complete];
-            }
-            //NSLog(@"Reply JSON: %@", responseObject);
-        }
-    }];
-}
+    });
 
-- (void)checkGameContract:(CVSDKContractStatusBlock) complete{
-    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-    obj[@"to"] = @"0x3F57BF31E55de54306543863E079aD234f477b88";
-    obj[@"data"] = @"0x244675aa";
+}
+- (void) checkContract: (id) responseObject complete:(CVSDKContractStatusBlock) complete{
     
-    [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
-        if (!error) {
-            BOOL isCheck = YES;
-            if(isCheck){
-                [self checkGamePaused:complete];
-            }
-            //NSLog(@"Reply JSON: %@", responseObject);
+    if([responseObject count] > 0){
+        NSDictionary *resultGameContract = (NSDictionary *)responseObject[0];
+        NSLog(@"Reply1 JSON: %@", resultGameContract[@"result"]);
+        
+        NSDictionary *resultDevContract = (NSDictionary *)responseObject[1];
+        NSLog(@"Reply2 JSON: %@", resultDevContract[@"result"]);
+        
+        
+        NSDictionary *resultGamePaused = (NSDictionary *)responseObject[2];
+        NSLog(@"Reply3 JSON: %@", resultGamePaused[@"result"]);
+        
+        NSDictionary *resultDevPaused = (NSDictionary *)responseObject[3];
+        NSLog(@"Reply4 JSON: %@", resultDevPaused[@"result"]);
+        
+        int isGameContract = [CVSDKUtils convertHexToDecimal:resultGameContract[@"result"]];
+        
+        int isDevContract = [CVSDKUtils convertHexToDecimal:resultDevContract[@"result"]];
+        
+        int isGamePaused = [CVSDKUtils convertHexToDecimal:resultGamePaused[@"result"]];
+        
+        int isDevPaused = [CVSDKUtils convertHexToDecimal:resultDevPaused[@"result"]];
+        
+        
+        if(isGameContract == 1 && isDevContract == 1 && isGamePaused == 1 && isDevPaused == 1){
+            complete(TRUE);
         }
-    }];
-}
-
-- (void)checkGamePaused:(CVSDKContractStatusBlock) complete{
-    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-    obj[@"to"] = @"0xd786Db6012d7A542e7531068b0f987Da6414C54B";
-    obj[@"data"] = @"0x44e097aa0000000000000000000000003f57bf31e55de54306543863e079ad234f477b88";
+    }
     
-    [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
-        if (!error) {
-            BOOL isCheck = YES;
-            if(isCheck){
-                [self checkDeveloperPaused:complete];
+    
+}
+
+- (AnyPromise *)isDeveloperContractPromise
+{
+    
+    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
+        ObjcSolidityFunction *function = [[ObjcSolidityFunction alloc] init];
+        NSString *encode = [function encode:@"isDeveloperContract()" :[NSArray array]];
+        NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+        obj[@"to"] = @"0x690FDdc2a98050f924Bd7Ec5900f2D2F49b6aEC7";
+        obj[@"data"] = encode;
+        
+        [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
+            if (!error) {
+                resolve(responseObject);
             }
-            //NSLog(@"Reply JSON: %@", responseObject);
-        }
+        }];
+        
     }];
 }
 
-- (void)checkDeveloperPaused:(CVSDKContractStatusBlock) complete{
-    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-    obj[@"to"] = @"0xd786Db6012d7A542e7531068b0f987Da6414C54B";
-    obj[@"data"] = @"0x1298d00d000000000000000000000000690fddc2a98050f924bd7ec5900f2d2f49b6aec7";
-    [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
-        if (!error) {
-            BOOL isCheck = YES;
-            complete(isCheck);
-            NSLog(@"Reply JSON: %@", responseObject);
-        }
+- (AnyPromise *)isGameContractPromise
+{
+    
+    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
+        ObjcSolidityFunction *function = [[ObjcSolidityFunction alloc] init];
+        NSString *encode = [function encode:@"isGameContract()" :[NSArray array]];
+        
+        NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+        obj[@"to"] = @"0x3F57BF31E55de54306543863E079aD234f477b88";
+        obj[@"data"] = encode;
+        
+        [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
+            if (!error) {
+                resolve(responseObject);
+            }
+        }];
+        
     }];
 }
+
+- (AnyPromise *)isGamePausedPromise
+{
+    
+    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
+        W3Address *gameContractAddress = [[W3Address alloc] initWithString:@"0x3F57BF31E55de54306543863E079aD234f477b88"];
+        
+        ObjcSolidityFunction *function = [[ObjcSolidityFunction alloc] init];
+        NSString *encode = [function encode:@"isGamePaused(address)" :@[gameContractAddress]];
+
+        
+        NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+        obj[@"to"] = @"0xd786Db6012d7A542e7531068b0f987Da6414C54B";
+        obj[@"data"] = encode;
+        
+        [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
+            if (!error) {
+                resolve(responseObject);
+            }
+        }];
+        
+    }];
+}
+
+- (AnyPromise *)isDeveloperPausedPromise
+{
+    
+    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
+        W3Address *developerContractAddress = [[W3Address alloc] initWithString:@"0x3F57BF31E55de54306543863E079aD234f477b88"];
+        
+        ObjcSolidityFunction *function = [[ObjcSolidityFunction alloc] init];
+        NSString *encode = [function encode:@"isDeveloperPaused(address)" :@[developerContractAddress]];
+        
+        NSLog(@"nampv_hic %@",encode);
+        
+        
+        NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+        obj[@"to"] = @"0xd786Db6012d7A542e7531068b0f987Da6414C54B";
+        obj[@"data"] = encode;
+        [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
+            if (!error) {
+                resolve(responseObject);
+            }
+        }];
+        
+    }];
+}
+
+
 @end

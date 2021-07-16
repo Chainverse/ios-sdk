@@ -1,0 +1,13 @@
+//
+//  factorial.c
+//  Chainverse-SDK
+//
+//  Created by pham nam on 14/07/2021.
+//
+
+#include "factorial.h"
+
+long factorial(int n) {
+    if (n == 0 || n == 1) return 1;
+    return n * factorial(n-1);
+}
