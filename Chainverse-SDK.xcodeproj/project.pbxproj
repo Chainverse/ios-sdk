@@ -461,6 +461,8 @@
 		3AEA5D0F269FCCA500A270E2 /* CVSDKBaseWeb3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D0C269FCCA500A270E2 /* CVSDKBaseWeb3.m */; };
 		3AEA5D1126A07A0B00A270E2 /* ObjcSolidityFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1026A07A0B00A270E2 /* ObjcSolidityFunction.swift */; };
 		3AEA5D1226A07A0B00A270E2 /* ObjcSolidityFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1026A07A0B00A270E2 /* ObjcSolidityFunction.swift */; };
+		3AEA5D1426A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */; };
+		3AEA5D1526A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -816,6 +818,7 @@
 		3AEA5D0B269FCCA500A270E2 /* CVSDKBaseWeb3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseWeb3.h; sourceTree = "<group>"; };
 		3AEA5D0C269FCCA500A270E2 /* CVSDKBaseWeb3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKBaseWeb3.m; sourceTree = "<group>"; };
 		3AEA5D1026A07A0B00A270E2 /* ObjcSolidityFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcSolidityFunction.swift; sourceTree = "<group>"; };
+		3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSDKKeccak256.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1211,6 +1214,7 @@
 				3ACEF170269E952A00EBDAF1 /* scrypt */,
 				3ACEF0B2269E952900EBDAF1 /* secp256k1 */,
 				3ACEE9F5269E823800EBDAF1 /* Test.swift */,
+				3AEA5D1326A12DCB00A270E2 /* CVSDKKeccak256.swift */,
 				3AEA5D1026A07A0B00A270E2 /* ObjcSolidityFunction.swift */,
 				3ACEE9F3269E823800EBDAF1 /* Chainverse-SDK-Bridging-Header.h */,
 				3ACEE9F4269E823800EBDAF1 /* Chainverse-Bridging-Header.h */,
@@ -2005,6 +2009,7 @@
 			files = (
 				3ACEF3FE269E95CF00EBDAF1 /* Guides.swift in Sources */,
 				3ACEF3B7269E95CF00EBDAF1 /* Web3+JsonRpcRequest.swift in Sources */,
+				3AEA5D1426A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */,
 				3A9F0503267B02E5008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */,
 				3ACEF2B5269E952A00EBDAF1 /* humansize.c in Sources */,
 				3ACEF3F4269E95CF00EBDAF1 /* EthereumKeystoreV3.swift in Sources */,
@@ -2344,6 +2349,7 @@
 				3ACEF3CD269E95CF00EBDAF1 /* ABIv2.swift in Sources */,
 				3ACEF3E9269E95CF00EBDAF1 /* KeystoreManager.swift in Sources */,
 				3ACEF386269E95CF00EBDAF1 /* ERC888.swift in Sources */,
+				3AEA5D1526A12DCB00A270E2 /* CVSDKKeccak256.swift in Sources */,
 				3ACEF3F9269E95CF00EBDAF1 /* EthereumAddress.swift in Sources */,
 				3ACEF2C9269E952A00EBDAF1 /* asprintf.c in Sources */,
 				3ACEF37E269E95CF00EBDAF1 /* ComparisonExtensions.swift in Sources */,

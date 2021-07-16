@@ -80,8 +80,15 @@
 
 - (void)handleCallbackFromWallet :(NSURL *)url{
     if(![[CVSDKUtils getValueFromQueryParam:url withParam:@"accounts"] isEqualToString:@""]){
+        NSString *accounts = [CVSDKUtils getValueFromQueryParam:url withParam:@"accounts"];
+        NSArray *tmp = [accounts componentsSeparatedByString:@","];
+        NSString *xUserAddress = tmp[0];
+        NSLog(@"nampv_wallet %@",xUserAddress);
         CVSDKTrustSignMessage *signMessage = [[CVSDKTrustSignMessage alloc] init];
-        [signMessage signMessage:@""];
+        
+        CVSDKKeccak256 *keccak256 = [[CVSDKKeccak256 alloc] init];
+        [signMessage signMessage:[keccak256 keccak256:xUserAddress]];
+        
     }else if(![[CVSDKUtils getValueFromQueryParam:url withParam:@"signature"] isEqualToString:@""]){
         NSString *signature = [CVSDKUtils getValueFromQueryParam:url withParam:@"signature"];
         NSLog(@"nampv_sig %@",signature);
