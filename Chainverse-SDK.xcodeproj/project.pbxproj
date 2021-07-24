@@ -23,6 +23,52 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		044F8C7E26A5C20000C5FD70 /* humansize.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C6526A5C20000C5FD70 /* humansize.h */; };
+		044F8C7F26A5C20000C5FD70 /* scrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C6726A5C20000C5FD70 /* scrypt.h */; };
+		044F8C8026A5C20000C5FD70 /* crypto_scrypt_smix_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C6826A5C20000C5FD70 /* crypto_scrypt_smix_sse2.h */; };
+		044F8C8126A5C20000C5FD70 /* insecure_memzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C6926A5C20000C5FD70 /* insecure_memzero.c */; };
+		044F8C8226A5C20000C5FD70 /* insecure_memzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C6926A5C20000C5FD70 /* insecure_memzero.c */; };
+		044F8C8326A5C20000C5FD70 /* sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C6A26A5C20000C5FD70 /* sha256.h */; };
+		044F8C8426A5C20000C5FD70 /* readpass.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C6B26A5C20000C5FD70 /* readpass.h */; };
+		044F8C8526A5C20000C5FD70 /* asprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C6C26A5C20000C5FD70 /* asprintf.h */; };
+		044F8C8626A5C20000C5FD70 /* sysendian.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C6D26A5C20000C5FD70 /* sysendian.h */; };
+		044F8C8726A5C20100C5FD70 /* warnp.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C6E26A5C20000C5FD70 /* warnp.h */; };
+		044F8C8826A5C20100C5FD70 /* crypto_scrypt_smix.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C6F26A5C20000C5FD70 /* crypto_scrypt_smix.h */; };
+		044F8C8926A5C20100C5FD70 /* entropy.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C7026A5C20000C5FD70 /* entropy.h */; };
+		044F8C8A26A5C20100C5FD70 /* getopt.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C7126A5C20000C5FD70 /* getopt.h */; };
+		044F8C8B26A5C20100C5FD70 /* parsenum.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C7226A5C20000C5FD70 /* parsenum.h */; };
+		044F8C8C26A5C20100C5FD70 /* humansize.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7326A5C20000C5FD70 /* humansize.c */; };
+		044F8C8D26A5C20100C5FD70 /* humansize.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7326A5C20000C5FD70 /* humansize.c */; };
+		044F8C8E26A5C20100C5FD70 /* insecure_memzero.h in Headers */ = {isa = PBXBuildFile; fileRef = 044F8C7426A5C20000C5FD70 /* insecure_memzero.h */; };
+		044F8C8F26A5C20100C5FD70 /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7526A5C20000C5FD70 /* sha256.c */; };
+		044F8C9026A5C20100C5FD70 /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7526A5C20000C5FD70 /* sha256.c */; };
+		044F8C9126A5C20100C5FD70 /* readpass.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7626A5C20000C5FD70 /* readpass.c */; };
+		044F8C9226A5C20100C5FD70 /* readpass.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7626A5C20000C5FD70 /* readpass.c */; };
+		044F8C9326A5C20100C5FD70 /* crypto_scrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7726A5C20000C5FD70 /* crypto_scrypt.c */; };
+		044F8C9426A5C20100C5FD70 /* crypto_scrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7726A5C20000C5FD70 /* crypto_scrypt.c */; };
+		044F8C9526A5C20100C5FD70 /* crypto_scrypt_smix_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7826A5C20000C5FD70 /* crypto_scrypt_smix_sse2.c */; };
+		044F8C9626A5C20100C5FD70 /* crypto_scrypt_smix_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7826A5C20000C5FD70 /* crypto_scrypt_smix_sse2.c */; };
+		044F8C9726A5C20100C5FD70 /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7926A5C20000C5FD70 /* entropy.c */; };
+		044F8C9826A5C20100C5FD70 /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7926A5C20000C5FD70 /* entropy.c */; };
+		044F8C9926A5C20100C5FD70 /* getopt.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7A26A5C20000C5FD70 /* getopt.c */; };
+		044F8C9A26A5C20100C5FD70 /* getopt.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7A26A5C20000C5FD70 /* getopt.c */; };
+		044F8C9B26A5C20100C5FD70 /* crypto_scrypt_smix.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7B26A5C20000C5FD70 /* crypto_scrypt_smix.c */; };
+		044F8C9C26A5C20100C5FD70 /* crypto_scrypt_smix.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7B26A5C20000C5FD70 /* crypto_scrypt_smix.c */; };
+		044F8C9D26A5C20100C5FD70 /* warnp.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7C26A5C20000C5FD70 /* warnp.c */; };
+		044F8C9E26A5C20100C5FD70 /* warnp.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7C26A5C20000C5FD70 /* warnp.c */; };
+		044F8C9F26A5C20100C5FD70 /* asprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7D26A5C20000C5FD70 /* asprintf.c */; };
+		044F8CA026A5C20100C5FD70 /* asprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 044F8C7D26A5C20000C5FD70 /* asprintf.c */; };
+		0474961726A6D9C200F9C769 /* CVSDKBridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 0474961526A6D9C200F9C769 /* CVSDKBridging.h */; };
+		0474961826A6D9C200F9C769 /* CVSDKBridging.m in Sources */ = {isa = PBXBuildFile; fileRef = 0474961626A6D9C200F9C769 /* CVSDKBridging.m */; };
+		0474961926A6D9C200F9C769 /* CVSDKBridging.m in Sources */ = {isa = PBXBuildFile; fileRef = 0474961626A6D9C200F9C769 /* CVSDKBridging.m */; };
+		3A1E928F26A7C97F00110854 /* CVSDKConnectWalletDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E928D26A7C97F00110854 /* CVSDKConnectWalletDialog.h */; };
+		3A1E929026A7C97F00110854 /* CVSDKConnectWalletDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E928E26A7C97F00110854 /* CVSDKConnectWalletDialog.m */; };
+		3A1E929126A7C97F00110854 /* CVSDKConnectWalletDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E928E26A7C97F00110854 /* CVSDKConnectWalletDialog.m */; };
+		3A1E929426A7C9A600110854 /* CVSDKConnectWalletView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E929226A7C9A600110854 /* CVSDKConnectWalletView.h */; };
+		3A1E929526A7C9A600110854 /* CVSDKConnectWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E929326A7C9A600110854 /* CVSDKConnectWalletView.m */; };
+		3A1E929626A7C9A600110854 /* CVSDKConnectWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E929326A7C9A600110854 /* CVSDKConnectWalletView.m */; };
+		3A1E929826A7C9C200110854 /* CVSDKConnectWalletView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1E929726A7C9C200110854 /* CVSDKConnectWalletView.xib */; };
+		3A1E929926A7C9C200110854 /* CVSDKConnectWalletView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1E929726A7C9C200110854 /* CVSDKConnectWalletView.xib */; };
 		3A3D7C3A26819DAB003A0DC4 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C2C26819DAB003A0DC4 /* AFSecurityPolicy.h */; };
 		3A3D7C3B26819DAB003A0DC4 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C2D26819DAB003A0DC4 /* AFNetworkReachabilityManager.h */; };
 		3A3D7C3C26819DAB003A0DC4 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3D7C2E26819DAB003A0DC4 /* AFURLSessionManager.h */; };
@@ -64,15 +110,10 @@
 		3A9F00F126730259008F4C1B /* Chainverse_SDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F00F026730259008F4C1B /* Chainverse_SDKUITests.m */; };
 		3A9F0116267302B7008F4C1B /* ChainverseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0115267302B7008F4C1B /* ChainverseTests.m */; };
 		3A9F036C267AF462008F4C1B /* Chainverse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A9F0369267AF462008F4C1B /* Chainverse.h */; };
-		3A9F03A3267AF531008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F037D267AF531008F4C1B /* CVSDKChooseWLViewDialog.m */; };
-		3A9F03A4267AF531008F4C1B /* CVSDKChooseWLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F037E267AF531008F4C1B /* CVSDKChooseWLView.m */; };
-		3A9F03A5267AF531008F4C1B /* TestScreenViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0380267AF531008F4C1B /* TestScreenViewDialog.m */; };
-		3A9F03A6267AF531008F4C1B /* TestScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0382267AF531008F4C1B /* TestScreenView.m */; };
 		3A9F03A7267AF531008F4C1B /* CVSDKBaseSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0387267AF531008F4C1B /* CVSDKBaseSocketManager.m */; };
 		3A9F03A8267AF531008F4C1B /* CVSDKBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F038B267AF531008F4C1B /* CVSDKBaseView.m */; };
 		3A9F03A9267AF531008F4C1B /* CVSDKBaseResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F038D267AF531008F4C1B /* CVSDKBaseResource.m */; };
 		3A9F03AA267AF531008F4C1B /* CVSDKBaseViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0390267AF531008F4C1B /* CVSDKBaseViewDialog.m */; };
-		3A9F03AB267AF531008F4C1B /* CVSDKTrustTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */; };
 		3A9F03AC267AF531008F4C1B /* CVSDKTrustConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */; };
 		3A9F03AD267AF531008F4C1B /* CVSDKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F039B267AF531008F4C1B /* CVSDKUtils.m */; };
 		3A9F03AE267AF531008F4C1B /* ChainverseSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F039D267AF531008F4C1B /* ChainverseSDK.m */; };
@@ -85,12 +126,7 @@
 		3A9F03DA267AF681008F4C1B /* ChainverseSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F039C267AF531008F4C1B /* ChainverseSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A9F03DC267AF681008F4C1B /* ChainverseSDKCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F039E267AF531008F4C1B /* ChainverseSDKCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A9F03DD267AF681008F4C1B /* CVSDKUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F039A267AF531008F4C1B /* CVSDKUtils.h */; };
-		3A9F03E0267AF681008F4C1B /* CVSDKChooseWLViewDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F037B267AF531008F4C1B /* CVSDKChooseWLViewDialog.h */; };
-		3A9F03E1267AF681008F4C1B /* CVSDKChooseWLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F037C267AF531008F4C1B /* CVSDKChooseWLView.h */; };
-		3A9F03E7267AF681008F4C1B /* TestScreenViewDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0383267AF531008F4C1B /* TestScreenViewDialog.h */; };
-		3A9F03E8267AF681008F4C1B /* TestScreenView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0384267AF531008F4C1B /* TestScreenView.h */; };
 		3A9F03E9267AF681008F4C1B /* CVSDKTrustConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0395267AF531008F4C1B /* CVSDKTrustConnect.h */; };
-		3A9F03EB267AF681008F4C1B /* CVSDKTrustTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0397267AF531008F4C1B /* CVSDKTrustTransfer.h */; };
 		3A9F03ED267AF681008F4C1B /* Chainverse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9F0369267AF462008F4C1B /* Chainverse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A9F04B4267B022E008F4C1B /* ChainverseSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F039D267AF531008F4C1B /* ChainverseSDK.m */; };
 		3A9F04C4267B02A6008F4C1B /* CVSDKBaseSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0387267AF531008F4C1B /* CVSDKBaseSocketManager.m */; };
@@ -98,43 +134,72 @@
 		3A9F04D2267B02AF008F4C1B /* CVSDKBaseResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F038D267AF531008F4C1B /* CVSDKBaseResource.m */; };
 		3A9F04D9267B02B3008F4C1B /* CVSDKBaseViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0390267AF531008F4C1B /* CVSDKBaseViewDialog.m */; };
 		3A9F04E0267B02B8008F4C1B /* CVSDKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F039B267AF531008F4C1B /* CVSDKUtils.m */; };
-		3A9F04E7267B02C0008F4C1B /* TestScreenViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0380267AF531008F4C1B /* TestScreenViewDialog.m */; };
-		3A9F04EE267B02C2008F4C1B /* TestScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0382267AF531008F4C1B /* TestScreenView.m */; };
-		3A9F04F5267B02C6008F4C1B /* CVSDKTrustTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */; };
 		3A9F04FC267B02C9008F4C1B /* CVSDKTrustConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */; };
-		3A9F0503267B02E5008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F037D267AF531008F4C1B /* CVSDKChooseWLViewDialog.m */; };
-		3A9F050A267B02E7008F4C1B /* CVSDKChooseWLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F037E267AF531008F4C1B /* CVSDKChooseWLView.m */; };
 		3A9F0511267B0373008F4C1B /* SocketIO.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */; };
 		3A9F0512267B0373008F4C1B /* SocketIO.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A9F0519267B0375008F4C1B /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A1267AF531008F4C1B /* Starscream.xcframework */; };
 		3A9F051A267B0375008F4C1B /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F03A1267AF531008F4C1B /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3A9F0545267B06AE008F4C1B /* TestScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F0381267AF531008F4C1B /* TestScreenView.xib */; };
-		3A9F054C267B06B7008F4C1B /* TestScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F0381267AF531008F4C1B /* TestScreenView.xib */; };
-		3A9F0553267B06BD008F4C1B /* CVSDKChooseWLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */; };
-		3A9F055A267B06BE008F4C1B /* CVSDKChooseWLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */; };
 		3AB58F4F268579F800DFDBEA /* CVSDKRESTfulClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AB58F4D268579F800DFDBEA /* CVSDKRESTfulClient.h */; };
 		3AB58F50268579F800DFDBEA /* CVSDKRESTfulClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB58F4E268579F800DFDBEA /* CVSDKRESTfulClient.m */; };
 		3AB58F51268579F800DFDBEA /* CVSDKRESTfulClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB58F4E268579F800DFDBEA /* CVSDKRESTfulClient.m */; };
+		3ACE235926A9122A0041499B /* chainverse_icon_wallet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE235626A9122A0041499B /* chainverse_icon_wallet@3x.png */; };
+		3ACE235A26A9122A0041499B /* chainverse_icon_wallet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE235626A9122A0041499B /* chainverse_icon_wallet@3x.png */; };
+		3ACE235B26A9122A0041499B /* chainverse_icon_wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE235726A9122A0041499B /* chainverse_icon_wallet.png */; };
+		3ACE235C26A9122A0041499B /* chainverse_icon_wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE235726A9122A0041499B /* chainverse_icon_wallet.png */; };
+		3ACE235D26A9122A0041499B /* chainverse_icon_wallet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE235826A9122A0041499B /* chainverse_icon_wallet@2x.png */; };
+		3ACE235E26A9122A0041499B /* chainverse_icon_wallet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE235826A9122A0041499B /* chainverse_icon_wallet@2x.png */; };
+		3ACE236226A9124E0041499B /* chainverse_icon_trustwallet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE235F26A9124E0041499B /* chainverse_icon_trustwallet.png */; };
+		3ACE236326A9124E0041499B /* chainverse_icon_trustwallet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE235F26A9124E0041499B /* chainverse_icon_trustwallet.png */; };
+		3ACE236426A9124E0041499B /* chainverse_icon_trustwallet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236026A9124E0041499B /* chainverse_icon_trustwallet@3x.png */; };
+		3ACE236526A9124E0041499B /* chainverse_icon_trustwallet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236026A9124E0041499B /* chainverse_icon_trustwallet@3x.png */; };
+		3ACE236626A9124E0041499B /* chainverse_icon_trustwallet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236126A9124E0041499B /* chainverse_icon_trustwallet@2x.png */; };
+		3ACE236726A9124E0041499B /* chainverse_icon_trustwallet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236126A9124E0041499B /* chainverse_icon_trustwallet@2x.png */; };
+		3ACE236A26A92E140041499B /* CVSDKDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACE236826A92E140041499B /* CVSDKDefine.h */; };
+		3ACE237026A949B90041499B /* chainverse_modal_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236D26A949B90041499B /* chainverse_modal_top.png */; };
+		3ACE237126A949B90041499B /* chainverse_modal_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236D26A949B90041499B /* chainverse_modal_top.png */; };
+		3ACE237226A949B90041499B /* chainverse_modal_top@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236E26A949B90041499B /* chainverse_modal_top@3x.png */; };
+		3ACE237326A949B90041499B /* chainverse_modal_top@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236E26A949B90041499B /* chainverse_modal_top@3x.png */; };
+		3ACE237426A949B90041499B /* chainverse_modal_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236F26A949B90041499B /* chainverse_modal_top@2x.png */; };
+		3ACE237526A949B90041499B /* chainverse_modal_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE236F26A949B90041499B /* chainverse_modal_top@2x.png */; };
+		3ACE238226A94CD90041499B /* chainverse_icon_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE237F26A94CD90041499B /* chainverse_icon_close@3x.png */; };
+		3ACE238326A94CD90041499B /* chainverse_icon_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE237F26A94CD90041499B /* chainverse_icon_close@3x.png */; };
+		3ACE238426A94CD90041499B /* chainverse_icon_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE238026A94CD90041499B /* chainverse_icon_close@2x.png */; };
+		3ACE238526A94CD90041499B /* chainverse_icon_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE238026A94CD90041499B /* chainverse_icon_close@2x.png */; };
+		3ACE238626A94CD90041499B /* chainverse_icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE238126A94CD90041499B /* chainverse_icon_close.png */; };
+		3ACE238726A94CD90041499B /* chainverse_icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ACE238126A94CD90041499B /* chainverse_icon_close.png */; };
+		3ACE238B26A955F20041499B /* CVSDKUserDefault.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACE238926A955F20041499B /* CVSDKUserDefault.h */; };
+		3ACE238C26A955F20041499B /* CVSDKUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE238A26A955F20041499B /* CVSDKUserDefault.m */; };
+		3ACE238D26A955F20041499B /* CVSDKUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE238A26A955F20041499B /* CVSDKUserDefault.m */; };
+		3ACE239126A9578A0041499B /* CVSDKTrustResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACE238F26A9578A0041499B /* CVSDKTrustResult.h */; };
+		3ACE239226A9578A0041499B /* CVSDKTrustResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE239026A9578A0041499B /* CVSDKTrustResult.m */; };
+		3ACE239326A9578A0041499B /* CVSDKTrustResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE239026A9578A0041499B /* CVSDKTrustResult.m */; };
+		3ACE239726A9789F0041499B /* CVSDKItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACE239526A9789F0041499B /* CVSDKItem.h */; };
+		3ACE239826A9789F0041499B /* CVSDKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE239626A9789F0041499B /* CVSDKItem.m */; };
+		3ACE239926A9789F0041499B /* CVSDKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE239626A9789F0041499B /* CVSDKItem.m */; };
+		3ACE239D26AA5BAE0041499B /* CVSDKCallbackToGame.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACE239B26AA5BAD0041499B /* CVSDKCallbackToGame.h */; };
+		3ACE239E26AA5BAE0041499B /* CVSDKCallbackToGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE239C26AA5BAD0041499B /* CVSDKCallbackToGame.m */; };
+		3ACE239F26AA5BAE0041499B /* CVSDKCallbackToGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE239C26AA5BAD0041499B /* CVSDKCallbackToGame.m */; };
+		3ACE23B126AA621F0041499B /* BigInt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE23AF26AA621F0041499B /* BigInt.xcframework */; };
+		3ACE23B426AA62290041499B /* PromiseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE23B226AA62290041499B /* PromiseKit.xcframework */; };
+		3ACE23B726AA622F0041499B /* SipHash.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE23B526AA622F0041499B /* SipHash.xcframework */; };
+		3ACE23FB26AAAD7B0041499B /* BigInt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE23AF26AA621F0041499B /* BigInt.xcframework */; };
+		3ACE23FC26AAAD7B0041499B /* BigInt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE23AF26AA621F0041499B /* BigInt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3ACE23FD26AAAD7D0041499B /* SipHash.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE23B526AA622F0041499B /* SipHash.xcframework */; };
+		3ACE23FE26AAAD7D0041499B /* SipHash.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE23B526AA622F0041499B /* SipHash.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3ACE23FF26AAAD800041499B /* PromiseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE23B226AA62290041499B /* PromiseKit.xcframework */; };
+		3ACE240026AAAD800041499B /* PromiseKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACE23B226AA62290041499B /* PromiseKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3ACE241226ABEB230041499B /* CVSDKConvert.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACE241026ABEB230041499B /* CVSDKConvert.h */; };
+		3ACE241326ABEB230041499B /* CVSDKConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE241126ABEB230041499B /* CVSDKConvert.m */; };
+		3ACE241426ABEB230041499B /* CVSDKConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACE241126ABEB230041499B /* CVSDKConvert.m */; };
+		3ACE241726ABF1910041499B /* ChainverseSDKError.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACE241526ABF1910041499B /* ChainverseSDKError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ACEE9F6269E823800EBDAF1 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEE9F5269E823800EBDAF1 /* Test.swift */; };
 		3ACEE9F7269E823800EBDAF1 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEE9F5269E823800EBDAF1 /* Test.swift */; };
-		3ACEED0A269E8A8A00EBDAF1 /* PromiseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED04269E8A8800EBDAF1 /* PromiseKit.xcframework */; };
 		3ACEED0C269E8A8A00EBDAF1 /* CryptoSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED05269E8A8900EBDAF1 /* CryptoSwift.xcframework */; };
 		3ACEED0E269E8A8A00EBDAF1 /* secp256k1.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED06269E8A8900EBDAF1 /* secp256k1.xcframework */; };
-		3ACEED10269E8A8A00EBDAF1 /* BigInt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED07269E8A8A00EBDAF1 /* BigInt.xcframework */; };
-		3ACEED12269E8A8A00EBDAF1 /* SipHash.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED08269E8A8A00EBDAF1 /* SipHash.xcframework */; };
-		3ACEED13269E8A9400EBDAF1 /* SipHash.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED08269E8A8A00EBDAF1 /* SipHash.xcframework */; };
-		3ACEED14269E8A9400EBDAF1 /* SipHash.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED08269E8A8A00EBDAF1 /* SipHash.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3ACEED15269E8A9500EBDAF1 /* secp256k1.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED06269E8A8900EBDAF1 /* secp256k1.xcframework */; };
 		3ACEED16269E8A9500EBDAF1 /* secp256k1.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED06269E8A8900EBDAF1 /* secp256k1.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3ACEED17269E8A9600EBDAF1 /* PromiseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED04269E8A8800EBDAF1 /* PromiseKit.xcframework */; };
-		3ACEED18269E8A9600EBDAF1 /* PromiseKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED04269E8A8800EBDAF1 /* PromiseKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3ACEED19269E8A9700EBDAF1 /* CryptoSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED05269E8A8900EBDAF1 /* CryptoSwift.xcframework */; };
 		3ACEED1A269E8A9700EBDAF1 /* CryptoSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED05269E8A8900EBDAF1 /* CryptoSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3ACEED1B269E8A9900EBDAF1 /* BigInt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED07269E8A8A00EBDAF1 /* BigInt.xcframework */; };
-		3ACEED1C269E8A9900EBDAF1 /* BigInt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACEED07269E8A8A00EBDAF1 /* BigInt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3ACEF0AF269E90E300EBDAF1 /* factorial.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF0AD269E90E300EBDAF1 /* factorial.h */; };
-		3ACEF0B0269E90E300EBDAF1 /* factorial.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF0AE269E90E300EBDAF1 /* factorial.c */; };
-		3ACEF0B1269E90E300EBDAF1 /* factorial.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF0AE269E90E300EBDAF1 /* factorial.c */; };
 		3ACEF18A269E952A00EBDAF1 /* scalar_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF0B3269E952900EBDAF1 /* scalar_impl.h */; };
 		3ACEF18B269E952A00EBDAF1 /* field_10x26_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF0B4269E952900EBDAF1 /* field_10x26_impl.h */; };
 		3ACEF18C269E952A00EBDAF1 /* scratch.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF0B5269E952900EBDAF1 /* scratch.h */; };
@@ -184,41 +249,6 @@
 		3ACEF1B8269E952A00EBDAF1 /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF0E2269E952900EBDAF1 /* keccak.c */; };
 		3ACEF1B9269E952A00EBDAF1 /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF0E2269E952900EBDAF1 /* keccak.c */; };
 		3ACEF1BA269E952A00EBDAF1 /* keccak.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF0E4269E952900EBDAF1 /* keccak.h */; };
-		3ACEF2A7269E952A00EBDAF1 /* humansize.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF171269E952A00EBDAF1 /* humansize.h */; };
-		3ACEF2A8269E952A00EBDAF1 /* scrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF173269E952A00EBDAF1 /* scrypt.h */; };
-		3ACEF2A9269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF174269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.h */; };
-		3ACEF2AA269E952A00EBDAF1 /* insecure_memzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF175269E952A00EBDAF1 /* insecure_memzero.c */; };
-		3ACEF2AB269E952A00EBDAF1 /* insecure_memzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF175269E952A00EBDAF1 /* insecure_memzero.c */; };
-		3ACEF2AC269E952A00EBDAF1 /* sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF176269E952A00EBDAF1 /* sha256.h */; };
-		3ACEF2AD269E952A00EBDAF1 /* readpass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF177269E952A00EBDAF1 /* readpass.h */; };
-		3ACEF2AE269E952A00EBDAF1 /* asprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF178269E952A00EBDAF1 /* asprintf.h */; };
-		3ACEF2AF269E952A00EBDAF1 /* sysendian.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF179269E952A00EBDAF1 /* sysendian.h */; };
-		3ACEF2B0269E952A00EBDAF1 /* warnp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF17A269E952A00EBDAF1 /* warnp.h */; };
-		3ACEF2B1269E952A00EBDAF1 /* crypto_scrypt_smix.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF17B269E952A00EBDAF1 /* crypto_scrypt_smix.h */; };
-		3ACEF2B2269E952A00EBDAF1 /* entropy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF17C269E952A00EBDAF1 /* entropy.h */; };
-		3ACEF2B3269E952A00EBDAF1 /* getopt.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF17D269E952A00EBDAF1 /* getopt.h */; };
-		3ACEF2B4269E952A00EBDAF1 /* parsenum.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF17E269E952A00EBDAF1 /* parsenum.h */; };
-		3ACEF2B5269E952A00EBDAF1 /* humansize.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF17F269E952A00EBDAF1 /* humansize.c */; };
-		3ACEF2B6269E952A00EBDAF1 /* humansize.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF17F269E952A00EBDAF1 /* humansize.c */; };
-		3ACEF2B7269E952A00EBDAF1 /* insecure_memzero.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ACEF180269E952A00EBDAF1 /* insecure_memzero.h */; };
-		3ACEF2B8269E952A00EBDAF1 /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF181269E952A00EBDAF1 /* sha256.c */; };
-		3ACEF2B9269E952A00EBDAF1 /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF181269E952A00EBDAF1 /* sha256.c */; };
-		3ACEF2BA269E952A00EBDAF1 /* readpass.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF182269E952A00EBDAF1 /* readpass.c */; };
-		3ACEF2BB269E952A00EBDAF1 /* readpass.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF182269E952A00EBDAF1 /* readpass.c */; };
-		3ACEF2BC269E952A00EBDAF1 /* crypto_scrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF183269E952A00EBDAF1 /* crypto_scrypt.c */; };
-		3ACEF2BD269E952A00EBDAF1 /* crypto_scrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF183269E952A00EBDAF1 /* crypto_scrypt.c */; };
-		3ACEF2BE269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF184269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.c */; };
-		3ACEF2BF269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF184269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.c */; };
-		3ACEF2C0269E952A00EBDAF1 /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF185269E952A00EBDAF1 /* entropy.c */; };
-		3ACEF2C1269E952A00EBDAF1 /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF185269E952A00EBDAF1 /* entropy.c */; };
-		3ACEF2C2269E952A00EBDAF1 /* getopt.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF186269E952A00EBDAF1 /* getopt.c */; };
-		3ACEF2C3269E952A00EBDAF1 /* getopt.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF186269E952A00EBDAF1 /* getopt.c */; };
-		3ACEF2C4269E952A00EBDAF1 /* crypto_scrypt_smix.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF187269E952A00EBDAF1 /* crypto_scrypt_smix.c */; };
-		3ACEF2C5269E952A00EBDAF1 /* crypto_scrypt_smix.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF187269E952A00EBDAF1 /* crypto_scrypt_smix.c */; };
-		3ACEF2C6269E952A00EBDAF1 /* warnp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF188269E952A00EBDAF1 /* warnp.c */; };
-		3ACEF2C7269E952A00EBDAF1 /* warnp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF188269E952A00EBDAF1 /* warnp.c */; };
-		3ACEF2C8269E952A00EBDAF1 /* asprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF189269E952A00EBDAF1 /* asprintf.c */; };
-		3ACEF2C9269E952A00EBDAF1 /* asprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF189269E952A00EBDAF1 /* asprintf.c */; };
 		3ACEF357269E95CF00EBDAF1 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF2CE269E95CF00EBDAF1 /* AES.swift */; };
 		3ACEF358269E95CF00EBDAF1 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF2CE269E95CF00EBDAF1 /* AES.swift */; };
 		3ACEF359269E95CF00EBDAF1 /* keccak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEF2CF269E95CF00EBDAF1 /* keccak.swift */; };
@@ -507,12 +537,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3ACEED1C269E8A9900EBDAF1 /* BigInt.xcframework in Embed Frameworks */,
 				3ACEED16269E8A9500EBDAF1 /* secp256k1.xcframework in Embed Frameworks */,
+				3ACE240026AAAD800041499B /* PromiseKit.xcframework in Embed Frameworks */,
+				3ACE23FC26AAAD7B0041499B /* BigInt.xcframework in Embed Frameworks */,
 				3A9F051A267B0375008F4C1B /* Starscream.xcframework in Embed Frameworks */,
 				3ACEED1A269E8A9700EBDAF1 /* CryptoSwift.xcframework in Embed Frameworks */,
-				3ACEED18269E8A9600EBDAF1 /* PromiseKit.xcframework in Embed Frameworks */,
-				3ACEED14269E8A9400EBDAF1 /* SipHash.xcframework in Embed Frameworks */,
+				3ACE23FE26AAAD7D0041499B /* SipHash.xcframework in Embed Frameworks */,
 				3A9F0512267B0373008F4C1B /* SocketIO.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -531,6 +561,37 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		044F8C6526A5C20000C5FD70 /* humansize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = humansize.h; sourceTree = "<group>"; };
+		044F8C6726A5C20000C5FD70 /* scrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrypt.h; sourceTree = "<group>"; };
+		044F8C6826A5C20000C5FD70 /* crypto_scrypt_smix_sse2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_scrypt_smix_sse2.h; sourceTree = "<group>"; };
+		044F8C6926A5C20000C5FD70 /* insecure_memzero.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insecure_memzero.c; sourceTree = "<group>"; };
+		044F8C6A26A5C20000C5FD70 /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha256.h; sourceTree = "<group>"; };
+		044F8C6B26A5C20000C5FD70 /* readpass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readpass.h; sourceTree = "<group>"; };
+		044F8C6C26A5C20000C5FD70 /* asprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asprintf.h; sourceTree = "<group>"; };
+		044F8C6D26A5C20000C5FD70 /* sysendian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysendian.h; sourceTree = "<group>"; };
+		044F8C6E26A5C20000C5FD70 /* warnp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = warnp.h; sourceTree = "<group>"; };
+		044F8C6F26A5C20000C5FD70 /* crypto_scrypt_smix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_scrypt_smix.h; sourceTree = "<group>"; };
+		044F8C7026A5C20000C5FD70 /* entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entropy.h; sourceTree = "<group>"; };
+		044F8C7126A5C20000C5FD70 /* getopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getopt.h; sourceTree = "<group>"; };
+		044F8C7226A5C20000C5FD70 /* parsenum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parsenum.h; sourceTree = "<group>"; };
+		044F8C7326A5C20000C5FD70 /* humansize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = humansize.c; sourceTree = "<group>"; };
+		044F8C7426A5C20000C5FD70 /* insecure_memzero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insecure_memzero.h; sourceTree = "<group>"; };
+		044F8C7526A5C20000C5FD70 /* sha256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256.c; sourceTree = "<group>"; };
+		044F8C7626A5C20000C5FD70 /* readpass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = readpass.c; sourceTree = "<group>"; };
+		044F8C7726A5C20000C5FD70 /* crypto_scrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_scrypt.c; sourceTree = "<group>"; };
+		044F8C7826A5C20000C5FD70 /* crypto_scrypt_smix_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_scrypt_smix_sse2.c; sourceTree = "<group>"; };
+		044F8C7926A5C20000C5FD70 /* entropy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entropy.c; sourceTree = "<group>"; };
+		044F8C7A26A5C20000C5FD70 /* getopt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getopt.c; sourceTree = "<group>"; };
+		044F8C7B26A5C20000C5FD70 /* crypto_scrypt_smix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_scrypt_smix.c; sourceTree = "<group>"; };
+		044F8C7C26A5C20000C5FD70 /* warnp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = warnp.c; sourceTree = "<group>"; };
+		044F8C7D26A5C20000C5FD70 /* asprintf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = asprintf.c; sourceTree = "<group>"; };
+		0474961526A6D9C200F9C769 /* CVSDKBridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKBridging.h; sourceTree = "<group>"; };
+		0474961626A6D9C200F9C769 /* CVSDKBridging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKBridging.m; sourceTree = "<group>"; };
+		3A1E928D26A7C97F00110854 /* CVSDKConnectWalletDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKConnectWalletDialog.h; sourceTree = "<group>"; };
+		3A1E928E26A7C97F00110854 /* CVSDKConnectWalletDialog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKConnectWalletDialog.m; sourceTree = "<group>"; };
+		3A1E929226A7C9A600110854 /* CVSDKConnectWalletView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKConnectWalletView.h; sourceTree = "<group>"; };
+		3A1E929326A7C9A600110854 /* CVSDKConnectWalletView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKConnectWalletView.m; sourceTree = "<group>"; };
+		3A1E929726A7C9C200110854 /* CVSDKConnectWalletView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVSDKConnectWalletView.xib; sourceTree = "<group>"; };
 		3A3D7C2C26819DAB003A0DC4 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		3A3D7C2D26819DAB003A0DC4 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		3A3D7C2E26819DAB003A0DC4 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -577,16 +638,6 @@
 		3A9F02892679AC40008F4C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9F0367267AF462008F4C1B /* libChainverse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChainverse.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9F0369267AF462008F4C1B /* Chainverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chainverse.h; sourceTree = "<group>"; };
-		3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVSDKChooseWLView.xib; sourceTree = "<group>"; };
-		3A9F037B267AF531008F4C1B /* CVSDKChooseWLViewDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKChooseWLViewDialog.h; sourceTree = "<group>"; };
-		3A9F037C267AF531008F4C1B /* CVSDKChooseWLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKChooseWLView.h; sourceTree = "<group>"; };
-		3A9F037D267AF531008F4C1B /* CVSDKChooseWLViewDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKChooseWLViewDialog.m; sourceTree = "<group>"; };
-		3A9F037E267AF531008F4C1B /* CVSDKChooseWLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKChooseWLView.m; sourceTree = "<group>"; };
-		3A9F0380267AF531008F4C1B /* TestScreenViewDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScreenViewDialog.m; sourceTree = "<group>"; };
-		3A9F0381267AF531008F4C1B /* TestScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestScreenView.xib; sourceTree = "<group>"; };
-		3A9F0382267AF531008F4C1B /* TestScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScreenView.m; sourceTree = "<group>"; };
-		3A9F0383267AF531008F4C1B /* TestScreenViewDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScreenViewDialog.h; sourceTree = "<group>"; };
-		3A9F0384267AF531008F4C1B /* TestScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScreenView.h; sourceTree = "<group>"; };
 		3A9F0387267AF531008F4C1B /* CVSDKBaseSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKBaseSocketManager.m; sourceTree = "<group>"; };
 		3A9F0388267AF531008F4C1B /* CVSDKBaseSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseSocketManager.h; sourceTree = "<group>"; };
 		3A9F038A267AF531008F4C1B /* CVSDKBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseView.h; sourceTree = "<group>"; };
@@ -597,8 +648,6 @@
 		3A9F0391267AF531008F4C1B /* CVSDKBaseViewDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKBaseViewDialog.h; sourceTree = "<group>"; };
 		3A9F0392267AF531008F4C1B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9F0395267AF531008F4C1B /* CVSDKTrustConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKTrustConnect.h; sourceTree = "<group>"; };
-		3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKTrustTransfer.m; sourceTree = "<group>"; };
-		3A9F0397267AF531008F4C1B /* CVSDKTrustTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKTrustTransfer.h; sourceTree = "<group>"; };
 		3A9F0398267AF531008F4C1B /* CVSDKTrustConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKTrustConnect.m; sourceTree = "<group>"; };
 		3A9F039A267AF531008F4C1B /* CVSDKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKUtils.h; sourceTree = "<group>"; };
 		3A9F039B267AF531008F4C1B /* CVSDKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKUtils.m; sourceTree = "<group>"; };
@@ -609,16 +658,38 @@
 		3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SocketIO.xcframework; sourceTree = "<group>"; };
 		3AB58F4D268579F800DFDBEA /* CVSDKRESTfulClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKRESTfulClient.h; sourceTree = "<group>"; };
 		3AB58F4E268579F800DFDBEA /* CVSDKRESTfulClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKRESTfulClient.m; sourceTree = "<group>"; };
+		3ACE235626A9122A0041499B /* chainverse_icon_wallet@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chainverse_icon_wallet@3x.png"; sourceTree = "<group>"; };
+		3ACE235726A9122A0041499B /* chainverse_icon_wallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chainverse_icon_wallet.png; sourceTree = "<group>"; };
+		3ACE235826A9122A0041499B /* chainverse_icon_wallet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chainverse_icon_wallet@2x.png"; sourceTree = "<group>"; };
+		3ACE235F26A9124E0041499B /* chainverse_icon_trustwallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chainverse_icon_trustwallet.png; sourceTree = "<group>"; };
+		3ACE236026A9124E0041499B /* chainverse_icon_trustwallet@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chainverse_icon_trustwallet@3x.png"; sourceTree = "<group>"; };
+		3ACE236126A9124E0041499B /* chainverse_icon_trustwallet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chainverse_icon_trustwallet@2x.png"; sourceTree = "<group>"; };
+		3ACE236826A92E140041499B /* CVSDKDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKDefine.h; sourceTree = "<group>"; };
+		3ACE236D26A949B90041499B /* chainverse_modal_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chainverse_modal_top.png; sourceTree = "<group>"; };
+		3ACE236E26A949B90041499B /* chainverse_modal_top@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chainverse_modal_top@3x.png"; sourceTree = "<group>"; };
+		3ACE236F26A949B90041499B /* chainverse_modal_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chainverse_modal_top@2x.png"; sourceTree = "<group>"; };
+		3ACE237F26A94CD90041499B /* chainverse_icon_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chainverse_icon_close@3x.png"; sourceTree = "<group>"; };
+		3ACE238026A94CD90041499B /* chainverse_icon_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chainverse_icon_close@2x.png"; sourceTree = "<group>"; };
+		3ACE238126A94CD90041499B /* chainverse_icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chainverse_icon_close.png; sourceTree = "<group>"; };
+		3ACE238926A955F20041499B /* CVSDKUserDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKUserDefault.h; sourceTree = "<group>"; };
+		3ACE238A26A955F20041499B /* CVSDKUserDefault.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKUserDefault.m; sourceTree = "<group>"; };
+		3ACE238F26A9578A0041499B /* CVSDKTrustResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKTrustResult.h; sourceTree = "<group>"; };
+		3ACE239026A9578A0041499B /* CVSDKTrustResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKTrustResult.m; sourceTree = "<group>"; };
+		3ACE239526A9789F0041499B /* CVSDKItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKItem.h; sourceTree = "<group>"; };
+		3ACE239626A9789F0041499B /* CVSDKItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKItem.m; sourceTree = "<group>"; };
+		3ACE239B26AA5BAD0041499B /* CVSDKCallbackToGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKCallbackToGame.h; sourceTree = "<group>"; };
+		3ACE239C26AA5BAD0041499B /* CVSDKCallbackToGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKCallbackToGame.m; sourceTree = "<group>"; };
+		3ACE23AF26AA621F0041499B /* BigInt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BigInt.xcframework; sourceTree = "<group>"; };
+		3ACE23B226AA62290041499B /* PromiseKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromiseKit.xcframework; sourceTree = "<group>"; };
+		3ACE23B526AA622F0041499B /* SipHash.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SipHash.xcframework; sourceTree = "<group>"; };
+		3ACE241026ABEB230041499B /* CVSDKConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKConvert.h; sourceTree = "<group>"; };
+		3ACE241126ABEB230041499B /* CVSDKConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKConvert.m; sourceTree = "<group>"; };
+		3ACE241526ABF1910041499B /* ChainverseSDKError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainverseSDKError.h; sourceTree = "<group>"; };
 		3ACEE9F3269E823800EBDAF1 /* Chainverse-SDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chainverse-SDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		3ACEE9F4269E823800EBDAF1 /* Chainverse-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chainverse-Bridging-Header.h"; sourceTree = "<group>"; };
 		3ACEE9F5269E823800EBDAF1 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		3ACEED04269E8A8800EBDAF1 /* PromiseKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromiseKit.xcframework; sourceTree = "<group>"; };
 		3ACEED05269E8A8900EBDAF1 /* CryptoSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoSwift.xcframework; sourceTree = "<group>"; };
 		3ACEED06269E8A8900EBDAF1 /* secp256k1.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = secp256k1.xcframework; sourceTree = "<group>"; };
-		3ACEED07269E8A8A00EBDAF1 /* BigInt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BigInt.xcframework; sourceTree = "<group>"; };
-		3ACEED08269E8A8A00EBDAF1 /* SipHash.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SipHash.xcframework; sourceTree = "<group>"; };
-		3ACEF0AD269E90E300EBDAF1 /* factorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = factorial.h; sourceTree = "<group>"; };
-		3ACEF0AE269E90E300EBDAF1 /* factorial.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = factorial.c; sourceTree = "<group>"; };
 		3ACEF0B3269E952900EBDAF1 /* scalar_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scalar_impl.h; sourceTree = "<group>"; };
 		3ACEF0B4269E952900EBDAF1 /* field_10x26_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = field_10x26_impl.h; sourceTree = "<group>"; };
 		3ACEF0B5269E952900EBDAF1 /* scratch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scratch.h; sourceTree = "<group>"; };
@@ -666,30 +737,6 @@
 		3ACEF0E0269E952900EBDAF1 /* eckey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eckey.h; sourceTree = "<group>"; };
 		3ACEF0E2269E952900EBDAF1 /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
 		3ACEF0E4269E952900EBDAF1 /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
-		3ACEF171269E952A00EBDAF1 /* humansize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = humansize.h; sourceTree = "<group>"; };
-		3ACEF173269E952A00EBDAF1 /* scrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrypt.h; sourceTree = "<group>"; };
-		3ACEF174269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_scrypt_smix_sse2.h; sourceTree = "<group>"; };
-		3ACEF175269E952A00EBDAF1 /* insecure_memzero.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insecure_memzero.c; sourceTree = "<group>"; };
-		3ACEF176269E952A00EBDAF1 /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha256.h; sourceTree = "<group>"; };
-		3ACEF177269E952A00EBDAF1 /* readpass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readpass.h; sourceTree = "<group>"; };
-		3ACEF178269E952A00EBDAF1 /* asprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asprintf.h; sourceTree = "<group>"; };
-		3ACEF179269E952A00EBDAF1 /* sysendian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysendian.h; sourceTree = "<group>"; };
-		3ACEF17A269E952A00EBDAF1 /* warnp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = warnp.h; sourceTree = "<group>"; };
-		3ACEF17B269E952A00EBDAF1 /* crypto_scrypt_smix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_scrypt_smix.h; sourceTree = "<group>"; };
-		3ACEF17C269E952A00EBDAF1 /* entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entropy.h; sourceTree = "<group>"; };
-		3ACEF17D269E952A00EBDAF1 /* getopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getopt.h; sourceTree = "<group>"; };
-		3ACEF17E269E952A00EBDAF1 /* parsenum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parsenum.h; sourceTree = "<group>"; };
-		3ACEF17F269E952A00EBDAF1 /* humansize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = humansize.c; sourceTree = "<group>"; };
-		3ACEF180269E952A00EBDAF1 /* insecure_memzero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insecure_memzero.h; sourceTree = "<group>"; };
-		3ACEF181269E952A00EBDAF1 /* sha256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256.c; sourceTree = "<group>"; };
-		3ACEF182269E952A00EBDAF1 /* readpass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = readpass.c; sourceTree = "<group>"; };
-		3ACEF183269E952A00EBDAF1 /* crypto_scrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_scrypt.c; sourceTree = "<group>"; };
-		3ACEF184269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_scrypt_smix_sse2.c; sourceTree = "<group>"; };
-		3ACEF185269E952A00EBDAF1 /* entropy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entropy.c; sourceTree = "<group>"; };
-		3ACEF186269E952A00EBDAF1 /* getopt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getopt.c; sourceTree = "<group>"; };
-		3ACEF187269E952A00EBDAF1 /* crypto_scrypt_smix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_scrypt_smix.c; sourceTree = "<group>"; };
-		3ACEF188269E952A00EBDAF1 /* warnp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = warnp.c; sourceTree = "<group>"; };
-		3ACEF189269E952A00EBDAF1 /* asprintf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = asprintf.c; sourceTree = "<group>"; };
 		3ACEF2CE269E95CF00EBDAF1 /* AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
 		3ACEF2CF269E95CF00EBDAF1 /* keccak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keccak.swift; sourceTree = "<group>"; };
 		3ACEF2D0269E95CF00EBDAF1 /* DerivedKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DerivedKey.swift; sourceTree = "<group>"; };
@@ -821,12 +868,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ACEED1B269E8A9900EBDAF1 /* BigInt.xcframework in Frameworks */,
-				3ACEED17269E8A9600EBDAF1 /* PromiseKit.xcframework in Frameworks */,
+				3ACE23FB26AAAD7B0041499B /* BigInt.xcframework in Frameworks */,
+				3ACE23FF26AAAD800041499B /* PromiseKit.xcframework in Frameworks */,
 				3A9F0519267B0375008F4C1B /* Starscream.xcframework in Frameworks */,
 				3ACEED15269E8A9500EBDAF1 /* secp256k1.xcframework in Frameworks */,
 				3A9F0511267B0373008F4C1B /* SocketIO.xcframework in Frameworks */,
-				3ACEED13269E8A9400EBDAF1 /* SipHash.xcframework in Frameworks */,
+				3ACE23FD26AAAD7D0041499B /* SipHash.xcframework in Frameworks */,
 				3ACEED19269E8A9700EBDAF1 /* CryptoSwift.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,19 +910,103 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ACEED10269E8A8A00EBDAF1 /* BigInt.xcframework in Frameworks */,
 				3ACEED0C269E8A8A00EBDAF1 /* CryptoSwift.xcframework in Frameworks */,
+				3ACE23B126AA621F0041499B /* BigInt.xcframework in Frameworks */,
+				3ACE23B426AA62290041499B /* PromiseKit.xcframework in Frameworks */,
 				3A9F03B0267AF531008F4C1B /* SocketIO.xcframework in Frameworks */,
 				3A9F03AF267AF531008F4C1B /* Starscream.xcframework in Frameworks */,
+				3ACE23B726AA622F0041499B /* SipHash.xcframework in Frameworks */,
 				3ACEED0E269E8A8A00EBDAF1 /* secp256k1.xcframework in Frameworks */,
-				3ACEED12269E8A8A00EBDAF1 /* SipHash.xcframework in Frameworks */,
-				3ACEED0A269E8A8A00EBDAF1 /* PromiseKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044F8C6426A5C20000C5FD70 /* scrypt */ = {
+			isa = PBXGroup;
+			children = (
+				044F8C6526A5C20000C5FD70 /* humansize.h */,
+				044F8C6626A5C20000C5FD70 /* include */,
+				044F8C6826A5C20000C5FD70 /* crypto_scrypt_smix_sse2.h */,
+				044F8C6926A5C20000C5FD70 /* insecure_memzero.c */,
+				044F8C6A26A5C20000C5FD70 /* sha256.h */,
+				044F8C6B26A5C20000C5FD70 /* readpass.h */,
+				044F8C6C26A5C20000C5FD70 /* asprintf.h */,
+				044F8C6D26A5C20000C5FD70 /* sysendian.h */,
+				044F8C6E26A5C20000C5FD70 /* warnp.h */,
+				044F8C6F26A5C20000C5FD70 /* crypto_scrypt_smix.h */,
+				044F8C7026A5C20000C5FD70 /* entropy.h */,
+				044F8C7126A5C20000C5FD70 /* getopt.h */,
+				044F8C7226A5C20000C5FD70 /* parsenum.h */,
+				044F8C7326A5C20000C5FD70 /* humansize.c */,
+				044F8C7426A5C20000C5FD70 /* insecure_memzero.h */,
+				044F8C7526A5C20000C5FD70 /* sha256.c */,
+				044F8C7626A5C20000C5FD70 /* readpass.c */,
+				044F8C7726A5C20000C5FD70 /* crypto_scrypt.c */,
+				044F8C7826A5C20000C5FD70 /* crypto_scrypt_smix_sse2.c */,
+				044F8C7926A5C20000C5FD70 /* entropy.c */,
+				044F8C7A26A5C20000C5FD70 /* getopt.c */,
+				044F8C7B26A5C20000C5FD70 /* crypto_scrypt_smix.c */,
+				044F8C7C26A5C20000C5FD70 /* warnp.c */,
+				044F8C7D26A5C20000C5FD70 /* asprintf.c */,
+			);
+			path = scrypt;
+			sourceTree = "<group>";
+		};
+		044F8C6626A5C20000C5FD70 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				044F8C6726A5C20000C5FD70 /* scrypt.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		047495D626A6D0E000F9C769 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				3ACE239426A978780041499B /* Model */,
+				0474961426A6D94F00F9C769 /* Bridging */,
+				3AB58F4B2685795400DFDBEA /* Network */,
+				3A9747A826830E42003E53C8 /* Manager */,
+				3A9F0385267AF531008F4C1B /* Base */,
+				3A9F0399267AF531008F4C1B /* Commons */,
+				3A9F0393267AF531008F4C1B /* Wallet */,
+				3A9F0377267AF531008F4C1B /* UI */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		047495EF26A6D2D500F9C769 /* Third-Party */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D7C542681A025003A0DC4 /* Library */,
+				3A9F03A0267AF531008F4C1B /* Frameworks */,
+			);
+			path = "Third-Party";
+			sourceTree = "<group>";
+		};
+		0474961426A6D94F00F9C769 /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				0474961526A6D9C200F9C769 /* CVSDKBridging.h */,
+				0474961626A6D9C200F9C769 /* CVSDKBridging.m */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
+		3A1E928C26A7C93900110854 /* ConnectWallet */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E928D26A7C97F00110854 /* CVSDKConnectWalletDialog.h */,
+				3A1E928E26A7C97F00110854 /* CVSDKConnectWalletDialog.m */,
+				3A1E929226A7C9A600110854 /* CVSDKConnectWalletView.h */,
+				3A1E929326A7C9A600110854 /* CVSDKConnectWalletView.m */,
+				3A1E929726A7C9C200110854 /* CVSDKConnectWalletView.xib */,
+			);
+			path = ConnectWallet;
+			sourceTree = "<group>";
+		};
 		3A3D7C2B26819DAB003A0DC4 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -900,7 +1031,7 @@
 		3A3D7C542681A025003A0DC4 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				3ACEE9F2269E821300EBDAF1 /* SwiftLibrary */,
+				3ACEE9F2269E821300EBDAF1 /* Swift */,
 				3A3D7C2B26819DAB003A0DC4 /* AFNetworking */,
 			);
 			path = Library;
@@ -1015,6 +1146,7 @@
 		3A9F02882679AC40008F4C1B /* ChainverseBundle */ = {
 			isa = PBXGroup;
 			children = (
+				3ACE234C26A911500041499B /* ConnectWallet */,
 				3A9F02892679AC40008F4C1B /* Info.plist */,
 			);
 			path = ChainverseBundle;
@@ -1023,16 +1155,11 @@
 		3A9F0368267AF462008F4C1B /* Chainverse */ = {
 			isa = PBXGroup;
 			children = (
-				3AB58F4B2685795400DFDBEA /* Network */,
-				3A9747A826830E42003E53C8 /* Manager */,
-				3A3D7C542681A025003A0DC4 /* Library */,
-				3A9F03A0267AF531008F4C1B /* Frameworks */,
-				3A9F0385267AF531008F4C1B /* Base */,
-				3A9F0399267AF531008F4C1B /* Commons */,
-				3A9F0393267AF531008F4C1B /* Wallet */,
-				3A9F0377267AF531008F4C1B /* UI */,
+				047495EF26A6D2D500F9C769 /* Third-Party */,
+				047495D626A6D0E000F9C769 /* Internal */,
 				3A9F0369267AF462008F4C1B /* Chainverse.h */,
 				3A9F039C267AF531008F4C1B /* ChainverseSDK.h */,
+				3ACE241526ABF1910041499B /* ChainverseSDKError.h */,
 				3A9F039D267AF531008F4C1B /* ChainverseSDK.m */,
 				3A9F039E267AF531008F4C1B /* ChainverseSDKCallback.h */,
 				3A9F0392267AF531008F4C1B /* Info.plist */,
@@ -1051,34 +1178,9 @@
 		3A9F0378267AF531008F4C1B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				3A9F0379267AF531008F4C1B /* ChooseWL */,
-				3A9F037F267AF531008F4C1B /* TestScreen */,
+				3A1E928C26A7C93900110854 /* ConnectWallet */,
 			);
 			path = Screen;
-			sourceTree = "<group>";
-		};
-		3A9F0379267AF531008F4C1B /* ChooseWL */ = {
-			isa = PBXGroup;
-			children = (
-				3A9F037A267AF531008F4C1B /* CVSDKChooseWLView.xib */,
-				3A9F037B267AF531008F4C1B /* CVSDKChooseWLViewDialog.h */,
-				3A9F037C267AF531008F4C1B /* CVSDKChooseWLView.h */,
-				3A9F037D267AF531008F4C1B /* CVSDKChooseWLViewDialog.m */,
-				3A9F037E267AF531008F4C1B /* CVSDKChooseWLView.m */,
-			);
-			path = ChooseWL;
-			sourceTree = "<group>";
-		};
-		3A9F037F267AF531008F4C1B /* TestScreen */ = {
-			isa = PBXGroup;
-			children = (
-				3A9F0380267AF531008F4C1B /* TestScreenViewDialog.m */,
-				3A9F0381267AF531008F4C1B /* TestScreenView.xib */,
-				3A9F0382267AF531008F4C1B /* TestScreenView.m */,
-				3A9F0383267AF531008F4C1B /* TestScreenViewDialog.h */,
-				3A9F0384267AF531008F4C1B /* TestScreenView.h */,
-			);
-			path = TestScreen;
 			sourceTree = "<group>";
 		};
 		3A9F0385267AF531008F4C1B /* Base */ = {
@@ -1140,10 +1242,9 @@
 		3A9F0394267AF531008F4C1B /* Trust */ = {
 			isa = PBXGroup;
 			children = (
+				3ACE238E26A957710041499B /* Result */,
 				3AEA5D1926A181AB00A270E2 /* SignMessage */,
 				3AEA5D1826A181A000A270E2 /* Connect */,
-				3A9F0396267AF531008F4C1B /* CVSDKTrustTransfer.m */,
-				3A9F0397267AF531008F4C1B /* CVSDKTrustTransfer.h */,
 			);
 			path = Trust;
 			sourceTree = "<group>";
@@ -1151,8 +1252,12 @@
 		3A9F0399267AF531008F4C1B /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				3ACE240F26ABEB020041499B /* Convert */,
+				3ACE239A26AA5B950041499B /* CallbackToGame */,
+				3ACE238826A955B10041499B /* UserDefault */,
 				3AEA5D04269ECF2600A270E2 /* CVSDKConstant.h */,
 				3AEA5D1726A17CB400A270E2 /* Utils */,
+				3ACE236826A92E140041499B /* CVSDKDefine.h */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -1160,11 +1265,11 @@
 		3A9F03A0267AF531008F4C1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3ACEED07269E8A8A00EBDAF1 /* BigInt.xcframework */,
+				3ACE23B526AA622F0041499B /* SipHash.xcframework */,
+				3ACE23B226AA62290041499B /* PromiseKit.xcframework */,
+				3ACE23AF26AA621F0041499B /* BigInt.xcframework */,
 				3ACEED05269E8A8900EBDAF1 /* CryptoSwift.xcframework */,
-				3ACEED04269E8A8800EBDAF1 /* PromiseKit.xcframework */,
 				3ACEED06269E8A8900EBDAF1 /* secp256k1.xcframework */,
-				3ACEED08269E8A8A00EBDAF1 /* SipHash.xcframework */,
 				3A9F03A1267AF531008F4C1B /* Starscream.xcframework */,
 				3A9F03A2267AF531008F4C1B /* SocketIO.xcframework */,
 			);
@@ -1196,20 +1301,83 @@
 			path = RESTful;
 			sourceTree = "<group>";
 		};
-		3ACEE9F2269E821300EBDAF1 /* SwiftLibrary */ = {
+		3ACE234C26A911500041499B /* ConnectWallet */ = {
 			isa = PBXGroup;
 			children = (
+				3ACE238126A94CD90041499B /* chainverse_icon_close.png */,
+				3ACE238026A94CD90041499B /* chainverse_icon_close@2x.png */,
+				3ACE237F26A94CD90041499B /* chainverse_icon_close@3x.png */,
+				3ACE236D26A949B90041499B /* chainverse_modal_top.png */,
+				3ACE236F26A949B90041499B /* chainverse_modal_top@2x.png */,
+				3ACE236E26A949B90041499B /* chainverse_modal_top@3x.png */,
+				3ACE235F26A9124E0041499B /* chainverse_icon_trustwallet.png */,
+				3ACE236126A9124E0041499B /* chainverse_icon_trustwallet@2x.png */,
+				3ACE236026A9124E0041499B /* chainverse_icon_trustwallet@3x.png */,
+				3ACE235726A9122A0041499B /* chainverse_icon_wallet.png */,
+				3ACE235826A9122A0041499B /* chainverse_icon_wallet@2x.png */,
+				3ACE235626A9122A0041499B /* chainverse_icon_wallet@3x.png */,
+			);
+			path = ConnectWallet;
+			sourceTree = "<group>";
+		};
+		3ACE238826A955B10041499B /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				3ACE238926A955F20041499B /* CVSDKUserDefault.h */,
+				3ACE238A26A955F20041499B /* CVSDKUserDefault.m */,
+			);
+			path = UserDefault;
+			sourceTree = "<group>";
+		};
+		3ACE238E26A957710041499B /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				3ACE238F26A9578A0041499B /* CVSDKTrustResult.h */,
+				3ACE239026A9578A0041499B /* CVSDKTrustResult.m */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		3ACE239426A978780041499B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3ACE239526A9789F0041499B /* CVSDKItem.h */,
+				3ACE239626A9789F0041499B /* CVSDKItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3ACE239A26AA5B950041499B /* CallbackToGame */ = {
+			isa = PBXGroup;
+			children = (
+				3ACE239B26AA5BAD0041499B /* CVSDKCallbackToGame.h */,
+				3ACE239C26AA5BAD0041499B /* CVSDKCallbackToGame.m */,
+			);
+			path = CallbackToGame;
+			sourceTree = "<group>";
+		};
+		3ACE240F26ABEB020041499B /* Convert */ = {
+			isa = PBXGroup;
+			children = (
+				3ACE241026ABEB230041499B /* CVSDKConvert.h */,
+				3ACE241126ABEB230041499B /* CVSDKConvert.m */,
+			);
+			path = Convert;
+			sourceTree = "<group>";
+		};
+		3ACEE9F2269E821300EBDAF1 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				044F8C6426A5C20000C5FD70 /* scrypt */,
 				3AEA5D1626A131D800A270E2 /* Chainvese */,
 				3ACEF2CC269E95CF00EBDAF1 /* web3swift */,
-				3ACEF2CA269E955800EBDAF1 /* factorial */,
 				3ACEF0E1269E952900EBDAF1 /* keccak */,
-				3ACEF170269E952A00EBDAF1 /* scrypt */,
 				3ACEF0B2269E952900EBDAF1 /* secp256k1 */,
 				3ACEE9F5269E823800EBDAF1 /* Test.swift */,
 				3ACEE9F3269E823800EBDAF1 /* Chainverse-SDK-Bridging-Header.h */,
 				3ACEE9F4269E823800EBDAF1 /* Chainverse-Bridging-Header.h */,
 			);
-			path = SwiftLibrary;
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		3ACEF0B2269E952900EBDAF1 /* secp256k1 */ = {
@@ -1285,63 +1453,6 @@
 			isa = PBXGroup;
 			children = (
 				3ACEF0E4269E952900EBDAF1 /* keccak.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		3ACEF170269E952A00EBDAF1 /* scrypt */ = {
-			isa = PBXGroup;
-			children = (
-				3ACEF171269E952A00EBDAF1 /* humansize.h */,
-				3ACEF172269E952A00EBDAF1 /* include */,
-				3ACEF174269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.h */,
-				3ACEF175269E952A00EBDAF1 /* insecure_memzero.c */,
-				3ACEF176269E952A00EBDAF1 /* sha256.h */,
-				3ACEF177269E952A00EBDAF1 /* readpass.h */,
-				3ACEF178269E952A00EBDAF1 /* asprintf.h */,
-				3ACEF179269E952A00EBDAF1 /* sysendian.h */,
-				3ACEF17A269E952A00EBDAF1 /* warnp.h */,
-				3ACEF17B269E952A00EBDAF1 /* crypto_scrypt_smix.h */,
-				3ACEF17C269E952A00EBDAF1 /* entropy.h */,
-				3ACEF17D269E952A00EBDAF1 /* getopt.h */,
-				3ACEF17E269E952A00EBDAF1 /* parsenum.h */,
-				3ACEF17F269E952A00EBDAF1 /* humansize.c */,
-				3ACEF180269E952A00EBDAF1 /* insecure_memzero.h */,
-				3ACEF181269E952A00EBDAF1 /* sha256.c */,
-				3ACEF182269E952A00EBDAF1 /* readpass.c */,
-				3ACEF183269E952A00EBDAF1 /* crypto_scrypt.c */,
-				3ACEF184269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.c */,
-				3ACEF185269E952A00EBDAF1 /* entropy.c */,
-				3ACEF186269E952A00EBDAF1 /* getopt.c */,
-				3ACEF187269E952A00EBDAF1 /* crypto_scrypt_smix.c */,
-				3ACEF188269E952A00EBDAF1 /* warnp.c */,
-				3ACEF189269E952A00EBDAF1 /* asprintf.c */,
-			);
-			name = scrypt;
-			path = ../../../../../web3swift/Sources/scrypt;
-			sourceTree = "<group>";
-		};
-		3ACEF172269E952A00EBDAF1 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				3ACEF173269E952A00EBDAF1 /* scrypt.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		3ACEF2CA269E955800EBDAF1 /* factorial */ = {
-			isa = PBXGroup;
-			children = (
-				3ACEF2CB269E956C00EBDAF1 /* include */,
-				3ACEF0AE269E90E300EBDAF1 /* factorial.c */,
-			);
-			path = factorial;
-			sourceTree = "<group>";
-		};
-		3ACEF2CB269E956C00EBDAF1 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				3ACEF0AD269E90E300EBDAF1 /* factorial.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -1654,20 +1765,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ACEF1B2269E952A00EBDAF1 /* hash.h in Headers */,
+				044F8C8326A5C20000C5FD70 /* sha256.h in Headers */,
+				0474961726A6D9C200F9C769 /* CVSDKBridging.h in Headers */,
+				3ACE241726ABF1910041499B /* ChainverseSDKError.h in Headers */,
 				3ACEF1A7269E952A00EBDAF1 /* ecmult.h in Headers */,
 				3ACEF194269E952A00EBDAF1 /* field.h in Headers */,
 				3ACEF1AB269E952A00EBDAF1 /* secp256k1_main.h in Headers */,
 				3ACEF18E269E952A00EBDAF1 /* secp256k1-config.h in Headers */,
+				3ACE239726A9789F0041499B /* CVSDKItem.h in Headers */,
 				3A3D7C3C26819DAB003A0DC4 /* AFURLSessionManager.h in Headers */,
 				3A97474B2682D5B1003E53C8 /* CVSDKRPCClient.h in Headers */,
 				3A9F03ED267AF681008F4C1B /* Chainverse.h in Headers */,
 				3ACEF1B4269E952A00EBDAF1 /* num_gmp_impl.h in Headers */,
 				3ACEF195269E952A00EBDAF1 /* secp256k1.h in Headers */,
-				3ACEF2AF269E952A00EBDAF1 /* sysendian.h in Headers */,
 				3A9F03DA267AF681008F4C1B /* ChainverseSDK.h in Headers */,
 				3ACEF193269E952A00EBDAF1 /* num_impl.h in Headers */,
 				3A97476F2682F34D003E53C8 /* CVSDKBaseBlocks.h in Headers */,
+				3ACE241226ABEB230041499B /* CVSDKConvert.h in Headers */,
 				3ACEF1A9269E952A00EBDAF1 /* ecmult_impl.h in Headers */,
+				044F8C8A26A5C20100C5FD70 /* getopt.h in Headers */,
 				3ACEF1A1269E952A00EBDAF1 /* ecdsa.h in Headers */,
 				3ACEF196269E952A00EBDAF1 /* ecdh_impl.h in Headers */,
 				3ACEF18A269E952A00EBDAF1 /* scalar_impl.h in Headers */,
@@ -1678,6 +1794,7 @@
 				3A9F03DC267AF681008F4C1B /* ChainverseSDKCallback.h in Headers */,
 				3A9F03D3267AF681008F4C1B /* CVSDKBaseSocketManager.h in Headers */,
 				3ACEF1B1269E952A00EBDAF1 /* num_gmp.h in Headers */,
+				3ACE239126A9578A0041499B /* CVSDKTrustResult.h in Headers */,
 				3A9F03D4267AF681008F4C1B /* CVSDKBaseView.h in Headers */,
 				3ACEF1A2269E952A00EBDAF1 /* scalar.h in Headers */,
 				3A9F03D7267AF681008F4C1B /* CVSDKBaseResource.h in Headers */,
@@ -1686,59 +1803,57 @@
 				3A9F03D9267AF681008F4C1B /* CVSDKBaseViewDialog.h in Headers */,
 				3A5EF6EB269D77B80035A10C /* CVSDKTrustSignMessage.h in Headers */,
 				3ACEF1BA269E952A00EBDAF1 /* keccak.h in Headers */,
-				3ACEF2B4269E952A00EBDAF1 /* parsenum.h in Headers */,
+				3A1E929426A7C9A600110854 /* CVSDKConnectWalletView.h in Headers */,
 				3ACEF1B7269E952A00EBDAF1 /* eckey.h in Headers */,
+				044F8C7F26A5C20000C5FD70 /* scrypt.h in Headers */,
+				044F8C8426A5C20000C5FD70 /* readpass.h in Headers */,
 				3ACEF1A5269E952A00EBDAF1 /* scalar_low_impl.h in Headers */,
-				3ACEF2B3269E952A00EBDAF1 /* getopt.h in Headers */,
+				3ACE239D26AA5BAE0041499B /* CVSDKCallbackToGame.h in Headers */,
 				3AEA5D06269ECF2600A270E2 /* CVSDKConstant.h in Headers */,
 				3A3D7C3A26819DAB003A0DC4 /* AFSecurityPolicy.h in Headers */,
 				3A3D7C4226819DAB003A0DC4 /* AFURLResponseSerialization.h in Headers */,
 				3A9747B226830E94003E53C8 /* ContractManager.h in Headers */,
 				3A9F03DD267AF681008F4C1B /* CVSDKUtils.h in Headers */,
 				3ACEF1AE269E952A00EBDAF1 /* scalar_4x64_impl.h in Headers */,
-				3ACEF2AE269E952A00EBDAF1 /* asprintf.h in Headers */,
 				3ACEF1AD269E952A00EBDAF1 /* field_5x52_int128_impl.h in Headers */,
 				3A3D7C3B26819DAB003A0DC4 /* AFNetworkReachabilityManager.h in Headers */,
-				3ACEF2B0269E952A00EBDAF1 /* warnp.h in Headers */,
-				3ACEF2B2269E952A00EBDAF1 /* entropy.h in Headers */,
 				3ACEF1AF269E952A00EBDAF1 /* group_impl.h in Headers */,
 				3ACEF191269E952A00EBDAF1 /* scalar_8x32_impl.h in Headers */,
-				3ACEF2AD269E952A00EBDAF1 /* readpass.h in Headers */,
+				044F8C8726A5C20100C5FD70 /* warnp.h in Headers */,
 				3ACEF192269E952A00EBDAF1 /* field_5x52.h in Headers */,
-				3A9F03E0267AF681008F4C1B /* CVSDKChooseWLViewDialog.h in Headers */,
 				3ACEF199269E952A00EBDAF1 /* scalar_4x64.h in Headers */,
 				3A3D7C4C26819DAB003A0DC4 /* AFCompatibilityMacros.h in Headers */,
 				3ACEF1A3269E952A00EBDAF1 /* ecdsa_impl.h in Headers */,
+				3ACE238B26A955F20041499B /* CVSDKUserDefault.h in Headers */,
 				3ACEF1B0269E952A00EBDAF1 /* ecmult_const.h in Headers */,
 				3ACEF197269E952A00EBDAF1 /* field_5x52_asm_impl.h in Headers */,
-				3ACEF2A7269E952A00EBDAF1 /* humansize.h in Headers */,
-				3ACEF2A8269E952A00EBDAF1 /* scrypt.h in Headers */,
-				3ACEF2B7269E952A00EBDAF1 /* insecure_memzero.h in Headers */,
+				044F8C8B26A5C20100C5FD70 /* parsenum.h in Headers */,
 				3ACEF1AC269E952A00EBDAF1 /* util.h in Headers */,
-				3ACEF2AC269E952A00EBDAF1 /* sha256.h in Headers */,
 				3ACEF198269E952A00EBDAF1 /* field_impl.h in Headers */,
 				3ACEF1A6269E952A00EBDAF1 /* hash_impl.h in Headers */,
+				044F8C8E26A5C20100C5FD70 /* insecure_memzero.h in Headers */,
 				3ACEF19D269E952A00EBDAF1 /* field_5x52_impl.h in Headers */,
 				3ACEF19A269E952A00EBDAF1 /* basic-config.h in Headers */,
 				3ACEF1AA269E952A00EBDAF1 /* group.h in Headers */,
 				3ACEF19B269E952A00EBDAF1 /* num.h in Headers */,
-				3ACEF2A9269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.h in Headers */,
 				3ACEF19E269E952A00EBDAF1 /* ecmult_const_impl.h in Headers */,
+				044F8C8826A5C20100C5FD70 /* crypto_scrypt_smix.h in Headers */,
+				3A1E928F26A7C97F00110854 /* CVSDKConnectWalletDialog.h in Headers */,
 				3ACEF18F269E952A00EBDAF1 /* field_10x26.h in Headers */,
 				3A3D7C3D26819DAB003A0DC4 /* AFURLRequestSerialization.h in Headers */,
 				3A3D7C4726819DAB003A0DC4 /* AFNetworking.h in Headers */,
 				3ACEF18C269E952A00EBDAF1 /* scratch.h in Headers */,
-				3A9F03E1267AF681008F4C1B /* CVSDKChooseWLView.h in Headers */,
-				3ACEF2B1269E952A00EBDAF1 /* crypto_scrypt_smix.h in Headers */,
-				3A9F03E7267AF681008F4C1B /* TestScreenViewDialog.h in Headers */,
-				3A9F03E8267AF681008F4C1B /* TestScreenView.h in Headers */,
+				044F8C8926A5C20100C5FD70 /* entropy.h in Headers */,
+				3ACE236A26A92E140041499B /* CVSDKDefine.h in Headers */,
+				044F8C8526A5C20000C5FD70 /* asprintf.h in Headers */,
 				3ACEF1A4269E952A00EBDAF1 /* ecmult_gen.h in Headers */,
 				3ACEF18B269E952A00EBDAF1 /* field_10x26_impl.h in Headers */,
 				3ACEF18D269E952A00EBDAF1 /* ecmult_gen_impl.h in Headers */,
+				044F8C8026A5C20000C5FD70 /* crypto_scrypt_smix_sse2.h in Headers */,
+				044F8C7E26A5C20000C5FD70 /* humansize.h in Headers */,
+				044F8C8626A5C20000C5FD70 /* sysendian.h in Headers */,
 				3A9F03E9267AF681008F4C1B /* CVSDKTrustConnect.h in Headers */,
 				3ACEF190269E952A00EBDAF1 /* recovery_impl.h in Headers */,
-				3A9F03EB267AF681008F4C1B /* CVSDKTrustTransfer.h in Headers */,
-				3ACEF0AF269E90E300EBDAF1 /* factorial.h in Headers */,
 				3AB58F4F268579F800DFDBEA /* CVSDKRESTfulClient.h in Headers */,
 				3ACEF1A8269E952A00EBDAF1 /* scratch_impl.h in Headers */,
 			);
@@ -1920,15 +2035,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ACE237426A949B90041499B /* chainverse_modal_top@2x.png in Resources */,
 				3ACEF3D9269E95CF00EBDAF1 /* SolidityDataWriter.swift~HEAD in Resources */,
-				3A9F055A267B06BE008F4C1B /* CVSDKChooseWLView.xib in Resources */,
+				3ACE237026A949B90041499B /* chainverse_modal_top.png in Resources */,
 				3ACEF3D6269E95CF00EBDAF1 /* SolidityFunction.swift~HEAD in Resources */,
+				3ACE235D26A9122A0041499B /* chainverse_icon_wallet@2x.png in Resources */,
 				3A9F00D926730259008F4C1B /* LaunchScreen.storyboard in Resources */,
 				3ACEF3BD269E95CF00EBDAF1 /* EthURL.swift~HEAD in Resources */,
+				3ACE236426A9124E0041499B /* chainverse_icon_trustwallet@3x.png in Resources */,
 				3ACEF3DD269E95CF00EBDAF1 /* SolidityTypes.swift~HEAD in Resources */,
 				3A9F00D626730259008F4C1B /* Assets.xcassets in Resources */,
+				3ACE238426A94CD90041499B /* chainverse_icon_close@2x.png in Resources */,
+				3ACE236626A9124E0041499B /* chainverse_icon_trustwallet@2x.png in Resources */,
+				3ACE238626A94CD90041499B /* chainverse_icon_close.png in Resources */,
+				3ACE237226A949B90041499B /* chainverse_modal_top@3x.png in Resources */,
 				3ACEF3DA269E95CF00EBDAF1 /* SolidityDataReader.swift~HEAD in Resources */,
-				3A9F054C267B06B7008F4C1B /* TestScreenView.xib in Resources */,
+				3A1E929826A7C9C200110854 /* CVSDKConnectWalletView.xib in Resources */,
+				3ACE238226A94CD90041499B /* chainverse_icon_close@3x.png in Resources */,
+				3ACE236226A9124E0041499B /* chainverse_icon_trustwallet.png in Resources */,
+				3ACE235B26A9122A0041499B /* chainverse_icon_wallet.png in Resources */,
+				3ACE235926A9122A0041499B /* chainverse_icon_wallet@3x.png in Resources */,
 				3A9F00D426730258008F4C1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1958,8 +2084,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A9F0553267B06BD008F4C1B /* CVSDKChooseWLView.xib in Resources */,
-				3A9F0545267B06AE008F4C1B /* TestScreenView.xib in Resources */,
+				3ACE235C26A9122A0041499B /* chainverse_icon_wallet.png in Resources */,
+				3ACE237126A949B90041499B /* chainverse_modal_top.png in Resources */,
+				3ACE238526A94CD90041499B /* chainverse_icon_close@2x.png in Resources */,
+				3ACE238726A94CD90041499B /* chainverse_icon_close.png in Resources */,
+				3A1E929926A7C9C200110854 /* CVSDKConnectWalletView.xib in Resources */,
+				3ACE236526A9124E0041499B /* chainverse_icon_trustwallet@3x.png in Resources */,
+				3ACE238326A94CD90041499B /* chainverse_icon_close@3x.png in Resources */,
+				3ACE235E26A9122A0041499B /* chainverse_icon_wallet@2x.png in Resources */,
+				3ACE236326A9124E0041499B /* chainverse_icon_trustwallet.png in Resources */,
+				3ACE235A26A9122A0041499B /* chainverse_icon_wallet@3x.png in Resources */,
+				3ACE237326A949B90041499B /* chainverse_modal_top@3x.png in Resources */,
+				3ACE237526A949B90041499B /* chainverse_modal_top@2x.png in Resources */,
+				3ACE236726A9124E0041499B /* chainverse_icon_trustwallet@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2010,29 +2147,30 @@
 				3ACEF3FE269E95CF00EBDAF1 /* Guides.swift in Sources */,
 				3ACEF3B7269E95CF00EBDAF1 /* Web3+JsonRpcRequest.swift in Sources */,
 				3AEA5D1426A12DCB00A270E2 /* CVSDKHash.swift in Sources */,
-				3A9F0503267B02E5008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */,
-				3ACEF2B5269E952A00EBDAF1 /* humansize.c in Sources */,
 				3ACEF3F4269E95CF00EBDAF1 /* EthereumKeystoreV3.swift in Sources */,
 				3ACEF422269E95CF00EBDAF1 /* W3Personal.swift in Sources */,
 				3ACEF39B269E95CF00EBDAF1 /* Web3.swift in Sources */,
 				3ACEF385269E95CF00EBDAF1 /* ERC888.swift in Sources */,
-				3ACEF0B0269E90E300EBDAF1 /* factorial.c in Sources */,
 				3ACEF412269E95CF00EBDAF1 /* Int+Sequence.swift in Sources */,
 				3A3D7C4026819DAB003A0DC4 /* AFHTTPSessionManager.m in Sources */,
 				3ACEF404269E95CF00EBDAF1 /* UInt256.swift in Sources */,
 				3ACEF42C269E95CF00EBDAF1 /* W3Wallet.swift in Sources */,
+				044F8C9326A5C20100C5FD70 /* crypto_scrypt.c in Sources */,
 				3ACEF40A269E95CF00EBDAF1 /* LibSecp256k1Extension.swift in Sources */,
+				044F8C8C26A5C20100C5FD70 /* humansize.c in Sources */,
 				3ACEF3B5269E95CF00EBDAF1 /* Web3+Options.swift in Sources */,
 				3ACEF414269E95CF00EBDAF1 /* Base58.swift in Sources */,
 				3A3D7C4A26819DAB003A0DC4 /* AFSecurityPolicy.m in Sources */,
-				3ACEF2C8269E952A00EBDAF1 /* asprintf.c in Sources */,
 				3ACEF41C269E95CF00EBDAF1 /* OutputParameters.swift in Sources */,
+				044F8C9F26A5C20100C5FD70 /* asprintf.c in Sources */,
 				3ACEF393269E95CF00EBDAF1 /* JsonRpcRequest.swift in Sources */,
 				3ACEF3C0269E95CF00EBDAF1 /* TxPool.swift in Sources */,
 				3A9F00D126730258008F4C1B /* ViewController.m in Sources */,
 				3ACEF377269E95CF00EBDAF1 /* BloomFilter.swift in Sources */,
 				3ACEF3F2269E95CF00EBDAF1 /* BIP32Keystore.swift in Sources */,
+				3ACE238C26A955F20041499B /* CVSDKUserDefault.m in Sources */,
 				3ACEF416269E95CF00EBDAF1 /* Array+Extension.swift in Sources */,
+				044F8C9B26A5C20100C5FD70 /* crypto_scrypt_smix.c in Sources */,
 				3A97474C2682D5B1003E53C8 /* CVSDKRPCClient.m in Sources */,
 				3A9F04FC267B02C9008F4C1B /* CVSDKTrustConnect.m in Sources */,
 				3A9F04CB267B02AA008F4C1B /* CVSDKBaseView.m in Sources */,
@@ -2048,6 +2186,7 @@
 				3ACEF373269E95CF00EBDAF1 /* KeyDerivation.swift in Sources */,
 				3ACEF361269E95CF00EBDAF1 /* Utilities.swift in Sources */,
 				3A9F00CB26730258008F4C1B /* AppDelegate.m in Sources */,
+				044F8C8F26A5C20100C5FD70 /* sha256.c in Sources */,
 				3ACEF3A1269E95CF00EBDAF1 /* Web3+Instance.swift in Sources */,
 				3ACEF38D269E95CF00EBDAF1 /* ERC777.swift in Sources */,
 				3ACEF3A5269E95CF00EBDAF1 /* Web3+EventParser.swift in Sources */,
@@ -2065,6 +2204,7 @@
 				3ACEF39F269E95CF00EBDAF1 /* Web3+Utils.swift in Sources */,
 				3ACEF40E269E95CF00EBDAF1 /* Data+Extension.swift in Sources */,
 				3ACEF3C2269E95CF00EBDAF1 /* DecoderExtensions.swift in Sources */,
+				3A1E929526A7C9A600110854 /* CVSDKConnectWalletView.m in Sources */,
 				3ACEF363269E95CF00EBDAF1 /* StreamCryptor.swift in Sources */,
 				3A9F04E0267B02B8008F4C1B /* CVSDKUtils.m in Sources */,
 				3ACEF43F269E95CF00EBDAF1 /* Migration-iOS.swift in Sources */,
@@ -2077,16 +2217,17 @@
 				3ACEF3BE269E95CF00EBDAF1 /* EIP681.swift in Sources */,
 				3ACEF1B8269E952A00EBDAF1 /* keccak.c in Sources */,
 				3ACEF3A9269E95CF00EBDAF1 /* Web3+Methods.swift in Sources */,
-				3A9F050A267B02E7008F4C1B /* CVSDKChooseWLView.m in Sources */,
 				3ACEF389269E95CF00EBDAF1 /* ERC20.swift in Sources */,
 				3ACEF3B3269E95CF00EBDAF1 /* Web3+Structures.swift in Sources */,
 				3A9747B326830E94003E53C8 /* ContractManager.m in Sources */,
+				044F8C9126A5C20100C5FD70 /* readpass.c in Sources */,
 				3ACEF369269E95CF00EBDAF1 /* Crypto.swift in Sources */,
-				3A9F04F5267B02C6008F4C1B /* CVSDKTrustTransfer.m in Sources */,
+				3ACE239826A9789F0041499B /* CVSDKItem.m in Sources */,
 				3ACEF3A7269E95CF00EBDAF1 /* Web3+Protocols.swift in Sources */,
 				3ACEF3F0269E95CF00EBDAF1 /* BIP39+WordLists.swift in Sources */,
 				3ACEF43B269E95CF00EBDAF1 /* W3Eth.swift in Sources */,
 				3ACEF35B269E95CF00EBDAF1 /* DerivedKey.swift in Sources */,
+				3ACE241326ABEB230041499B /* CVSDKConvert.m in Sources */,
 				3ACEF35F269E95CF00EBDAF1 /* Random.swift in Sources */,
 				3ACEF371269E95CF00EBDAF1 /* Status.swift in Sources */,
 				3ACEF418269E95CF00EBDAF1 /* EthereumApi.swift in Sources */,
@@ -2096,30 +2237,26 @@
 				3A3D7C4526819DAB003A0DC4 /* AFURLRequestSerialization.m in Sources */,
 				3ACEF38F269E95CF00EBDAF1 /* NetworkPromises.swift in Sources */,
 				3ACEF383269E95CF00EBDAF1 /* ContractABIv2.swift in Sources */,
-				3ACEF2AA269E952A00EBDAF1 /* insecure_memzero.c in Sources */,
+				044F8C8126A5C20000C5FD70 /* insecure_memzero.c in Sources */,
 				3ACEF430269E95CF00EBDAF1 /* W3Keystore.swift in Sources */,
-				3ACEF2B8269E952A00EBDAF1 /* sha256.c in Sources */,
 				3ACEF3CA269E95CF00EBDAF1 /* ABIv2Elements.swift in Sources */,
 				3A3D7C3E26819DAB003A0DC4 /* AFURLResponseSerialization.m in Sources */,
+				044F8C9926A5C20100C5FD70 /* getopt.c in Sources */,
 				3ACEF41E269E95CF00EBDAF1 /* InputParameters.swift in Sources */,
 				3ACEF420269E95CF00EBDAF1 /* W3Transaction.swift in Sources */,
+				044F8C9726A5C20100C5FD70 /* entropy.c in Sources */,
 				3ACEF3E8269E95CF00EBDAF1 /* KeystoreManager.swift in Sources */,
 				3ACEF3E4269E95CF00EBDAF1 /* EthereumTransaction.swift in Sources */,
-				3ACEF2C0269E952A00EBDAF1 /* entropy.c in Sources */,
-				3A9F04EE267B02C2008F4C1B /* TestScreenView.m in Sources */,
 				3ACEF441269E95CF00EBDAF1 /* BlockExplorer.swift in Sources */,
-				3ACEF2C6269E952A00EBDAF1 /* warnp.c in Sources */,
 				3ACEF3FA269E95CF00EBDAF1 /* PlainKeystore.swift in Sources */,
 				3ACEF37B269E95CF00EBDAF1 /* EventFiltering.swift in Sources */,
 				3ACEF408269E95CF00EBDAF1 /* String+Extension.swift in Sources */,
 				3ACEF3E2269E95CF00EBDAF1 /* SolidityTypes.swift in Sources */,
 				3ACEF35D269E95CF00EBDAF1 /* scrypt.swift in Sources */,
 				3ACEF37D269E95CF00EBDAF1 /* ComparisonExtensions.swift in Sources */,
-				3ACEF2BE269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.c in Sources */,
 				3ACEF3CC269E95CF00EBDAF1 /* ABIv2.swift in Sources */,
 				3AB58F50268579F800DFDBEA /* CVSDKRESTfulClient.m in Sources */,
 				3ACEF19F269E952A00EBDAF1 /* secp256k1.c in Sources */,
-				3ACEF2BC269E952A00EBDAF1 /* crypto_scrypt.c in Sources */,
 				3ACEF432269E95CF00EBDAF1 /* W3JsonRpc.swift in Sources */,
 				3ACEF406269E95CF00EBDAF1 /* CryptoExtensions.swift in Sources */,
 				3ACEF3C6269E95CF00EBDAF1 /* Web3+BrowserFunctions.swift in Sources */,
@@ -2127,16 +2264,17 @@
 				3ACEF3E6269E95CF00EBDAF1 /* BlockNumber.swift in Sources */,
 				3ACEF3FC269E95CF00EBDAF1 /* AbstractKeystore.swift in Sources */,
 				3A9F04D2267B02AF008F4C1B /* CVSDKBaseResource.m in Sources */,
+				0474961826A6D9C200F9C769 /* CVSDKBridging.m in Sources */,
 				3ACEF395269E95CF00EBDAF1 /* JEncodable.swift in Sources */,
+				044F8C9526A5C20100C5FD70 /* crypto_scrypt_smix_sse2.c in Sources */,
 				3ACEF40C269E95CF00EBDAF1 /* NSRegularExpressionExtension.swift in Sources */,
+				3ACE239226A9578A0041499B /* CVSDKTrustResult.m in Sources */,
 				3ACEF391269E95CF00EBDAF1 /* NetworkProvider.swift in Sources */,
 				3ACEF3EA269E95CF00EBDAF1 /* IBAN.swift in Sources */,
 				3ACEF399269E95CF00EBDAF1 /* Web3+HttpProvider.swift in Sources */,
 				3ACEF428269E95CF00EBDAF1 /* W3UInt.swift in Sources */,
-				3ACEF2C2269E952A00EBDAF1 /* getopt.c in Sources */,
 				3ACEF3CE269E95CF00EBDAF1 /* ABIv2TypeParser.swift in Sources */,
 				3ACEF359269E95CF00EBDAF1 /* keccak.swift in Sources */,
-				3ACEF2C4269E952A00EBDAF1 /* crypto_scrypt_smix.c in Sources */,
 				3ACEE9F6269E823800EBDAF1 /* Test.swift in Sources */,
 				3ACEF3D2269E95CF00EBDAF1 /* ABIv2ParameterTypes.swift in Sources */,
 				3A9F04B4267B022E008F4C1B /* ChainverseSDK.m in Sources */,
@@ -2144,16 +2282,18 @@
 				3ACEF3C4269E95CF00EBDAF1 /* Web3+Wallet.swift in Sources */,
 				3A9F00CE26730258008F4C1B /* SceneDelegate.m in Sources */,
 				3A9F04C4267B02A6008F4C1B /* CVSDKBaseSocketManager.m in Sources */,
+				3A1E929026A7C97F00110854 /* CVSDKConnectWalletDialog.m in Sources */,
 				3A5EF6EC269D77B80035A10C /* CVSDKTrustSignMessage.m in Sources */,
 				3ACEF38B269E95CF00EBDAF1 /* ERC721.swift in Sources */,
 				3ACEF381269E95CF00EBDAF1 /* ContractProtocol.swift in Sources */,
 				3ACEF3EC269E95CF00EBDAF1 /* BIP39.swift in Sources */,
+				044F8C9D26A5C20100C5FD70 /* warnp.c in Sources */,
 				3ACEF410269E95CF00EBDAF1 /* NativeTypesEncoding+Extensions.swift in Sources */,
 				3ACEF3A3269E95CF00EBDAF1 /* Web3+Contract.swift in Sources */,
 				3A3D7C4826819DAB003A0DC4 /* AFNetworkReachabilityManager.m in Sources */,
 				3ACEF3EE269E95CF00EBDAF1 /* BIP32HDNode.swift in Sources */,
-				3ACEF2BA269E952A00EBDAF1 /* readpass.c in Sources */,
 				3ACEF3D0269E95CF00EBDAF1 /* ABIv2Decoding.swift in Sources */,
+				3ACE239E26AA5BAE0041499B /* CVSDKCallbackToGame.m in Sources */,
 				3ACEF3D4269E95CF00EBDAF1 /* ABIv2Encoding.swift in Sources */,
 				3ACEF434269E95CF00EBDAF1 /* W3Structs.swift in Sources */,
 				3ACEF3B9269E95CF00EBDAF1 /* RLP.swift in Sources */,
@@ -2163,7 +2303,6 @@
 				3ACEF36D269E95CF00EBDAF1 /* Updatable.swift in Sources */,
 				3ACEF379269E95CF00EBDAF1 /* TransactionSigner.swift in Sources */,
 				3ACEF3F6269E95CF00EBDAF1 /* HDPath.swift in Sources */,
-				3A9F04E7267B02C0008F4C1B /* TestScreenViewDialog.m in Sources */,
 				3ACEF36B269E95CF00EBDAF1 /* Cryptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2205,7 +2344,6 @@
 			files = (
 				3ACEF42D269E95CF00EBDAF1 /* W3Wallet.swift in Sources */,
 				3ACEF41B269E95CF00EBDAF1 /* ShhApi.swift in Sources */,
-				3A9F03A5267AF531008F4C1B /* TestScreenViewDialog.m in Sources */,
 				3ACEF364269E95CF00EBDAF1 /* StreamCryptor.swift in Sources */,
 				3ACEF3A0269E95CF00EBDAF1 /* Web3+Utils.swift in Sources */,
 				3ACEF39A269E95CF00EBDAF1 /* Web3+HttpProvider.swift in Sources */,
@@ -2217,7 +2355,6 @@
 				3ACEF431269E95CF00EBDAF1 /* W3Keystore.swift in Sources */,
 				3ACEF3A8269E95CF00EBDAF1 /* Web3+Protocols.swift in Sources */,
 				3ACEF433269E95CF00EBDAF1 /* W3JsonRpc.swift in Sources */,
-				3ACEF0B1269E90E300EBDAF1 /* factorial.c in Sources */,
 				3ACEF37A269E95CF00EBDAF1 /* TransactionSigner.swift in Sources */,
 				3ACEF3AA269E95CF00EBDAF1 /* Web3+Methods.swift in Sources */,
 				3ACEF43E269E95CF00EBDAF1 /* W3TxPool.swift in Sources */,
@@ -2231,69 +2368,71 @@
 				3ACEF3BF269E95CF00EBDAF1 /* EIP681.swift in Sources */,
 				3ACEF435269E95CF00EBDAF1 /* W3Structs.swift in Sources */,
 				3ACEF380269E95CF00EBDAF1 /* EthereumFilterEncodingExtensions.swift in Sources */,
-				3ACEF2C5269E952A00EBDAF1 /* crypto_scrypt_smix.c in Sources */,
 				3ACEF35A269E95CF00EBDAF1 /* keccak.swift in Sources */,
 				3ACEF401269E95CF00EBDAF1 /* Migration.swift in Sources */,
 				3ACEF3E1269E95CF00EBDAF1 /* SolidityDataWriter.swift in Sources */,
 				3ACEF39C269E95CF00EBDAF1 /* Web3.swift in Sources */,
 				3ACEF3E5269E95CF00EBDAF1 /* EthereumTransaction.swift in Sources */,
+				3A1E929126A7C97F00110854 /* CVSDKConnectWalletDialog.m in Sources */,
 				3ACEF40B269E95CF00EBDAF1 /* LibSecp256k1Extension.swift in Sources */,
 				3ACEF3A4269E95CF00EBDAF1 /* Web3+Contract.swift in Sources */,
+				044F8C8D26A5C20100C5FD70 /* humansize.c in Sources */,
 				3ACEF41D269E95CF00EBDAF1 /* OutputParameters.swift in Sources */,
 				3ACEF3B6269E95CF00EBDAF1 /* Web3+Options.swift in Sources */,
 				3ACEF3D5269E95CF00EBDAF1 /* ABIv2Encoding.swift in Sources */,
 				3ACEF3B2269E95CF00EBDAF1 /* Batching.swift in Sources */,
 				3ACEF3CB269E95CF00EBDAF1 /* ABIv2Elements.swift in Sources */,
 				3ACEF374269E95CF00EBDAF1 /* KeyDerivation.swift in Sources */,
+				044F8C9E26A5C20100C5FD70 /* warnp.c in Sources */,
 				3ACEF36E269E95CF00EBDAF1 /* Updatable.swift in Sources */,
 				3ACEF396269E95CF00EBDAF1 /* JEncodable.swift in Sources */,
 				3ACEF3AE269E95CF00EBDAF1 /* Web3+TransactionIntermediate.swift in Sources */,
-				3A9F03A3267AF531008F4C1B /* CVSDKChooseWLViewDialog.m in Sources */,
 				3ACEF43C269E95CF00EBDAF1 /* W3Eth.swift in Sources */,
 				3ACEF3B8269E95CF00EBDAF1 /* Web3+JsonRpcRequest.swift in Sources */,
 				3ACEF388269E95CF00EBDAF1 /* SecurityToken.swift in Sources */,
-				3ACEF2BD269E952A00EBDAF1 /* crypto_scrypt.c in Sources */,
 				3ACEF3BA269E95CF00EBDAF1 /* RLP.swift in Sources */,
-				3ACEF2AB269E952A00EBDAF1 /* insecure_memzero.c in Sources */,
 				3ACEF36C269E95CF00EBDAF1 /* Cryptor.swift in Sources */,
 				3ACEF366269E95CF00EBDAF1 /* HMAC.swift in Sources */,
 				3ACEF378269E95CF00EBDAF1 /* BloomFilter.swift in Sources */,
+				044F8C9826A5C20100C5FD70 /* entropy.c in Sources */,
 				3A9F03AA267AF531008F4C1B /* CVSDKBaseViewDialog.m in Sources */,
 				3ACEF419269E95CF00EBDAF1 /* EthereumApi.swift in Sources */,
-				3ACEF2B9269E952A00EBDAF1 /* sha256.c in Sources */,
-				3ACEF2C3269E952A00EBDAF1 /* getopt.c in Sources */,
 				3A9F03A9267AF531008F4C1B /* CVSDKBaseResource.m in Sources */,
-				3A9F03A4267AF531008F4C1B /* CVSDKChooseWLView.m in Sources */,
 				3ACEF3B4269E95CF00EBDAF1 /* Web3+Structures.swift in Sources */,
 				3ACEF425269E95CF00EBDAF1 /* W3TransactionIntermediate.swift in Sources */,
 				3ACEF3FF269E95CF00EBDAF1 /* Guides.swift in Sources */,
 				3ACEF3E3269E95CF00EBDAF1 /* SolidityTypes.swift in Sources */,
 				3ACEF3C5269E95CF00EBDAF1 /* Web3+Wallet.swift in Sources */,
 				3ACEF3ED269E95CF00EBDAF1 /* BIP39.swift in Sources */,
-				3ACEF2C1269E952A00EBDAF1 /* entropy.c in Sources */,
 				3ACEF3C3269E95CF00EBDAF1 /* DecoderExtensions.swift in Sources */,
 				3ACEF3A2269E95CF00EBDAF1 /* Web3+Instance.swift in Sources */,
 				3ACEF3C1269E95CF00EBDAF1 /* TxPool.swift in Sources */,
+				0474961926A6D9C200F9C769 /* CVSDKBridging.m in Sources */,
+				3ACE238D26A955F20041499B /* CVSDKUserDefault.m in Sources */,
 				3ACEF423269E95CF00EBDAF1 /* W3Personal.swift in Sources */,
 				3ACEF3A6269E95CF00EBDAF1 /* Web3+EventParser.swift in Sources */,
+				044F8C9026A5C20100C5FD70 /* sha256.c in Sources */,
 				3ACEF372269E95CF00EBDAF1 /* Status.swift in Sources */,
 				3ACEF38A269E95CF00EBDAF1 /* ERC20.swift in Sources */,
 				3ACEF38C269E95CF00EBDAF1 /* ERC721.swift in Sources */,
+				3ACE241426ABEB230041499B /* CVSDKConvert.m in Sources */,
 				3ACEF3CF269E95CF00EBDAF1 /* ABIv2TypeParser.swift in Sources */,
 				3ACEF3C7269E95CF00EBDAF1 /* Web3+BrowserFunctions.swift in Sources */,
 				3ACEF41F269E95CF00EBDAF1 /* InputParameters.swift in Sources */,
 				3ACEF3EF269E95CF00EBDAF1 /* BIP32HDNode.swift in Sources */,
+				3ACE239926A9789F0041499B /* CVSDKItem.m in Sources */,
+				3ACE239326A9578A0041499B /* CVSDKTrustResult.m in Sources */,
 				3ACEF3F3269E95CF00EBDAF1 /* BIP32Keystore.swift in Sources */,
 				3ACEF3F1269E95CF00EBDAF1 /* BIP39+WordLists.swift in Sources */,
-				3ACEF2BF269E952A00EBDAF1 /* crypto_scrypt_smix_sse2.c in Sources */,
 				3ACEF1B9269E952A00EBDAF1 /* keccak.c in Sources */,
 				3ACEF405269E95CF00EBDAF1 /* UInt256.swift in Sources */,
 				3ACEF370269E95CF00EBDAF1 /* SSLPointerTricks.swift in Sources */,
+				3A1E929626A7C9A600110854 /* CVSDKConnectWalletView.m in Sources */,
+				3ACE239F26AA5BAE0041499B /* CVSDKCallbackToGame.m in Sources */,
 				3A9F03AD267AF531008F4C1B /* CVSDKUtils.m in Sources */,
 				3ACEF3F5269E95CF00EBDAF1 /* EthereumKeystoreV3.swift in Sources */,
 				3ACEF415269E95CF00EBDAF1 /* Base58.swift in Sources */,
 				3ACEF440269E95CF00EBDAF1 /* Migration-iOS.swift in Sources */,
-				3ACEF2BB269E952A00EBDAF1 /* readpass.c in Sources */,
 				3ACEF36A269E95CF00EBDAF1 /* Crypto.swift in Sources */,
 				3ACEF437269E95CF00EBDAF1 /* Bridging.swift in Sources */,
 				3ACEF3D8269E95CF00EBDAF1 /* SolidityDataReader.swift in Sources */,
@@ -2310,15 +2449,14 @@
 				3ACEF3D1269E95CF00EBDAF1 /* ABIv2Decoding.swift in Sources */,
 				3ACEF403269E95CF00EBDAF1 /* RIPEMD160+StackOveflow.swift in Sources */,
 				3ACEF3AC269E95CF00EBDAF1 /* Web3+Eth.swift in Sources */,
-				3A9F03A6267AF531008F4C1B /* TestScreenView.m in Sources */,
 				3ACEF37C269E95CF00EBDAF1 /* EventFiltering.swift in Sources */,
 				3AB58F51268579F800DFDBEA /* CVSDKRESTfulClient.m in Sources */,
 				3ACEF3BC269E95CF00EBDAF1 /* EIP67Code.swift in Sources */,
 				3ACEF3B0269E95CF00EBDAF1 /* Web3+Infura.swift in Sources */,
-				3ACEF2C7269E952A00EBDAF1 /* warnp.c in Sources */,
 				3A9F03A7267AF531008F4C1B /* CVSDKBaseSocketManager.m in Sources */,
 				3ACEF39E269E95CF00EBDAF1 /* Web3+Personal.swift in Sources */,
 				3A9747B426830E94003E53C8 /* ContractManager.m in Sources */,
+				044F8C9426A5C20100C5FD70 /* crypto_scrypt.c in Sources */,
 				3ACEE9F7269E823800EBDAF1 /* Test.swift in Sources */,
 				3ACEF42B269E95CF00EBDAF1 /* W3Contract.swift in Sources */,
 				3A5EF6ED269D77B80035A10C /* CVSDKTrustSignMessage.m in Sources */,
@@ -2327,6 +2465,7 @@
 				3ACEF376269E95CF00EBDAF1 /* PrivateKey.swift in Sources */,
 				3ACEF3C9269E95CF00EBDAF1 /* ABIv2Parsing.swift in Sources */,
 				3ACEF407269E95CF00EBDAF1 /* CryptoExtensions.swift in Sources */,
+				044F8C9626A5C20100C5FD70 /* crypto_scrypt_smix_sse2.c in Sources */,
 				3ACEF409269E95CF00EBDAF1 /* String+Extension.swift in Sources */,
 				3ACEF421269E95CF00EBDAF1 /* W3Transaction.swift in Sources */,
 				3A3D7C4626819DAB003A0DC4 /* AFURLRequestSerialization.m in Sources */,
@@ -2335,21 +2474,22 @@
 				3ACEF3FD269E95CF00EBDAF1 /* AbstractKeystore.swift in Sources */,
 				3ACEF362269E95CF00EBDAF1 /* Utilities.swift in Sources */,
 				3ACEF442269E95CF00EBDAF1 /* BlockExplorer.swift in Sources */,
-				3A9F03AB267AF531008F4C1B /* CVSDKTrustTransfer.m in Sources */,
 				3ACEF1A0269E952A00EBDAF1 /* secp256k1.c in Sources */,
 				3ACEF413269E95CF00EBDAF1 /* Int+Sequence.swift in Sources */,
 				3ACEF384269E95CF00EBDAF1 /* ContractABIv2.swift in Sources */,
+				044F8C8226A5C20000C5FD70 /* insecure_memzero.c in Sources */,
 				3A3D7C4126819DAB003A0DC4 /* AFHTTPSessionManager.m in Sources */,
 				3ACEF3DF269E95CF00EBDAF1 /* Transaction.swift in Sources */,
+				044F8C9A26A5C20100C5FD70 /* getopt.c in Sources */,
 				3A3D7C3F26819DAB003A0DC4 /* AFURLResponseSerialization.m in Sources */,
-				3ACEF2B6269E952A00EBDAF1 /* humansize.c in Sources */,
 				3ACEF3E7269E95CF00EBDAF1 /* BlockNumber.swift in Sources */,
+				044F8C9C26A5C20100C5FD70 /* crypto_scrypt_smix.c in Sources */,
 				3ACEF3CD269E95CF00EBDAF1 /* ABIv2.swift in Sources */,
 				3ACEF3E9269E95CF00EBDAF1 /* KeystoreManager.swift in Sources */,
 				3ACEF386269E95CF00EBDAF1 /* ERC888.swift in Sources */,
 				3AEA5D1526A12DCB00A270E2 /* CVSDKHash.swift in Sources */,
+				044F8CA026A5C20100C5FD70 /* asprintf.c in Sources */,
 				3ACEF3F9269E95CF00EBDAF1 /* EthereumAddress.swift in Sources */,
-				3ACEF2C9269E952A00EBDAF1 /* asprintf.c in Sources */,
 				3ACEF37E269E95CF00EBDAF1 /* ComparisonExtensions.swift in Sources */,
 				3ACEF40F269E95CF00EBDAF1 /* Data+Extension.swift in Sources */,
 				3ACEF3F7269E95CF00EBDAF1 /* HDPath.swift in Sources */,
@@ -2357,6 +2497,7 @@
 				3ACEF3FB269E95CF00EBDAF1 /* PlainKeystore.swift in Sources */,
 				3A9F03AE267AF531008F4C1B /* ChainverseSDK.m in Sources */,
 				3A97474D2682D5B1003E53C8 /* CVSDKRPCClient.m in Sources */,
+				044F8C9226A5C20100C5FD70 /* readpass.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2529,12 +2670,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6CV7UNHJKY;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 armv7";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chainverse/Third-Party/Frameworks",
+				);
 				INFOPLIST_FILE = "Chainverse-SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2543,10 +2690,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Chainverse/Library/SwiftLibrary/Chainverse-SDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chainverse/Third-Party/Library/Swift/Chainverse-SDK-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
@@ -2555,11 +2703,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6CV7UNHJKY;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chainverse/Third-Party/Frameworks",
+				);
 				INFOPLIST_FILE = "Chainverse-SDK/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2568,9 +2722,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Chainverse/Library/SwiftLibrary/Chainverse-SDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chainverse/Third-Party/Library/Swift/Chainverse-SDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
@@ -2695,7 +2850,8 @@
 		3A9F028B2679AC40008F4C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6CV7UNHJKY;
 				INFOPLIST_FILE = ChainverseBundle/Info.plist;
@@ -2704,6 +2860,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test.ChainverseBundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
@@ -2713,7 +2871,8 @@
 		3A9F028C2679AC40008F4C1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6CV7UNHJKY;
 				INFOPLIST_FILE = ChainverseBundle/Info.plist;
@@ -2721,6 +2880,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmosdk.test.ChainverseBundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
@@ -2755,13 +2916,21 @@
 		3A9F036E267AF462008F4C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6CV7UNHJKY;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chainverse/Frameworks",
+					"$(PROJECT_DIR)/Chainverse/Third-Party/Frameworks",
+				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2772,7 +2941,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
-				SWIFT_OBJC_BRIDGING_HEADER = "Chainverse/Library/SwiftLibrary/Chainverse-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chainverse/Third-Party/Library/Swift/Chainverse-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2782,12 +2951,20 @@
 		3A9F036F267AF462008F4C1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6CV7UNHJKY;
 				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chainverse/Frameworks",
+					"$(PROJECT_DIR)/Chainverse/Third-Party/Frameworks",
+				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2798,7 +2975,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
-				SWIFT_OBJC_BRIDGING_HEADER = "Chainverse/Library/SwiftLibrary/Chainverse-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chainverse/Third-Party/Library/Swift/Chainverse-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

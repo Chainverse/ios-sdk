@@ -10,9 +10,10 @@
 @protocol ChainverseSDKCallback <NSObject>
 
 @required
-
-- (void)didConnectWallet:(NSString *) address;
-
+- (void)didInitSDKSuccess;
+- (void)didError:(int)error;
+- (void)didUserAddress:(NSString *) address;
+- (void)didUserLogout:(NSString *) address;
 - (void)didSocketCallback:(NSArray *)data;
 @end
 

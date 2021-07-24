@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,6 +59,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YS-9z-7KU">
+                                <rect key="frame" x="20" y="414" width="200" height="45"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1Fz-3i-HSY"/>
+                                    <constraint firstAttribute="height" constant="45" id="TWe-lD-OH8"/>
+                                </constraints>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,6 +81,8 @@
                             <constraint firstItem="f3q-l0-OTw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="H5o-ir-XgV"/>
                             <constraint firstItem="9i9-of-7Hq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Lbx-Kw-R4r"/>
                             <constraint firstItem="aNJ-td-TTq" firstAttribute="top" secondItem="9i9-of-7Hq" secondAttribute="bottom" constant="23" id="Rz4-xs-glw"/>
+                            <constraint firstItem="7YS-9z-7KU" firstAttribute="top" secondItem="f3q-l0-OTw" secondAttribute="bottom" constant="20" id="SDq-m7-Y1S"/>
+                            <constraint firstItem="7YS-9z-7KU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Son-QF-xp7"/>
                             <constraint firstItem="f3q-l0-OTw" firstAttribute="top" secondItem="aNJ-td-TTq" secondAttribute="bottom" constant="24" id="Utf-h2-oUr"/>
                             <constraint firstItem="Wml-ti-zOU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ya2-02-c6X"/>
                         </constraints>
@@ -76,6 +90,7 @@
                     <connections>
                         <outlet property="btnChoose" destination="9i9-of-7Hq" id="CaA-LG-pfc"/>
                         <outlet property="btnConnect" destination="aNJ-td-TTq" id="VFA-gU-sg6"/>
+                        <outlet property="btnLogout" destination="7YS-9z-7KU" id="BtE-Cm-qHJ"/>
                         <outlet property="btnTransfer" destination="f3q-l0-OTw" id="4eC-pt-sbN"/>
                         <outlet property="lblAddress" destination="Wml-ti-zOU" id="ZcI-eM-jTF"/>
                     </connections>

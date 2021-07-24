@@ -17,7 +17,10 @@
     [super viewDidLoad];
     [self.btnConnect addTarget:self action:@selector(handleConnect:) forControlEvents:UIControlEventTouchUpInside];
     [self.btnTransfer addTarget:self action:@selector(handleTransfer:) forControlEvents:UIControlEventTouchUpInside];
+    self.btnTransfer.hidden = TRUE;
     [self.btnChoose addTarget:self action:@selector(handleChoose:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.btnLogout addTarget:self action:@selector(handleLogout:) forControlEvents:UIControlEventTouchUpInside];
     [[NSNotificationCenter defaultCenter] addObserver:self
             selector:@selector(receiveTestNotification:)
             name:@"SampleNotiAddress"
@@ -37,14 +40,14 @@
 
 
 - (void)handleTransfer:(id)sender {
-    [[ChainverseSDK shared] transferTrust:@"c60"
-                                       to:@"0x728B02377230b5df73Aa4E3192E89b6090DD7312"
-                                   amount:@"0.01"
-                                 feePrice:@"2112000000"
-                                 feeLimit:@"21000"];
+   
 }
 
 - (void)handleChoose:(id)sender {
-    [[ChainverseSDK shared] chooseWL];
+    [[ChainverseSDK shared] showConnectWalletView];
+}
+
+- (void)handleLogout:(id)sender {
+    [[ChainverseSDK shared] logout];
 }
 @end

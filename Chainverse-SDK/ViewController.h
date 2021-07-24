@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnConnect;
 @property (weak, nonatomic) IBOutlet UIButton *btnTransfer;
 @property (weak, nonatomic) IBOutlet UILabel *lblAddress;
+@property (weak, nonatomic) IBOutlet UIButton *btnLogout;
 
 
 @end

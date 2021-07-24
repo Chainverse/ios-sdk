@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "ChainverseSDK.h"
 #import "ChainverseSDKCallback.h"
+#import "ChainverseSDKError.h"
 @interface AppDelegate ()<ChainverseSDKCallback>
 
 @end
@@ -20,18 +21,31 @@
     [ChainverseSDK shared].gameAddress = @"0x3F57BF31E55de54306543863E079aD234f477b88";
     [ChainverseSDK shared].scheme = @"trustsdk";
     [ChainverseSDK shared].delegate = self;
-    [[ChainverseSDK shared] start];
+    [[ChainverseSDK shared] initialize];
+    [[ChainverseSDK shared] setIsKeepConnectWallet:TRUE];
     
     NSLog(@"ChainverSDK Verison %@",[[ChainverseSDK shared] getVersion]);
     
     return YES;
 }
 
-- (void)didConnectWallet:(NSString *)address{
+- (void)didInitSDKSuccess{
+   
+}
+
+- (void)didUserAddress:(NSString *)address{
     NSLog(@"ChainverseSDKCallback_didConnectWallet %@",address);
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:address forKey:@"address"];
     [[NSNotificationCenter defaultCenter] postNotificationName:
                            @"SampleNotiAddress" object:nil userInfo:userInfo];
+}
+
+- (void)didUserLogout:(NSString *)address{
+   
+}
+
+- (void)didError:(int)error{
+    NSLog(@"didError %d",error);
 }
 
 - (void)didSocketCallback:(NSArray *)data{
