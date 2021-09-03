@@ -11,19 +11,27 @@
 #import "CVSDKTrustSignMessage.h"
 #import "CVSDKUtils.h"
 #import "CVSDKConnectWalletDialog.h"
-#import "CVSDKBaseSocketManager.h"
+#import "CVSDKBaseSocketIO.h"
 #import "CVSDKRPCClient.h"
-#import "ContractManager.h"
+#import "CVSDKContractManager.h"
 #import "CVSDKBridging.h"
 #import "CVSDKUserDefault.h"
 #import "CVSDKTrustResult.h"
 #import "CVSDKDefine.h"
 #import "CVSDKCallbackToGame.h"
 #import "ChainverseSDKError.h"
+#import "CVSDKRESTfulClient.h"
+#import "CVSDKParseJson.h"
+#import "CVSDKConstant.h"
+#import "ChainverseItem.h"
+#import "CVSDKChainverseConnect.h"
+#import "CVSDKChainverseResult.h"
+#import "CVSDKTransferItemManager.h"
+#import "ChainverseVersion.h"
 @interface ChainverseSDK(){
     BOOL isInitSDK;
 }
-@property (nonatomic, nonatomic) CVSDKBaseSocketManager *manager;
+@property (nonatomic, nonatomic) CVSDKBaseSocketIO *socketIO;
 @end
 @implementation ChainverseSDK
 
@@ -38,47 +46,97 @@
 
 - (void)initialize{
     isInitSDK = false;
-    self.isKeepConnectWallet = TRUE;
+    self.isKeepConnect = TRUE;
     [self checkContract];
 }
 
 - (void)checkContract{
-    ContractManager *contractManager = [[ContractManager alloc] init];
+    CVSDKContractManager *contractManager = [[CVSDKContractManager alloc] init];
     [contractManager check:^(BOOL isChecked){
         if(isChecked){
             [CVSDKCallbackToGame didInitSDKSuccess];
             [self doInitialize];
         }else{
-            [CVSDKCallbackToGame didError:Error_InitSDK];
+            [CVSDKCallbackToGame didError:ERROR_INIT_SDK];
         }
     }];
 }
 
 - (void)doInitialize{
     isInitSDK = true;
-    if(self.isKeepConnectWallet){
-        [CVSDKCallbackToGame didUserAddress:[CVSDKUserDefault getXUserAdress]];
+    if(self.isKeepConnect){
+        [self doConnectSuccess];
     }else{
         [CVSDKUserDefault clearXUserAddress];
+        [CVSDKUserDefault clearXUserSignature];
     }
 }
 
+- (void)doConnectSuccess{
+    
+    if([self isUserConnected]){
+        NSLog(@"chainversesdk_connect_success %@",[CVSDKUserDefault getXUserSignature]);
+        [CVSDKCallbackToGame didConnectSuccess:[CVSDKUserDefault getXUserAdress]];
+        [[CVSDKTransferItemManager shared] on:^(int event,NSArray * _Nonnull data){
+            switch (event) {
+                case EVENT_TRANSFER_ITEM_TO_USER:
+                    if([data count] > 0){
+                        [CVSDKCallbackToGame didItemUpdate:[CVSDKParseJson parseItem:data] type:TRANSFER_ITEM_TO_USER];
+                        [self getItems];
+                    }
+                    break;
+                    
+                case EVENT_TRANSFER_ITEM_FROM_USER:
+                    if([data count] > 0){
+                        [CVSDKCallbackToGame didItemUpdate:[CVSDKParseJson parseItem:data] type:TRANSFER_ITEM_FROM_USER];
+                        [self getItems];
+                    }
+                    break;
+                    
+                default:
+                    break;
+            }
+        }];
+        [[CVSDKTransferItemManager shared] connect];
+    }
+}
 
-- (void) setKeepConnectWallet:(BOOL)isKeep{
-    self.isKeepConnectWallet = isKeep;
+- (void) setKeepConnect:(BOOL)isKeep{
+    self.isKeepConnect = isKeep;
 }
 
 - (void) logout{
     if(![self isInitSDKSuccess]){
         return;
     }
-    [CVSDKCallbackToGame didUserLogout:[CVSDKUserDefault getXUserAdress]];
+    [CVSDKCallbackToGame didLogout:[CVSDKUserDefault getXUserAdress]];
     [CVSDKUserDefault clearXUserAddress];
+    [CVSDKUserDefault clearXUserSignature];
 }
 
-- (NSString *)getUser{
-    return [CVSDKUserDefault getXUserAdress];
+
+- (void)getItems{
+    if(![self isInitSDKSuccess]){
+        return;
+    }
+    
+    if([self isUserConnected]){
+        NSString *action = [NSString stringWithFormat:actionItems, [CVSDKUserDefault getXUserAdress], [ChainverseSDK shared].gameAddress];
+        [[CVSDKRESTfulClient shared] get:action completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSLog(@"nampv_getItems %@",responseObject);
+            if([CVSDKParseJson errorCode:responseObject] == 0){
+                NSMutableArray *items = [CVSDKParseJson parseItems:responseObject];
+                [CVSDKCallbackToGame didGetItems:items];
+            }else{
+                [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"nampv_getItems_r %@",error);
+            [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
+        }];
+    }
 }
+
 
 - (BOOL)handleOpenUrl:(UIApplication *)app
               openURL:(NSURL *)url
@@ -99,51 +157,107 @@
 }
 
 - (void)doHandleOpenUrl :(NSURL *)url{
-    int action = [CVSDKTrustResult getAction:url];
-    switch (action) {
-        case TrustAccount:{
-            NSString *xUserAddress = [CVSDKTrustResult getUserAddress:url];
-            [CVSDKUserDefault setXUserAddress:xUserAddress];
-            CVSDKTrustSignMessage *trust = [[CVSDKTrustSignMessage alloc] init];
-            trust.data = [CVSDKBridging keccak256:_gameAddress];
-            [trust signMessage];
-            break;
+    NSLog(@"nampv_chainverse_url %@",url);
+    if([[CVSDKUserDefault getConnectWallet] isEqualToString:@"trust"]){
+        int action = [CVSDKTrustResult getAction:url];
+        switch (action) {
+            case TrustAccount:{
+                NSString *xUserAddress = [CVSDKTrustResult getUserAddress:url];
+                [CVSDKUserDefault setXUserAddress:xUserAddress];
+                CVSDKTrustSignMessage *trust = [[CVSDKTrustSignMessage alloc] init];
+                //NSString *message = [NSString stringWithFormat:@"get_game_user_item:%@",_gameAddress];
+                //trust.data = [CVSDKBridging keccak256:@"chainverse"];
+                trust.data = @"chainverse";
+                [trust signMessage];
+                break;
+            }
+            case TrustSignature: {
+                NSString *signature = [NSString stringWithFormat:@"%@",[CVSDKTrustResult getSignature:url]];
+                [CVSDKUserDefault setXUserSignature:signature];
+                [self doConnectSuccess];
+                break;
+            }
+            default:
+                break;
         }
-        case TrustSignature: {
-            NSString *signature = [CVSDKTrustResult getSignature:url];
-            [CVSDKUserDefault setXUserSignature:signature];
-            [CVSDKCallbackToGame didUserAddress:[CVSDKUserDefault getXUserAdress]];
-            break;
-        }
-        default:
-            break;
+    }else{
+        //Connect Chainverse
+        NSString *xUserAddress = [CVSDKChainverseResult getUserAddress:url];
+        [CVSDKUserDefault setXUserAddress:xUserAddress];
+        NSString *signature = [NSString stringWithFormat:@"%@",[CVSDKTrustResult getSignature:url]];
+        [CVSDKUserDefault setXUserSignature:signature];
+        [self doConnectSuccess];
     }
+    
 }
 
 - (NSString *)getVersion{
-    return @"1.0.1";
+    return version;
 }
 
-- (void)showConnectWalletView{
+- (void)showConnectView{
     if(![self isInitSDKSuccess]){
         return;
     }
     [CVSDKConnectWalletDialog showConnectView];
 }
 
-- (void)connectTrust{
+- (void)connectWithTrust{
     if(![self isInitSDKSuccess]){
         return;
     }
+    [CVSDKUserDefault setConnectWallet:@"trust"];
     CVSDKTrustConnect *trust = [[CVSDKTrustConnect alloc] init];
     [trust connect];
 }
 
+- (void)connectWithChainverse{
+    if(![self isInitSDKSuccess]){
+        return;
+    }
+    if([CVSDKUtils isChainverseInstalled]){
+        [CVSDKUserDefault setConnectWallet:@"chainverse"];
+        CVSDKChainverseConnect *chainverse = [[CVSDKChainverseConnect alloc] init];
+        [chainverse connect];
+    }
+    
+}
+
 - (BOOL)isInitSDKSuccess{
     if(!isInitSDK){
-        [CVSDKCallbackToGame didError:Error_InitSDK];
+        [CVSDKCallbackToGame didError:ERROR_WAITING_INIT_SDK];
         return false;
     }
     return true;
+}
+
+- (BOOL)isUserConnected{
+    if([CVSDKUserDefault getXUserSignature] != nil){
+        return true;
+    }
+    return false;
+}
+
+- (ChainverseUser *)getUser{
+    if([self isUserConnected]){
+        NSDictionary *dict = @{ @"address" : [CVSDKUserDefault getXUserAdress], @"signature" : [CVSDKUserDefault getXUserSignature]};
+        ChainverseUser *user = [[ChainverseUser alloc] initWithObjectDict:dict];
+        [ChainverseUser archiveObject:user];
+        return user;
+    }
+    return nil;
+}
+
+- (void)testPurchase{
+    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+    obj[@"to"] = [ChainverseSDK shared].developerAddress;
+    obj[@"data"] = [CVSDKBridging EthFunctionEncode:@"isDeveloperContract()" address:@""];
+    
+    [[CVSDKRESTfulClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
+        NSLog(@"nampv_fu %@",responseObject);
+        if (!error) {
+            
+        }
+    }];
 }
 @end

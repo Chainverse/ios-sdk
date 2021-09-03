@@ -56,12 +56,13 @@
 }
 
 - (void)connectTrust:(id)sender{
-    [[ChainverseSDK shared] connectTrust];
+    [[ChainverseSDK shared] connectWithTrust];
     [self doClose];
 }
 
 - (void)connectChainverse:(id)sender{
-    
+    [[ChainverseSDK shared] connectWithChainverse];
+    [self doClose];
 }
 
 - (void)doClose{

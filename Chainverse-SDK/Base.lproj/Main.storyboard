@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="45" id="HwL-hT-B2d"/>
                                     <constraint firstAttribute="width" constant="200" id="IOH-Om-eRu"/>
                                 </constraints>
-                                <state key="normal" title="TRANSFER TRUST WALLET">
+                                <state key="normal" title="GET ITEM">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>

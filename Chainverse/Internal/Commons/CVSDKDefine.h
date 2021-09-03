@@ -18,4 +18,11 @@ typedef enum : int {
     TrustSignature = 2
 } TrustResultAction;
 
+typedef enum : int {
+    EVENT_CONNECT = 1,
+    EVENT_TRANSFER_ITEM_TO_USER = 2,
+    EVENT_TRANSFER_ITEM_FROM_USER = 3,
+    EVENT_ERROR = 4
+} SocketIOEvent;
+
 #define DEBUG_CHAINVERSE_BUNDLE YES

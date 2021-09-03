@@ -8,10 +8,16 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ChainverseSDKCallback.h"
+#import "ChainverseUser.h"
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : int {
+    TRANSFER_ITEM_TO_USER = 1,
+    TRANSFER_ITEM_FROM_USER = 2
+} ChainverseTransferItemType;
+
 @interface ChainverseSDK : NSObject
-@property (nonatomic) BOOL isKeepConnectWallet;
+@property (nonatomic) BOOL isKeepConnect;
 /**
  ChainverseSDK delegate
  */
@@ -44,19 +50,18 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)initialize;
 
 /**
- setKeepConnectWallet: Hàm thiết lập keep connect
- @param isKeep  true (giữ keep connect) |  false (không keep connect)
- */
-- (void)setKeepConnectWallet:(BOOL) isKeep;
+* setKeepConnect: Keep connect wallet
+*/
+- (void)setKeepConnect:(BOOL) isKeep;
 
 /**
- getUser: Thông tin user
- */
-- (NSString *)getUser;
+* return list support wallet
+*/
+- (void)getItems;
 
 /**
- logout: Logout
- */
+* logout: Logout
+*/
 - (void)logout;
 
 /**
@@ -96,14 +101,31 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)getVersion;
 
 /**
- showConnectWalletView: Hàm hiển thị màn hình connect
+ showConnectView: Show screen choose wallet
  */
-- (void)showConnectWalletView;
+- (void)showConnectView;
 
 /**
- connectTrust: Connect ví trust không có UI
+ connectWithTrust: Connect with Trust Wallet
  */
-- (void)connectTrust;
+- (void)connectWithTrust;
+
+/**
+ connectWithChainverse: Connect with Chainverse
+ */
+- (void)connectWithChainverse;
+
+/**
+ * isUserConnected: return status connected or no connected
+ */
+- (BOOL)isUserConnected;
+
+/**
+getUserInfo: Return user info
+*/
+- (ChainverseUser *) getUser;
+
+- (void)testPurchase;
 
 @end
 

@@ -23,7 +23,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>trustsdk</string>
+				<string>trust-rn-example</string>
 			</array>
 		</dict>
 	</array>
@@ -31,6 +31,7 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>chainverse</string>
 		<string>trust</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>

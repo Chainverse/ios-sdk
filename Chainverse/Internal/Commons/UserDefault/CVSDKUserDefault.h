@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void) setXUserSignature: (NSString *) value;
 + (NSString *)getXUserSignature;
 + (void)clearXUserSignature;
+
++ (void) setConnectWallet: (NSString *) value;
++ (NSString *)getConnectWallet;
++ (void)clearConnectWallet;
 @end
 
 NS_ASSUME_NONNULL_END

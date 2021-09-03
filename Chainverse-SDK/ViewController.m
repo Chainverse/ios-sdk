@@ -17,7 +17,6 @@
     [super viewDidLoad];
     [self.btnConnect addTarget:self action:@selector(handleConnect:) forControlEvents:UIControlEventTouchUpInside];
     [self.btnTransfer addTarget:self action:@selector(handleTransfer:) forControlEvents:UIControlEventTouchUpInside];
-    self.btnTransfer.hidden = TRUE;
     [self.btnChoose addTarget:self action:@selector(handleChoose:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.btnLogout addTarget:self action:@selector(handleLogout:) forControlEvents:UIControlEventTouchUpInside];
@@ -35,16 +34,16 @@
 }
 
 - (void)handleConnect:(id)sender {
-    [[ChainverseSDK shared] connectTrust];
+    [[ChainverseSDK shared] connectWithTrust];
 }
 
 
 - (void)handleTransfer:(id)sender {
-   
+    [[ChainverseSDK shared] testPurchase];
 }
 
 - (void)handleChoose:(id)sender {
-    [[ChainverseSDK shared] showConnectWalletView];
+    [[ChainverseSDK shared] showConnectView];
 }
 
 - (void)handleLogout:(id)sender {

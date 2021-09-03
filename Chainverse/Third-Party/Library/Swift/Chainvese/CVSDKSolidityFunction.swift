@@ -11,9 +11,12 @@ import Foundation
     override init() {}
     
     @objc(encode::)
-    public func encode(_ function: String, _ arguments: [Any]) -> String {
+    public func encode(_ function: String, _ address: String) -> String {
+        let address = Address(address)
+        let params = [address]
+        
         let function = try! SolidityFunction(function: function)
-        let data = function.encode(arguments.swift as! [SolidityDataRepresentable])
+        let data = function.encode(params.swift as! [SolidityDataRepresentable])
         let hex = data.hex.withHex.lowercased()
         return hex
     }

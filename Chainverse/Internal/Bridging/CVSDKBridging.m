@@ -12,8 +12,8 @@
     return [hash keccak256:gameAddress];
 }
 
-+ (NSString *)EthFunctionEncode:(NSString *)method params:(NSArray *)params{
++ (NSString *)EthFunctionEncode:(NSString *)method address:(NSString *)address{
     CVSDKSolidityFunction *function = [[CVSDKSolidityFunction alloc] init];
-    return [function encode:method :params];
+    return [function encode:method :address];
 }
 @end

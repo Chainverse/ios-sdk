@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CVSDKBridging : NSObject
 + (NSString *)keccak256:(NSString *)gameAddress;
-+ (NSString *)EthFunctionEncode:(NSString *)method params:(NSArray *)params;
++ (NSString *)EthFunctionEncode:(NSString *)method address:(NSString *)address;
 @end
 
 NS_ASSUME_NONNULL_END

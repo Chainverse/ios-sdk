@@ -8,7 +8,12 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : int {
-    Error_Success = 0,//Không có lỗi nào
-    Error_InitSDK = 1001// Lỗi init SDK ()
+    ERROR_WAITING_INIT_SDK = 1000,
+    ERROR_INIT_SDK = 1001,
+    ERROR_REQUEST_ITEM = 1002,
+    ERROR_GAME_ADDRESS = 1003,
+    ERROR_DEVELOPER_ADDRESS = 1004,
+    ERROR_GAME_PAUSE = 1005,
+    ERROR_DEVELOPER_PAUSE = 1006
 } ChainverseSDKError;
 

@@ -6,6 +6,7 @@
 //
 
 #import "CVSDKRPCClient.h"
+#import "CVSDKConstant.h"
 @implementation CVSDKRPCClient
 + (CVSDKRPCClient *)shared{
     static CVSDKRPCClient *_shared = nil;
@@ -41,7 +42,7 @@
 }
 
 - (NSMutableURLRequest *) createRequest:(NSString *)raw{
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://data-seed-prebsc-1-s1.binance.org:8545"] cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:120];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlBlockchain] cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:120];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody: [raw dataUsingEncoding:NSUTF8StringEncoding]];

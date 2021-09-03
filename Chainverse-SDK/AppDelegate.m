@@ -9,6 +9,7 @@
 #import "ChainverseSDK.h"
 #import "ChainverseSDKCallback.h"
 #import "ChainverseSDKError.h"
+#import "ChainverseItem.h"
 @interface AppDelegate ()<ChainverseSDKCallback>
 
 @end
@@ -17,12 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [ChainverseSDK shared].developerAddress = @"0x690FDdc2a98050f924Bd7Ec5900f2D2F49b6aEC7";
-    [ChainverseSDK shared].gameAddress = @"0x3F57BF31E55de54306543863E079aD234f477b88";
-    [ChainverseSDK shared].scheme = @"trustsdk";
+    [ChainverseSDK shared].developerAddress = @"0xE1717d89f2d7A7b4834c2724408b319ABAf500ec";
+    [ChainverseSDK shared].gameAddress = @"0xD146b45817fd18555c59c061C840e3a446Cd5A6c";
+    [ChainverseSDK shared].scheme = @"trust-rn-example://";
     [ChainverseSDK shared].delegate = self;
     [[ChainverseSDK shared] initialize];
-    [[ChainverseSDK shared] setIsKeepConnectWallet:TRUE];
+    [[ChainverseSDK shared] setKeepConnect:TRUE];
     
     NSLog(@"ChainverSDK Verison %@",[[ChainverseSDK shared] getVersion]);
     
@@ -30,26 +31,55 @@
 }
 
 - (void)didInitSDKSuccess{
-   
+    
 }
 
-- (void)didUserAddress:(NSString *)address{
+- (void)didConnectSuccess:(NSString *)address{
     NSLog(@"ChainverseSDKCallback_didConnectWallet %@",address);
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:address forKey:@"address"];
     [[NSNotificationCenter defaultCenter] postNotificationName:
                            @"SampleNotiAddress" object:nil userInfo:userInfo];
+    [[ChainverseSDK shared] getItems];
+    
+    ChainverseUser *info = [[ChainverseSDK shared] getUser];
+    NSLog(@"nampv_caddress %@",[info address]);
+    NSLog(@"nampv_csign %@",[info signature]);
 }
 
-- (void)didUserLogout:(NSString *)address{
-   
+- (void)didLogout:(NSString *)address{
+    NSLog(@"didLogout");
 }
 
 - (void)didError:(int)error{
+    switch (error) {
+        case ERROR_WAITING_INIT_SDK:
+            
+            break;
+            
+        default:
+            break;
+    }
     NSLog(@"didError %d",error);
 }
 
-- (void)didSocketCallback:(NSArray *)data{
-    NSLog(@"nampv_socket_callback");
+- (void)didGetItems:(NSMutableArray *)items{
+    NSLog(@"didGetItems %@",items);
+    for(ChainverseItem *itemx in items){
+        NSLog(@"nampv_fic1 %@",itemx.game_address);
+    }
+}
+
+- (void)didItemUpdate:(ChainverseItem *)item type:(int)type{
+    switch (type) {
+        case TRANSFER_ITEM_TO_USER:
+            //Xử lý item trong game khi item NFT chuyển tới tài khoản của bạn
+            NSLog(@"nampv_transfer_to %@",item);
+            break;
+        case TRANSFER_ITEM_FROM_USER:
+            //Xử lý item trong game khi item NFT của bạn chuyến tời tài khoản khác
+            NSLog(@"nampv_transfer_from %@",item);
+            break;
+    }
 }
 
 

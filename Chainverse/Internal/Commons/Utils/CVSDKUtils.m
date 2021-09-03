@@ -44,4 +44,19 @@
     [scanner scanHexInt:&value];
     return (int)value;
 }
+
++ (BOOL)checkAppInstalled:(NSString *)scheme{
+    UIApplication *application = [UIApplication sharedApplication];
+    NSURL *URL = [NSURL URLWithString:scheme];
+    return [application canOpenURL:URL];
+}
+
++ (BOOL)isChainverseInstalled{
+    if(![self checkAppInstalled:@"chainverse://"]){
+        [self openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id1287508973"]];
+        return false;
+    }
+    return true;
+    
+}
 @end

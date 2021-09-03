@@ -20,6 +20,7 @@
         [NSURLQueryItem queryItemWithName:@"callback" value:@"sdk_sign_result"],
         [NSURLQueryItem queryItemWithName:@"id" value:@"1"]
     ];
+    
     NSURL *url = components.URL;
     NSLog(@"chainverse_url %@",url.absoluteString);
     return url;
