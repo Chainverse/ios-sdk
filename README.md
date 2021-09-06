@@ -544,14 +544,18 @@ ChainverseSDK.shared().isUserConnected()
 
 Chainverse SDK iOS sử dụng những thư viện sau:
 ##### 1. AFNetworking
-Home page: https://github.com/AFNetworking/AFNetworking
-Mục đích sử dụng: Để kết nối REST (API), Kết nối blockchain
+- License: MIT License
+- Home page: https://github.com/AFNetworking/AFNetworking
+- Mục đích sử dụng: Để kết nối REST (API), Kết nối blockchain
 ##### 2. Socket io
-Home page: https://socket.io/
-Mục đích sử dụng: Xử lý realtime
+- License: MIT License
+- Home page: https://socket.io/
+- Mục đích sử dụng: Xử lý realtime
 ##### 3. Web3swift (Sử dụng 1 phần)
-Home page: https://bankex.github.io/web3swift/
-Mục đích sử dụng: Sử dụng các hàm băm, encode các (function, param) trước khi gọi lên blockchain (qua AFNetworking)
+- License: MIT License
+- Home page: https://bankex.github.io/web3swift/
+- Mục đích sử dụng: Sử dụng các hàm băm, encode các (function, param) trước khi gọi lên blockchain (qua AFNetworking)
 ##### 4. PromiseKit
-Home page: https://github.com/mxcl/PromiseKit
-Mục đích sử dụng: Xử lý bất đồng bộ/đồng bộ khi kết nối API, blockchain
+- License: MIT License
+- Home page: https://github.com/mxcl/PromiseKit
+- Mục đích sử dụng: Xử lý bất đồng bộ/đồng bộ khi kết nối API, blockchain
