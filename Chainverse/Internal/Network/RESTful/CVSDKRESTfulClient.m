@@ -23,7 +23,7 @@
 - (void)get:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
     
     [self.requestSerializer setValue:[CVSDKUserDefault getXUserSignature] forHTTPHeaderField:@"X-User-Signature"];
-    [self.requestSerializer setValue:@"true" forHTTPHeaderField:@"X-Signature-Ethers"];
+    [self.requestSerializer setValue:@"false" forHTTPHeaderField:@"X-Signature-Ethers"];
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     

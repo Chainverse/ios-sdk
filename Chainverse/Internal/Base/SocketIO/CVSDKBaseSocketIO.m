@@ -23,7 +23,7 @@
                                 @"x-user-address": [CVSDKUserDefault getXUserAdress],
                                 @"x-signature": [CVSDKUserDefault getXUserSignature],
                                 @"x-game-address": [ChainverseSDK shared].gameAddress,
-                                @"x-signature-ethers" : @"true"
+                                @"x-signature-ethers" : @"false"
              }
             
             };

@@ -53,7 +53,7 @@
 
 + (BOOL)isChainverseInstalled{
     if(![self checkAppInstalled:@"chainverse://"]){
-        [self openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id1287508973"]];
+        [self openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id1580411367"]];
         return false;
     }
     return true;

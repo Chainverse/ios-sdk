@@ -166,8 +166,8 @@
                 [CVSDKUserDefault setXUserAddress:xUserAddress];
                 CVSDKTrustSignMessage *trust = [[CVSDKTrustSignMessage alloc] init];
                 //NSString *message = [NSString stringWithFormat:@"get_game_user_item:%@",_gameAddress];
-                //trust.data = [CVSDKBridging keccak256:@"chainverse"];
-                trust.data = @"chainverse";
+                trust.data = [CVSDKBridging keccak256:@"chainverse"];
+                //trust.data = @"chainverse";
                 [trust signMessage];
                 break;
             }
@@ -184,7 +184,7 @@
         //Connect Chainverse
         NSString *xUserAddress = [CVSDKChainverseResult getUserAddress:url];
         [CVSDKUserDefault setXUserAddress:xUserAddress];
-        NSString *signature = [NSString stringWithFormat:@"%@",[CVSDKTrustResult getSignature:url]];
+        NSString *signature = [NSString stringWithFormat:@"0x%@",[CVSDKChainverseResult getSignature:url]];
         [CVSDKUserDefault setXUserSignature:signature];
         [self doConnectSuccess];
     }
@@ -218,6 +218,7 @@
     if([CVSDKUtils isChainverseInstalled]){
         [CVSDKUserDefault setConnectWallet:@"chainverse"];
         CVSDKChainverseConnect *chainverse = [[CVSDKChainverseConnect alloc] init];
+        chainverse.data = [CVSDKBridging keccak256:@"chainverse"];
         [chainverse connect];
     }
     

@@ -4,7 +4,7 @@
 
 Đơn giản hoá tích hợp Blokchain vào game của bạn với Chainverse SDK. 
 
-Chainverse Native SDK sử dụng các API và tối ưu hóa dành riêng cho hệ điều hành để mang lại trải nghiệm người dùng tốt hơn. Chúng chứa chức năng cốt lõi để tích hợp vào game nhanh chóng hơn bao gồm các chức năng chính: Kết nối với ví Blockchain (TrustWallet và các ví khác) và trao đổi item NFT. 
+Chainverse Native SDK sử dụng các API và tối ưu hóa dành riêng cho hệ điều hành để mang lại trải nghiệm người dùng tốt hơn. Chúng chứa chức năng cốt lõi để tích hợp vào game nhanh chóng hơn bao gồm các chức năng chính: Kết nối với ví Blockchain (Chainverse và các ví khác) và trao đổi item NFT. 
 
 ## Mô hình Chainverse SDK
 ### Sequence flow 1
@@ -29,7 +29,7 @@ Danh sách mã lỗi của Chainverse SDK
 ## Installation
 ### Cài đặt thủ công
 #### Bước 1: Tải xuống static framework
-Tải xuống static framework
+Tải xuống ChainverseSDK_Framework.zip tại https://github.com/Chainverse/ios-sdk/releases
 #### Bước 2: Giải nén
 Giải nén file ChainverseSDK.framework.zip bạn vừa tải xuống có những file sau:
 ```
@@ -58,15 +58,20 @@ SocketIO.xcframework
 <img src="https://gblobscdn.gitbook.com/assets%2F-MfegUcnHBLzXgHaEQpA%2F-MgoqNIb4BqdRSM7M3u5%2F-MgoqPBPaQXXKWWgCoJb%2FScreen%20Shot%202021-08-11%20at%2017.53.58.png?alt=media&token=615fd852-fb3c-4900-90e7-2c6585f42963" width="100%" alt="NFT Shiba Inu">
 
 #### Bước 5:  Thiết lập Url scheme
-Bạn cần thiết lập Url scheme để  connect với ví Chainverse, Trust
+Bạn cần thiết lập Url scheme để  connect với ví Chainverse
 
 <img src="https://gblobscdn.gitbook.com/assets%2F-MfegUcnHBLzXgHaEQpA%2F-MgorLoJosT6jOcaXFSS%2F-MgorP7YqB_0XNpNQhcD%2FScreen%20Shot%202021-08-11%20at%2017.58.32.png?alt=media&token=62912882-6b99-4561-b1d2-3af3ae6ea104" width="100%" alt="NFT Shiba Inu">
 
 ####  Bước 6. Config Application Schemes
-Bạn phải thiết lập "chainverse" và "trust" trong file Info.Plist để connect với ví Chainverse và Trust. 
+Bạn phải thiết lập "chainverse" trong file Info.Plist để connect với ví Chainverse. 
 
-<img src="https://gblobscdn.gitbook.com/assets%2F-MfegUcnHBLzXgHaEQpA%2F-Mgorp90t8NZaBEweCaX%2F-MgorsBFerdedM3OgRTo%2FScreen%20Shot%202021-08-11%20at%2018.00.26.png?alt=media&token=a2a1e505-df3b-4459-833f-f05b84504188" width="100%" alt="NFT Shiba Inu">
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+   <string>chainverse</string>
+</array>
 
+```
 ## Tích hợp SDK
 ### Trước khi bắt đầu
 Bạn phải cài đặt Chainverse SDK (xem Hướng dẫn).
@@ -75,7 +80,7 @@ Tài liệu này chứa các tham số bắt buộc. Bạn phải đảm bảo k
 
 1. "Game Address": Địa chỉ contract của game.
 2. "Developer Address": Địa chỉ contract của developer.
-3. "App Scheme": Khai báo scheme để connect Trust Wallet, Chainverse.
+3. "App Scheme": Khai báo scheme để connect Chainverse.
 
 ### Khởi tạo Chainverse SDK
 #### Bước 1: Import dependencies 
@@ -154,7 +159,7 @@ func didError(_ error: Int32) {
 ```
 
 #### 3. Callback didConnectSuccess
-Khi user connect tới ví Trust, Chainverse thành công thì sẽ có callback này. Thông tin trả về là địa chỉ ví của user. 
+Khi user connect tới ví Chainverse thành công thì sẽ có callback này. Thông tin trả về là địa chỉ ví của user. 
 
 ##### Objective C
 ```
@@ -386,20 +391,8 @@ Hàm này hiển thị màn hình danh sách các ví để user lựa chọn co
 ChainverseSDK.shared().showConnectView()
 ```
 
-#### 2. Hàm connectWithTrust
-Sử dụng hàm này để kết nối với ví Trust, mà không cần hiển thị giao diện.  
 
-##### Objective C
-```
-[[ChainverseSDK shared] connectWithTrust];
-```
-
-##### Swift
-```
-ChainverseSDK.shared().connectWithTrust()
-```
-
-#### 3. Hàm connectWithChainverse
+#### 2. Hàm connectWithChainverse
 Sử dụng hàm này để kết nối với ví Chainverse, mà không cần hiển thị giao diện.  
 
 ##### Objective C
@@ -412,7 +405,7 @@ Sử dụng hàm này để kết nối với ví Chainverse, mà không cần h
 ChainverseSDK.shared().connectWithChainverse()
 ```
 
-#### 4. Hàm getItems
+#### 3. Hàm getItems
 Sử dụng hàm này để lấy danh sách ITEM của user. Thông tin sẽ được trả về qua callback  didGetItems 
 
 ##### Objective C
@@ -438,7 +431,7 @@ func didGetItems(_ items: NSMutableArray!) {
 }
 ```
 
-#### 5. Hàm logout
+#### 4. Hàm logout
 Gọi hàm này để thực hiện logout. Thông tin được trả về qua callback didLogout .
 
 ##### Objective C
@@ -461,8 +454,8 @@ func didLogout(_ address: String!) {
 }
 ```
 
-#### 6. Hàm hứng data được trả về từ ví Trust, Chainverse
-Khi connect thành công với ví Trust. Trust sẽ mở lại app/game thông qua scheme (đã khai báo ở phần Intergrate SDK). Vì vậy cần khai báo các hàm này để Chainverse SDK xử lý dữ liệu được trả về từ ví Trust.
+#### 5. Hàm hứng data được trả về từ ví  Chainverse
+Khi connect thành công với ví Chainverse. Chainverse sẽ mở lại app/game thông qua scheme (đã khai báo ở phần Intergrate SDK). Vì vậy cần khai báo các hàm này để Chainverse SDK xử lý dữ liệu được trả về từ ví Chainverse.
 Khai báo ở file AppDeletegate :
 
 ##### Objective C
@@ -481,8 +474,8 @@ Khai báo ở file AppDeletegate :
 ChainverseSDK.shared().handleOpenUrl(app, open: url, options: options)
 ```
 
-#### 7. Hàm setKeepConnect
-Hàm này tuỳ chọn thiết lập trạng thái giữ connect với ví Trust (Khi vào lại app không cần phải kết nối lại ví) 
+#### 6. Hàm setKeepConnect
+Hàm này tuỳ chọn thiết lập trạng thái giữ connect với ví Chainverse (Khi vào lại app không cần phải kết nối lại ví) 
 *true : Giữ trạng thái keep connect.
 *false: Không giữ trạng thái keep connect.
 
@@ -497,7 +490,7 @@ Hàm này tuỳ chọn thiết lập trạng thái giữ connect với ví Trust
 ChainverseSDK.shared().setKeepConnect(true)
 ```
 
-#### 8. Hàm getVersion
+#### 7. Hàm getVersion
 Trả về version của SDK
 
 ##### Objective C
@@ -511,7 +504,7 @@ Trả về version của SDK
 ChainverseSDK.shared().getVersion()
 ```
 
-#### 9. Hàm getUser
+#### 8. Hàm getUser
 Trả về thông tin của user bao gồm : address và signature
 
 ##### Objective C
@@ -526,7 +519,7 @@ NSLog(@"TAG %@",[info signature]);
 let info: ChainverseUser = ChainverseSDK.shared().getUser()
 ```
 
-#### 10. Hàm isUserConnected
+#### 9. Hàm isUserConnected
 Kiểm tra trạng thái connect ví của user. Trả về boolean
 
 ##### Objective C

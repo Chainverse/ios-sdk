@@ -11,6 +11,6 @@ static NSString *chainverseFactoryAddress = @"0xAa3c798b8d3b8A6a3FB3abB758Ee511d
 static NSString *actionItems = @"/v1/user/%@/game/%@/items";
 static NSString *urlSocketIO = @"wss://beta-sdk-api.dev.chainverse.xyz";
 static NSString *urlRestful = @"https://beta-sdk-api.dev.chainverse.xyz";
-static NSString *urlBuyTest = @"https://beta-game-sign-2.dev.chainverse.xyz/v1/item";
+static NSString *urlBuyTest = @"https://beta-game-sign-1.dev.chainverse.xyz/v1/item";
 static NSString *urlBlockchain = @"https://data-seed-prebsc-1-s1.binance.org:8545";
 #endif

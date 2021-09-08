@@ -38,17 +38,12 @@
 - (void)initButton{
     UIColor *borderColor = UIColorFromRGB(0x979797) ;
 
-    self.btnConnectTrust.layer.cornerRadius = 24.0f;
-    self.btnConnectTrust.layer.borderWidth = 1.0f;
-    self.btnConnectTrust.layer.borderColor = [borderColor colorWithAlphaComponent:0.3].CGColor ;
-    
     self.btnConnectChainverse.layer.cornerRadius = 24.0f;
     self.btnConnectChainverse.layer.borderWidth = 1.0f;
     self.btnConnectChainverse.layer.borderColor = [borderColor colorWithAlphaComponent:0.3].CGColor ;
     
     [self.btnClose addTarget:self action:@selector(close:) forControlEvents:UIControlEventTouchUpInside];
     [self.btnConnectChainverse addTarget:self action:@selector(connectChainverse:) forControlEvents:UIControlEventTouchUpInside];
-    [self.btnConnectTrust addTarget:self action:@selector(connectTrust:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)close:(id)sender{
