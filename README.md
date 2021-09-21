@@ -110,7 +110,7 @@ Trong didFinishLaunchingWithOptions khai báo Game Contract Address và Develope
 ```
 [ChainverseSDK shared].developerAddress = @"DeveloperAddress";
 [ChainverseSDK shared].gameAddress = @"GameAddress";
-[ChainverseSDK shared].scheme = @"app_scheme://";
+[ChainverseSDK shared].scheme = @"your-app-scheme://";
 [ChainverseSDK shared].delegate = self;
 [[ChainverseSDK shared] initialize];
 ```
@@ -119,7 +119,7 @@ Trong didFinishLaunchingWithOptions khai báo Game Contract Address và Develope
 ```
 ChainverseSDK.shared().developerAddress = "DeveloperAddress"
 ChainverseSDK.shared().gameAddress = "GameAddress"
-ChainverseSDK.shared().scheme = "app_scheme://";
+ChainverseSDK.shared().scheme = "your-app-scheme://";
 ChainverseSDK.shared().delegate = self
 ChainverseSDK.shared().initialize()
 ```
@@ -268,7 +268,7 @@ func didItemUpdate(_ item: ChainverseItem!, type: Int32) {
     
     [ChainverseSDK shared].developerAddress = @"0x690FDdc2a98050f924Bd7Ec5900f2D2F49b6aEC7";
     [ChainverseSDK shared].gameAddress = @"0x3F57BF31E55de54306543863E079aD234f477b88";
-    [ChainverseSDK shared].scheme = @"app_scheme://";
+    [ChainverseSDK shared].scheme = @"your-app-scheme://";
     [ChainverseSDK shared].delegate = self;
     [[ChainverseSDK shared] initialize];
     [[ChainverseSDK shared] setIsKeepConnectWallet:TRUE];
@@ -363,7 +363,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ChainverseSDKCallback {
         // Override point for customization after application launch.
         ChainverseSDK.shared().developerAddress = "0x9aa2DC5A69eEd97d072A4168A83Cc000873321ff"
         ChainverseSDK.shared().gameAddress = "0xD703d36e924A84D050F7b17f392F7d6D2Dd483AF"
-        ChainverseSDK.shared().scheme = "app_scheme://"
+        ChainverseSDK.shared().scheme = "your-app-scheme://"
         ChainverseSDK.shared().delegate = self;
         ChainverseSDK.shared().initialize()
         ChainverseSDK.shared().setKeepConnect(true)
