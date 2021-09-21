@@ -60,7 +60,7 @@ SocketIO.xcframework
 #### Bước 5:  Thiết lập Url scheme
 Bạn cần thiết lập Url scheme để  connect với ví Chainverse
 
-<img src="https://gblobscdn.gitbook.com/assets%2F-MfegUcnHBLzXgHaEQpA%2F-MgorLoJosT6jOcaXFSS%2F-MgorP7YqB_0XNpNQhcD%2FScreen%20Shot%202021-08-11%20at%2017.58.32.png?alt=media&token=62912882-6b99-4561-b1d2-3af3ae6ea104" width="100%" alt="NFT Shiba Inu">
+<img src="https://i.imgur.com/otRESxJ.png" width="100%" alt="NFT Shiba Inu">
 
 ####  Bước 6. Config Application Schemes
 Bạn phải thiết lập "chainverse" trong file Info.Plist để connect với ví Chainverse. 
