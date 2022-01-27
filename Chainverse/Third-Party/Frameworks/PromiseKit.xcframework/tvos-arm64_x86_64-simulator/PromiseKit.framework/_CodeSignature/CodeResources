@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/PromiseKit-Swift.h</key>
 		<data>
-		u13MhIVK/3VWFWtkXSmjJLXUgAE=
+		HYAJzWMYbwPHWo0HkDjL2YjUt10=
 		</data>
 		<key>Headers/PromiseKit.h</key>
 		<data>
@@ -18,59 +18,59 @@
 		</data>
 		<key>Headers/fwd.h</key>
 		<data>
-		5cHyeI7j3jxIuB50wT+ztNHHbAQ=
+		8+zzYdHhrZ5UXsusNs1B1ziCx9Y=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Q0icUIsn0ZshKLSmeOyZ40EhiMQ=
+		4chUqiybt99upNLIkz3kvHqq3Aw=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/Project/arm64-apple-tvos-simulator.swiftsourceinfo</key>
 		<data>
-		PSWRQwq4mMB8h9fPJCZiYWddT8k=
+		uJQuZtH2UVabDkgIC3Ed+Qi2Wyc=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		PSWRQwq4mMB8h9fPJCZiYWddT8k=
+		uJQuZtH2UVabDkgIC3Ed+Qi2Wyc=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/Project/x86_64-apple-tvos-simulator.swiftsourceinfo</key>
 		<data>
-		yZGqnGfzXEP8YVMeEJER+GskpwU=
+		oG0Evohr9a6jvHbclb+Ua2rfZK0=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		yZGqnGfzXEP8YVMeEJER+GskpwU=
+		oG0Evohr9a6jvHbclb+Ua2rfZK0=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		8Yio92nvUm+SXEKsa1x1UGVjpRM=
+		UYDAMWo0flbQW2209y1fgG0rYn0=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		ZdSwuTGn/ggi8ADadfMB6CZEX3o=
+		vurelTRENdocASBGDN6uRDemNUI=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		8Yio92nvUm+SXEKsa1x1UGVjpRM=
+		UYDAMWo0flbQW2209y1fgG0rYn0=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ZdSwuTGn/ggi8ADadfMB6CZEX3o=
+		vurelTRENdocASBGDN6uRDemNUI=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		cXTEwoILAGKQy/kq3NPdtFgjevw=
+		XWv7Mh2JCsK4kQ+yjQli1AISKio=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		pH3zTIHVMsEl2XshWXEP8BmKx1w=
+		Fi26IiWpRYOyaoKD5vq292/0Kfo=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		cXTEwoILAGKQy/kq3NPdtFgjevw=
+		XWv7Mh2JCsK4kQ+yjQli1AISKio=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		pH3zTIHVMsEl2XshWXEP8BmKx1w=
+		Fi26IiWpRYOyaoKD5vq292/0Kfo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -85,6 +85,10 @@
 	<dict>
 		<key>Headers/AnyPromise.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			M/j/xh5T3e1wOfer9gNmYwk4zi4=
+			</data>
 			<key>hash2</key>
 			<data>
 			4fJAcCaPbkOMFoevq6s6pGIzxiwz9Qbu2KGQM301xI4=
@@ -92,13 +96,21 @@
 		</dict>
 		<key>Headers/PromiseKit-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			HYAJzWMYbwPHWo0HkDjL2YjUt10=
+			</data>
 			<key>hash2</key>
 			<data>
-			Rw8lUjIYuuEqnmJqZtXXaaFEIRcBKayT8jzhlmqH/Ik=
+			nKRnJzc/yZXlcTkltUYmkM9j0apMpK4w0MFYOvYPksI=
 			</data>
 		</dict>
 		<key>Headers/PromiseKit.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			0q02uv6YBQCzQmNaXtvUKI9PYjs=
+			</data>
 			<key>hash2</key>
 			<data>
 			tTGs4R6Ff9sCRTrNHQN+FnaQIX0kzwuqtmW8MeV7i+c=
@@ -106,97 +118,153 @@
 		</dict>
 		<key>Headers/fwd.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			8+zzYdHhrZ5UXsusNs1B1ziCx9Y=
+			</data>
 			<key>hash2</key>
 			<data>
-			BOmZPOKV6UcJgBhrHqUfIBJQygd//Ej6VkB89Q/tQNM=
+			nAYmgbUZ8cztC8ie96ynicBetq4fI3C8a2bFy9D+vcA=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/Project/arm64-apple-tvos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			uJQuZtH2UVabDkgIC3Ed+Qi2Wyc=
+			</data>
 			<key>hash2</key>
 			<data>
-			GL8dKgpNhaCesUGcuENLMMY5BNm9ceAEiuFpx28s+1E=
+			hPHPs8OCuctlN6gZQEAEGYLhWTGlQa+dfiEVtJUbZl4=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			uJQuZtH2UVabDkgIC3Ed+Qi2Wyc=
+			</data>
 			<key>hash2</key>
 			<data>
-			GL8dKgpNhaCesUGcuENLMMY5BNm9ceAEiuFpx28s+1E=
+			hPHPs8OCuctlN6gZQEAEGYLhWTGlQa+dfiEVtJUbZl4=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/Project/x86_64-apple-tvos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			oG0Evohr9a6jvHbclb+Ua2rfZK0=
+			</data>
 			<key>hash2</key>
 			<data>
-			upBPeB2r2twncgNNaXPfnea+PbulaDds93V8+TGHUCA=
+			skEGKxRTJ17k4lfS6T0SS8YChplLN2EvBu3ELqv5qDY=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			oG0Evohr9a6jvHbclb+Ua2rfZK0=
+			</data>
 			<key>hash2</key>
 			<data>
-			upBPeB2r2twncgNNaXPfnea+PbulaDds93V8+TGHUCA=
+			skEGKxRTJ17k4lfS6T0SS8YChplLN2EvBu3ELqv5qDY=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			UYDAMWo0flbQW2209y1fgG0rYn0=
+			</data>
 			<key>hash2</key>
 			<data>
-			I6r2wcKWPgisyTr4w8KiIqUf0i+dVrKN0qiRbkEHkMU=
+			Y2GMpmOLycAeilw2tDgGLryvsCJtZxfabtSqJMmk2aE=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			vurelTRENdocASBGDN6uRDemNUI=
+			</data>
 			<key>hash2</key>
 			<data>
-			KAggs0tyyG6EyRSKVcwmlsixq3zxGH6jVcKn2xZRx68=
+			bM9ohaRnwZ4W1xKkVBr++1oC0IePn3BvfSAmUsUi0to=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/arm64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			UYDAMWo0flbQW2209y1fgG0rYn0=
+			</data>
 			<key>hash2</key>
 			<data>
-			I6r2wcKWPgisyTr4w8KiIqUf0i+dVrKN0qiRbkEHkMU=
+			Y2GMpmOLycAeilw2tDgGLryvsCJtZxfabtSqJMmk2aE=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/arm64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			vurelTRENdocASBGDN6uRDemNUI=
+			</data>
 			<key>hash2</key>
 			<data>
-			KAggs0tyyG6EyRSKVcwmlsixq3zxGH6jVcKn2xZRx68=
+			bM9ohaRnwZ4W1xKkVBr++1oC0IePn3BvfSAmUsUi0to=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			XWv7Mh2JCsK4kQ+yjQli1AISKio=
+			</data>
 			<key>hash2</key>
 			<data>
-			FSCB/59cvBAsOMVwT9t6A0xmF53yI2ghNu3SmfhlzzI=
+			u99wZ5HsSbAalFb7sQAMZhuGUa1yopWJXJZuYLSMMk4=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			Fi26IiWpRYOyaoKD5vq292/0Kfo=
+			</data>
 			<key>hash2</key>
 			<data>
-			kYV3QpK17i1/Gpk5Z6VFy4hLKm49D7dpDiPalY+mjgs=
+			nyCcncrceJTbnSdwlLwMYlLXlnxiAB7UeUmuQuh18qE=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			XWv7Mh2JCsK4kQ+yjQli1AISKio=
+			</data>
 			<key>hash2</key>
 			<data>
-			FSCB/59cvBAsOMVwT9t6A0xmF53yI2ghNu3SmfhlzzI=
+			u99wZ5HsSbAalFb7sQAMZhuGUa1yopWJXJZuYLSMMk4=
 			</data>
 		</dict>
 		<key>Modules/PromiseKit.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			Fi26IiWpRYOyaoKD5vq292/0Kfo=
+			</data>
 			<key>hash2</key>
 			<data>
-			kYV3QpK17i1/Gpk5Z6VFy4hLKm49D7dpDiPalY+mjgs=
+			nyCcncrceJTbnSdwlLwMYlLXlnxiAB7UeUmuQuh18qE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			9gadZGS0TEt96l/Zm5m2cu38COg=
+			</data>
 			<key>hash2</key>
 			<data>
 			Xej1YLQ4ONP01CsatnMw/EFNBghshHaZO/uwLrl7xR4=
@@ -204,6 +272,10 @@
 		</dict>
 		<key>PrivateHeaders/AnyPromise+Private.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			9Vpyn4mLXShMPsH3VX1YTBVvSYo=
+			</data>
 			<key>hash2</key>
 			<data>
 			7aygqxWUw7UualTmkVlZZkbAzjKJvchuiNOgAKOnUDA=

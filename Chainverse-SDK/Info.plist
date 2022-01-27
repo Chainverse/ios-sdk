@@ -23,7 +23,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>trust-rn-example</string>
+				<string>your-app-scheme</string>
 			</array>
 		</dict>
 	</array>

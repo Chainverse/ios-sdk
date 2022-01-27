@@ -6,59 +6,59 @@
 	<dict>
 		<key>Headers/BigInt-Swift.h</key>
 		<data>
-		Gk2uROg8TvNtAzW06m1pmXsiQbo=
+		V8oXFdMGUbDEghqNSoFi1v1ONW0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ABOu+DcUo3gGJoUZTkMuyC97rzI=
+		HLuveDUbKKPxikTVo2Y+thh7U2U=
 		</data>
 		<key>Modules/BigInt.swiftmodule/Project/arm64-apple-tvos-simulator.swiftsourceinfo</key>
 		<data>
-		6i0v6IeITyKrVviZcD4wsCN6eWA=
+		0IpHY6xUxWA1nzJ7AjIx9XunadE=
 		</data>
 		<key>Modules/BigInt.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		6i0v6IeITyKrVviZcD4wsCN6eWA=
+		0IpHY6xUxWA1nzJ7AjIx9XunadE=
 		</data>
 		<key>Modules/BigInt.swiftmodule/Project/x86_64-apple-tvos-simulator.swiftsourceinfo</key>
 		<data>
-		RufZnacc1qS71imHd8nZxTAe0mg=
+		HsZ2VVLU/wurZpynDEeayJZDB8k=
 		</data>
 		<key>Modules/BigInt.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		RufZnacc1qS71imHd8nZxTAe0mg=
+		HsZ2VVLU/wurZpynDEeayJZDB8k=
 		</data>
 		<key>Modules/BigInt.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		MlsmbPIuYg6PNLzD2R2wFQDa2vI=
+		8MpWor9v9bOjyk79SHKANgCT24w=
 		</data>
 		<key>Modules/BigInt.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		SxuEtEZxXopoA+monEmqmYjaPCY=
+		u7vm3li3NYo6UGJXVPKlOIwmVE8=
 		</data>
 		<key>Modules/BigInt.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		MlsmbPIuYg6PNLzD2R2wFQDa2vI=
+		8MpWor9v9bOjyk79SHKANgCT24w=
 		</data>
 		<key>Modules/BigInt.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		SxuEtEZxXopoA+monEmqmYjaPCY=
+		u7vm3li3NYo6UGJXVPKlOIwmVE8=
 		</data>
 		<key>Modules/BigInt.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		j+mZeLUqsRFkoEmTbjmlFKAXy40=
+		yHUz1jm51fIX3kky2kiDwLvWWXo=
 		</data>
 		<key>Modules/BigInt.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		syIUhwuaHDFRGkA9DNViZ6GkEYM=
+		01Vm4F+/gerzgPQDWM3IC3PYvAw=
 		</data>
 		<key>Modules/BigInt.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		j+mZeLUqsRFkoEmTbjmlFKAXy40=
+		yHUz1jm51fIX3kky2kiDwLvWWXo=
 		</data>
 		<key>Modules/BigInt.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		syIUhwuaHDFRGkA9DNViZ6GkEYM=
+		01Vm4F+/gerzgPQDWM3IC3PYvAw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,97 +69,153 @@
 	<dict>
 		<key>Headers/BigInt-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			V8oXFdMGUbDEghqNSoFi1v1ONW0=
+			</data>
 			<key>hash2</key>
 			<data>
-			ClCuTNl+puK1N+ZLrI14ztvGhhnbIq48IV3iqasdbKI=
+			zLmfBAgEjhsBoSnQ0BsLWsLsUHWzFTOqrFYzG+KHYJM=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/Project/arm64-apple-tvos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			0IpHY6xUxWA1nzJ7AjIx9XunadE=
+			</data>
 			<key>hash2</key>
 			<data>
-			lfqZ0idMWi7bvJFy5jSxoobwaTC9qdOxXgZhRvA+tRg=
+			aWRU8cGQMV0Atf7n1oBu9W3A4GvP6K19mXKx3RLU288=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			0IpHY6xUxWA1nzJ7AjIx9XunadE=
+			</data>
 			<key>hash2</key>
 			<data>
-			lfqZ0idMWi7bvJFy5jSxoobwaTC9qdOxXgZhRvA+tRg=
+			aWRU8cGQMV0Atf7n1oBu9W3A4GvP6K19mXKx3RLU288=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/Project/x86_64-apple-tvos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			HsZ2VVLU/wurZpynDEeayJZDB8k=
+			</data>
 			<key>hash2</key>
 			<data>
-			jdrKILHyCIzddJNHAefKG1gVCmml3ZnOhhtddYnUPl4=
+			bisqi3tXStNuPGx04rYDa+qgGHLNOeSc5l/gEUVHWrs=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			HsZ2VVLU/wurZpynDEeayJZDB8k=
+			</data>
 			<key>hash2</key>
 			<data>
-			jdrKILHyCIzddJNHAefKG1gVCmml3ZnOhhtddYnUPl4=
+			bisqi3tXStNuPGx04rYDa+qgGHLNOeSc5l/gEUVHWrs=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			8MpWor9v9bOjyk79SHKANgCT24w=
+			</data>
 			<key>hash2</key>
 			<data>
-			pJpqo97rNQd5B9JW9dK8KR3U2HMrUOzN+3xZFfK19Ng=
+			uf9AaYkoCED2HAJgG64+iy1bbyrouCiVjZR1fP4Llhc=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			u7vm3li3NYo6UGJXVPKlOIwmVE8=
+			</data>
 			<key>hash2</key>
 			<data>
-			AB2EpX/EbvfEWmr38DXL7zg6Jb0BgGqIk2kfSfqdwVU=
+			FKCd5gz8Maxs+J9pvY8Rog4Bf+j+0z2K+kRH+yHyI4s=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/arm64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			8MpWor9v9bOjyk79SHKANgCT24w=
+			</data>
 			<key>hash2</key>
 			<data>
-			pJpqo97rNQd5B9JW9dK8KR3U2HMrUOzN+3xZFfK19Ng=
+			uf9AaYkoCED2HAJgG64+iy1bbyrouCiVjZR1fP4Llhc=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/arm64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			u7vm3li3NYo6UGJXVPKlOIwmVE8=
+			</data>
 			<key>hash2</key>
 			<data>
-			AB2EpX/EbvfEWmr38DXL7zg6Jb0BgGqIk2kfSfqdwVU=
+			FKCd5gz8Maxs+J9pvY8Rog4Bf+j+0z2K+kRH+yHyI4s=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			yHUz1jm51fIX3kky2kiDwLvWWXo=
+			</data>
 			<key>hash2</key>
 			<data>
-			kBi/MJ1vCF25IUb/SmsTbZ211BG/uv44DEsz5xnBmxE=
+			+CLgAFhEYFq+vxN16zzBEGjTU76kedSWMLUkzp/jA6o=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			01Vm4F+/gerzgPQDWM3IC3PYvAw=
+			</data>
 			<key>hash2</key>
 			<data>
-			KwPrP1XKK9MBwVkJG127O+09hJ0xlkbCkjkFVzG/lVI=
+			qgPBA/Tuu75ainrJjGZ8Q1r3QjstU9N8Do2UEl3zer0=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			yHUz1jm51fIX3kky2kiDwLvWWXo=
+			</data>
 			<key>hash2</key>
 			<data>
-			kBi/MJ1vCF25IUb/SmsTbZ211BG/uv44DEsz5xnBmxE=
+			+CLgAFhEYFq+vxN16zzBEGjTU76kedSWMLUkzp/jA6o=
 			</data>
 		</dict>
 		<key>Modules/BigInt.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			01Vm4F+/gerzgPQDWM3IC3PYvAw=
+			</data>
 			<key>hash2</key>
 			<data>
-			KwPrP1XKK9MBwVkJG127O+09hJ0xlkbCkjkFVzG/lVI=
+			qgPBA/Tuu75ainrJjGZ8Q1r3QjstU9N8Do2UEl3zer0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			+LKgrLBuf9oVedV96sBpcGpjSPg=
+			</data>
 			<key>hash2</key>
 			<data>
 			9JqPjEbto4aNugHPlO21kmd46NJFeqPwFqs5DGejvTk=

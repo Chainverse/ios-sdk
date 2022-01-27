@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CVSDKUtils : NSObject
@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (int)convertHexToDecimal:(NSString *)hex;
 + (BOOL)checkAppInstalled: (NSString *)scheme;
 + (BOOL)isChainverseInstalled;
++ (UIColor *)colorWithHexString:(NSString *)hexString;
++ (NSArray*)shuffleArray:(NSArray*)array;
 @end
 
 NS_ASSUME_NONNULL_END

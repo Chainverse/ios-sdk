@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WaP-wv-9nR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zhc-qY-eiB">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCs-vt-Tx7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="WaP-wv-9nR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XKC-EI-SeV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RP1-5Q-N9f"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1612" y="-89"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,82 +33,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNJ-td-TTq">
-                                <rect key="frame" x="20" y="280" width="300" height="45"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="awX-gI-CTH"/>
-                                    <constraint firstAttribute="width" constant="300" id="mRo-ve-3BS"/>
-                                </constraints>
-                                <state key="normal" title="CONNECT TRUST WALLET WITHOUT UI">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3q-l0-OTw">
-                                <rect key="frame" x="20" y="349" width="200" height="45"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="HwL-hT-B2d"/>
-                                    <constraint firstAttribute="width" constant="200" id="IOH-Om-eRu"/>
-                                </constraints>
-                                <state key="normal" title="GET ITEM">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wml-ti-zOU">
-                                <rect key="frame" x="20" y="86" width="374" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="K2A-4K-5yS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9i9-of-7Hq">
-                                <rect key="frame" x="20" y="212" width="242" height="45"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="CU1-8F-RXy"/>
-                                    <constraint firstAttribute="width" constant="242" id="oEY-HY-fhi"/>
-                                </constraints>
-                                <state key="normal" title="CHOOSE WALLET WITH UI">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YS-9z-7KU">
-                                <rect key="frame" x="20" y="414" width="200" height="45"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="1Fz-3i-HSY"/>
-                                    <constraint firstAttribute="height" constant="45" id="TWe-lD-OH8"/>
-                                </constraints>
-                                <state key="normal" title="LOGOUT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R7c-qp-oXj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="SQN-S2-HID"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NzJ-0B-KZB"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Wml-ti-zOU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="1GA-MQ-LBw"/>
-                            <constraint firstItem="aNJ-td-TTq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Ke-8v-ZTB"/>
-                            <constraint firstItem="9i9-of-7Hq" firstAttribute="top" secondItem="Wml-ti-zOU" secondAttribute="bottom" constant="26" id="54X-Ak-OBA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wml-ti-zOU" secondAttribute="trailing" constant="20" id="7re-DD-zmT"/>
-                            <constraint firstItem="f3q-l0-OTw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="H5o-ir-XgV"/>
-                            <constraint firstItem="9i9-of-7Hq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Lbx-Kw-R4r"/>
-                            <constraint firstItem="aNJ-td-TTq" firstAttribute="top" secondItem="9i9-of-7Hq" secondAttribute="bottom" constant="23" id="Rz4-xs-glw"/>
-                            <constraint firstItem="7YS-9z-7KU" firstAttribute="top" secondItem="f3q-l0-OTw" secondAttribute="bottom" constant="20" id="SDq-m7-Y1S"/>
-                            <constraint firstItem="7YS-9z-7KU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Son-QF-xp7"/>
-                            <constraint firstItem="f3q-l0-OTw" firstAttribute="top" secondItem="aNJ-td-TTq" secondAttribute="bottom" constant="24" id="Utf-h2-oUr"/>
-                            <constraint firstItem="Wml-ti-zOU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ya2-02-c6X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R7c-qp-oXj" secondAttribute="trailing" id="0Nx-v6-u8x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R7c-qp-oXj" secondAttribute="bottom" id="K8U-Yo-d0E"/>
+                            <constraint firstItem="R7c-qp-oXj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WqC-08-Py8"/>
+                            <constraint firstItem="R7c-qp-oXj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n0R-I1-0K2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iBe-GU-S3I"/>
                     <connections>
-                        <outlet property="btnChoose" destination="9i9-of-7Hq" id="CaA-LG-pfc"/>
-                        <outlet property="btnConnect" destination="aNJ-td-TTq" id="VFA-gU-sg6"/>
-                        <outlet property="btnLogout" destination="7YS-9z-7KU" id="BtE-Cm-qHJ"/>
-                        <outlet property="btnTransfer" destination="f3q-l0-OTw" id="4eC-pt-sbN"/>
-                        <outlet property="lblAddress" destination="Wml-ti-zOU" id="ZcI-eM-jTF"/>
+                        <outlet property="tableView" destination="R7c-qp-oXj" id="6aW-1t-04g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,9 +64,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

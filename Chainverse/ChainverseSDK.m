@@ -28,6 +28,13 @@
 #import "CVSDKChainverseResult.h"
 #import "CVSDKTransferItemManager.h"
 #import "ChainverseVersion.h"
+#import "CVSDKWalletCreateScreen.h"
+#import "CVSDKWalletBackupScreen.h"
+#import "CVSDKWalletVerifyScreen.h"
+#import "CVSDKWalletConnectScreen.h"
+#import "CVSDKWalletInfoScreen.h"
+#import "CVSDKWeb3.h"
+#import "CVSDKWallet.h"
 @interface ChainverseSDK(){
     BOOL isInitSDK;
 }
@@ -47,8 +54,24 @@
 - (void)initialize{
     isInitSDK = false;
     self.isKeepConnect = TRUE;
-    [self checkContract];
+    //[self checkContract];
+    [CVSDKCallbackToGame didInitSDKSuccess];
+    [self doInitialize];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectSuccessNotification:) name:NOTIFICATION_CONNECT_SUCCESS object:nil];
+    
+   
+//    NSString *signedMessage = [CVSDKWallet signFuck:[CVSDKUserDefault getMnemonic]];
+//    NSString *signedMessage = [CVSDKWallet signMessage:@"chainverse"];
+//    NSLog(@"nampv_signmessage %@",signedMessage);
 }
+
+- (void) connectSuccessNotification:(NSNotification *) notification
+{
+    if ([[notification name] isEqualToString:NOTIFICATION_CONNECT_SUCCESS]){
+        [self doConnectSuccess];
+    }
+}
+
 
 - (void)checkContract{
     CVSDKContractManager *contractManager = [[CVSDKContractManager alloc] init];
@@ -76,6 +99,7 @@
     
     if([self isUserConnected]){
         NSLog(@"chainversesdk_connect_success %@",[CVSDKUserDefault getXUserSignature]);
+        NSLog(@"chainversesdk_connect_address %@",[CVSDKUserDefault getXUserAdress]);
         [CVSDKCallbackToGame didConnectSuccess:[CVSDKUserDefault getXUserAdress]];
         [[CVSDKTransferItemManager shared] on:^(int event,NSArray * _Nonnull data){
             switch (event) {
@@ -134,6 +158,8 @@
             NSLog(@"nampv_getItems_r %@",error);
             [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
         }];
+    } else {
+        [CVSDKCallbackToGame didError:ERROR_DEVELOPER_PAUSE];
     }
 }
 
@@ -260,5 +286,13 @@
             
         }
     }];
+}
+
+- (void) showConnectWalletView{
+    [CVSDKWalletConnectScreen open];
+}
+
+- (void)showWalletInfoView{
+    [CVSDKWalletInfoScreen open];
 }
 @end

@@ -7,7 +7,14 @@
 
 #import "ViewController.h"
 #import "ChainverseSDK.h"
-@interface ViewController ()
+#import "DemoTableViewCell.h"
+
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+{
+    NSMutableArray *items;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -15,15 +22,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.btnConnect addTarget:self action:@selector(handleConnect:) forControlEvents:UIControlEventTouchUpInside];
-    [self.btnTransfer addTarget:self action:@selector(handleTransfer:) forControlEvents:UIControlEventTouchUpInside];
-    [self.btnChoose addTarget:self action:@selector(handleChoose:) forControlEvents:UIControlEventTouchUpInside];
+    self.title = @"Chainverse SDK for iOS";
     
-    [self.btnLogout addTarget:self action:@selector(handleLogout:) forControlEvents:UIControlEventTouchUpInside];
     [[NSNotificationCenter defaultCenter] addObserver:self
             selector:@selector(receiveTestNotification:)
             name:@"SampleNotiAddress"
             object:nil];
+
+    items = [[NSMutableArray alloc] initWithObjects:
+             @{@"title":@"Connect Wallet", @"description":@"Show Connect wallet page", @"scheme": @"connect_wallet", @"value": @0},
+             @{@"title":@"Wallet", @"description":@"Show your wallet info page", @"scheme": @"wallet_info", @"value":@1},
+             @{@"title":@"Get Items", @"description":@"Get list items", @"sheme": @"list_items", @"value": @2},
+             @{@"title":@"Logout", @"description":@"", @"scheme": @"logout", @"value": @3},
+             nil];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:[DemoTableViewCell nibName]
+                                               bundle:[NSBundle mainBundle]]
+         forCellReuseIdentifier:[DemoTableViewCell nibName]];
+    [self.tableView reloadData];
+    
 }
 
 - (void) receiveTestNotification:(NSNotification *) notification
@@ -33,20 +50,60 @@
     self.lblAddress.text = address;
 }
 
-- (void)handleConnect:(id)sender {
-    [[ChainverseSDK shared] connectWithTrust];
-}
-
-
 - (void)handleTransfer:(id)sender {
     [[ChainverseSDK shared] testPurchase];
 }
 
-- (void)handleChoose:(id)sender {
-    [[ChainverseSDK shared] showConnectView];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:[DemoTableViewCell nibName]];
+
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[DemoTableViewCell nibName]];
+    }
+    if ([cell isKindOfClass:[DemoTableViewCell class]]) {
+        DemoTableViewCell *demoCell = (DemoTableViewCell *)cell;
+        [demoCell configCellWith:items[indexPath.row]];
+    }
+    
+    return cell;
 }
 
-- (void)handleLogout:(id)sender {
-    [[ChainverseSDK shared] logout];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return items.count;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *selectedItem = items[indexPath.row];
+    int selectedItemValue = [selectedItem[@"value"] intValue];
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    switch (selectedItemValue) {
+        case 0:
+            /// Connect wallet
+            [[ChainverseSDK shared] showConnectWalletView];
+            break;
+            
+        case 1:
+            /// Show wallet info
+            [[ChainverseSDK shared] showWalletInfoView];
+            break;
+            
+        case 2:
+            /// Get list item
+            [[ChainverseSDK shared] getItems];
+            break;
+            
+        case 3:
+            /// Logout
+            [[ChainverseSDK shared] logout];
+            break;
+            
+        default:
+            break;
+    }
+}
+
 @end
+
+
+

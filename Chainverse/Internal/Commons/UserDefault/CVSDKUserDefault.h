@@ -21,6 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void) setConnectWallet: (NSString *) value;
 + (NSString *)getConnectWallet;
 + (void)clearConnectWallet;
+
++ (void) setMnemonic: (NSString *) value;
++ (NSString *)getMnemonic;
++ (void)clearMnemonic;
+
 @end
 
 NS_ASSUME_NONNULL_END

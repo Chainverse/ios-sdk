@@ -127,6 +127,10 @@ getUserInfo: Return user info
 
 - (void)testPurchase;
 
+- (void)showConnectWalletView;
+
+- (void)showWalletInfoView;
+
 @end
 
 NS_ASSUME_NONNULL_END

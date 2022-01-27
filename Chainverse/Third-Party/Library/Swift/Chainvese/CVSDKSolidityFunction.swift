@@ -12,12 +12,12 @@ import Foundation
     
     @objc(encode::)
     public func encode(_ function: String, _ address: String) -> String {
-        let address = Address(address)
+        /*let address = Address(address)
         let params = [address]
         
         let function = try! SolidityFunction(function: function)
         let data = function.encode(params.swift as! [SolidityDataRepresentable])
-        let hex = data.hex.withHex.lowercased()
-        return hex
+        let hex = data.hex.withHex.lowercased()*/
+        return ""
     }
 }

@@ -13,4 +13,5 @@ static NSString *urlSocketIO = @"wss://beta-sdk-api.dev.chainverse.xyz";
 static NSString *urlRestful = @"https://beta-sdk-api.dev.chainverse.xyz";
 static NSString *urlBuyTest = @"https://beta-game-sign-1.dev.chainverse.xyz/v1/item";
 static NSString *urlBlockchain = @"https://data-seed-prebsc-1-s1.binance.org:8545";
+static NSString *NOTIFICATION_CONNECT_SUCCESS = @"chainverse_notification_connect_success";
 #endif

@@ -11,7 +11,8 @@ import Foundation
     override init() {}
     @objc(keccak256:)
     public func keccak256(_ input: String) -> String {
-        let data = Data(input.utf8)
-        return data.sha3(.keccak256).hex
+        //let data = Data(input.utf8)
+        //return data.sha3(.keccak256).hex
+        return ""
     }
 }

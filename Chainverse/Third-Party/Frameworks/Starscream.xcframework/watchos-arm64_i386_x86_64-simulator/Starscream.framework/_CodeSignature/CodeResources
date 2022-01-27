@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Starscream-Swift.h</key>
 		<data>
-		6F3M+zB/hvNkNF7LK0bdVgryhCo=
+		DcSxkj0s/ELKHeBqE+ioAzAH5c8=
 		</data>
 		<key>Headers/Starscream.h</key>
 		<data>
@@ -14,79 +14,79 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bD0vg/6mbj1nTa7TKZAqW5VQnqY=
+		Gp1CUNAl6LItnuaY8VnPeyukxeI=
 		</data>
 		<key>Modules/Starscream.swiftmodule/Project/arm64-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		vvuLEkqwsF0oWA0Qo8y9exL4oqQ=
+		g3A78S5n3+enpuk91oDrKQ8fQlg=
 		</data>
 		<key>Modules/Starscream.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		vvuLEkqwsF0oWA0Qo8y9exL4oqQ=
+		g3A78S5n3+enpuk91oDrKQ8fQlg=
 		</data>
 		<key>Modules/Starscream.swiftmodule/Project/i386-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		kV33Qj8hlQijBh1kdoLC8jd+L8M=
+		CJJkJECzXHGGGY7S8oCQ2hgS33k=
 		</data>
 		<key>Modules/Starscream.swiftmodule/Project/i386.swiftsourceinfo</key>
 		<data>
-		kV33Qj8hlQijBh1kdoLC8jd+L8M=
+		CJJkJECzXHGGGY7S8oCQ2hgS33k=
 		</data>
 		<key>Modules/Starscream.swiftmodule/Project/x86_64-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		LhmH16qWoVZpywuki0iidbuzq0w=
+		chaN0T/L8GCRJxOeFXC+iAwaWos=
 		</data>
 		<key>Modules/Starscream.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		LhmH16qWoVZpywuki0iidbuzq0w=
+		chaN0T/L8GCRJxOeFXC+iAwaWos=
 		</data>
 		<key>Modules/Starscream.swiftmodule/arm64-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		QmFB2oKsV5qe3jrq3FGP7EGawEQ=
+		xOe1UPSb3aroW7x02CyAr87nLog=
 		</data>
 		<key>Modules/Starscream.swiftmodule/arm64-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		linmf/jyFyusu4VE/atow2SMkMQ=
+		ftCJQHqDC6Ad9jUUlDbK3nq7678=
 		</data>
 		<key>Modules/Starscream.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		QmFB2oKsV5qe3jrq3FGP7EGawEQ=
+		xOe1UPSb3aroW7x02CyAr87nLog=
 		</data>
 		<key>Modules/Starscream.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		linmf/jyFyusu4VE/atow2SMkMQ=
+		ftCJQHqDC6Ad9jUUlDbK3nq7678=
 		</data>
 		<key>Modules/Starscream.swiftmodule/i386-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		ZKqYKhxpKMKEuFZeC5SnfGNuheg=
+		5k3yYOkVIU2r6SpMuerBCqI5aVo=
 		</data>
 		<key>Modules/Starscream.swiftmodule/i386-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		iIihafCgm6pdU9nA3v10KpvxLEA=
+		W/ASxyAuAj/5LnC98FuqUHHWuDE=
 		</data>
 		<key>Modules/Starscream.swiftmodule/i386.swiftdoc</key>
 		<data>
-		ZKqYKhxpKMKEuFZeC5SnfGNuheg=
+		5k3yYOkVIU2r6SpMuerBCqI5aVo=
 		</data>
 		<key>Modules/Starscream.swiftmodule/i386.swiftmodule</key>
 		<data>
-		iIihafCgm6pdU9nA3v10KpvxLEA=
+		W/ASxyAuAj/5LnC98FuqUHHWuDE=
 		</data>
 		<key>Modules/Starscream.swiftmodule/x86_64-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		2OozqAYOSZ+6ZoA6lWlrHlakB6E=
+		iQZ5Zve+erE1dMuDCVD6AqJayBI=
 		</data>
 		<key>Modules/Starscream.swiftmodule/x86_64-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		eOj4aRp8bcq92pA6R6Ds0jk4VG0=
+		hvRwrhB1Z8snyWdHPgHTqFdfyRs=
 		</data>
 		<key>Modules/Starscream.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		2OozqAYOSZ+6ZoA6lWlrHlakB6E=
+		iQZ5Zve+erE1dMuDCVD6AqJayBI=
 		</data>
 		<key>Modules/Starscream.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		eOj4aRp8bcq92pA6R6Ds0jk4VG0=
+		hvRwrhB1Z8snyWdHPgHTqFdfyRs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -97,13 +97,21 @@
 	<dict>
 		<key>Headers/Starscream-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			DcSxkj0s/ELKHeBqE+ioAzAH5c8=
+			</data>
 			<key>hash2</key>
 			<data>
-			+3qFLDHjKVXDE/kF/l5guqZY6GnOontRaHpDTFeZ0Ss=
+			lFPK7x95RfZ5T2mMxGvKoPl6pg8q+3w+ODL3EfX+f+M=
 			</data>
 		</dict>
 		<key>Headers/Starscream.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			bIF/9oSljUDPWlbHwEoxEPdpaHo=
+			</data>
 			<key>hash2</key>
 			<data>
 			uDB1F1BYBSS///5Kx3sW3b25gGjxudlItQDs2UvmKGE=
@@ -111,132 +119,208 @@
 		</dict>
 		<key>Modules/Starscream.swiftmodule/Project/arm64-apple-watchos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			g3A78S5n3+enpuk91oDrKQ8fQlg=
+			</data>
 			<key>hash2</key>
 			<data>
-			/Bm+jDta/mc+MT86sD03ElZu5eJ1GTbe8OoII7pCVHE=
+			Mby5ZN9Z5PxKXe/VF3C+mxDl5oX8LgGekUPvmBqSSgo=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			g3A78S5n3+enpuk91oDrKQ8fQlg=
+			</data>
 			<key>hash2</key>
 			<data>
-			/Bm+jDta/mc+MT86sD03ElZu5eJ1GTbe8OoII7pCVHE=
+			Mby5ZN9Z5PxKXe/VF3C+mxDl5oX8LgGekUPvmBqSSgo=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/Project/i386-apple-watchos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			CJJkJECzXHGGGY7S8oCQ2hgS33k=
+			</data>
 			<key>hash2</key>
 			<data>
-			JkwzD6R980BWmdKHe4XkMmAiB+bR9RXSUt5otC898Kc=
+			XUwRVpdTvcZQWlJcpmuVmNr3Z9k9e+aBO1XjjUY9qRc=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/Project/i386.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			CJJkJECzXHGGGY7S8oCQ2hgS33k=
+			</data>
 			<key>hash2</key>
 			<data>
-			JkwzD6R980BWmdKHe4XkMmAiB+bR9RXSUt5otC898Kc=
+			XUwRVpdTvcZQWlJcpmuVmNr3Z9k9e+aBO1XjjUY9qRc=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/Project/x86_64-apple-watchos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			chaN0T/L8GCRJxOeFXC+iAwaWos=
+			</data>
 			<key>hash2</key>
 			<data>
-			Umf4dhQICAJtnGja+YN7VfYB9VTD5QIk6FwKtWISfNY=
+			uSSv4lncL4j7KjcHpS9vgFNaKL/K37FGnmNfKnLiXOM=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			chaN0T/L8GCRJxOeFXC+iAwaWos=
+			</data>
 			<key>hash2</key>
 			<data>
-			Umf4dhQICAJtnGja+YN7VfYB9VTD5QIk6FwKtWISfNY=
+			uSSv4lncL4j7KjcHpS9vgFNaKL/K37FGnmNfKnLiXOM=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/arm64-apple-watchos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			xOe1UPSb3aroW7x02CyAr87nLog=
+			</data>
 			<key>hash2</key>
 			<data>
-			6fI2MfZeOwAud3cmnFgJihEvNifv3NRRQbOyMhViKk4=
+			LCfoJvbwG4moTS5pBrizIPKq3DcCTbnX4GSR5dRuoB0=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/arm64-apple-watchos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ftCJQHqDC6Ad9jUUlDbK3nq7678=
+			</data>
 			<key>hash2</key>
 			<data>
-			QAqToMUGFzC1Q7vFCtZSVtGCLgrZrvCQv9R/XVUSg84=
+			va4iDYilWrK969VgzmKWUkmcWr2n5ELtX+2ADfcHx5A=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/arm64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			xOe1UPSb3aroW7x02CyAr87nLog=
+			</data>
 			<key>hash2</key>
 			<data>
-			6fI2MfZeOwAud3cmnFgJihEvNifv3NRRQbOyMhViKk4=
+			LCfoJvbwG4moTS5pBrizIPKq3DcCTbnX4GSR5dRuoB0=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/arm64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ftCJQHqDC6Ad9jUUlDbK3nq7678=
+			</data>
 			<key>hash2</key>
 			<data>
-			QAqToMUGFzC1Q7vFCtZSVtGCLgrZrvCQv9R/XVUSg84=
+			va4iDYilWrK969VgzmKWUkmcWr2n5ELtX+2ADfcHx5A=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/i386-apple-watchos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			5k3yYOkVIU2r6SpMuerBCqI5aVo=
+			</data>
 			<key>hash2</key>
 			<data>
-			2li6tNyVQStFWVSuQEgk9zij8UKzeZTD+zfvf53dvzY=
+			AJrzpavZEjYBNtdw5yJfK3o1DIx2sOjgXAqmFz09QZc=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/i386-apple-watchos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			W/ASxyAuAj/5LnC98FuqUHHWuDE=
+			</data>
 			<key>hash2</key>
 			<data>
-			qZuzoup7aytrxAULimIwB20bw8pZczkkKrODIYLsFyg=
+			YJ1mrz0EvKUchVA6D3kvJlAKFg3w3lh81b6opzDc900=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/i386.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			5k3yYOkVIU2r6SpMuerBCqI5aVo=
+			</data>
 			<key>hash2</key>
 			<data>
-			2li6tNyVQStFWVSuQEgk9zij8UKzeZTD+zfvf53dvzY=
+			AJrzpavZEjYBNtdw5yJfK3o1DIx2sOjgXAqmFz09QZc=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/i386.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			W/ASxyAuAj/5LnC98FuqUHHWuDE=
+			</data>
 			<key>hash2</key>
 			<data>
-			qZuzoup7aytrxAULimIwB20bw8pZczkkKrODIYLsFyg=
+			YJ1mrz0EvKUchVA6D3kvJlAKFg3w3lh81b6opzDc900=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/x86_64-apple-watchos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			iQZ5Zve+erE1dMuDCVD6AqJayBI=
+			</data>
 			<key>hash2</key>
 			<data>
-			7fc4SsSqqZjYSHM9e4NCFkUuBh549C9ApLI1j+Kd4So=
+			SH/sTqp4Fez44CKjsyLHASjJsiK25G541IDf+aQyf5w=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/x86_64-apple-watchos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			hvRwrhB1Z8snyWdHPgHTqFdfyRs=
+			</data>
 			<key>hash2</key>
 			<data>
-			xjzkmHU888JbSkD4px2Bma700qiW89oJTcE+1HEL5Bs=
+			XquTszr7/+qMCIpxrym/ZtRpH9l4O7QdJkwI6/W8MtE=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			iQZ5Zve+erE1dMuDCVD6AqJayBI=
+			</data>
 			<key>hash2</key>
 			<data>
-			7fc4SsSqqZjYSHM9e4NCFkUuBh549C9ApLI1j+Kd4So=
+			SH/sTqp4Fez44CKjsyLHASjJsiK25G541IDf+aQyf5w=
 			</data>
 		</dict>
 		<key>Modules/Starscream.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			hvRwrhB1Z8snyWdHPgHTqFdfyRs=
+			</data>
 			<key>hash2</key>
 			<data>
-			xjzkmHU888JbSkD4px2Bma700qiW89oJTcE+1HEL5Bs=
+			XquTszr7/+qMCIpxrym/ZtRpH9l4O7QdJkwI6/W8MtE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			sr9DR7cNfv/8frVUIbBLPHCc60g=
+			</data>
 			<key>hash2</key>
 			<data>
 			nYTs/q5E5rMtj3rXmqMuzZYThSlmu615k3gwB/Evs/I=
