@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CVSDKWalletConnectView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68I-4L-p4I">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7md-0S-JUx">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqV-Se-ifJ">
+                                    <rect key="frame" x="16" y="23" width="50" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="3sV-5u-jjF"/>
+                                        <constraint firstAttribute="height" constant="24" id="xQy-Kn-EOI"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="chainverse_ic_back.png"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="wqV-Se-ifJ" firstAttribute="leading" secondItem="7md-0S-JUx" secondAttribute="leading" constant="16" id="TvM-RL-L7s"/>
+                                <constraint firstAttribute="height" constant="70" id="cf4-6V-0x7"/>
+                                <constraint firstItem="wqV-Se-ifJ" firstAttribute="centerY" secondItem="7md-0S-JUx" secondAttribute="centerY" id="vpq-i3-tr8"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGa-Yf-MoI">
+                            <rect key="frame" x="0.0" y="70" width="414" height="826"/>
+                            <subviews>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odc-Wo-GOT">
+                                    <rect key="frame" x="0.0" y="24" width="414" height="802"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tau-z7-Upk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="802"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2to-Bb-j5S">
+                                                    <rect key="frame" x="16" y="738" width="382" height="48"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="ame-0X-fXO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="CREATE A NEW WALLET">
+                                                        <color key="titleColor" red="0.027450980390000001" green="0.49019607840000001" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFz-eK-MaI">
+                                                    <rect key="frame" x="16" y="680" width="382" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="5Sd-Tj-6Fb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="I ALREADY HAVE A WALLET"/>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chainverse_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="MIl-hT-vpO">
+                                                    <rect key="frame" x="117" y="254" width="180" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="l6C-bK-1ZH"/>
+                                                        <constraint firstAttribute="width" constant="180" id="q8U-x9-wBY"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="2to-Bb-j5S" firstAttribute="leading" secondItem="tau-z7-Upk" secondAttribute="leading" constant="16" id="6qt-eN-R19"/>
+                                                <constraint firstAttribute="trailing" secondItem="jFz-eK-MaI" secondAttribute="trailing" constant="16" id="MZB-2G-6gF"/>
+                                                <constraint firstItem="2to-Bb-j5S" firstAttribute="top" secondItem="jFz-eK-MaI" secondAttribute="bottom" constant="10" id="ZsA-je-5WM"/>
+                                                <constraint firstAttribute="bottom" secondItem="2to-Bb-j5S" secondAttribute="bottom" constant="16" id="d51-VO-sLE"/>
+                                                <constraint firstItem="jFz-eK-MaI" firstAttribute="leading" secondItem="tau-z7-Upk" secondAttribute="leading" constant="16" id="gfL-FQ-YA4"/>
+                                                <constraint firstAttribute="trailing" secondItem="2to-Bb-j5S" secondAttribute="trailing" constant="16" id="z8j-Dr-WUw"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="tau-z7-Upk" secondAttribute="trailing" id="2qN-Cc-jUg"/>
+                                        <constraint firstItem="tau-z7-Upk" firstAttribute="width" secondItem="odc-Wo-GOT" secondAttribute="width" id="Cwi-6q-3WJ"/>
+                                        <constraint firstItem="tau-z7-Upk" firstAttribute="top" secondItem="odc-Wo-GOT" secondAttribute="top" id="NTk-AR-ClZ"/>
+                                        <constraint firstItem="tau-z7-Upk" firstAttribute="height" secondItem="odc-Wo-GOT" secondAttribute="height" id="Pxt-xP-LDU"/>
+                                        <constraint firstAttribute="bottom" secondItem="tau-z7-Upk" secondAttribute="bottom" id="VZW-jd-cho"/>
+                                        <constraint firstItem="tau-z7-Upk" firstAttribute="leading" secondItem="odc-Wo-GOT" secondAttribute="leading" id="mod-c5-AaN"/>
+                                    </constraints>
+                                </scrollView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="odc-Wo-GOT" secondAttribute="bottom" id="ALZ-i6-brd"/>
+                                <constraint firstItem="odc-Wo-GOT" firstAttribute="top" secondItem="rGa-Yf-MoI" secondAttribute="top" constant="24" id="I91-HF-oxx"/>
+                                <constraint firstItem="odc-Wo-GOT" firstAttribute="leading" secondItem="rGa-Yf-MoI" secondAttribute="leading" id="L1o-Y3-hNx"/>
+                                <constraint firstAttribute="trailing" secondItem="odc-Wo-GOT" secondAttribute="trailing" id="e0I-u7-Bbg"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.027450980392156862" green="0.49019607843137253" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7md-0S-JUx" secondAttribute="trailing" id="7Z4-Hh-36q"/>
+                        <constraint firstAttribute="trailing" secondItem="rGa-Yf-MoI" secondAttribute="trailing" id="BC4-cT-AZ0"/>
+                        <constraint firstAttribute="bottom" secondItem="rGa-Yf-MoI" secondAttribute="bottom" id="Bvp-OT-Zv5"/>
+                        <constraint firstItem="7md-0S-JUx" firstAttribute="top" secondItem="68I-4L-p4I" secondAttribute="top" id="FsS-1b-66z"/>
+                        <constraint firstItem="7md-0S-JUx" firstAttribute="leading" secondItem="68I-4L-p4I" secondAttribute="leading" id="Tqj-pd-d1o"/>
+                        <constraint firstItem="rGa-Yf-MoI" firstAttribute="leading" secondItem="68I-4L-p4I" secondAttribute="leading" id="da9-Wh-v2b"/>
+                        <constraint firstItem="rGa-Yf-MoI" firstAttribute="top" secondItem="7md-0S-JUx" secondAttribute="bottom" id="kj4-zl-Tg1"/>
+                        <constraint firstItem="MIl-hT-vpO" firstAttribute="centerY" secondItem="68I-4L-p4I" secondAttribute="centerY" id="nq7-ep-tv4"/>
+                        <constraint firstItem="MIl-hT-vpO" firstAttribute="centerX" secondItem="68I-4L-p4I" secondAttribute="centerX" id="xtV-xU-J5Q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="68I-4L-p4I" secondAttribute="trailing" id="9pi-7R-w4b"/>
+                <constraint firstItem="68I-4L-p4I" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LdW-DV-k8S"/>
+                <constraint firstAttribute="bottom" secondItem="68I-4L-p4I" secondAttribute="bottom" id="e0l-28-Uvh"/>
+                <constraint firstItem="68I-4L-p4I" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uRG-VR-oi1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnBack" destination="wqV-Se-ifJ" id="x65-IT-x1A"/>
+                <outlet property="btnCreate" destination="2to-Bb-j5S" id="hbZ-2E-s1l"/>
+                <outlet property="btnImport" destination="jFz-eK-MaI" id="sWy-Dq-gpJ"/>
+                <outlet property="viewContainer" destination="68I-4L-p4I" id="yJU-54-DbN"/>
+                <outlet property="viewHeader" destination="7md-0S-JUx" id="cYe-UA-LOP"/>
+                <outlet property="viewHeadermarginTop" destination="FsS-1b-66z" id="IXv-e4-k8w"/>
+                <outlet property="viewMain" destination="rGa-Yf-MoI" id="yYr-NE-XBx"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="80.357142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chainverse_ic_back.png" width="24" height="24"/>
+        <image name="chainverse_logo.png" width="260" height="260"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

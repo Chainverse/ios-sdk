@@ -20,17 +20,5 @@ import CryptoSwift
 
     }
     
-    @objc(keccak256)
-    public func keccak256() -> String {
-        let data = Data("nampv".utf8)
-        return data.sha3(.keccak256).hex
-    }
-    
-    @objc(test)
-    public func test() -> String {
-        let function = try! SolidityFunction(function: "isDeveloperContract()")
-        let data = function.encode([] as! [SolidityDataRepresentable])
-        let hex = data.hex.withHex.lowercased()
-        return hex
-    }
+  
 }

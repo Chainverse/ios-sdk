@@ -18,9 +18,28 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getXUserSignature;
 + (void)clearXUserSignature;
 
++ (void) setXUserNonce: (NSString *) value;
++ (NSString *)getXUserNonce;
++ (void)clearXUserNonce;
+
++ (void) setXUserTime: (NSString *) value;
++ (NSString *)getXUserTime;
++ (void)clearXUserTime;
+
++ (void) setXUserSignatureV2: (NSString *) value;
++ (NSString *)getXUserSignatureV2;
++ (void)clearXUserSignatureV2;
+
 + (void) setConnectWallet: (NSString *) value;
 + (NSString *)getConnectWallet;
 + (void)clearConnectWallet;
+
++ (void) setMnemonic: (NSString *) value;
++ (NSString *)getMnemonic;
++ (void)clearMnemonic;
+
++ (void) setRPC: (NSString *) value;
++ (NSString *)getRPC;
 @end
 
 NS_ASSUME_NONNULL_END

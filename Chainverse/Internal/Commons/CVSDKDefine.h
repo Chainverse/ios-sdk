@@ -25,4 +25,16 @@ typedef enum : int {
     EVENT_ERROR = 4
 } SocketIOEvent;
 
+typedef enum : int {
+    approveToken = 1,
+    approveNFT = 2,
+    buyNFT = 3,
+    bidNFT = 4,
+    sellNFT = 5,
+    cancelSell = 6,
+    withdrawItem = 7,
+    moveService = 8,
+    transferItem = 9
+} EFunction;
+
 #define DEBUG_CHAINVERSE_BUNDLE YES

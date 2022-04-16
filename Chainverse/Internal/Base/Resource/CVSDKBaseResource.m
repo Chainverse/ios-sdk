@@ -15,4 +15,17 @@
         return [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"ChainverseBundle" withExtension:@"bundle"]];
     }
 }
+
++ (UIImage*) imageNamed:(NSString*) name{
+    NSString* fileName = [[name lastPathComponent] stringByDeletingPathExtension];
+    NSString* extension = [name pathExtension];
+    NSBundle *bundle = [self getBundle];
+    return [UIImage imageWithContentsOfFile:[bundle pathForResource:fileName ofType:extension]];
+}
+
++ (NSString *)loadContractABI:(NSString *)resource{
+    NSString *path = [[self getBundle] pathForResource:resource ofType:@"json"];
+    NSString* jsonString = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    return jsonString;
+}
 @end

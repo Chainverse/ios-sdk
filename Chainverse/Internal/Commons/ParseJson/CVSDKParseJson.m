@@ -7,6 +7,8 @@
 
 #import "CVSDKParseJson.h"
 #import "ChainverseItem.h"
+#import "CVSDKTokenURI.h"
+#import "CVSDKService.h"
 @implementation CVSDKParseJson
 + (int) errorCode:(id)responseObject{
     NSDictionary *result = (NSDictionary *) responseObject;
@@ -32,5 +34,32 @@
     ChainverseItem *item = [[ChainverseItem alloc] initWithObjectDict:res];
     [ChainverseItem archiveObject:item];
     return item;
+}
+
++ (CVSDKTokenURI *) parseTokenUri:(id)responseObject{
+    NSDictionary *result = (NSDictionary *) responseObject;
+    CVSDKTokenURI *item = [[CVSDKTokenURI alloc] initWithObjectDict:result];
+    return item;
+}
+
+
+
++ (NSMutableArray *)parseServices:(NSMutableArray *)data{
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    NSMutableArray *services = data;
+    NSLog(@"nampv_parse_service %@",data);
+    if(data.count > 0){
+        for(NSDictionary *service in services){
+            CVSDKService *item = [[CVSDKService alloc] initWithObjectDict:service];
+            [items addObject:item];
+        }
+    }
+    return items;
+}
+
++ (NSArray *)parseRPC:(NSString *)rpcs{
+    NSData* data = [rpcs dataUsingEncoding:NSUTF8StringEncoding];
+    NSArray *arrayRpcs = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    return arrayRpcs;
 }
 @end

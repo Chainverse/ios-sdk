@@ -6,59 +6,59 @@
 	<dict>
 		<key>Headers/SipHash-Swift.h</key>
 		<data>
-		mQEoIhNFJh30TbbNveNdJp2E8fI=
+		vJ0HkhRPLUjoVNgQUcWbI1X8WBk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YQTV5ZW4buPkwGxWrn9eHlE4Y2Y=
+		GXS7Fpc8mO+yrW9h/2DTwrT85yE=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/arm64-apple-tvos-simulator.swiftsourceinfo</key>
 		<data>
-		NKylvE7hgav7IixoecdKbfrMDtk=
+		4jZQGvj2lMhYcltiWu8mfOlfbH8=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		NKylvE7hgav7IixoecdKbfrMDtk=
+		4jZQGvj2lMhYcltiWu8mfOlfbH8=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/x86_64-apple-tvos-simulator.swiftsourceinfo</key>
 		<data>
-		0AWveeHHRjh59QPd/9iem+jvmvM=
+		3NgYkCwcpBxU0ztAk5MEh60ythw=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		0AWveeHHRjh59QPd/9iem+jvmvM=
+		3NgYkCwcpBxU0ztAk5MEh60ythw=
 		</data>
 		<key>Modules/SipHash.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		86WyKpf27o3lD46j4ycBauXAohE=
+		0WOIbDcOHJq6pRQU610uTw9UzCI=
 		</data>
 		<key>Modules/SipHash.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		SAmKUPmzIdQZhMSRVhAQi5p/0jg=
+		TMAbECDkGf68cEbBFjydVTU7CXE=
 		</data>
 		<key>Modules/SipHash.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		86WyKpf27o3lD46j4ycBauXAohE=
+		0WOIbDcOHJq6pRQU610uTw9UzCI=
 		</data>
 		<key>Modules/SipHash.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		SAmKUPmzIdQZhMSRVhAQi5p/0jg=
+		TMAbECDkGf68cEbBFjydVTU7CXE=
 		</data>
 		<key>Modules/SipHash.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<data>
-		AzhDh5pq0vwBvrqkyELLaMtKG8c=
+		l6Z6WsIRetFx6Esi+hueq+L660E=
 		</data>
 		<key>Modules/SipHash.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		ReibOL9GZfQzPNLNMV3sC+PofTk=
+		3nCGaUyUb1EYU7hHa2LUJNJXqgQ=
 		</data>
 		<key>Modules/SipHash.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		AzhDh5pq0vwBvrqkyELLaMtKG8c=
+		l6Z6WsIRetFx6Esi+hueq+L660E=
 		</data>
 		<key>Modules/SipHash.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		ReibOL9GZfQzPNLNMV3sC+PofTk=
+		3nCGaUyUb1EYU7hHa2LUJNJXqgQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,97 +69,153 @@
 	<dict>
 		<key>Headers/SipHash-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			vJ0HkhRPLUjoVNgQUcWbI1X8WBk=
+			</data>
 			<key>hash2</key>
 			<data>
-			93G/dtifWSI2221EXhPHkzgVwpA9XdqysucHKrySkYs=
+			WZFy1LItX0n6vE1eQOTB7o5aJZpOpRQNYrvvu9I39nE=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/arm64-apple-tvos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			4jZQGvj2lMhYcltiWu8mfOlfbH8=
+			</data>
 			<key>hash2</key>
 			<data>
-			5cX0G7j04XU0llo6h2AmA8O/zCH/q89z1CXuqdA3DTg=
+			hYnBtEwJubc2zi3BQQt9ms56/r/pNmdiViKom6yhNMQ=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			4jZQGvj2lMhYcltiWu8mfOlfbH8=
+			</data>
 			<key>hash2</key>
 			<data>
-			5cX0G7j04XU0llo6h2AmA8O/zCH/q89z1CXuqdA3DTg=
+			hYnBtEwJubc2zi3BQQt9ms56/r/pNmdiViKom6yhNMQ=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/x86_64-apple-tvos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			3NgYkCwcpBxU0ztAk5MEh60ythw=
+			</data>
 			<key>hash2</key>
 			<data>
-			yk7YUmtf+LbKeI4as1SiNqA2L6G7foYwHKja0s3oPnc=
+			UUElCVTWSOeiqKMUBxTx/nPRnXRimI4AYLV3oEy9ZOs=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			3NgYkCwcpBxU0ztAk5MEh60ythw=
+			</data>
 			<key>hash2</key>
 			<data>
-			yk7YUmtf+LbKeI4as1SiNqA2L6G7foYwHKja0s3oPnc=
+			UUElCVTWSOeiqKMUBxTx/nPRnXRimI4AYLV3oEy9ZOs=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/arm64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			0WOIbDcOHJq6pRQU610uTw9UzCI=
+			</data>
 			<key>hash2</key>
 			<data>
-			RIfv1OxxMAF0ZlGgbD9+YHbdm8Fpxyq3DF4l6Hj7KGc=
+			7CZL2jaBmPqMlNIuPu83Qt6hpLRCvIFUWxJ5W7SC310=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			TMAbECDkGf68cEbBFjydVTU7CXE=
+			</data>
 			<key>hash2</key>
 			<data>
-			wi+tM5cpU0hJLa9BAJyaRGqrTT/A+pMixDNUrR36nQY=
+			ow6OvQ+LO7nfV0faq3iCBa8aVqjQt/MsW53cB7/GlYg=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/arm64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			0WOIbDcOHJq6pRQU610uTw9UzCI=
+			</data>
 			<key>hash2</key>
 			<data>
-			RIfv1OxxMAF0ZlGgbD9+YHbdm8Fpxyq3DF4l6Hj7KGc=
+			7CZL2jaBmPqMlNIuPu83Qt6hpLRCvIFUWxJ5W7SC310=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/arm64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			TMAbECDkGf68cEbBFjydVTU7CXE=
+			</data>
 			<key>hash2</key>
 			<data>
-			wi+tM5cpU0hJLa9BAJyaRGqrTT/A+pMixDNUrR36nQY=
+			ow6OvQ+LO7nfV0faq3iCBa8aVqjQt/MsW53cB7/GlYg=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/x86_64-apple-tvos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			l6Z6WsIRetFx6Esi+hueq+L660E=
+			</data>
 			<key>hash2</key>
 			<data>
-			MIaF7bTA0JYuq6nayRc6QHPEQe3szzPVBciZLlA8hZo=
+			K2ymDCdN2+2VJ71Nh7JMrDxRsWJ2r5JUsXzp1cdD9XA=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			3nCGaUyUb1EYU7hHa2LUJNJXqgQ=
+			</data>
 			<key>hash2</key>
 			<data>
-			+Fuz3T80yx1veQJkZ+sLVpU9K1hGQMYXmdEywR6ttQc=
+			IBTlumRmCCnSrr/RdBpjxXHvpfIgAY1syTRvnzwGLio=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			l6Z6WsIRetFx6Esi+hueq+L660E=
+			</data>
 			<key>hash2</key>
 			<data>
-			MIaF7bTA0JYuq6nayRc6QHPEQe3szzPVBciZLlA8hZo=
+			K2ymDCdN2+2VJ71Nh7JMrDxRsWJ2r5JUsXzp1cdD9XA=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			3nCGaUyUb1EYU7hHa2LUJNJXqgQ=
+			</data>
 			<key>hash2</key>
 			<data>
-			+Fuz3T80yx1veQJkZ+sLVpU9K1hGQMYXmdEywR6ttQc=
+			IBTlumRmCCnSrr/RdBpjxXHvpfIgAY1syTRvnzwGLio=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			FWzVWbkl0XEHOayklCWTBP3pbfw=
+			</data>
 			<key>hash2</key>
 			<data>
 			aVrNyEhgyWZm0VYIEpXwTZivYEnmV1fVZkk2+isIBnA=

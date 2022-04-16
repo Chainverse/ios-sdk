@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CryptoSwift-Swift.h</key>
 		<data>
-		BXYpe6ZHvRFtjFPO+4b2WewkdNA=
+		0l4upgJi3aVw3aT1rWa+qe59bY8=
 		</data>
 		<key>Headers/CryptoSwift.h</key>
 		<data>
@@ -14,103 +14,103 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HRFPOX5hzvlYzJtkrlJS52uxMm8=
+		7wklT1udsTWDry6HtzrrLt5Ndwo=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/Project/arm64-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		AzxVls3RRncA0ScAZENqXwuHQ7Q=
+		i21xJR1Ww1Rf4qkTbuSgIY9Glb0=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		AzxVls3RRncA0ScAZENqXwuHQ7Q=
+		i21xJR1Ww1Rf4qkTbuSgIY9Glb0=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/Project/i386-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		L/9Xjcx3HK/n522H2adrDd3rWjI=
+		njGYgZcW1XBGzsREH/pJ1Ff1RF4=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/Project/i386.swiftsourceinfo</key>
 		<data>
-		L/9Xjcx3HK/n522H2adrDd3rWjI=
+		njGYgZcW1XBGzsREH/pJ1Ff1RF4=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/Project/x86_64-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		lj8X7SaMDgmO1go9wkxczSrLsQM=
+		fQkZHX54YKIQQipmyvKu4k9rYQ0=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		lj8X7SaMDgmO1go9wkxczSrLsQM=
+		fQkZHX54YKIQQipmyvKu4k9rYQ0=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/arm64-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		dIcWR3KWB0r7y26uRFimoXIcUQk=
+		VERCJPYhY+wcIgwJ9s/vpAW2c6E=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/arm64-apple-watchos-simulator.swiftinterface</key>
 		<data>
-		10ekYV70ONuVbQ7ToVEhRQC2rqE=
+		CALLa+kJHP2g52NYV8bvRN8ERZI=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/arm64-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		pKExFKpYJGOd8DRwFuCRgtFu7AA=
+		AZvffQriV7/aDuDM8Pb5CgGc5EY=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		dIcWR3KWB0r7y26uRFimoXIcUQk=
+		VERCJPYhY+wcIgwJ9s/vpAW2c6E=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		10ekYV70ONuVbQ7ToVEhRQC2rqE=
+		CALLa+kJHP2g52NYV8bvRN8ERZI=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		pKExFKpYJGOd8DRwFuCRgtFu7AA=
+		AZvffQriV7/aDuDM8Pb5CgGc5EY=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/i386-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		fnBk0fPdgFBqsbhVySYYklQbxTo=
+		RMsWlukBKslijJvHjqEdTbmoJ3k=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/i386-apple-watchos-simulator.swiftinterface</key>
 		<data>
-		L+VuH0ZFY0B1FGDX7qjRfi3Of8A=
+		Qp8FXVUEPvuyTIg2fIKzOg7JItQ=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/i386-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		UqBH3kZbQHuUVl6KFTZG73JmOEI=
+		5xnjJJplGzjLU5sEhjvwDrYnzmM=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/i386.swiftdoc</key>
 		<data>
-		fnBk0fPdgFBqsbhVySYYklQbxTo=
+		RMsWlukBKslijJvHjqEdTbmoJ3k=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/i386.swiftinterface</key>
 		<data>
-		L+VuH0ZFY0B1FGDX7qjRfi3Of8A=
+		Qp8FXVUEPvuyTIg2fIKzOg7JItQ=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/i386.swiftmodule</key>
 		<data>
-		UqBH3kZbQHuUVl6KFTZG73JmOEI=
+		5xnjJJplGzjLU5sEhjvwDrYnzmM=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		Zpx3Xr+rQaQK3QEoCrLEe5fuT0A=
+		3Nl6X8kcJK9tMKB8A682ZN58+hc=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64-apple-watchos-simulator.swiftinterface</key>
 		<data>
-		mCMEIHjYGIsoIwfeEe/+y+6itdM=
+		ufS9mLtRLjlVFj3z7Jh5RsFvkkI=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		LXz5C5MFHm1tWxOI+rIEktkSHOE=
+		/xVmQlJfL5uQX481E76cK0hx43M=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		Zpx3Xr+rQaQK3QEoCrLEe5fuT0A=
+		3Nl6X8kcJK9tMKB8A682ZN58+hc=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		mCMEIHjYGIsoIwfeEe/+y+6itdM=
+		ufS9mLtRLjlVFj3z7Jh5RsFvkkI=
 		</data>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		LXz5C5MFHm1tWxOI+rIEktkSHOE=
+		/xVmQlJfL5uQX481E76cK0hx43M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -123,11 +123,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BXYpe6ZHvRFtjFPO+4b2WewkdNA=
+			0l4upgJi3aVw3aT1rWa+qe59bY8=
 			</data>
 			<key>hash2</key>
 			<data>
-			4aSyCKIk3ekZscyvUGMIplPQ8dmYuWPbDlML69y6o0E=
+			zwsNAraW50CEYVJpryH2DK/+AL2t2Eq8T/gil+fLNCo=
 			</data>
 		</dict>
 		<key>Headers/CryptoSwift.h</key>
@@ -145,264 +145,264 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AzxVls3RRncA0ScAZENqXwuHQ7Q=
+			i21xJR1Ww1Rf4qkTbuSgIY9Glb0=
 			</data>
 			<key>hash2</key>
 			<data>
-			+ao6WNIYYRt19cXV5ae+qySn2/WgwdjmDQjflUNm7Ig=
+			DfCGyYmLqMSez8BgWbtkgiASBufuNovnAKcLCG4itsM=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AzxVls3RRncA0ScAZENqXwuHQ7Q=
+			i21xJR1Ww1Rf4qkTbuSgIY9Glb0=
 			</data>
 			<key>hash2</key>
 			<data>
-			+ao6WNIYYRt19cXV5ae+qySn2/WgwdjmDQjflUNm7Ig=
+			DfCGyYmLqMSez8BgWbtkgiASBufuNovnAKcLCG4itsM=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/Project/i386-apple-watchos-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L/9Xjcx3HK/n522H2adrDd3rWjI=
+			njGYgZcW1XBGzsREH/pJ1Ff1RF4=
 			</data>
 			<key>hash2</key>
 			<data>
-			EEJ+6Wz4EVaoPv6E8Qy6yaglGLO95CkiCSQYyzjDNgE=
+			TcbBr7yYsdcV5lAe+jVp+x0XfLo7Y8K4y9tTH2MMqvs=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/Project/i386.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L/9Xjcx3HK/n522H2adrDd3rWjI=
+			njGYgZcW1XBGzsREH/pJ1Ff1RF4=
 			</data>
 			<key>hash2</key>
 			<data>
-			EEJ+6Wz4EVaoPv6E8Qy6yaglGLO95CkiCSQYyzjDNgE=
+			TcbBr7yYsdcV5lAe+jVp+x0XfLo7Y8K4y9tTH2MMqvs=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/Project/x86_64-apple-watchos-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lj8X7SaMDgmO1go9wkxczSrLsQM=
+			fQkZHX54YKIQQipmyvKu4k9rYQ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			mxcBuVINNa+yx5xY4gyLdvWcQx0O0G00CVsvOwyDrhU=
+			ha1Ehj1EOQa14namgsXjWkFbDElKZsJ5ocej+pqC6fY=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lj8X7SaMDgmO1go9wkxczSrLsQM=
+			fQkZHX54YKIQQipmyvKu4k9rYQ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			mxcBuVINNa+yx5xY4gyLdvWcQx0O0G00CVsvOwyDrhU=
+			ha1Ehj1EOQa14namgsXjWkFbDElKZsJ5ocej+pqC6fY=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/arm64-apple-watchos-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dIcWR3KWB0r7y26uRFimoXIcUQk=
+			VERCJPYhY+wcIgwJ9s/vpAW2c6E=
 			</data>
 			<key>hash2</key>
 			<data>
-			gOJCW5KNisWsWTKhIyHu11oIOlUr5wzElWac1Zn1eDA=
+			eGUbd3dWVmwHwJKMwb4a2lc6sC2MU8jhqnjEMBAQKQk=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/arm64-apple-watchos-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			10ekYV70ONuVbQ7ToVEhRQC2rqE=
+			CALLa+kJHP2g52NYV8bvRN8ERZI=
 			</data>
 			<key>hash2</key>
 			<data>
-			zYlGKE50Yaw694KW2vK3YrHIUFavdyARJ03y5fut7C4=
+			rrBmrpRYV4LWvUIOIxh++c2ACEG/7P5Qi7rEdyYBUys=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/arm64-apple-watchos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pKExFKpYJGOd8DRwFuCRgtFu7AA=
+			AZvffQriV7/aDuDM8Pb5CgGc5EY=
 			</data>
 			<key>hash2</key>
 			<data>
-			zjLXHgoYthwKaE59otKU9pSYbcvvlbW03zpOrK78abs=
+			Cw9xCtuzLyvhD4HbeZcviEhJNvjNKDOiKfbXMM0egoI=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dIcWR3KWB0r7y26uRFimoXIcUQk=
+			VERCJPYhY+wcIgwJ9s/vpAW2c6E=
 			</data>
 			<key>hash2</key>
 			<data>
-			gOJCW5KNisWsWTKhIyHu11oIOlUr5wzElWac1Zn1eDA=
+			eGUbd3dWVmwHwJKMwb4a2lc6sC2MU8jhqnjEMBAQKQk=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			10ekYV70ONuVbQ7ToVEhRQC2rqE=
+			CALLa+kJHP2g52NYV8bvRN8ERZI=
 			</data>
 			<key>hash2</key>
 			<data>
-			zYlGKE50Yaw694KW2vK3YrHIUFavdyARJ03y5fut7C4=
+			rrBmrpRYV4LWvUIOIxh++c2ACEG/7P5Qi7rEdyYBUys=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pKExFKpYJGOd8DRwFuCRgtFu7AA=
+			AZvffQriV7/aDuDM8Pb5CgGc5EY=
 			</data>
 			<key>hash2</key>
 			<data>
-			zjLXHgoYthwKaE59otKU9pSYbcvvlbW03zpOrK78abs=
+			Cw9xCtuzLyvhD4HbeZcviEhJNvjNKDOiKfbXMM0egoI=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/i386-apple-watchos-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fnBk0fPdgFBqsbhVySYYklQbxTo=
+			RMsWlukBKslijJvHjqEdTbmoJ3k=
 			</data>
 			<key>hash2</key>
 			<data>
-			xbOvlhThnkbEp1U4t53iDfUQVVMorfF6zWryp/d3Ydg=
+			sBSeUd71H2m1h5/B686vKYFuZ3SyxYbnZaPTwx3OFZA=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/i386-apple-watchos-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L+VuH0ZFY0B1FGDX7qjRfi3Of8A=
+			Qp8FXVUEPvuyTIg2fIKzOg7JItQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			5clADu5B0268rqw5JGBZMov6HU4NGDJEMRa42e+LYPw=
+			/kfE4/Ern+rX+6RASb+7dI/EPjsZdlRIs/AdtqZfpXQ=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/i386-apple-watchos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UqBH3kZbQHuUVl6KFTZG73JmOEI=
+			5xnjJJplGzjLU5sEhjvwDrYnzmM=
 			</data>
 			<key>hash2</key>
 			<data>
-			oBSkGi+maocthpi4FUntfjUeqdA3Fr5G/sNkRd/rdas=
+			dOqnEt1CEquFpaNwWcp8Ezn1fbFRJdM1gvb9iRxKGcg=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/i386.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fnBk0fPdgFBqsbhVySYYklQbxTo=
+			RMsWlukBKslijJvHjqEdTbmoJ3k=
 			</data>
 			<key>hash2</key>
 			<data>
-			xbOvlhThnkbEp1U4t53iDfUQVVMorfF6zWryp/d3Ydg=
+			sBSeUd71H2m1h5/B686vKYFuZ3SyxYbnZaPTwx3OFZA=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/i386.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L+VuH0ZFY0B1FGDX7qjRfi3Of8A=
+			Qp8FXVUEPvuyTIg2fIKzOg7JItQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			5clADu5B0268rqw5JGBZMov6HU4NGDJEMRa42e+LYPw=
+			/kfE4/Ern+rX+6RASb+7dI/EPjsZdlRIs/AdtqZfpXQ=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UqBH3kZbQHuUVl6KFTZG73JmOEI=
+			5xnjJJplGzjLU5sEhjvwDrYnzmM=
 			</data>
 			<key>hash2</key>
 			<data>
-			oBSkGi+maocthpi4FUntfjUeqdA3Fr5G/sNkRd/rdas=
+			dOqnEt1CEquFpaNwWcp8Ezn1fbFRJdM1gvb9iRxKGcg=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64-apple-watchos-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zpx3Xr+rQaQK3QEoCrLEe5fuT0A=
+			3Nl6X8kcJK9tMKB8A682ZN58+hc=
 			</data>
 			<key>hash2</key>
 			<data>
-			J5HYa76+tIrcuqXpDfhpOuIjsqLcAaynfVLJ1LOsKQ4=
+			9rKTWmKxViqeJVUnNwtX4x97e9P0t89m0ncoAKmBKbY=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64-apple-watchos-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mCMEIHjYGIsoIwfeEe/+y+6itdM=
+			ufS9mLtRLjlVFj3z7Jh5RsFvkkI=
 			</data>
 			<key>hash2</key>
 			<data>
-			bl88i9Ck/ZC6RYoX12F7TzmbpO+DKCMDedF8195n7qc=
+			qcW5qi4d7vLtKINkuno4faifE6pAfvXNz1AolHiAj3g=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64-apple-watchos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LXz5C5MFHm1tWxOI+rIEktkSHOE=
+			/xVmQlJfL5uQX481E76cK0hx43M=
 			</data>
 			<key>hash2</key>
 			<data>
-			oHvg35Rj1VhVFWeyU5utDospB45E1WpJUdMRegD5pLk=
+			aCz5ToPfTSZNe+81LcV+WBjhoT6gJ947kY3ICNwHM+M=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zpx3Xr+rQaQK3QEoCrLEe5fuT0A=
+			3Nl6X8kcJK9tMKB8A682ZN58+hc=
 			</data>
 			<key>hash2</key>
 			<data>
-			J5HYa76+tIrcuqXpDfhpOuIjsqLcAaynfVLJ1LOsKQ4=
+			9rKTWmKxViqeJVUnNwtX4x97e9P0t89m0ncoAKmBKbY=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mCMEIHjYGIsoIwfeEe/+y+6itdM=
+			ufS9mLtRLjlVFj3z7Jh5RsFvkkI=
 			</data>
 			<key>hash2</key>
 			<data>
-			bl88i9Ck/ZC6RYoX12F7TzmbpO+DKCMDedF8195n7qc=
+			qcW5qi4d7vLtKINkuno4faifE6pAfvXNz1AolHiAj3g=
 			</data>
 		</dict>
 		<key>Modules/CryptoSwift.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LXz5C5MFHm1tWxOI+rIEktkSHOE=
+			/xVmQlJfL5uQX481E76cK0hx43M=
 			</data>
 			<key>hash2</key>
 			<data>
-			oHvg35Rj1VhVFWeyU5utDospB45E1WpJUdMRegD5pLk=
+			aCz5ToPfTSZNe+81LcV+WBjhoT6gJ947kY3ICNwHM+M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

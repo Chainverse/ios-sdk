@@ -1,0 +1,244 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "48bfdddffc8cbab3ebe761912de1b233ac028e85d21b72a8f10844b17d6c7bc8"
+build_start_time: [1650009454, 947021007]
+build_end_time: [1650009472, 595263004]
+inputs:
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/Chainvese/CVWallet.swift"
+  : [1649908039, 232002735]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/Chainvese/CVWeb3.swift"
+  : [1649908030, 434906959]
+  "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/Test.swift": [1649047536, 167304277]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Browser/Bridge.swift"
+  : [1646119074, 319451808]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Browser/BrowserViewController.swift"
+  : [1646119074, 319545745]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Contract/ComparisonExtensions.swift"
+  : [1646119074, 330909967]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Contract/ContractProtocol.swift"
+  : [1646119074, 330972433]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Contract/EthereumContract.swift"
+  : [1649038746, 937463283]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Contract/EthereumFilterEncodingExtensions.swift"
+  : [1646119074, 335292339]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Contract/EventFiltering.swift"
+  : [1646119074, 335367679]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/Array+Extension.swift"
+  : [1646119074, 336449623]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/Base58.swift"
+  : [1646119074, 336532831]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/BigUInt+Extensions.swift"
+  : [1646119074, 336620330]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/CryptoExtensions.swift"
+  : [1646119074, 336685180]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/Data+Extension.swift"
+  : [1646119074, 336770534]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/Decodable+Extensions.swift"
+  : [1646119074, 336850643]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/Dictionary+Extension.swift"
+  : [1646119074, 336915016]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/Encodable+Extensions.swift"
+  : [1646119074, 336982965]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/NSRegularExpressionExtension.swift"
+  : [1646119074, 337071418]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/NativeTypesEncoding+Extensions.swift"
+  : [1646119074, 337145805]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/RIPEMD160+StackOveflow.swift"
+  : [1646119074, 337252140]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/SECP256k1.swift"
+  : [1646119074, 337364196]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Convenience/String+Extension.swift"
+  : [1646119074, 337447166]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/EthereumABI/ABI.swift"
+  : [1646119074, 337561607]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/EthereumABI/ABIDecoding.swift"
+  : [1646119074, 337656974]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/EthereumABI/ABIElements.swift"
+  : [1646119074, 337738513]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/EthereumABI/ABIEncoding.swift"
+  : [1649905704, 151422023]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/EthereumABI/ABIParameterTypes.swift"
+  : [1646119074, 337895870]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/EthereumABI/ABIParsing.swift"
+  : [1646119074, 337974309]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/EthereumABI/ABITypeParser.swift"
+  : [1646119074, 338051795]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/EthereumAddress/EthereumAddress.swift"
+  : [1646119074, 338160514]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/EthereumAddress/Extensions.swift"
+  : [1646119074, 338229656]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/HookedFunctions/Web3+BrowserFunctions.swift"
+  : [1646119074, 338351011]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/HookedFunctions/Web3+Wallet.swift"
+  : [1646119074, 338419437]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/AbstractKeystore.swift"
+  : [1646119074, 338531970]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/BIP32HDNode.swift"
+  : [1646119074, 338628292]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/BIP32Keystore.swift"
+  : [1646119074, 338734149]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/BIP39+WordLists.swift"
+  : [1646119074, 341041088]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/BIP39.swift"
+  : [1646119074, 341130733]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/EthereumKeystoreV3.swift"
+  : [1646119074, 341208934]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/IBAN.swift"
+  : [1646119074, 341276168]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/KeystoreManager.swift"
+  : [1646119074, 341342449]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/KeystoreParams.swift"
+  : [1646119074, 341406345]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/PathAddressStorage.swift"
+  : [1646119074, 341471195]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/KeystoreManager/PlainKeystore.swift"
+  : [1646119074, 341534137]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Batching.swift"
+  : [1646119074, 341644763]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+HttpProvider.swift"
+  : [1646119074, 341712713]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Contract+GetIndexedEvents.swift"
+  : [1646119074, 341779232]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+Call.swift"
+  : [1646119074, 341876029]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+EstimateGas.swift"
+  : [1649407228, 956133842]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetAccounts.swift"
+  : [1646119074, 342026233]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetBalance.swift"
+  : [1646119074, 342093944]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetBlockByHash.swift"
+  : [1646119074, 342161178]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetBlockByNumber.swift"
+  : [1646119074, 342227935]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetBlockNumber.swift"
+  : [1646119074, 342308998]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetCode.swift"
+  : [1646119074, 342380523]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetGasPrice.swift"
+  : [1646119074, 342457771]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetTransactionCount.swift"
+  : [1646119074, 342531681]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetTransactionDetails.swift"
+  : [1646119074, 342606544]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+GetTransactionReceipt.swift"
+  : [1646119074, 342696666]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+SendRawTransaction.swift"
+  : [1646119074, 342772006]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Eth+SendTransaction.swift"
+  : [1646119074, 342835187]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Personal+CreateAccount.swift"
+  : [1646119074, 342899322]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Personal+Sign.swift"
+  : [1646119074, 342979907]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+Personal+UnlockAccount.swift"
+  : [1646119074, 343041896]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Promises/Promise+Web3+TxPool.swift"
+  : [1646119074, 343110561]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/SwiftRLP/RLP.swift"
+  : [1646119074, 343253612]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC1155/Web3+ERC1155.swift"
+  : [1646119074, 343426704]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC1376/Web3+ERC1376.swift"
+  : [1646119074, 343591213]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC1400/Web3+ERC1400.swift"
+  : [1646119074, 343787670]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC1410/Web3+ERC1410.swift"
+  : [1646119074, 343944072]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC1594/Web3+ERC1594.swift"
+  : [1646119074, 344094038]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC1633/Web3+ERC1633.swift"
+  : [1646119074, 344240188]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC1643/Web3+ERC1643.swift"
+  : [1646119074, 344389438]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC1644/Web3+ERC1644.swift"
+  : [1646119074, 344527244]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC165/Web3+ERC165.swift"
+  : [1646119074, 344663619]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC20/Web3+ERC20.swift"
+  : [1646119074, 344801425]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC721/Web3+ERC721.swift"
+  : [1646119074, 344936847]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC721x/Web3+ERC721x.swift"
+  : [1646119074, 345091819]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC777/Web3+ERC777.swift"
+  : [1646119074, 345220565]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC820/Web3+ERC820.swift"
+  : [1646119074, 345347404]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ERC888/Web3+ERC888.swift"
+  : [1646119074, 345472335]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ST20/Web3+ST20.swift"
+  : [1646119074, 345650196]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Tokens/ST20/Web3+SecurityToken.swift"
+  : [1646119074, 345758914]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Transaction/BloomFilter.swift"
+  : [1646119074, 345923900]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Transaction/EthereumTransaction.swift"
+  : [1646119074, 346033334]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Transaction/TransactionSigner.swift"
+  : [1646359260, 71886539]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/EIP/EIP67Code.swift"
+  : [1646119074, 346291780]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/EIP/EIP681.swift"
+  : [1646119074, 346388578]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/EIP/EIP712.swift"
+  : [1646119074, 346478462]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/ENS/ENS.swift"
+  : [1646119074, 346726417]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/ENS/ENSBaseRegistrar.swift"
+  : [1646119074, 346833467]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/ENS/ENSRegistry.swift"
+  : [1646119074, 346911430]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/ENS/ENSResolver.swift"
+  : [1646119074, 346977233]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/ENS/ENSReverseRegistrar.swift"
+  : [1646119074, 347045898]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/ENS/ETHRegistrarController.swift"
+  : [1646119074, 347110986]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/ENS/NameHash.swift"
+  : [1646119074, 347180604]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/ENS/PublicKey.swift"
+  : [1646119074, 347277641]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Utils/Hooks/NonceMiddleware.swift"
+  : [1646119074, 347412109]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Constants.swift"
+  : [1646119074, 347503185]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Contract.swift"
+  : [1649047536, 169799327]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Eth+Websocket.swift"
+  : [1646119074, 347767353]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Eth.swift"
+  : [1648630835, 985259532]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+EventParser.swift"
+  : [1646119074, 347975730]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Eventloop.swift"
+  : [1646119074, 348052501]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+HttpProvider.swift"
+  : [1646119074, 348122119]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+InfuraProviders.swift"
+  : [1649407228, 957065105]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Instance.swift"
+  : [1646119074, 348287343]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+JSONRPC.swift"
+  : [1646119074, 348364353]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Methods.swift"
+  : [1646119074, 348431110]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+MutatingTransaction.swift"
+  : [1648873347, 640942096]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Options.swift"
+  : [1648873198, 687252044]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Personal.swift"
+  : [1646119074, 348774194]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Protocols.swift"
+  : [1646119074, 348857402]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+ReadingTransaction.swift"
+  : [1649407228, 957184314]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Structures.swift"
+  : [1646119074, 349040985]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+TxPool.swift"
+  : [1646119074, 349108457]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+Utils.swift"
+  : [1647674356, 492209434]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3+WebsocketProvider.swift"
+  : [1646119074, 349490165]
+  ? "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/Swift/web3swift/Web3/Web3.swift"
+  : [1649407228, 957453012]

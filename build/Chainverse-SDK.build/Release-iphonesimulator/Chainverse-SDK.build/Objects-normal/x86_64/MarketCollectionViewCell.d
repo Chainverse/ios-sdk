@@ -1,0 +1,36 @@
+dependencies: \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse-SDK/ViewController/MarketScreen/Cell/MarketCollectionViewCell.m \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse-SDK/ViewController/MarketScreen/Cell/MarketCollectionViewCell.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/kcdata.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/uuid.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/netinet6.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/machine.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/device.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/mach_debug.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/mach_machine.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/mach.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/bank.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/darwin_posix_sys_types.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/netinet.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/net.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/darwin_cdefs.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.2.sdk/usr/include/mach-o/dyld.modulemap \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Internal/Model/NFT/CVSDKTokenURI.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Internal/Base/Object/CVSDKBaseObject.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse-SDK/SDWebImage.framework/Headers/UIImageView+WebCache.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse-SDK/SDWebImage.framework/Headers/SDWebImageCompat.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse-SDK/SDWebImage.framework/Headers/SDWebImageManager.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse-SDK/SDWebImage.framework/Headers/SDWebImageOperation.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse-SDK/SDWebImage.framework/Headers/SDWebImageDownloader.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse-SDK/SDWebImage.framework/Headers/SDImageCache.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Internal/Model/NFT/ChainverseNFT.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/JSONModel/JSONModel/JSONModel.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/JSONModel/JSONModel/JSONModelError.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/JSONModel/JSONModelTransformations/JSONValueTransformer.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Third-Party/Library/JSONModel/JSONModelTransformations/JSONKeyMapper.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Internal/Model/NFT/ChainverseNFTAuction.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Internal/Model/NFT/ChainverseNFTCurrency.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Internal/Model/NFT/ChainverseNFTType.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Internal/Model/NFT/ChainverseNFTNetwork.h \
+  /Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse/Internal/Model/NFT/ChainverseNFTCategory.h

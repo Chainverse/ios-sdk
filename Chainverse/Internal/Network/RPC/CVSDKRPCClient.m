@@ -42,7 +42,7 @@
 }
 
 - (NSMutableURLRequest *) createRequest:(NSString *)raw{
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlBlockchain] cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:120];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:DEFAULT_RPC] cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:120];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody: [raw dataUsingEncoding:NSUTF8StringEncoding]];

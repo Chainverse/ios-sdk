@@ -7,16 +7,12 @@
 
 #import "ChainverseSDK.h"
 #import "UIKit/UIKit.h"
-#import "CVSDKTrustConnect.h"
-#import "CVSDKTrustSignMessage.h"
 #import "CVSDKUtils.h"
 #import "CVSDKConnectWalletDialog.h"
 #import "CVSDKBaseSocketIO.h"
 #import "CVSDKRPCClient.h"
 #import "CVSDKContractManager.h"
-#import "CVSDKBridging.h"
 #import "CVSDKUserDefault.h"
-#import "CVSDKTrustResult.h"
 #import "CVSDKDefine.h"
 #import "CVSDKCallbackToGame.h"
 #import "ChainverseSDKError.h"
@@ -24,14 +20,32 @@
 #import "CVSDKParseJson.h"
 #import "CVSDKConstant.h"
 #import "ChainverseItem.h"
-#import "CVSDKChainverseConnect.h"
-#import "CVSDKChainverseResult.h"
+#import "CVSDKChainverseApp.h"
+#import "CVSDKChainverseAppResult.h"
 #import "CVSDKTransferItemManager.h"
 #import "ChainverseVersion.h"
+#import "CVSDKWalletCreateScreen.h"
+#import "CVSDKWalletBackupScreen.h"
+#import "CVSDKWalletVerifyScreen.h"
+#import "CVSDKWalletConnectScreen.h"
+#import "CVSDKWalletInfoScreen.h"
+#import "CVSDKBridgingWeb3.h"
+#import "CVSDKBridgingWallet.h"
+#import "CVSDKSignMessageScreen.h"
+#import "CVSDKRESTfulClientEndpoint.h"
+#import "CVSDKNonce.h"
+#import "CVSDKServiceGame.h"
+#import "CVSDKService.h"
+#import "CVSDKNFTResult.h"
+#import "CVSDKNFTDetail.h"
+#import "CVSDKContractCallScreen.h"
+#import "CVSDKContractCallModel.h"
 @interface ChainverseSDK(){
     BOOL isInitSDK;
+    
 }
 @property (nonatomic, nonatomic) CVSDKBaseSocketIO *socketIO;
+@property (nonatomic, nonatomic) NSString *updateRPC;
 @end
 @implementation ChainverseSDK
 
@@ -47,12 +61,81 @@
 - (void)initialize{
     isInitSDK = false;
     self.isKeepConnect = TRUE;
-    [self checkContract];
+    [self receiverNotificationConnect];
+    [self getServiceByGame];
 }
 
-- (void)checkContract{
-    CVSDKContractManager *contractManager = [[CVSDKContractManager alloc] init];
-    [contractManager check:^(BOOL isChecked){
+- (void) receiverNotificationConnect{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectSuccessNotification:) name:NOTIFICATION_CONNECT_SUCCESS object:nil];
+}
+- (void)getServiceByGame{
+    NSString *action = [NSString stringWithFormat:getServiceByGameEndpoint, [ChainverseSDK shared].gameAddress];
+    [[CVSDKRESTfulClient marketShared] getServiceByGame:action completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if([CVSDKParseJson errorCode:responseObject] == 0){
+            if (responseObject[@"data"]){
+                CVSDKServiceGame *serviceGame = [[CVSDKServiceGame alloc] initWithObjectDict:responseObject[@"data"]];
+                NSArray *arrayRpcs = serviceGame.rpcs;
+                NSString *defaultRPC = DEFAULT_RPC;
+                if(arrayRpcs.count > 0){
+                    defaultRPC = arrayRpcs.firstObject;
+                }
+                //initSDK
+                [[CVSDKBridgingWallet shared] initialize];
+                [[CVSDKBridgingWeb3 shared] initialize:defaultRPC];
+                [self checkInitSDK];
+                [self doInitialize];
+                [CVSDKServiceGame archiveObject:serviceGame];
+                
+                [self checkRPC];
+            }else{
+                [CVSDKCallbackToGame didError:ERROR_SERVICE_NOT_FOUND];
+            }
+        }else{
+            [CVSDKCallbackToGame didError:ERROR_SERVICE_NOT_FOUND];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [CVSDKCallbackToGame didError:ERROR_SERVICE_NOT_FOUND];
+    }];
+}
+
+- (void)checkRPC{
+    dispatch_queue_t backgroundQueue = dispatch_queue_create("com.chainverse.check.rpc", NULL);
+    dispatch_async(backgroundQueue, ^{
+        
+        CVSDKServiceGame *serviceGame = [CVSDKServiceGame getArchivedObjectWithClass:[CVSDKServiceGame class]];
+        NSArray *arrayRpcs = serviceGame.rpcs;
+        NSInteger block = 0;
+        if(arrayRpcs.count > 0){
+            for(int i = 0;i < arrayRpcs.count ; i++){
+                NSInteger newBlock = [[CVSDKBridgingWeb3 shared] getBlockNumber:arrayRpcs[i]];
+                if(newBlock > block){
+                    block = newBlock;
+                    self.updateRPC = arrayRpcs[i];
+                    
+                }
+                NSLog(@"chainverse_rpc %@ %li",arrayRpcs[i], newBlock);
+            }
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[CVSDKBridgingWeb3 shared] initialize:self.updateRPC];
+            NSLog(@"chainverse_rpc_update %@",self.updateRPC);
+        });
+       
+    });
+}
+
+- (void) connectSuccessNotification:(NSNotification *) notification
+{
+    if ([[notification name] isEqualToString:NOTIFICATION_CONNECT_SUCCESS]){
+        [self doConnectSuccess];
+    }
+}
+
+
+- (void)checkInitSDK{
+    [[CVSDKContractManager shared] checkInitSDK:^(BOOL isChecked){
         if(isChecked){
             [CVSDKCallbackToGame didInitSDKSuccess];
             [self doInitialize];
@@ -73,23 +156,21 @@
 }
 
 - (void)doConnectSuccess{
-    
     if([self isUserConnected]){
-        NSLog(@"chainversesdk_connect_success %@",[CVSDKUserDefault getXUserSignature]);
+        [self setAccessToken];
         [CVSDKCallbackToGame didConnectSuccess:[CVSDKUserDefault getXUserAdress]];
+        NSLog(@"nampv_signature %@",[CVSDKUserDefault getXUserSignature]);
         [[CVSDKTransferItemManager shared] on:^(int event,NSArray * _Nonnull data){
             switch (event) {
                 case EVENT_TRANSFER_ITEM_TO_USER:
                     if([data count] > 0){
                         [CVSDKCallbackToGame didItemUpdate:[CVSDKParseJson parseItem:data] type:TRANSFER_ITEM_TO_USER];
-                        [self getItems];
                     }
                     break;
                     
                 case EVENT_TRANSFER_ITEM_FROM_USER:
                     if([data count] > 0){
                         [CVSDKCallbackToGame didItemUpdate:[CVSDKParseJson parseItem:data] type:TRANSFER_ITEM_FROM_USER];
-                        [self getItems];
                     }
                     break;
                     
@@ -109,33 +190,11 @@
     if(![self isInitSDKSuccess]){
         return;
     }
+    [CVSDKUserDefault clearXUserSignature];
     [CVSDKCallbackToGame didLogout:[CVSDKUserDefault getXUserAdress]];
     [CVSDKUserDefault clearXUserAddress];
-    [CVSDKUserDefault clearXUserSignature];
 }
 
-
-- (void)getItems{
-    if(![self isInitSDKSuccess]){
-        return;
-    }
-    
-    if([self isUserConnected]){
-        NSString *action = [NSString stringWithFormat:actionItems, [CVSDKUserDefault getXUserAdress], [ChainverseSDK shared].gameAddress];
-        [[CVSDKRESTfulClient shared] get:action completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"nampv_getItems %@",responseObject);
-            if([CVSDKParseJson errorCode:responseObject] == 0){
-                NSMutableArray *items = [CVSDKParseJson parseItems:responseObject];
-                [CVSDKCallbackToGame didGetItems:items];
-            }else{
-                [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
-            }
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"nampv_getItems_r %@",error);
-            [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
-        }];
-    }
-}
 
 
 - (BOOL)handleOpenUrl:(UIApplication *)app
@@ -158,36 +217,20 @@
 
 - (void)doHandleOpenUrl :(NSURL *)url{
     NSLog(@"nampv_chainverse_url %@",url);
-    if([[CVSDKUserDefault getConnectWallet] isEqualToString:@"trust"]){
-        int action = [CVSDKTrustResult getAction:url];
-        switch (action) {
-            case TrustAccount:{
-                NSString *xUserAddress = [CVSDKTrustResult getUserAddress:url];
-                [CVSDKUserDefault setXUserAddress:xUserAddress];
-                CVSDKTrustSignMessage *trust = [[CVSDKTrustSignMessage alloc] init];
-                //NSString *message = [NSString stringWithFormat:@"get_game_user_item:%@",_gameAddress];
-                trust.data = [CVSDKBridging keccak256:@"chainverse"];
-                //trust.data = @"chainverse";
-                [trust signMessage];
-                break;
-            }
-            case TrustSignature: {
-                NSString *signature = [NSString stringWithFormat:@"%@",[CVSDKTrustResult getSignature:url]];
-                [CVSDKUserDefault setXUserSignature:signature];
-                [self doConnectSuccess];
-                break;
-            }
-            default:
-                break;
-        }
-    }else{
-        //Connect Chainverse
-        NSString *xUserAddress = [CVSDKChainverseResult getUserAddress:url];
+    
+    if([[CVSDKChainverseAppResult getAction:url] isEqualToString:@"account_sign_message"]){
+        NSString *xUserAddress = [CVSDKChainverseAppResult getUserAddress:url];
         [CVSDKUserDefault setXUserAddress:xUserAddress];
-        NSString *signature = [NSString stringWithFormat:@"0x%@",[CVSDKChainverseResult getSignature:url]];
-        [CVSDKUserDefault setXUserSignature:signature];
+        [CVSDKUserDefault setXUserSignature:[CVSDKChainverseAppResult getSignature1:url]];
+        
+        [CVSDKUserDefault setXUserTime:[CVSDKChainverseAppResult getTime:url]];
+        [CVSDKUserDefault setXUserNonce:[CVSDKChainverseAppResult getNonce:url]];
+        [CVSDKUserDefault setXUserSignatureV2:[CVSDKChainverseAppResult getSignature0:url]];
         [self doConnectSuccess];
+    }else if([[CVSDKChainverseAppResult getAction:url] isEqualToString:@"sdk_sign_message"]){
+        [CVSDKCallbackToGame didSignMessage:[CVSDKChainverseAppResult getSignature:url]];
     }
+    
     
 }
 
@@ -202,24 +245,15 @@
     [CVSDKConnectWalletDialog showConnectView];
 }
 
-- (void)connectWithTrust{
-    if(![self isInitSDKSuccess]){
-        return;
-    }
-    [CVSDKUserDefault setConnectWallet:@"trust"];
-    CVSDKTrustConnect *trust = [[CVSDKTrustConnect alloc] init];
-    [trust connect];
-}
+
 
 - (void)connectWithChainverse{
     if(![self isInitSDKSuccess]){
         return;
     }
     if([CVSDKUtils isChainverseInstalled]){
-        [CVSDKUserDefault setConnectWallet:@"chainverse"];
-        CVSDKChainverseConnect *chainverse = [[CVSDKChainverseConnect alloc] init];
-        chainverse.data = [CVSDKBridging keccak256:@"chainverse"];
-        [chainverse connect];
+        [CVSDKUserDefault setConnectWallet:@"ChainverseApp"];
+        [CVSDKChainverseApp connect];
     }
     
 }
@@ -249,16 +283,227 @@
     return nil;
 }
 
-- (void)testPurchase{
-    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-    obj[@"to"] = [ChainverseSDK shared].developerAddress;
-    obj[@"data"] = [CVSDKBridging EthFunctionEncode:@"isDeveloperContract()" address:@""];
+
+- (void) showConnectWalletView{
+    [CVSDKUserDefault setConnectWallet:@"ChainverseSDK"];
+    [CVSDKWalletConnectScreen open];
+}
+
+- (void)showWalletInfoView{
+    [CVSDKWalletInfoScreen open];
+}
+
+- (NSString *)getBalance{
+    return [[CVSDKBridgingWeb3 shared] getBalance:[CVSDKUserDefault getXUserAdress]];
+}
+
+- (NSString *)getBalance:(NSString *)contractAddress{
+    return  [[CVSDKBridgingWeb3 shared] getBalance:contractAddress owner:[CVSDKUserDefault getXUserAdress]];
+}
+
+- (void)signMessage:(NSString *)message{
+    if([[CVSDKUserDefault getConnectWallet] isEqualToString:@"ChainverseSDK"]){
+        NSMutableDictionary *inputDic = [[NSMutableDictionary alloc] init];
+        [inputDic setObject:message forKey:@"message"];
+        [inputDic setObject:@"message" forKey:@"type"];
+        [CVSDKSignMessageScreen showSignerView:inputDic];
+    }else{
+        [CVSDKChainverseApp signMessage:message];
+    }
+}
+
+- (void)signTransaction:(NSString *)nonce gasPrice:(NSString *)gasPrice gasLimit:(NSString *)gasLimit toAddress:(NSString *)toAddress amount:(NSString *)amount chainID:(NSString *)chainID templateData:(NSData *)templateData{
     
-    [[CVSDKRESTfulClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
-        NSLog(@"nampv_fu %@",responseObject);
-        if (!error) {
-            
+    NSMutableDictionary *inputDic = [[NSMutableDictionary alloc] init];
+    [inputDic setObject:@"fuck" forKey:@"message"];
+    [inputDic setObject:@"message" forKey:@"type"];
+    //[CVSDKContractCallConfirmScreen showSignerView:inputDic];
+    //[[CVSDKBridgingWeb3 shared] signTransaction:nonce gasPrice:gasPrice gasLimit:gasLimit toAddress:toAddress value:amount chainID:chainID templateData:templateData];
+}
+
+- (void)setAccessToken{
+    NSString *action = getNonceEndpoint;
+    [[CVSDKRESTfulClient marketShared] getNonce:action completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *result = (NSDictionary *)responseObject;
+        if (result[@"data"] && [result[@"data"] isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *data = result[@"data"];
+            CVSDKNonce *nonce = [[CVSDKNonce alloc] initWithObjectDict:data];
+            [CVSDKUserDefault setXUserTime:[nonce time]];
+            [CVSDKUserDefault setXUserNonce:[nonce nonce]];
+            NSString *signedPersonalMessage = [[CVSDKBridgingWeb3 shared] signPersonalMessage:[nonce message]];
+            [CVSDKUserDefault setXUserSignatureV2:signedPersonalMessage];
         }
+        //NSLog(@"nampv_market_getnonce2 %@",responseObject);
+    }failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //NSLog(@"nampv_market_getnonce2 %@",error);
     }];
+    
+}
+
+
+- (void)getListItemOnMarket{
+    NSString *action = [NSString stringWithFormat:getListItemOnMarketEndpoint, [ChainverseSDK shared].gameAddress];
+    [[CVSDKRESTfulClient marketShared] getListItemOnMarket:action completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if([CVSDKParseJson errorCode:responseObject] == 0){
+            CVSDKNFTResult *data = [[CVSDKNFTResult alloc] initWithDictionary:responseObject error:nil];
+            [CVSDKCallbackToGame didGetListItemMarket:[[data data] rows]];
+        }else{
+            [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
+    }];
+}
+
+
+
+- (void)getMyAsset{
+    NSString *action = [NSString stringWithFormat:getMyAssetEndpoint, [ChainverseSDK shared].gameAddress];
+    [[CVSDKRESTfulClient marketShared] getMyAsset:action completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if([CVSDKParseJson errorCode:responseObject] == 0){
+            CVSDKNFTData *data = [[CVSDKNFTData alloc] initWithDictionary:responseObject error:nil];
+            [CVSDKCallbackToGame didGetMyAssets:[data data]];
+        }else{
+            [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
+    }];
+}
+
+
+- (void)buyNFT:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:currency forKey:@"currency"];
+    [params setObject:[NSNumber numberWithInteger:listingId] forKey:@"listingId"];
+    [params setObject:price forKey:@"price"];
+    
+    NSString *fee = [[CVSDKContractManager shared] feeBuyNFT:currency listingId:listingId price:price];
+    CVSDKContractCallModel *input = [[CVSDKContractCallModel alloc] init];
+    input.from = [CVSDKUserDefault getXUserAdress];
+    input.to = marketServiceAddress;
+    input.contract = marketServiceAddress;
+    input.fee = fee;
+    input.type = @"buyNFT";
+    input.params = params;
+    
+    [CVSDKContractCallScreen show:input];
+}
+
+- (NSString *)bidNFT:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price{
+    NSString *tx = [[CVSDKContractManager shared] bidNFT:currency listingId:listingId price:price];
+    [CVSDKCallbackToGame didTransact:bidNFT tx:tx];
+    return tx;
+}
+
+- (NSString *)approveToken:(NSString *)token amount:(NSString *)amount{
+    
+    NSString *tx = [[CVSDKContractManager shared] approveToken:token spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564" amount:[NSString stringWithFormat:@"%@",amount]];
+    [CVSDKCallbackToGame didTransact:approveToken tx:tx];
+    return tx;
+}
+
+- (NSString *)sellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
+    NSString *tx = [[CVSDKContractManager shared] sellNFT:NFT tokenId:tokenId price:price currency:currency];
+    [CVSDKCallbackToGame didTransact:sellNFT tx:tx];
+    return tx;
+}
+
+- (NSString *)approveNFT:(NSString *)nft tokenId:(NSInteger )tokenId{
+    NSString *tx = [[CVSDKContractManager shared] approveNFT:nft tokenId:tokenId];
+    [CVSDKCallbackToGame didTransact:approveNFT tx:tx];
+    return tx;
+}
+
+- (NSString *)approveNFTForGame:(NSString *)nft tokenId:(NSInteger )tokenId{
+    NSString *tx = [[CVSDKContractManager shared] approveNFTForGame:nft tokenId:tokenId];
+    [CVSDKCallbackToGame didTransact:approveNFT tx:tx];
+    return tx;
+}
+
+- (NSString *)approveNFTForService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    NSString *tx = [[CVSDKContractManager shared] approveNFTForService:service abi:abi nft:nft tokenId:tokenId];
+    [CVSDKCallbackToGame didTransact:approveNFT tx:tx];
+    return tx;
+}
+
+- (NSString *)cancelSellNFT: (NSInteger )listingId{
+    NSString *tx = [[CVSDKContractManager shared] cancelSellNFT:listingId];
+    [CVSDKCallbackToGame didTransact:cancelSell tx:tx];
+    return tx;
+}
+
+- (void)getNFT:(NSString *)nft tokenId:(NSInteger )tokenId complete:(CVSDKGetNFTBlock) complete{
+    [[CVSDKContractManager shared] getNFT:nft tokenId:tokenId complete:complete];
+}
+
+- (void)getDetailNFT:(NSString *)nft tokenId:(NSInteger )tokenId{
+    NSString *action = [NSString stringWithFormat:getDetailNFTEndpoint, nft, tokenId];
+    [[CVSDKRESTfulClient marketShared] getDetailNFT:action completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if([CVSDKParseJson errorCode:responseObject] == 0){
+            CVSDKNFTDetail *data = [[CVSDKNFTDetail alloc] initWithDictionary:responseObject error:nil];
+            [CVSDKCallbackToGame didGetDetailItem:[data data]];
+        }else{
+            [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [CVSDKCallbackToGame didError:ERROR_REQUEST_ITEM];
+    }];
+}
+
+- (void)publishNFT:(NSString *)nft tokenId:(NSInteger )tokenId complete:(CVSDKPublishNFTBlock) complete{
+    NSString *action = [NSString stringWithFormat:publishNFTEndpoint, nft, tokenId];
+    [[CVSDKRESTfulClient marketShared] publishNFT:action completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        complete(TRUE);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    }];
+}
+
+- (BOOL)isApproved:(NSString *)nft tokenId:(NSInteger )tokenId{
+    NSString *getApproved = [[CVSDKContractManager shared] isApproved:nft tokenId:tokenId];
+    if([getApproved isEqualToString:marketServiceAddress]){
+        return true;
+    };
+    return false;
+}
+
+- (BOOL)isApprovedForService:(NSString *)nft service:(NSString*)service tokenId:(NSInteger )tokenId{
+    NSString *getApproved = [[CVSDKContractManager shared] isApproved:nft tokenId:tokenId];
+    if([getApproved isEqualToString:service]){
+        return true;
+    };
+    return false;
+}
+
+- (NSString *)isApproved:(NSString *)token owner:(NSString*)owner spender:(NSString *)spender{
+    return [[CVSDKContractManager shared] isApproved:token owner:owner spender:spender];
+}
+
+- (NSString *)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    NSString *tx = [[CVSDKContractManager shared] transferItem:to nft:nft tokenId:tokenId];
+    [CVSDKCallbackToGame didTransact:transferItem tx:tx];
+    return tx;
+}
+
+- (NSString *)withdrawNFT:(NSString *)nft tokenId:(NSInteger )tokenId{
+    NSString *tx =  [[CVSDKContractManager shared] withdrawNFT:nft tokenId:tokenId];
+    [CVSDKCallbackToGame didTransact:withdrawItem tx:tx];
+    return tx;
+}
+
+- (NSString *)moveItemToGame:(NSString *)nft tokenId:(NSInteger )tokenId{
+    NSString *tx = [[CVSDKContractManager shared] moveItemToGame:nft tokenId:tokenId];
+    [CVSDKCallbackToGame didTransact:moveService tx:tx];
+    return tx;
+}
+
+- (NSString *)moveItemToService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    NSString *tx = [[CVSDKContractManager shared] moveItemToService:service abi:abi nft:nft tokenId:tokenId];
+    [CVSDKCallbackToGame didTransact:moveService tx:tx];
+    return tx;
+}
+
+- (BOOL) isAddress:(NSString *)address{
+    return [[CVSDKBridgingWeb3 shared] isAddress:address];
 }
 @end

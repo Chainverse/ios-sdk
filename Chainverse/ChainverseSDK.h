@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ChainverseSDKCallback.h"
 #import "ChainverseUser.h"
+#import "CVSDKBaseBlocks.h"
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum : int {
@@ -54,10 +55,6 @@ typedef enum : int {
 */
 - (void)setKeepConnect:(BOOL) isKeep;
 
-/**
-* return list support wallet
-*/
-- (void)getItems;
 
 /**
 * logout: Logout
@@ -106,11 +103,6 @@ typedef enum : int {
 - (void)showConnectView;
 
 /**
- connectWithTrust: Connect with Trust Wallet
- */
-- (void)connectWithTrust;
-
-/**
  connectWithChainverse: Connect with Chainverse
  */
 - (void)connectWithChainverse;
@@ -127,6 +119,39 @@ getUserInfo: Return user info
 
 - (void)testPurchase;
 
+- (void)showConnectWalletView;
+
+- (void)showWalletInfoView;
+
+- (NSString *)getBalance;
+
+- (NSString *)getBalance:(NSString *)contractAddress;
+
+- (void)signMessage:(NSString *)message;
+
+- (void)signTransaction:(NSString *)nonce gasPrice:(NSString *)gasPrice gasLimit:(NSString *)gasLimit toAddress:(NSString *)toAddress amount:(NSString *)amount chainID:(NSString *)chainID templateData:(NSData *)templateData;
+
+- (void)getListItemOnMarket;
+- (void)getMyAsset;
+- (void)buyNFT:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price;
+- (NSString *)bidNFT:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price;
+- (NSString *)approveToken:(NSString *)token amount:(NSString *)amount;
+- (NSString *)sellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency;
+- (NSString *)approveNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)approveNFTForGame:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)approveNFTForService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)cancelSellNFT: (NSInteger )listingId;
+- (void)getNFT:(NSString *)nft tokenId:(NSInteger )tokenId complete:(CVSDKGetNFTBlock) complete;
+- (void)getDetailNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (void)publishNFT:(NSString *)nft tokenId:(NSInteger )tokenId complete:(CVSDKPublishNFTBlock) complete;
+- (BOOL)isApproved:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)isApproved:(NSString *)token owner:(NSString* )owner spender:(NSString *)spender;
+- (BOOL)isApprovedForService:(NSString *)nft service:(NSString*)service tokenId:(NSInteger )tokenId;
+- (NSString *)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)withdrawNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)moveItemToGame:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)moveItemToService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (BOOL) isAddress:(NSString *)address;
 @end
 
 NS_ASSUME_NONNULL_END

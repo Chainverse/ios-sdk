@@ -20,13 +20,99 @@
     return _shared;
 }
 
-- (void)get:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
++ (CVSDKRESTfulClient *)marketShared{
+    static CVSDKRESTfulClient *_shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _shared = [[CVSDKRESTfulClient alloc] initWithBaseURL:[NSURL URLWithString:urlResfulMarket]];
+    });
+    return _shared;
     
+    
+}
+
+- (void)setHeader{
     [self.requestSerializer setValue:[CVSDKUserDefault getXUserSignature] forHTTPHeaderField:@"X-User-Signature"];
     [self.requestSerializer setValue:@"false" forHTTPHeaderField:@"X-Signature-Ethers"];
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+}
+
+- (void)setHeaderMarketplace{
+    [self.requestSerializer setValue:[CVSDKUserDefault getXUserAdress] forHTTPHeaderField:@"x-address"];
+    [self.requestSerializer setValue:[CVSDKUserDefault getXUserSignatureV2] forHTTPHeaderField:@"x-signature"];
+    [self.requestSerializer setValue:[CVSDKUserDefault getXUserNonce] forHTTPHeaderField:@"x-nonce"];
+    [self.requestSerializer setValue:[CVSDKUserDefault getXUserTime] forHTTPHeaderField:@"x-time"];
+    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
+    NSLog(@"nampv_header x-address:%@|x-signature:%@|x-nonce:%@|x-time:%@",[CVSDKUserDefault getXUserAdress],[CVSDKUserDefault getXUserSignatureV2],[CVSDKUserDefault getXUserNonce],[CVSDKUserDefault getXUserTime]);
+}
+
+- (void)getNonce:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
+    [self.requestSerializer setValue:[CVSDKUserDefault getXUserAdress] forHTTPHeaderField:@"x-address"];
+    [self POST:action parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        complete(task,responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(task,error);
+    }];
+}
+
+- (void)getListItemOnMarket:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
+    [self setHeaderMarketplace];
+    [self GET:action parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        complete(task,responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(task,error);
+    }];
+}
+
+- (void)getMyAsset:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
+    [self setHeaderMarketplace];
+    [self GET:action parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        complete(task,responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(task,error);
+    }];
+}
+
+- (void)publishNFT:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
+    [self setHeaderMarketplace];
+    [self PUT:action parameters:nil headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        complete(task,responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(task,error);
+    }];
+}
+
+- (void)getDetailNFT:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
+    [self setHeaderMarketplace];
+    [self GET:action parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        complete(task,responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(task,error);
+    }];
+}
+
+- (void)getTokenUri:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
+    [self GET:action parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        complete(task,responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(task,error);
+    }];
+}
+
+- (void)getServiceByGame:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
+    [self setHeaderMarketplace];
+    [self GET:action parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        complete(task,responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(task,error);
+    }];
+}
+
+- (void)get:(NSString *)action completeBlock:(CVSDKRESTfulSuccess) complete failure:(CVSDKRESTfulFailure) failure{
+    [self setHeader];
     [self GET:action parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         complete(task,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

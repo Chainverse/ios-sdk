@@ -6,83 +6,83 @@
 	<dict>
 		<key>Headers/SipHash-Swift.h</key>
 		<data>
-		NLoSQm7jEkwurRv9o1HYfsb/tAY=
+		J0PGHcyheLTrXaoyicQU+rAEMbQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Xg6iWsXAMlKUQtaeCqVoLGjd11Q=
+		mENPGPwCs71H6t6xQTkv7TF6+pI=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/arm64-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		ODxB9d4I4T+FV0XIkrXx/t8KxV4=
+		kSTt2sMz4MJRpohHiFt8jUnD+74=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		ODxB9d4I4T+FV0XIkrXx/t8KxV4=
+		kSTt2sMz4MJRpohHiFt8jUnD+74=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/i386-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		e8joAyYmiMpXdUxijCfa9eZJa8I=
+		fA95qLhwy1nys2gZg5aftnK4PnA=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/i386.swiftsourceinfo</key>
 		<data>
-		e8joAyYmiMpXdUxijCfa9eZJa8I=
+		fA95qLhwy1nys2gZg5aftnK4PnA=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/x86_64-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		n1q4vR7sr4spfi4xskgygAmaANc=
+		IQZ8K0g5svLBDjVLw0NYv3ZZ0Q8=
 		</data>
 		<key>Modules/SipHash.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		n1q4vR7sr4spfi4xskgygAmaANc=
+		IQZ8K0g5svLBDjVLw0NYv3ZZ0Q8=
 		</data>
 		<key>Modules/SipHash.swiftmodule/arm64-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		ttCMr02i63+JuSfxgZ69UnIjuHw=
+		OnG5e5UhhcifSTOx/Y1/6j4AjxE=
 		</data>
 		<key>Modules/SipHash.swiftmodule/arm64-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		eCFBDr1wLEdMwlo2fRneBlWkYt0=
+		K6li4rPcmXMBrk2h5veMGVCfaNI=
 		</data>
 		<key>Modules/SipHash.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		ttCMr02i63+JuSfxgZ69UnIjuHw=
+		OnG5e5UhhcifSTOx/Y1/6j4AjxE=
 		</data>
 		<key>Modules/SipHash.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		eCFBDr1wLEdMwlo2fRneBlWkYt0=
+		K6li4rPcmXMBrk2h5veMGVCfaNI=
 		</data>
 		<key>Modules/SipHash.swiftmodule/i386-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		QGi6t+Zsp9YMCAjpD1CY5QdKTmw=
+		AM78PY1u/3zjv0ON94+ZWh29laQ=
 		</data>
 		<key>Modules/SipHash.swiftmodule/i386-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		AWaKWYDoo7zrS6EnL/D3pbBrTqs=
+		LflZVHYjhMsiu0hjssavtEWygPM=
 		</data>
 		<key>Modules/SipHash.swiftmodule/i386.swiftdoc</key>
 		<data>
-		QGi6t+Zsp9YMCAjpD1CY5QdKTmw=
+		AM78PY1u/3zjv0ON94+ZWh29laQ=
 		</data>
 		<key>Modules/SipHash.swiftmodule/i386.swiftmodule</key>
 		<data>
-		AWaKWYDoo7zrS6EnL/D3pbBrTqs=
+		LflZVHYjhMsiu0hjssavtEWygPM=
 		</data>
 		<key>Modules/SipHash.swiftmodule/x86_64-apple-watchos-simulator.swiftdoc</key>
 		<data>
-		USxDe64FrNCrBKhQc6am01uuaz4=
+		AHZsMlzwhZtjh1POZ9GLC/XiGCA=
 		</data>
 		<key>Modules/SipHash.swiftmodule/x86_64-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		GZkrgddPp4OAd88w2tKm0rQxNlQ=
+		r05QOTH94Gl82G6h9JZmcvMKhvc=
 		</data>
 		<key>Modules/SipHash.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		USxDe64FrNCrBKhQc6am01uuaz4=
+		AHZsMlzwhZtjh1POZ9GLC/XiGCA=
 		</data>
 		<key>Modules/SipHash.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		GZkrgddPp4OAd88w2tKm0rQxNlQ=
+		r05QOTH94Gl82G6h9JZmcvMKhvc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -93,139 +93,219 @@
 	<dict>
 		<key>Headers/SipHash-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			J0PGHcyheLTrXaoyicQU+rAEMbQ=
+			</data>
 			<key>hash2</key>
 			<data>
-			sRM2vNtgNSTnq2QIKx/XqvBvHPmjLf4VVrfdum0004c=
+			1TKjdayo3LOCiV3Nh8YuzJRv2U9grkbhDt5+USdVbgI=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/arm64-apple-watchos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			kSTt2sMz4MJRpohHiFt8jUnD+74=
+			</data>
 			<key>hash2</key>
 			<data>
-			9EmXs0rL7tZuTjL1I9Mum92pjdKtqsQqygO/V3ybSHc=
+			bI1ldHa3kvj/vGfc0o3g8q4YSJJ8f/ofC7VG0/qWBYw=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			kSTt2sMz4MJRpohHiFt8jUnD+74=
+			</data>
 			<key>hash2</key>
 			<data>
-			9EmXs0rL7tZuTjL1I9Mum92pjdKtqsQqygO/V3ybSHc=
+			bI1ldHa3kvj/vGfc0o3g8q4YSJJ8f/ofC7VG0/qWBYw=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/i386-apple-watchos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			fA95qLhwy1nys2gZg5aftnK4PnA=
+			</data>
 			<key>hash2</key>
 			<data>
-			/CGmFdd/tvHgtAmKsltUsrXCwIBecEcomkAiyExBs7A=
+			DXQsJjd7IIHb6ki2UhOPh8JPlmaCxG8zgkAPUtDC8Rs=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/i386.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			fA95qLhwy1nys2gZg5aftnK4PnA=
+			</data>
 			<key>hash2</key>
 			<data>
-			/CGmFdd/tvHgtAmKsltUsrXCwIBecEcomkAiyExBs7A=
+			DXQsJjd7IIHb6ki2UhOPh8JPlmaCxG8zgkAPUtDC8Rs=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/x86_64-apple-watchos-simulator.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			IQZ8K0g5svLBDjVLw0NYv3ZZ0Q8=
+			</data>
 			<key>hash2</key>
 			<data>
-			CRJqzvSQ3cG4qRgw4IaFUSFuphnhYQFHYXRjJJlpMLc=
+			32ANBoLPVNQMKDizzBBTBshgN0l21SWvvhWCfy+Vk3Y=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			IQZ8K0g5svLBDjVLw0NYv3ZZ0Q8=
+			</data>
 			<key>hash2</key>
 			<data>
-			CRJqzvSQ3cG4qRgw4IaFUSFuphnhYQFHYXRjJJlpMLc=
+			32ANBoLPVNQMKDizzBBTBshgN0l21SWvvhWCfy+Vk3Y=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/arm64-apple-watchos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			OnG5e5UhhcifSTOx/Y1/6j4AjxE=
+			</data>
 			<key>hash2</key>
 			<data>
-			gLNPIGNbUxcAZJK8WyT2/1BbBBDvYe33Qu6mou2fycQ=
+			OASv3xSiZAnS1OEAIwWHGdKjgjvUJLmZjsB8nBFHncY=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/arm64-apple-watchos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			K6li4rPcmXMBrk2h5veMGVCfaNI=
+			</data>
 			<key>hash2</key>
 			<data>
-			YhOaZUkrSMlKVIU+KjVcTfj9nfRoCfkgkvbVffTW770=
+			Ye/y5EXfAUCyLfPq7cQTldzr64Sr2RcbgQbUOxHe+0U=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/arm64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			OnG5e5UhhcifSTOx/Y1/6j4AjxE=
+			</data>
 			<key>hash2</key>
 			<data>
-			gLNPIGNbUxcAZJK8WyT2/1BbBBDvYe33Qu6mou2fycQ=
+			OASv3xSiZAnS1OEAIwWHGdKjgjvUJLmZjsB8nBFHncY=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/arm64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			K6li4rPcmXMBrk2h5veMGVCfaNI=
+			</data>
 			<key>hash2</key>
 			<data>
-			YhOaZUkrSMlKVIU+KjVcTfj9nfRoCfkgkvbVffTW770=
+			Ye/y5EXfAUCyLfPq7cQTldzr64Sr2RcbgQbUOxHe+0U=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/i386-apple-watchos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			AM78PY1u/3zjv0ON94+ZWh29laQ=
+			</data>
 			<key>hash2</key>
 			<data>
-			K6dyUobEtUcrRA22W6CRYVRfhcdwunVjxe2Vh+q1GuI=
+			J0H2jnKhsOpkg60cvq1QcSJza5cYofMoxz21AzemV84=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/i386-apple-watchos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			LflZVHYjhMsiu0hjssavtEWygPM=
+			</data>
 			<key>hash2</key>
 			<data>
-			9ughbuYQkrwNwWmOZijeZ9Wjz3Vs350prHfZV9LZ2Lg=
+			/VNROfM9vtkoELtFHrDcOS6Nyne3D52Y808g1/reF/k=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/i386.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			AM78PY1u/3zjv0ON94+ZWh29laQ=
+			</data>
 			<key>hash2</key>
 			<data>
-			K6dyUobEtUcrRA22W6CRYVRfhcdwunVjxe2Vh+q1GuI=
+			J0H2jnKhsOpkg60cvq1QcSJza5cYofMoxz21AzemV84=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/i386.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			LflZVHYjhMsiu0hjssavtEWygPM=
+			</data>
 			<key>hash2</key>
 			<data>
-			9ughbuYQkrwNwWmOZijeZ9Wjz3Vs350prHfZV9LZ2Lg=
+			/VNROfM9vtkoELtFHrDcOS6Nyne3D52Y808g1/reF/k=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/x86_64-apple-watchos-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			AHZsMlzwhZtjh1POZ9GLC/XiGCA=
+			</data>
 			<key>hash2</key>
 			<data>
-			24IQx6DLETsjjh+Maap0ly7oTsRdAU/YnbYuFNJZKo4=
+			/KBCOxv+xANLRh0fbmS8E6Meo002sToqx1S9u4g2aAU=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/x86_64-apple-watchos-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			r05QOTH94Gl82G6h9JZmcvMKhvc=
+			</data>
 			<key>hash2</key>
 			<data>
-			MR6GFVBW89uP+r1p7b25gTljravdAWzvV6p2WGJkQSk=
+			7tGsmQkYQgUuPxHxxA+40ubPLqskCxI/0tlS4op0in4=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			AHZsMlzwhZtjh1POZ9GLC/XiGCA=
+			</data>
 			<key>hash2</key>
 			<data>
-			24IQx6DLETsjjh+Maap0ly7oTsRdAU/YnbYuFNJZKo4=
+			/KBCOxv+xANLRh0fbmS8E6Meo002sToqx1S9u4g2aAU=
 			</data>
 		</dict>
 		<key>Modules/SipHash.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			r05QOTH94Gl82G6h9JZmcvMKhvc=
+			</data>
 			<key>hash2</key>
 			<data>
-			MR6GFVBW89uP+r1p7b25gTljravdAWzvV6p2WGJkQSk=
+			7tGsmQkYQgUuPxHxxA+40ubPLqskCxI/0tlS4op0in4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			FWzVWbkl0XEHOayklCWTBP3pbfw=
+			</data>
 			<key>hash2</key>
 			<data>
 			aVrNyEhgyWZm0VYIEpXwTZivYEnmV1fVZkk2+isIBnA=

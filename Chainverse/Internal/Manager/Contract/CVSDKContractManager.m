@@ -7,7 +7,6 @@
 
 #import "CVSDKContractManager.h"
 #import "CVSDKRPCClient.h"
-#import "CVSDKBridging.h"
 #import "CVSDKUtils.h"
 #import <PromiseKit/PromiseKit.h>
 #import "CVSDKConstant.h"
@@ -15,125 +14,199 @@
 #import "CVSDKCallbackToGame.h"
 #import "ChainverseSDKError.h"
 #import "ChainverseSDK.h"
-@implementation CVSDKContractManager
-- (void)check:(CVSDKContractStatusBlock) complete{
-    PMKJoin(@[[self isDeveloperContract],
-              [self isGameContract],
-              [self isGamePaused],
-              [self isDeveloperPaused]
-            ]).then(^(id responseObject) {
-        return [self checkContract:responseObject complete:complete];
-    }).catch(^(NSError *error){
-        complete(false);
-    });;
 
+#import "CVSDKBridgingWeb3.h"
+#import "CVSDKABI.h"
+#import "CVSDKUserDefault.h"
+#import "CVSDKServiceManager.h"
+#import "CVSDKService.h"
+#import "CVSDKRESTfulClient.h"
+#import "CVSDKParseJson.h"
+#import "ChainverseNFT.h"
+#import "ChainverseNFTAuction.h"
+@implementation CVSDKContractManager
++ (CVSDKContractManager *)shared{
+    static CVSDKContractManager *_shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _shared = [[self alloc] init];
+    });
+    return _shared;
 }
-- (void) checkContract: (id) responseObject complete:(CVSDKContractStatusBlock) complete{
-    if([responseObject count] == 4){
-        NSDictionary *gameContract = (NSDictionary *)[responseObject objectAtIndex:0];
-        NSDictionary *devContract = (NSDictionary *)[responseObject objectAtIndex:1];
-        NSDictionary *gamePaused = (NSDictionary *)[responseObject objectAtIndex:2];
-        NSDictionary *devPaused = (NSDictionary *)[responseObject objectAtIndex:3];
-        
-        if ([gameContract objectForKey:@"result"]
-            && [devContract objectForKey:@"result"]
-            && [gamePaused objectForKey:@"result"]
-            && [devPaused objectForKey:@"result"]) {
-            if([CVSDKConvert hexToBool:gameContract[@"result"]]
-               && [CVSDKConvert hexToBool:devContract[@"result"]]
-               && ![CVSDKConvert hexToBool:gamePaused[@"result"]]
-               && ![CVSDKConvert hexToBool:devPaused[@"result"]]){
+
+- (void)checkInitSDK:(CVSDKContractStatusBlock) complete{
+    dispatch_queue_t backgroundQueue = dispatch_queue_create("com.chainverse.contract", NULL);
+    dispatch_async(backgroundQueue, ^{
+        if([self isGameContract]
+           && [self isDeveloperContract]
+           && ![self isGamePaused]
+           && ![self isDeveloperPaused]){
+            dispatch_async(dispatch_get_main_queue(), ^{
                 complete(TRUE);
-            }else{
-                complete(FALSE);
-            }
-           
+            
+            });
         }else{
-            complete(FALSE);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                complete(FALSE);
+            });
         }
         
-        
-        //Callback Error
-        if(![gameContract objectForKey:@"result"] || ![CVSDKConvert hexToBool:gameContract[@"result"]]){
-            [CVSDKCallbackToGame didError:ERROR_GAME_ADDRESS];
-        }
-        
-        if(![devContract objectForKey:@"result"] || ![CVSDKConvert hexToBool:devContract[@"result"]]){
-            [CVSDKCallbackToGame didError:ERROR_DEVELOPER_ADDRESS];
-        }
-        
-        if(![gamePaused objectForKey:@"result"] || [CVSDKConvert hexToBool:gamePaused[@"result"]]){
-            [CVSDKCallbackToGame didError:ERROR_GAME_PAUSE];
-        }
-        
-        if(![devPaused objectForKey:@"result"] || [CVSDKConvert hexToBool:devPaused[@"result"]]){
-            [CVSDKCallbackToGame didError:ERROR_DEVELOPER_PAUSE];
-        }
-       
-    }else{
-        complete(FALSE);
+        [self callBackError];
+    });
+}
+
+- (void)callBackError{
+    if(![self isGameContract]){
+        [CVSDKCallbackToGame didError:ERROR_GAME_ADDRESS];
+    }
+    
+    if(![self isDeveloperContract]){
+        [CVSDKCallbackToGame didError:ERROR_DEVELOPER_ADDRESS];
+    }
+    
+    if([self isGamePaused]){
+        [CVSDKCallbackToGame didError:ERROR_GAME_PAUSE];
+    }
+    
+    if([self isDeveloperPaused]){
+        [CVSDKCallbackToGame didError:ERROR_DEVELOPER_PAUSE];
     }
 }
 
-- (AnyPromise *)isDeveloperContract
-{
-    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
-        NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        obj[@"to"] = [ChainverseSDK shared].developerAddress;
-        obj[@"data"] = [CVSDKBridging EthFunctionEncode:@"isDeveloperContract()" address:@""];
-        [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
-            if (!error) {
-                resolve(responseObject);
-            }
-        }];
-        
-    }];
+- (BOOL)isDeveloperContract{
+    return [[CVSDKBridgingWeb3 shared] isDeveloperContract:[ChainverseSDK shared].developerAddress];
+}
+- (BOOL)isGameContract{
+    return [[CVSDKBridgingWeb3 shared] isGameContract:[ChainverseSDK shared].gameAddress];
+}
+- (BOOL)isGamePaused{
+    return [[CVSDKBridgingWeb3 shared] isGamePaused:chainverseFactoryAddress gameAddress:[ChainverseSDK shared].gameAddress];
+}
+- (BOOL)isDeveloperPaused{
+    return [[CVSDKBridgingWeb3 shared] isDeveloperPaused:chainverseFactoryAddress developerAddress:[ChainverseSDK shared].developerAddress];
 }
 
-- (AnyPromise *)isGameContract
-{
-    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
-        NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        obj[@"to"] = [ChainverseSDK shared].gameAddress;
-        obj[@"data"] = [CVSDKBridging EthFunctionEncode:@"isGameContract()" address:@""];
-        [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
-            if (!error) {
-                resolve(responseObject);
-            }
-        }];
-        
-    }];
+- (NSString *)buyNFT:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price{
+    return [[CVSDKBridgingWeb3 shared] buyNFT:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] currency:currency listingId:listingId price:price];
 }
 
-- (AnyPromise *)isGamePaused
-{
-    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
-        NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        obj[@"to"] = chainverseFactoryAddress;
-        obj[@"data"] = [CVSDKBridging EthFunctionEncode:@"isGamePaused(address)" address:[ChainverseSDK shared].gameAddress];
-        [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
-            if (!error) {
-                resolve(responseObject);
-            }
-        }];
-        
-    }];
+- (NSString *)feeBuyNFT:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price{
+    return [[CVSDKBridgingWeb3 shared] feeBuyNFT:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] currency:currency listingId:listingId price:price];
 }
 
-- (AnyPromise *)isDeveloperPaused
-{
-    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
-        NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-        obj[@"to"] = chainverseFactoryAddress;
-        obj[@"data"] = [CVSDKBridging EthFunctionEncode:@"isDeveloperPaused(address)" address:[ChainverseSDK shared].developerAddress];
-        [[CVSDKRPCClient shared] connect:[CVSDKRPCClient createParams:obj] method:@"eth_call" completeBlock:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error){
-            if (!error) {
-                resolve(responseObject);
-            }
-        }];
-        
-    }];
+- (NSString *)bidNFT:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price{
+    return [[CVSDKBridgingWeb3 shared] bidNFT:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] currency:currency listingId:listingId price:price];
+}
+
+- (NSString *)approveToken:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount{
+    return [[CVSDKBridgingWeb3 shared] approveToken:[CVSDKUserDefault getXUserAdress] token:token spender:spender amount:amount];
+}
+
+- (NSString *)sellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
+    return [[CVSDKBridgingWeb3 shared] sellNFT:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] nft:NFT tokenId:tokenId price:price currency:currency];
+}
+
+- (NSString *)approveNFT:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] approveNFT:marketServiceAddress abi:ABI_ERC721 walletAddress:[CVSDKUserDefault getXUserAdress] nft:nft tokenId:tokenId];
+}
+
+- (NSString *)approveNFTForGame:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] approveNFT:[ChainverseSDK shared].gameAddress abi:ABI_ERC721 walletAddress:[CVSDKUserDefault getXUserAdress] nft:nft tokenId:tokenId];
+}
+
+- (NSString *)approveNFTForService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] approveNFT:service abi:abi walletAddress:[CVSDKUserDefault getXUserAdress] nft:nft tokenId:tokenId];
+}
+
+- (NSString *)cancelSellNFT: (NSInteger )listingId{
+    return [[CVSDKBridgingWeb3 shared] cancelSellNFT:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] listing:listingId];
 }
 
 
+- (void)getNFT:(NSString *)nft tokenId:(NSInteger )tokenId complete:(CVSDKGetNFTBlock) complete{
+    
+    dispatch_queue_t backgroundQueue = dispatch_queue_create("com.chainverse.getnft", NULL);
+    dispatch_async(backgroundQueue, ^{
+        PMKJoin(@[[self getDetailNFT:nft tokenId:tokenId],[self getByNFT:nft tokenId:tokenId]]).then(^(id responseObject) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self doGetNFT:responseObject complete:complete];
+            });
+        }).catch(^(NSError *error){
+
+        });
+    });
+}
+
+- (void)doGetNFT:(id) responseObject complete:(CVSDKGetNFTBlock) complete{
+    if([responseObject count] == 2){
+        CVSDKTokenURI *respone  = (CVSDKTokenURI *)[responseObject objectAtIndex:0];
+        NSDictionary *itemDict = (NSDictionary *)[responseObject objectAtIndex:1];
+        
+        ChainverseNFTAuction *auction = [[ChainverseNFTAuction alloc] init];
+        auction.listing_id = [[itemDict allKeys] containsObject:@"listing_id"] ? [itemDict objectForKey:@"listing_id"] : 0;
+        auction.price = [[itemDict allKeys] containsObject:@"price"] ? [itemDict objectForKey:@"price"] : @"";
+        auction.is_auction = [[itemDict allKeys] containsObject:@"is_ended"] ? [itemDict objectForKey:@"is_ended"] : false;
+        
+        NSArray<ChainverseNFTAuction> *auctions;
+        [auctions arrayByAddingObject:auction];
+        
+        ChainverseNFT *item = [[ChainverseNFT alloc] init];
+        item.token_id = [[itemDict allKeys] containsObject:@"token_id"] ? [itemDict objectForKey:@"token_id"] : 0;
+        item.owner = [[itemDict allKeys] containsObject:@"owner"] ? [itemDict objectForKey:@"owner"] : @"";
+        item.nft = [[itemDict allKeys] containsObject:@"nft"] ? [itemDict objectForKey:@"nft"] : @"";
+        item.image = respone.image ? respone.image : @"";
+        item.image_preview = respone.image ? respone.image : @"";
+        item.name = respone.name ? respone.name : @"";
+        item.attributes = respone.attributes ? respone.attributes : @"";
+        item.auctions = auctions;
+        
+        complete(item);
+    }
+
+}
+
+- (AnyPromise *)getByNFT:(NSString *)nft tokenId:(NSInteger )tokenId
+{
+    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
+        NSMutableDictionary *dicNFT = [[CVSDKBridgingWeb3 shared] getByNFT:marketServiceAddress abi:ABI_MarketService nft:nft tokenId:tokenId];
+        resolve(dicNFT);
+    }];
+}
+
+- (AnyPromise *)getDetailNFT:(NSString *)nft tokenId:(NSInteger )tokenId
+{
+    return [AnyPromise promiseWithResolverBlock:^(PMKResolver resolve){
+        NSString *tokenUri = [[CVSDKBridgingWeb3 shared] getTokenUri:nft tokenId:tokenId];
+        
+        [[CVSDKRESTfulClient marketShared] getDetailNFT:tokenUri  completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            CVSDKTokenURI *item = [CVSDKParseJson parseTokenUri:responseObject];
+            resolve(item);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+        }];
+    }];
+}
+
+- (NSString *)isApproved:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] isApproved:nft tokenId:tokenId];
+}
+
+- (NSString *)isApproved:(NSString *)token owner:(NSString* )owner spender:(NSString *)spender{
+    return [[CVSDKBridgingWeb3 shared] isApproved:token owner:owner spender:spender];
+}
+- (NSString *)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] transferItem:[CVSDKUserDefault getXUserAdress] to:to nft:nft tokenId:tokenId];
+}
+
+- (NSString *)withdrawNFT:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] withdrawNFT:[CVSDKUserDefault getXUserAdress] gameAddress:[ChainverseSDK shared].gameAddress abi:ABI_Game nft:nft tokenId:tokenId];
+}
+
+- (NSString *)moveItemToGame:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] moveService:[CVSDKUserDefault getXUserAdress] serviceAddress:[ChainverseSDK shared].gameAddress abi:ABI_Game nft:nft tokenId:tokenId];
+}
+
+- (NSString *)moveItemToService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] moveService:[CVSDKUserDefault getXUserAdress] serviceAddress:service abi:abi nft:nft tokenId:tokenId];
+}
 @end

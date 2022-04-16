@@ -1,0 +1,46 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "88b7a4a20913d8a518530ef44a01d8afb28556a97a24541e5771f53e293ced86"
+    }
+  ],
+  "containerPath" : "/Users/phamnam/Documents/Work/Projects/iOSProject/Chainverse/chainverse-ios-sdk/Chainverse-SDK.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "configurationName" : "Release",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "BUILD_DIR" : "/Users/phamnam/Library/Developer/Xcode/DerivedData/Chainverse-SDK-dqnvwirgghmcrvdqphsjqbwcevba/Build/Products",
+          "BUILD_ROOT" : "/Users/phamnam/Library/Developer/Xcode/DerivedData/Chainverse-SDK-dqnvwirgghmcrvdqphsjqbwcevba/Build/Products",
+          "ONLY_ACTIVE_ARCH" : "YES",
+          "SDKROOT" : "iphonesimulator15.2",
+          "TOOLCHAINS" : "com.apple.dt.toolchain.XcodeDefault"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      },
+      "toolchainOverride" : "com.apple.dt.toolchain.XcodeDefault"
+    }
+  },
+  "schemeCommand" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : false
+}

@@ -34,13 +34,34 @@
     }
 }
 
-+ (void)didGetItems:(NSMutableArray *)items{
-    if([[ChainverseSDK shared].delegate respondsToSelector:@selector(didGetItems:)]){
-        [[ChainverseSDK shared].delegate didGetItems:items];
-    }
-}
 
 + (void)didItemUpdate:(ChainverseItem *)item type:(int)type{
     [[ChainverseSDK shared].delegate didItemUpdate:item type:type];
 }
+
++ (void)didSignMessage:(NSString *) signedMessage{
+    if([[ChainverseSDK shared].delegate respondsToSelector:@selector(didSignMessage:)]){
+        [[ChainverseSDK shared].delegate didSignMessage:signedMessage];
+    }
+}
+
++ (void)didGetListItemMarket:(NSArray<ChainverseNFT> *) items{
+    if([[ChainverseSDK shared].delegate respondsToSelector:@selector(didGetListItemMarket:)]){
+        [[ChainverseSDK shared].delegate didGetListItemMarket:items];
+    }
+}
+
++ (void)didGetMyAssets:(NSArray<ChainverseNFT> *) items{
+    if([[ChainverseSDK shared].delegate respondsToSelector:@selector(didGetMyAssets:)]){
+        [[ChainverseSDK shared].delegate didGetMyAssets:items];
+    }
+}
+
++ (void)didTransact:(int)function tx:(NSString *)tx{
+    [[ChainverseSDK shared].delegate didTransact:function tx:tx];
+}
++ (void)didGetDetailItem:(ChainverseNFT*)item{
+    [[ChainverseSDK shared].delegate didGetDetailItem:item];
+}
+
 @end
