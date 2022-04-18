@@ -680,7 +680,7 @@ Dữ liệu NFT
 | auctions | NSArray<ChainverseNFTAuction>  | Thông tin auctions |
 | type | ChainverseNFTType  | Developer đang bị pause | 
 | network_info | ChainverseNFTNetwork  | Thông tin mạng NFT |
-| categories | NSArray<ChainverseNFTCategory>  | Danh mục NFT |
+
 
 #### 2. ChainverseNFTAuction
 Dữ liệu Auction
@@ -710,13 +710,6 @@ Dữ liệu Network
 | chain_id  | String  | chain_id |
 | name | String  | Tên | 
 
-#### 5. ChainverseNFTCategory
-Dữ liệu Danh mục
-
-| Name  | Type | Description | 
-| ------------- | ------------- | ------------- | 
-| name| String  | Tên của danh mục |
-| category_id  | String  | Id danh mục |
 
 ## License
 

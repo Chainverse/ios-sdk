@@ -7,5 +7,5 @@
 
 #ifndef ChainverseVersion_h
 #define ChainverseVersion_h
-static NSString *version    = @"alpha-1.0.1";
+static NSString *version    = @"v1.0.2-alpha";
 #endif

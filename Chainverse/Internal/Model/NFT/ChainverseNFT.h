@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray<ChainverseNFTAuction> *auctions;
 @property (nonatomic, strong) ChainverseNFTType *type;
 @property (nonatomic, strong) ChainverseNFTNetwork *network_info;
-@property (nonatomic, strong) NSArray<ChainverseNFTCategory> *categories;
+//@property (nonatomic, strong) NSArray<ChainverseNFTCategory> *categories;
 
 @end
 

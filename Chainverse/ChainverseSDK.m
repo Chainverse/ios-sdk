@@ -76,18 +76,20 @@
             if (responseObject[@"data"]){
                 CVSDKServiceGame *serviceGame = [[CVSDKServiceGame alloc] initWithObjectDict:responseObject[@"data"]];
                 NSArray *arrayRpcs = serviceGame.rpcs;
-                NSString *defaultRPC = DEFAULT_RPC;
                 if(arrayRpcs.count > 0){
-                    defaultRPC = arrayRpcs.firstObject;
+                    NSString *rpc = arrayRpcs.firstObject;
+                    //initSDK
+                    [[CVSDKBridgingWallet shared] initialize];
+                    [[CVSDKBridgingWeb3 shared] initialize:rpc];
+                    [self checkInitSDK];
+                    [self doInitialize];
+                    [CVSDKServiceGame archiveObject:serviceGame];
+                    
+                    [self checkRPC];
+                }else{
+                    [CVSDKCallbackToGame didError:ERROR_SERVICE_NOT_FOUND];
                 }
-                //initSDK
-                [[CVSDKBridgingWallet shared] initialize];
-                [[CVSDKBridgingWeb3 shared] initialize:defaultRPC];
-                [self checkInitSDK];
-                [self doInitialize];
-                [CVSDKServiceGame archiveObject:serviceGame];
                 
-                [self checkRPC];
             }else{
                 [CVSDKCallbackToGame didError:ERROR_SERVICE_NOT_FOUND];
             }
