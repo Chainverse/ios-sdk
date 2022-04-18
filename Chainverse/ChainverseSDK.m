@@ -477,8 +477,8 @@
     return false;
 }
 
-- (NSString *)isApproved:(NSString *)token owner:(NSString*)owner spender:(NSString *)spender{
-    return [[CVSDKContractManager shared] isApproved:token owner:owner spender:spender];
+- (NSString *)isApproved:(NSString *)token owner:(NSString*)owner{
+    return [[CVSDKContractManager shared] isApproved:token owner:owner spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564"];
 }
 
 - (NSString *)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{

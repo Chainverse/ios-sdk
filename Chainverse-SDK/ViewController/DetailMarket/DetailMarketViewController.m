@@ -451,7 +451,7 @@
 
 - (void)checkApprove{
     ChainverseUser *info = [[ChainverseSDK shared] getUser];
-    NSString * allowence = [[ChainverseSDK shared] isApproved:TOKEN_USDT owner:info.address spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564"];
+    NSString * allowence = [[ChainverseSDK shared] isApproved:TOKEN_USDT owner:info.address];
     
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;

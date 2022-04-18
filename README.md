@@ -508,10 +508,15 @@ Sử dụng hàm này để lấy danh sách ITEM trong chợ. Danh sách item s
 ```
 
 #### 2. Hàm getDetailNFT
-Sử dụng hàm này để lấy thông tin chi tiết của item (thông tin offchain). Thông tin item sẽ được trả về qua callback didGetDetailItem
+Sử dụng hàm này để lấy thông tin chi tiết của 1 item (Thông tin này là Off chain). Thông tin sẽ được trả về qua callback onGetDetailItem.
 
 ##### Objective C
 ```
+/*
+ getDetailNFT: Hàm này sử dụng để lấy thông tin chi tiết của một NFT (dữ liệu offchain)
+ @param NSString nft
+ @param NSInteger tokenId
+ */
 [[ChainverseSDK shared] getDetailNFT:@"{nft_address}" tokenId:{tokenId}];
 
 //Callback delegate
@@ -526,6 +531,11 @@ Sử dụng hàm này để lấy thông tin chi tiết của item (thông tin o
 
 ##### Objective C
 ```
+/*
+ getNFT: Hàm này sử dụng để lấy thông tin chi tiết của một NFT (dữ liệu onchain)
+ @param NSString nft
+ @param NSInteger tokenId
+ */
 [[ChainverseSDK shared] getNFT:{nft_address} tokenId:{tokenId} complete:^(ChainverseNFT *item){
     //Xử lý ở đây    
         
@@ -534,7 +544,7 @@ Sử dụng hàm này để lấy thông tin chi tiết của item (thông tin o
 ```
 
 #### 4. Hàm getMyAsset
-Sử dụng hàm này để lấy danh sách các item của user. Danh sách item được trả về qua callback didGetMyAssets
+Sử dụng hàm này để lấy danh sách item user đang sở hữu (Kể cả đang được bán trên chợ). Thông tin sẽ được trả về qua callback didGetMyAssets.
 
 ##### Objective C
 ```
@@ -548,15 +558,15 @@ Sử dụng hàm này để lấy danh sách các item của user. Danh sách it
 ```
 
 #### 5. Hàm approveToken
-Trước khi mua bạn cần approve token trước:
-+ Với currency: là token mà chainverse support:
-+ amount: là số token cần apporve
-* Với Native Token như BNB thì không cần approve
-
-Thông tin trả về là transaction hash qua callback didTransact
+Hàm này sử dụng để approve token cho một địa chỉ. Thông tin transaction hash cũng sẽ được trả về qua callback didTransact (Khuyến khích xử lý logic trong hàm này).
 
 ##### Objective C
 ```
+/*
+ approveToken: Hàm này sử dụng để approve token cho một địa chỉ
+ @param NSString token
+ @param NSString amount
+ */
 [[ChainverseSDK shared] approveToken:@"{currency}" amount:@"{amount}"]
 
 //Callback delegate
@@ -567,11 +577,36 @@ Thông tin trả về là transaction hash qua callback didTransact
 
 ```
 
-#### 6. Hàm buyNFT
-Sử dụng hàm này để thực hiện mua item. Thông tin trả về là transaction hash qua callback didTransact
+#### 6. Hàm isApproved(Token)
+Hàm này sử dụng để lấy số lượng token mà bạn đã approved cho một địa chỉ nào đó. Thông tin transaction hash cũng sẽ được trả về qua callback didTransact (Khuyến khích xử lý logic trong hàm này).
+
+Chú ý: Trước khi muốn mua item trên chợ, bạn cần phải approve một lượng token (không nhỏ hơn giá trị của item) cho chợ
 
 ##### Objective C
 ```
+/*
+ isApproved(Token): Hàm này sử dụng để kiểm tra token số lượng token approve vào chợ
+ @param NSString token
+ @param NSString owner
+ */
+NSString * allowence = [[ChainverseSDK shared] isApproved:TOKEN_USDT owner:info.address];
+```
+
+#### 6. Hàm buyNFT
+Hàm này sử dụng để mua item đang bán trên chợ. Thông tin transaction hash cũng sẽ được trả về qua callback didTransact (Khuyến khích xử lý logic trong hàm này).
+
+Chú ý: Nếu bạn mua bằng token, bạn cần phải kiểm tra số lượng token đã approve cho chợ bằng hàm isApproved (Token). sử dụng hàm approveToken để approve token.
+
+Nếu không approve token trước khi mua, bạn có thể sẽ gặp lỗi sau: execution reverted: ERC20: transfer amount exceeds allowance
+
+##### Objective C
+```
+/*
+ buyNFT: Mua NFT trên chợ
+ @param NSString currency
+ @param NSInteger listingId
+ @param NSString price
+ */
 [[ChainverseSDK shared] buyNFT:{currency} listingId:{listing_id} price:{price}];
 
 //Callback delegate
@@ -585,10 +620,15 @@ Sử dụng hàm này để thực hiện mua item. Thông tin trả về là tr
 
 
 #### 7. Hàm approveNFT
-Trước khi bán được NFT cần approve NFT đó trước. Thông tin trả về là transaction hash qua callback didTransact
+Hàm này sử dụng để approve item bạn muốn bán cho chợ. Thông tin transaction hash cũng sẽ được trả về qua callback didTransact (Khuyến khích xử lý logic trong hàm này).
 
 ##### Objective C
 ```
+/*
+ approveNFT: Hàm này sử dụng để approve NFT trước khi bán lên chợ
+ @param NSString nft
+ @param NSInteger tokenId
+ */
 [[ChainverseSDK shared] approveNFT:@"{nft_address}" tokenId:{tokenId}];
 
 //Callback delegate
@@ -601,21 +641,41 @@ Trước khi bán được NFT cần approve NFT đó trước. Thông tin trả
 
 ```
 
-#### 8. Hàm isApproved
-Hàm kiểm tra xem NFT đó đã được approve chưa. Trả về boolean
+#### 8. Hàm isApproved(NFT)
+Hàm này sử dụng để kiểm tra item bạn muốn bán đã được approved cho chợ chưa.
+
+Chú ý: Trước khi muốn bán item, bạn phải approve item đó cho chợ.
 
 ##### Objective C
 ```
+/*
+ isApproved(NFT): Hàm này sử dụng để kiểm tra NFT đã được approve hay là chưa
+ @param NSString nft
+ @param NSInteger tokenId
+ */
 BOOL isApproved = [[ChainverseSDK shared] isApproved:@"{nft_address}" tokenId:{tokenId}];
 
 ```
 
 
 #### 9. Hàm sellNFT
-Hàm dùng để bán NFT lên chợ. Thông tin trả về là transaction hash qua callback didTransact
+Hàm này sử dụng để bán item lên chợ. Thông tin transaction hash cũng sẽ được trả về qua callback didTransact (Khuyến khích xử lý logic trong hàm này).
+
+Chú ý: Nếu bạn muốn bán item lên chợ, bạn cần phải kiểm tra item đó đã được approved cho chợ hay chưa bằng hàm isApproved (NFT). Sử dụng hàm approveNFT để approve item.
+
+Nếu không approve item trước khi bán, bạn có thể sẽ gặp lỗi sau: execution reverted: ERC721: transfer caller is not owner nor approved
+
+Sau khi đăng bán thành công, NFT có thể giao dịch trên blockchain, tuy nhiên NFT vẫn chưa hiển thị ngay trên ChainVerse Market. Để NFT hiển thị trên ChainVerse Market thì cần phải gọi hàm publishNFT
 
 ##### Objective C
 ```
+/*
+ sellNFT: Hàm này sử dụng để bán item lên chợ
+ @param NSString NFT
+ @param NSInteger tokenId
+ @param NSString price
+ @param NSString currency
+ */
 [[ChainverseSDK shared] sellNFT:@"{nft_address}" tokenId:{tokenID} price:@"{price}" currency:{currency}];
 
 //Callback delegate
@@ -651,14 +711,29 @@ Hàm dùng để dừng bán NFT lên chợ. Thông tin trả về là transacti
 
 
 #### 11. Hàm publishNFT
-Hàm dùng để dừng publish NFT lên chợ. 
+Hàm dùng để publish NFT lên chợ. 
 
 ##### Objective C
 ```
 [[ChainverseSDK shared] publishNFT:{nft_address} tokenId:{tokenId} complete:^(BOOL isPublished){
-        self.btnPublish.hidden = YES;
+        
 }];
 
+
+```
+
+#### 12. Hàm transferItem
+Sử dụng hàm này để chuyển item sang địa chỉ ví khác. Thông tin transaction hash cũng sẽ được trả về qua callback didTransact (Khuyến khích xử lý logic trong hàm này).
+
+##### Objective C
+```
+/*
+ transferItem: Hàm này sử dụng để chuyển NFT sang địa chỉ khác
+ @param NSString to
+ @param NSString nft
+ @param NSInteger tokenId
+ */
+[[ChainverseSDK shared] transferItem:@"{to}" nft:@"{nft}" tokenId:{tokenId}];
 
 
 ```
@@ -709,6 +784,14 @@ Dữ liệu Network
 | network | String  | Tên của mạng lưới |
 | chain_id  | String  | chain_id |
 | name | String  | Tên | 
+
+#### 4. ChainverseUser
+Dữ liệu Network
+
+| Name  | Type | Description | 
+| ------------- | ------------- | ------------- | 
+| address | String  | Địa chỉ ví user |
+| signature  | String  | signature |
 
 
 ## License
