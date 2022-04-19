@@ -149,8 +149,10 @@ getUserInfo: Return user info
 
 /*
  getListItemOnMarket: Hàm này sử dụng để lấy danh sách NFT đang được bán trên chợ
+ @param NSInteger page
+ @param NSInteger pageSize
  */
-- (void)getListItemOnMarket;
+- (void)getListItemOnMarket:(NSInteger )page pageSize:(NSInteger ) pageSize;
 
 /*
  getMyAsset: Hàm này sử dụng  để lấy danh sách NFT đang có của 1 địa chỉ ví

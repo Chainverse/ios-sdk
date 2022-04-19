@@ -56,10 +56,10 @@
         [self.iconSymbol setImage:[UIImage imageNamed:@"cvt.png"]];
     }
     
-    NSArray<ChainverseNFTCategory> *categories = NFT.categories;
+    /*NSArray<ChainverseNFTCategory> *categories = NFT.categories;
     for(ChainverseNFTCategory *category in categories){
         self.lblCategory.text = category.name;
-    }
+    }*/
     
     [self.imageView setImageWithURL:[NSURL URLWithString: NFT.image] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     

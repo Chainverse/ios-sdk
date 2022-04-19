@@ -7,7 +7,7 @@
 
 #ifndef CVSDKRESTfulClientEndpoint_h
 #define CVSDKRESTfulClientEndpoint_h
-static NSString *getListItemOnMarketEndpoint = @"/v1/sdk/market/%@/items";
+static NSString *getListItemOnMarketEndpoint = @"/v1/sdk/market/%@/items?page=%li&page_size=%li";
 static NSString *getMyAssetEndpoint = @"/v1/sdk/user/%@/items";
 static NSString *getServiceByGameEndpoint = @"/v1/sdk/game/%@";
 static NSString *getNonceEndpoint = @"/v1/user/nonce";

@@ -241,10 +241,10 @@
         _currencyLabel = @"CVT";
     }
     
-    NSArray<ChainverseNFTCategory> *categories = NFT.categories;
+    /*NSArray<ChainverseNFTCategory> *categories = NFT.categories;
     for(ChainverseNFTCategory *category in categories){
         self.category.text = category.name;
-    }
+    }*/
     
     [self.btnApprove setTitle:[NSString stringWithFormat:@"Approve %@",_currencyLabel] forState:UIControlStateNormal];
     

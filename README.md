@@ -498,7 +498,12 @@ Sử dụng hàm này để lấy danh sách ITEM trong chợ. Danh sách item s
 
 ##### Objective C
 ```
-[[ChainverseSDK shared] getListItemOnMarket];
+/*
+ getListItemOnMarket: Hàm này sử dụng để lấy danh sách NFT đang được bán trên chợ
+ @param NSInteger page
+ @param NSInteger pageSize
+ */
+[[ChainverseSDK shared] getListItemOnMarket:page pageSize:pageSize];
 
 //Callback delegate
 - (void)didGetListItemMarket:(NSArray<ChainverseNFT> *) items{
@@ -517,7 +522,7 @@ Sử dụng hàm này để lấy thông tin chi tiết của 1 item (Thông tin
  @param NSString nft
  @param NSInteger tokenId
  */
-[[ChainverseSDK shared] getDetailNFT:@"{nft_address}" tokenId:{tokenId}];
+[[ChainverseSDK shared] getDetailNFT:@"nft" tokenId:tokenId];
 
 //Callback delegate
 - (void)didGetDetailItem:(ChainverseNFT*)item{
@@ -536,7 +541,7 @@ Sử dụng hàm này để lấy thông tin chi tiết của item (thông tin o
  @param NSString nft
  @param NSInteger tokenId
  */
-[[ChainverseSDK shared] getNFT:{nft_address} tokenId:{tokenId} complete:^(ChainverseNFT *item){
+[[ChainverseSDK shared] getNFT:nft tokenId:tokenId complete:^(ChainverseNFT *item){
     //Xử lý ở đây    
         
 }];
@@ -567,7 +572,7 @@ Hàm này sử dụng để approve token cho một địa chỉ. Thông tin tra
  @param NSString token
  @param NSString amount
  */
-[[ChainverseSDK shared] approveToken:@"{currency}" amount:@"{amount}"]
+[[ChainverseSDK shared] approveToken:@"token" amount:@"amount"]
 
 //Callback delegate
 - (void)didTransact:(int)function tx:(NSString *)tx{
@@ -607,7 +612,7 @@ Nếu không approve token trước khi mua, bạn có thể sẽ gặp lỗi sa
  @param NSInteger listingId
  @param NSString price
  */
-[[ChainverseSDK shared] buyNFT:{currency} listingId:{listing_id} price:{price}];
+[[ChainverseSDK shared] buyNFT:@"currency" listingId:listingId price:@"price"];
 
 //Callback delegate
 - (void)didTransact:(int)function tx:(NSString *)tx{
@@ -629,7 +634,7 @@ Hàm này sử dụng để approve item bạn muốn bán cho chợ. Thông tin
  @param NSString nft
  @param NSInteger tokenId
  */
-[[ChainverseSDK shared] approveNFT:@"{nft_address}" tokenId:{tokenId}];
+[[ChainverseSDK shared] approveNFT:@"nft" tokenId:tokenId];
 
 //Callback delegate
 - (void)didTransact:(int)function tx:(NSString *)tx{
@@ -653,7 +658,7 @@ Chú ý: Trước khi muốn bán item, bạn phải approve item đó cho chợ
  @param NSString nft
  @param NSInteger tokenId
  */
-BOOL isApproved = [[ChainverseSDK shared] isApproved:@"{nft_address}" tokenId:{tokenId}];
+BOOL isApproved = [[ChainverseSDK shared] isApproved:@"nft" tokenId:tokenId];
 
 ```
 
@@ -676,7 +681,7 @@ Sau khi đăng bán thành công, NFT có thể giao dịch trên blockchain, tu
  @param NSString price
  @param NSString currency
  */
-[[ChainverseSDK shared] sellNFT:@"{nft_address}" tokenId:{tokenID} price:@"{price}" currency:{currency}];
+[[ChainverseSDK shared] sellNFT:@"NFT" tokenId:tokenId price:@"price" currency:@"currency"];
 
 //Callback delegate
 - (void)didTransact:(int)function tx:(NSString *)tx{
@@ -695,7 +700,11 @@ Hàm dùng để dừng bán NFT lên chợ. Thông tin trả về là transacti
 
 ##### Objective C
 ```
-[[ChainverseSDK shared] cancelSellNFT:{listingId}]
+/*
+ cancelSellNFT: Hàm này sử dụng để đừng bán NFT trên chợ
+ @param NSInteger listingId
+ */
+[[ChainverseSDK shared] cancelSellNFT:listingId]
 
 //Callback delegate
 - (void)didTransact:(int)function tx:(NSString *)tx{
@@ -711,11 +720,16 @@ Hàm dùng để dừng bán NFT lên chợ. Thông tin trả về là transacti
 
 
 #### 11. Hàm publishNFT
-Hàm dùng để publish NFT lên chợ. 
+Hàm dùng để publish NFT lên chợ. Hàm này trả về callback boolean isPublished
 
 ##### Objective C
 ```
-[[ChainverseSDK shared] publishNFT:{nft_address} tokenId:{tokenId} complete:^(BOOL isPublished){
+/*
+ publishNFT: Hàm này sử dụng để publish NFT lên chợ
+ @param NSString nft
+ @param NSInteger tokenId
+ */
+[[ChainverseSDK shared] publishNFT:@"nft" tokenId:tokenId complete:^(BOOL isPublished){
         
 }];
 
@@ -733,7 +747,7 @@ Sử dụng hàm này để chuyển item sang địa chỉ ví khác. Thông ti
  @param NSString nft
  @param NSInteger tokenId
  */
-[[ChainverseSDK shared] transferItem:@"{to}" nft:@"{nft}" tokenId:{tokenId}];
+[[ChainverseSDK shared] transferItem:@"to" nft:@"nft" tokenId:tokenId];
 
 
 ```

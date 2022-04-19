@@ -29,7 +29,7 @@
             name:@"SampleMarketItem"
             object:nil];
     
-    [[ChainverseSDK shared] getListItemOnMarket];
+    [[ChainverseSDK shared] getListItemOnMarket:0 pageSize:20];
     
     [self.btnMyAsset addTarget:self action:@selector(myAsset:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -55,10 +55,10 @@
             NSLog(@"nampv_test %ld",auction.listing_id);
         }
         
-        NSArray<ChainverseNFTCategory> *categories = itemx.categories;
+        /*NSArray<ChainverseNFTCategory> *categories = itemx.categories;
         for(ChainverseNFTCategory *category in categories){
             NSLog(@"nampv_test_category %@",category.name);
-        }
+        }*/
     }
     
     //_marketItems = items;

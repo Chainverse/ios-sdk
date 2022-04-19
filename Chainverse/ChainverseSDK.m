@@ -343,8 +343,9 @@
 }
 
 
-- (void)getListItemOnMarket{
-    NSString *action = [NSString stringWithFormat:getListItemOnMarketEndpoint, [ChainverseSDK shared].gameAddress];
+- (void)getListItemOnMarket:(NSInteger )page pageSize:(NSInteger ) pageSize{
+    NSString *action = [NSString stringWithFormat:getListItemOnMarketEndpoint, [ChainverseSDK shared].gameAddress, page,pageSize];
+    NSLog(@"nampv_listnft %@",action);
     [[CVSDKRESTfulClient marketShared] getListItemOnMarket:action completeBlock:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if([CVSDKParseJson errorCode:responseObject] == 0){
             CVSDKNFTResult *data = [[CVSDKNFTResult alloc] initWithDictionary:responseObject error:nil];
