@@ -102,7 +102,9 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat cellWidth = (CGRectGetWidth(self.collectionViewPhrase.frame) - 5 * 4)/3;
-    
+    if([CVSDKUtils isScreenLandcape]){
+        cellWidth = (CGRectGetWidth(self.collectionViewPhrase.frame) - 5 * 4)/6;
+    }
     return CGSizeMake(cellWidth, 30);
 }
 
@@ -153,10 +155,19 @@
         [_phrases addObject:phrase];
     }
     [self.collectionViewPhrase reloadData];
-    self.heightViewPhrase.constant = 170;
-    if([array count] == 24){
-        self.heightViewPhrase.constant = 340;
+    
+    if([CVSDKUtils isScreenLandcape]){
+        self.heightViewPhrase.constant = 90;
+        if([array count] == 24){
+            self.heightViewPhrase.constant = 170;
+        }
+    }else{
+        self.heightViewPhrase.constant = 170;
+        if([array count] == 24){
+            self.heightViewPhrase.constant = 340;
+        }
     }
+    
     
 }
 

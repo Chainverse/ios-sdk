@@ -86,9 +86,13 @@
 
 - (void)handleMarket:(id)sender {
     MarketViewController * object = [[MarketViewController alloc] init];
+    [[ChainverseSDK shared] getDetailNFT:@"sdsdsd" tokenId:87867];
     [self presentViewController:object animated:YES completion:nil];
     //[[ChainverseSDK shared] signMessage:@"ChainVerse"];
     //[[ChainverseSDK shared] signTransaction:@"" gasPrice:@"" gasLimit:@"" toAddress:@"" amount:@"" chainID:@"" templateData:nil];
+    //[[ChainverseSDK shared] signTransaction:@"" gasPrice:@"" gasLimit:<#(nonnull NSString *)#> toAddress:<#(nonnull NSString *)#> amount:<#(nonnull NSString *)#> chainID:<#(nonnull NSString *)#> templateData:<#(nonnull NSData *)#>]
+    
     
 }
+
 @end

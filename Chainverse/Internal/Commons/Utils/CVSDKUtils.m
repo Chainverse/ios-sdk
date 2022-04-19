@@ -78,4 +78,14 @@
 
     return [NSArray arrayWithArray:temp];
 }
+
++ (BOOL)isScreenLandcape{
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight) {
+        return true;
+    } else if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {
+        return false;
+    }
+    return false;
+}
 @end

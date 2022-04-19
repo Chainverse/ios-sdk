@@ -87,8 +87,8 @@
 		3A85E00D27FD85300095C229 /* CVSDKPhraseVerifyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE8227FD85300095C229 /* CVSDKPhraseVerifyViewCell.m */; };
 		3A85E00E27FD85300095C229 /* CVSDKPhraseVerifyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85DE8327FD85300095C229 /* CVSDKPhraseVerifyViewCell.xib */; };
 		3A85E00F27FD85300095C229 /* CVSDKWalletVerifyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE8427FD85300095C229 /* CVSDKWalletVerifyView.h */; };
-		3A85E01027FD85300095C229 /* CVSDKWalletBackupScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE8527FD85300095C229 /* CVSDKWalletBackupScreen.m */; };
-		3A85E01127FD85300095C229 /* CVSDKWalletBackupScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE8527FD85300095C229 /* CVSDKWalletBackupScreen.m */; };
+		3A85E01027FD85300095C229 /* CVSDKWalletVerifyScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE8527FD85300095C229 /* CVSDKWalletVerifyScreen.m */; };
+		3A85E01127FD85300095C229 /* CVSDKWalletVerifyScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE8527FD85300095C229 /* CVSDKWalletVerifyScreen.m */; };
 		3A85E01227FD85300095C229 /* CVSDKWalletInfoScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE8727FD85300095C229 /* CVSDKWalletInfoScreen.m */; };
 		3A85E01327FD85300095C229 /* CVSDKWalletInfoScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE8727FD85300095C229 /* CVSDKWalletInfoScreen.m */; };
 		3A85E01427FD85300095C229 /* CVSDKWalletInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE8927FD85300095C229 /* CVSDKWalletInfoView.h */; };
@@ -721,7 +721,7 @@
 		3A85DE8227FD85300095C229 /* CVSDKPhraseVerifyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKPhraseVerifyViewCell.m; sourceTree = "<group>"; };
 		3A85DE8327FD85300095C229 /* CVSDKPhraseVerifyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVSDKPhraseVerifyViewCell.xib; sourceTree = "<group>"; };
 		3A85DE8427FD85300095C229 /* CVSDKWalletVerifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKWalletVerifyView.h; sourceTree = "<group>"; };
-		3A85DE8527FD85300095C229 /* CVSDKWalletBackupScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKWalletBackupScreen.m; sourceTree = "<group>"; };
+		3A85DE8527FD85300095C229 /* CVSDKWalletVerifyScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKWalletVerifyScreen.m; sourceTree = "<group>"; };
 		3A85DE8727FD85300095C229 /* CVSDKWalletInfoScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKWalletInfoScreen.m; sourceTree = "<group>"; };
 		3A85DE8927FD85300095C229 /* CVSDKWalletInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKWalletInfoView.h; sourceTree = "<group>"; };
 		3A85DE8A27FD85300095C229 /* CVSDKWalletInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKWalletInfoView.m; sourceTree = "<group>"; };
@@ -1252,7 +1252,7 @@
 			children = (
 				3A85DE7C27FD85300095C229 /* CVSDKWalletVerifyScreen.h */,
 				3A85DE7D27FD85300095C229 /* View */,
-				3A85DE8527FD85300095C229 /* CVSDKWalletBackupScreen.m */,
+				3A85DE8527FD85300095C229 /* CVSDKWalletVerifyScreen.m */,
 			);
 			path = Verify;
 			sourceTree = "<group>";
@@ -2893,7 +2893,7 @@
 				3A85E1B627FD85310095C229 /* AFSecurityPolicy.m in Sources */,
 				3A85E0B327FD85300095C229 /* ABIElements.swift in Sources */,
 				3A85E21627FD87E40095C229 /* MyAssetCollectionViewCell.m in Sources */,
-				3A85E01027FD85300095C229 /* CVSDKWalletBackupScreen.m in Sources */,
+				3A85E01027FD85300095C229 /* CVSDKWalletVerifyScreen.m in Sources */,
 				3A85E05027FD85300095C229 /* CVSDKCallbackToGame.m in Sources */,
 				3A85E06927FD85300095C229 /* CVSDKServiceManager.m in Sources */,
 				3A85E0F127FD85310095C229 /* Web3+Methods.swift in Sources */,
@@ -3251,7 +3251,7 @@
 				3A85DFF727FD85300095C229 /* ChainverseSDK.m in Sources */,
 				3A85E19D27FD85310095C229 /* Web3+ERC1155.swift in Sources */,
 				3A85E1CB27FD85310095C229 /* JSONHTTPClient.m in Sources */,
-				3A85E01127FD85300095C229 /* CVSDKWalletBackupScreen.m in Sources */,
+				3A85E01127FD85300095C229 /* CVSDKWalletVerifyScreen.m in Sources */,
 				3A85E14927FD85310095C229 /* BrowserViewController.swift in Sources */,
 				3A85E15327FD85310095C229 /* BIP32HDNode.swift in Sources */,
 				3A85E0F227FD85310095C229 /* Web3+Methods.swift in Sources */,

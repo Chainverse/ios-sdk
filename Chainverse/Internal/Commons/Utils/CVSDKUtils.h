@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (int)convertHexToDecimal:(NSString *)hex;
 + (BOOL)checkAppInstalled: (NSString *)scheme;
 + (BOOL)isChainverseInstalled;
++ (BOOL)isScreenLandcape;
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 + (NSArray*)shuffleArray:(NSArray*)array;
 @end

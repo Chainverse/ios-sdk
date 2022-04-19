@@ -110,9 +110,22 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat cellWidth = (CGRectGetWidth(self.collectionViewPhraseVerify.frame) - 5 * 4)/3;
     
-    return CGSizeMake(cellWidth, 30);
+    if(collectionView == self.collectionViewPhraseVerify){
+        CGFloat cellWidth = (CGRectGetWidth(self.collectionViewPhraseVerify.frame) - 5 * 4)/3;
+        if([CVSDKUtils isScreenLandcape]){
+            cellWidth = (CGRectGetWidth(self.collectionViewPhraseVerify.frame) - 5 * 4)/6;
+        }
+        
+        return CGSizeMake(cellWidth, 30);
+    }else{
+        CGFloat cellWidth = (CGRectGetWidth(self.collectionViewPhraseRandom.frame) - 5 * 4)/3;
+        if([CVSDKUtils isScreenLandcape]){
+            cellWidth = (CGRectGetWidth(self.collectionViewPhraseRandom.frame) - 5 * 4)/6;
+        }
+        return CGSizeMake(cellWidth, 30);
+    }
+    
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
@@ -304,10 +317,19 @@
         [_phrasesVerify addObject:phrase];
     }
     [self.collectionViewPhraseVerify reloadData];
-    self.heightViewPhraseVerify.constant = 170;
-    if([array count] == 24){
-        self.heightViewPhraseVerify.constant = 340;
+    
+    if([CVSDKUtils isScreenLandcape]){
+        self.heightViewPhraseVerify.constant = 90;
+        if([array count] == 24){
+            self.heightViewPhraseVerify.constant = 170;
+        }
+    }else{
+        self.heightViewPhraseVerify.constant = 170;
+        if([array count] == 24){
+            self.heightViewPhraseVerify.constant = 340;
+        }
     }
+    
 }
 
 
@@ -328,10 +350,19 @@
     NSArray *random = [CVSDKUtils shuffleArray:_phrasesRandomTmp];
     _phrasesRandom = [[NSMutableArray alloc]initWithArray:random];
     [self.collectionViewPhraseRandom reloadData];
-    self.heightViewPhraseRandom.constant = 170;
-    if([array count] == 24){
-        self.heightViewPhraseRandom.constant = 340;
+    
+    if([CVSDKUtils isScreenLandcape]){
+        self.heightViewPhraseRandom.constant = 90;
+        if([array count] == 24){
+            self.heightViewPhraseRandom.constant = 170;
+        }
+    }else{
+        self.heightViewPhraseRandom.constant = 170;
+        if([array count] == 24){
+            self.heightViewPhraseRandom.constant = 340;
+        }
     }
+    
 }
 
 
