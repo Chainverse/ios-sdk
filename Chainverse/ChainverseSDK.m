@@ -8,7 +8,6 @@
 #import "ChainverseSDK.h"
 #import "UIKit/UIKit.h"
 #import "CVSDKUtils.h"
-#import "CVSDKConnectWalletDialog.h"
 #import "CVSDKBaseSocketIO.h"
 #import "CVSDKRPCClient.h"
 #import "CVSDKContractManager.h"
@@ -38,8 +37,9 @@
 #import "CVSDKService.h"
 #import "CVSDKNFTResult.h"
 #import "CVSDKNFTDetail.h"
-#import "CVSDKContractCallScreen.h"
-#import "CVSDKContractCallModel.h"
+#import "CVSDKContractConfirmScreen.h"
+#import "CVSDKContractConfirmInput.h"
+#import "ChainverseTokenSupport.h"
 @interface ChainverseSDK(){
     BOOL isInitSDK;
     
@@ -240,13 +240,6 @@
     return version;
 }
 
-- (void)showConnectView{
-    if(![self isInitSDKSuccess]){
-        return;
-    }
-    [CVSDKConnectWalletDialog showConnectView];
-}
-
 
 
 - (void)connectWithChainverse{
@@ -381,16 +374,24 @@
     [params setObject:[NSNumber numberWithInteger:listingId] forKey:@"listingId"];
     [params setObject:price forKey:@"price"];
     
+    NSString *name = @"0 BNB";
+    if([currency isEqualToString:@"0x0000000000000000000000000000000000000000"]){
+        NSString *price = [params objectForKey:@"price"];
+        name = [NSString stringWithFormat:@" - %@ BNB",price];
+    }
+    
     NSString *fee = [[CVSDKContractManager shared] feeBuyNFT:currency listingId:listingId price:price];
-    CVSDKContractCallModel *input = [[CVSDKContractCallModel alloc] init];
+    CVSDKContractConfirmInput *input = [[CVSDKContractConfirmInput alloc] init];
+    input.headTitle = @"Call Smart Contract";
+    input.name = name;
+    input.asset = @"";
     input.from = [CVSDKUserDefault getXUserAdress];
-    input.to = marketServiceAddress;
+    input.granted_to = marketServiceAddress;
     input.contract = marketServiceAddress;
     input.fee = fee;
-    input.type = @"buyNFT";
+    input.function = @"buyNFT";
     input.params = params;
-    
-    [CVSDKContractCallScreen show:input];
+    [CVSDKContractConfirmScreen show:input];
 }
 
 - (NSString *)bidNFT:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price{
@@ -399,23 +400,65 @@
     return tx;
 }
 
-- (NSString *)approveToken:(NSString *)token amount:(NSString *)amount{
+
+
+- (void)approveToken:(NSString *)token amount:(NSString *)amount{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:token forKey:@"token"];
+    [params setObject:amount forKey:@"amount"];
+    NSString *fee = [[CVSDKContractManager shared] feeApproveToken:token spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564" amount:amount];
+    CVSDKContractConfirmInput *input = [[CVSDKContractConfirmInput alloc] init];
+    input.headTitle = @"Approve";
+    input.name = [NSString stringWithFormat:@"Give permission to access your %@?",[CVSDKUtils getCurrency:token]];
+    input.asset = [CVSDKUtils getCurrency:token];
+    input.from = [CVSDKUserDefault getXUserAdress];
+    input.granted_to = marketServiceAddress;
+    input.contract = token;
+    input.fee = fee;
+    input.function = @"approveToken";
+    input.params = params;
+    [CVSDKContractConfirmScreen show:input];
+}
+
+- (void)sellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:NFT forKey:@"NFT"];
+    [params setObject:[NSNumber numberWithInteger:tokenId] forKey:@"tokenId"];
+    [params setObject:price forKey:@"price"];
+    [params setObject:currency forKey:@"currency"];
     
-    NSString *tx = [[CVSDKContractManager shared] approveToken:token spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564" amount:[NSString stringWithFormat:@"%@",amount]];
-    [CVSDKCallbackToGame didTransact:approveToken tx:tx];
-    return tx;
+    NSString *fee = [[CVSDKContractManager shared] feeSellNFT:NFT tokenId:tokenId price:price currency:currency];
+    CVSDKContractConfirmInput *input = [[CVSDKContractConfirmInput alloc] init];
+    input.headTitle = @"Call Smart Contract";
+    input.name = @"0 BNB";
+    input.asset = @"";
+    input.from = [CVSDKUserDefault getXUserAdress];
+    input.granted_to = marketServiceAddress;
+    input.contract = marketServiceAddress;
+    input.fee = fee;
+    input.function = @"sellNFT";
+    input.params = params;
+    [CVSDKContractConfirmScreen show:input];
 }
 
-- (NSString *)sellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
-    NSString *tx = [[CVSDKContractManager shared] sellNFT:NFT tokenId:tokenId price:price currency:currency];
-    [CVSDKCallbackToGame didTransact:sellNFT tx:tx];
-    return tx;
-}
-
-- (NSString *)approveNFT:(NSString *)nft tokenId:(NSInteger )tokenId{
-    NSString *tx = [[CVSDKContractManager shared] approveNFT:nft tokenId:tokenId];
-    [CVSDKCallbackToGame didTransact:approveNFT tx:tx];
-    return tx;
+- (void)approveNFT:(NSString *)nft tokenId:(NSInteger )tokenId{
+    [[ChainverseSDK shared] getNFT:nft tokenId:tokenId complete:^(ChainverseNFT *item){
+        NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+        [params setObject:nft forKey:@"nft"];
+        [params setObject:[NSNumber numberWithInteger:tokenId] forKey:@"tokenId"];
+        NSString *fee = [[CVSDKContractManager shared] feeApproveNFT:nft tokenId:tokenId];
+        CVSDKContractConfirmInput *input = [[CVSDKContractConfirmInput alloc] init];
+        input.headTitle = @"Approve";
+        input.name = item.name;
+        input.asset = item.name;
+        input.from = [CVSDKUserDefault getXUserAdress];
+        input.granted_to = marketServiceAddress;
+        input.contract = nft;
+        input.fee = fee;
+        input.function = @"approveNFT";
+        input.params = params;
+        [CVSDKContractConfirmScreen show:input];
+    }];
 }
 
 - (NSString *)approveNFTForGame:(NSString *)nft tokenId:(NSInteger )tokenId{
@@ -482,10 +525,25 @@
     return [[CVSDKContractManager shared] isApproved:token owner:owner spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564"];
 }
 
-- (NSString *)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{
-    NSString *tx = [[CVSDKContractManager shared] transferItem:to nft:nft tokenId:tokenId];
-    [CVSDKCallbackToGame didTransact:transferItem tx:tx];
-    return tx;
+- (void)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    [[ChainverseSDK shared] getNFT:nft tokenId:tokenId complete:^(ChainverseNFT *item){
+        NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+        [params setObject:to forKey:@"to"];
+        [params setObject:nft forKey:@"nft"];
+        [params setObject:[NSNumber numberWithInteger:tokenId] forKey:@"tokenId"];
+        NSString *fee = [[CVSDKContractManager shared] feeTransferItem:to nft:nft tokenId:tokenId];
+        CVSDKContractConfirmInput *input = [[CVSDKContractConfirmInput alloc] init];
+        input.headTitle = @"Transfer";
+        input.name = item.name;
+        input.asset = item.name;
+        input.from = [CVSDKUserDefault getXUserAdress];
+        input.granted_to = to;
+        input.contract = nft;
+        input.fee = fee;
+        input.function = @"transferItem";
+        input.params = params;
+        [CVSDKContractConfirmScreen show:input];
+    }];
 }
 
 - (NSString *)withdrawNFT:(NSString *)nft tokenId:(NSInteger )tokenId{

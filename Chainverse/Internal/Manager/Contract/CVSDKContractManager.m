@@ -102,12 +102,23 @@
     return [[CVSDKBridgingWeb3 shared] approveToken:[CVSDKUserDefault getXUserAdress] token:token spender:spender amount:amount];
 }
 
+- (NSString *)feeApproveToken:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount{
+    return [[CVSDKBridgingWeb3 shared] feeApproveToken:[CVSDKUserDefault getXUserAdress] token:token spender:spender amount:amount];
+}
 - (NSString *)sellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
     return [[CVSDKBridgingWeb3 shared] sellNFT:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] nft:NFT tokenId:tokenId price:price currency:currency];
 }
 
+- (NSString *)feeSellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
+    return [[CVSDKBridgingWeb3 shared] feeSellNFT:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] nft:NFT tokenId:tokenId price:price currency:currency];
+}
+
 - (NSString *)approveNFT:(NSString *)nft tokenId:(NSInteger )tokenId{
     return [[CVSDKBridgingWeb3 shared] approveNFT:marketServiceAddress abi:ABI_ERC721 walletAddress:[CVSDKUserDefault getXUserAdress] nft:nft tokenId:tokenId];
+}
+
+- (NSString *)feeApproveNFT:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] feeApproveNFT:marketServiceAddress abi:ABI_ERC721 walletAddress:[CVSDKUserDefault getXUserAdress] nft:nft tokenId:tokenId];
 }
 
 - (NSString *)approveNFTForGame:(NSString *)nft tokenId:(NSInteger )tokenId{
@@ -196,6 +207,11 @@
 }
 - (NSString *)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{
     return [[CVSDKBridgingWeb3 shared] transferItem:[CVSDKUserDefault getXUserAdress] to:to nft:nft tokenId:tokenId];
+}
+
+
+- (NSString *)feeTransferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [[CVSDKBridgingWeb3 shared] feeTransferItem:[CVSDKUserDefault getXUserAdress] to:to nft:nft tokenId:tokenId];
 }
 
 - (NSString *)withdrawNFT:(NSString *)nft tokenId:(NSInteger )tokenId{

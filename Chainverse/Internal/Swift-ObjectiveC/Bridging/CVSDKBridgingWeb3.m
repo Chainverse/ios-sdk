@@ -86,12 +86,25 @@
 - (NSString *)sellNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
     return [self.web3 sellNFTWithMarketService:marketService abi:abi walletAddress:walletAddress nft:nft tokenId:tokenId price:price currency:currency];
 }
+
+- (NSString *)feeSellNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
+    return [self.web3 feeSellNFTWithMarketService:marketService abi:abi walletAddress:walletAddress nft:nft tokenId:tokenId price:price currency:currency];
+}
+
 - (NSString *)approveToken:(NSString*)walletAddress token:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount{
     return [self.web3 approveTokenWithWalletAddress:walletAddress token:token spender:spender value:amount];
 }
 
+- (NSString *)feeApproveToken:(NSString*)walletAddress token:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount{
+    return [self.web3 feeApproveTokenWithWalletAddress:walletAddress token:token spender:spender value:amount];
+}
+
 - (NSString *)approveNFT:(NSString *)service abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId{
     return [self.web3 approveNFTWithService:service abi:abi walletAddress:walletAddress nft:nft tokenId:tokenId];
+}
+
+- (NSString *)feeApproveNFT:(NSString *)service abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [self.web3 feeApproveNFTWithService:service abi:abi walletAddress:walletAddress nft:nft tokenId:tokenId];
 }
 
 - (NSString *)cancelSellNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress listing:(NSInteger )listingId{
@@ -117,6 +130,10 @@
 
 - (NSString *)transferItem:(NSString *)walletAddress to:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{
     return [self.web3 transferItemWithWalletAddress:walletAddress to:to nft:nft tokenId:tokenId];
+}
+
+- (NSString *)feeTransferItem:(NSString *)walletAddress to:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    return [self.web3 feeTransferItemWithWalletAddress:walletAddress to:to nft:nft tokenId:tokenId];
 }
 
 - (NSString *)withdrawNFT:(NSString *)walletAddress gameAddress:(NSString *)gameAddress abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId{

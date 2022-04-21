@@ -23,18 +23,21 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		3A023830281110B300696C2C /* CVSDKContractConfirmScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A023828281110B300696C2C /* CVSDKContractConfirmScreen.m */; };
+		3A023831281110B300696C2C /* CVSDKContractConfirmScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A023828281110B300696C2C /* CVSDKContractConfirmScreen.m */; };
+		3A023832281110B300696C2C /* CVSDKContractConfirmInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A023829281110B300696C2C /* CVSDKContractConfirmInput.h */; };
+		3A023833281110B300696C2C /* CVSDKContractConfirmScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A02382A281110B300696C2C /* CVSDKContractConfirmScreen.h */; };
+		3A023834281110B300696C2C /* CVSDKContractConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A02382C281110B300696C2C /* CVSDKContractConfirmView.m */; };
+		3A023835281110B300696C2C /* CVSDKContractConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A02382C281110B300696C2C /* CVSDKContractConfirmView.m */; };
+		3A023836281110B300696C2C /* CVSDKContractConfirmView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A02382D281110B300696C2C /* CVSDKContractConfirmView.h */; };
+		3A023837281110B300696C2C /* CVSDKContractConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A02382E281110B300696C2C /* CVSDKContractConfirmView.xib */; };
+		3A023838281110B300696C2C /* CVSDKContractConfirmInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A02382F281110B300696C2C /* CVSDKContractConfirmInput.m */; };
+		3A023839281110B300696C2C /* CVSDKContractConfirmInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A02382F281110B300696C2C /* CVSDKContractConfirmInput.m */; };
+		3A02383A281110C300696C2C /* CVSDKContractConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A02382E281110B300696C2C /* CVSDKContractConfirmView.xib */; };
 		3A06AC9327FE812500319070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A06AC8F27FE812500319070 /* LaunchScreen.storyboard */; };
 		3A06AC9427FE812500319070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A06AC9127FE812500319070 /* Main.storyboard */; };
 		3A06AC9627FE8F2100319070 /* CVSDKSignMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A06AC9527FE8F2100319070 /* CVSDKSignMessageView.xib */; };
 		3A06AC9727FE8F2100319070 /* CVSDKSignMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A06AC9527FE8F2100319070 /* CVSDKSignMessageView.xib */; };
-		3A06AC9C27FE9A5D00319070 /* CVSDKContractCallScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A06AC9A27FE9A5D00319070 /* CVSDKContractCallScreen.h */; };
-		3A06AC9D27FE9A5D00319070 /* CVSDKContractCallScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A06AC9B27FE9A5D00319070 /* CVSDKContractCallScreen.m */; };
-		3A06AC9E27FE9A5D00319070 /* CVSDKContractCallScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A06AC9B27FE9A5D00319070 /* CVSDKContractCallScreen.m */; };
-		3A06ACA227FE9A8700319070 /* CVSDKContractCallView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A06ACA027FE9A8700319070 /* CVSDKContractCallView.h */; };
-		3A06ACA327FE9A8700319070 /* CVSDKContractCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A06ACA127FE9A8700319070 /* CVSDKContractCallView.m */; };
-		3A06ACA427FE9A8700319070 /* CVSDKContractCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A06ACA127FE9A8700319070 /* CVSDKContractCallView.m */; };
-		3A06ACA627FE9AB300319070 /* CVSDKContractCallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A06ACA527FE9AB300319070 /* CVSDKContractCallView.xib */; };
-		3A06ACA727FE9AB300319070 /* CVSDKContractCallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A06ACA527FE9AB300319070 /* CVSDKContractCallView.xib */; };
 		3A2898CD280914D4009C04C1 /* CVSDKWalletVerifyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85DE7F27FD85300095C229 /* CVSDKWalletVerifyView.xib */; };
 		3A2898CE280914D8009C04C1 /* CVSDKPhraseVerifyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85DE8327FD85300095C229 /* CVSDKPhraseVerifyViewCell.xib */; };
 		3A2898CF280914DD009C04C1 /* CVSDKWalletInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85DE8B27FD85300095C229 /* CVSDKWalletInfoView.xib */; };
@@ -56,22 +59,12 @@
 		3A4EAA76280A80040079EC47 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4EAA74280A80040079EC47 /* Starscream.xcframework */; };
 		3A4EAAFF280AA4280079EC47 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4EAA74280A80040079EC47 /* Starscream.xcframework */; };
 		3A4EAB00280AA4280079EC47 /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4EAA74280A80040079EC47 /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3A5C96E32806B45300D8F6D9 /* CVSDKContractCallModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A5C96E12806B45300D8F6D9 /* CVSDKContractCallModel.h */; };
-		3A5C96E42806B45300D8F6D9 /* CVSDKContractCallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5C96E22806B45300D8F6D9 /* CVSDKContractCallModel.m */; };
-		3A5C96E52806B45300D8F6D9 /* CVSDKContractCallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5C96E22806B45300D8F6D9 /* CVSDKContractCallModel.m */; };
 		3A85DFF327FD85300095C229 /* ChainverseVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE6527FD852F0095C229 /* ChainverseVersion.h */; };
 		3A85DFF427FD85300095C229 /* ChainverseSDKCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE6627FD852F0095C229 /* ChainverseSDKCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A85DFF527FD85300095C229 /* Chainverse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE6727FD852F0095C229 /* Chainverse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A85DFF627FD85300095C229 /* ChainverseSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE6827FD852F0095C229 /* ChainverseSDK.m */; };
 		3A85DFF727FD85300095C229 /* ChainverseSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE6827FD852F0095C229 /* ChainverseSDK.m */; };
 		3A85DFF827FD85300095C229 /* ChainverseSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE6927FD852F0095C229 /* ChainverseSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A85DFF927FD85300095C229 /* CVSDKConnectWalletView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE6E27FD852F0095C229 /* CVSDKConnectWalletView.h */; };
-		3A85DFFA27FD85300095C229 /* CVSDKConnectWalletDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE6F27FD852F0095C229 /* CVSDKConnectWalletDialog.h */; };
-		3A85DFFB27FD85300095C229 /* CVSDKConnectWalletView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A85DE7027FD852F0095C229 /* CVSDKConnectWalletView.xib */; };
-		3A85DFFC27FD85300095C229 /* CVSDKConnectWalletDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE7127FD852F0095C229 /* CVSDKConnectWalletDialog.m */; };
-		3A85DFFD27FD85300095C229 /* CVSDKConnectWalletDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE7127FD852F0095C229 /* CVSDKConnectWalletDialog.m */; };
-		3A85DFFE27FD85300095C229 /* CVSDKConnectWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE7227FD852F0095C229 /* CVSDKConnectWalletView.m */; };
-		3A85DFFF27FD85300095C229 /* CVSDKConnectWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE7227FD852F0095C229 /* CVSDKConnectWalletView.m */; };
 		3A85E00027FD85300095C229 /* CVSDKSignMessageScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE7427FD85300095C229 /* CVSDKSignMessageScreen.m */; };
 		3A85E00127FD85300095C229 /* CVSDKSignMessageScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DE7427FD85300095C229 /* CVSDKSignMessageScreen.m */; };
 		3A85E00227FD85300095C229 /* CVSDKSignMessageScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE7527FD85300095C229 /* CVSDKSignMessageScreen.h */; };
@@ -686,30 +679,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A023828281110B300696C2C /* CVSDKContractConfirmScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKContractConfirmScreen.m; sourceTree = "<group>"; };
+		3A023829281110B300696C2C /* CVSDKContractConfirmInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKContractConfirmInput.h; sourceTree = "<group>"; };
+		3A02382A281110B300696C2C /* CVSDKContractConfirmScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKContractConfirmScreen.h; sourceTree = "<group>"; };
+		3A02382C281110B300696C2C /* CVSDKContractConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKContractConfirmView.m; sourceTree = "<group>"; };
+		3A02382D281110B300696C2C /* CVSDKContractConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKContractConfirmView.h; sourceTree = "<group>"; };
+		3A02382E281110B300696C2C /* CVSDKContractConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVSDKContractConfirmView.xib; sourceTree = "<group>"; };
+		3A02382F281110B300696C2C /* CVSDKContractConfirmInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKContractConfirmInput.m; sourceTree = "<group>"; };
 		3A06AC9027FE812500319070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A06AC9227FE812500319070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		3A06AC9527FE8F2100319070 /* CVSDKSignMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVSDKSignMessageView.xib; sourceTree = "<group>"; };
-		3A06AC9A27FE9A5D00319070 /* CVSDKContractCallScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKContractCallScreen.h; sourceTree = "<group>"; };
-		3A06AC9B27FE9A5D00319070 /* CVSDKContractCallScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKContractCallScreen.m; sourceTree = "<group>"; };
-		3A06ACA027FE9A8700319070 /* CVSDKContractCallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKContractCallView.h; sourceTree = "<group>"; };
-		3A06ACA127FE9A8700319070 /* CVSDKContractCallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKContractCallView.m; sourceTree = "<group>"; };
-		3A06ACA527FE9AB300319070 /* CVSDKContractCallView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVSDKContractCallView.xib; sourceTree = "<group>"; };
 		3A4EAA53280A79BD0079EC47 /* BigInt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BigInt.xcframework; sourceTree = "<group>"; };
 		3A4EAA58280A7A6F0079EC47 /* PromiseKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromiseKit.xcframework; sourceTree = "<group>"; };
 		3A4EAA62280A7C4E0079EC47 /* SocketIO.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SocketIO.xcframework; sourceTree = "<group>"; };
 		3A4EAA74280A80040079EC47 /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Starscream.xcframework; sourceTree = "<group>"; };
-		3A5C96E12806B45300D8F6D9 /* CVSDKContractCallModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKContractCallModel.h; sourceTree = "<group>"; };
-		3A5C96E22806B45300D8F6D9 /* CVSDKContractCallModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKContractCallModel.m; sourceTree = "<group>"; };
 		3A85DE6527FD852F0095C229 /* ChainverseVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseVersion.h; sourceTree = "<group>"; };
 		3A85DE6627FD852F0095C229 /* ChainverseSDKCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseSDKCallback.h; sourceTree = "<group>"; };
 		3A85DE6727FD852F0095C229 /* Chainverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chainverse.h; sourceTree = "<group>"; };
 		3A85DE6827FD852F0095C229 /* ChainverseSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainverseSDK.m; sourceTree = "<group>"; };
 		3A85DE6927FD852F0095C229 /* ChainverseSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseSDK.h; sourceTree = "<group>"; };
-		3A85DE6E27FD852F0095C229 /* CVSDKConnectWalletView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKConnectWalletView.h; sourceTree = "<group>"; };
-		3A85DE6F27FD852F0095C229 /* CVSDKConnectWalletDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKConnectWalletDialog.h; sourceTree = "<group>"; };
-		3A85DE7027FD852F0095C229 /* CVSDKConnectWalletView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CVSDKConnectWalletView.xib; sourceTree = "<group>"; };
-		3A85DE7127FD852F0095C229 /* CVSDKConnectWalletDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKConnectWalletDialog.m; sourceTree = "<group>"; };
-		3A85DE7227FD852F0095C229 /* CVSDKConnectWalletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKConnectWalletView.m; sourceTree = "<group>"; };
 		3A85DE7427FD85300095C229 /* CVSDKSignMessageScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKSignMessageScreen.m; sourceTree = "<group>"; };
 		3A85DE7527FD85300095C229 /* CVSDKSignMessageScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKSignMessageScreen.h; sourceTree = "<group>"; };
 		3A85DE7727FD85300095C229 /* CVSDKSignMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKSignMessageView.m; sourceTree = "<group>"; };
@@ -1120,6 +1108,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A02382728110C4600696C2C /* Confirm */ = {
+			isa = PBXGroup;
+			children = (
+				3A023828281110B300696C2C /* CVSDKContractConfirmScreen.m */,
+				3A02382A281110B300696C2C /* CVSDKContractConfirmScreen.h */,
+				3A023829281110B300696C2C /* CVSDKContractConfirmInput.h */,
+				3A02382F281110B300696C2C /* CVSDKContractConfirmInput.m */,
+				3A02382B281110B300696C2C /* View */,
+			);
+			path = Confirm;
+			sourceTree = "<group>";
+		};
+		3A02382B281110B300696C2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A02382C281110B300696C2C /* CVSDKContractConfirmView.m */,
+				3A02382D281110B300696C2C /* CVSDKContractConfirmView.h */,
+				3A02382E281110B300696C2C /* CVSDKContractConfirmView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3A06AC8E27FE812500319070 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -1142,31 +1152,9 @@
 		3A06AC9927FE9A3100319070 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
-				3A5C96E02806AF7200D8F6D9 /* Confirm */,
+				3A02382728110C4600696C2C /* Confirm */,
 			);
 			path = Contract;
-			sourceTree = "<group>";
-		};
-		3A06AC9F27FE9A6B00319070 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3A06ACA527FE9AB300319070 /* CVSDKContractCallView.xib */,
-				3A06ACA027FE9A8700319070 /* CVSDKContractCallView.h */,
-				3A06ACA127FE9A8700319070 /* CVSDKContractCallView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3A5C96E02806AF7200D8F6D9 /* Confirm */ = {
-			isa = PBXGroup;
-			children = (
-				3A06AC9F27FE9A6B00319070 /* View */,
-				3A06AC9A27FE9A5D00319070 /* CVSDKContractCallScreen.h */,
-				3A06AC9B27FE9A5D00319070 /* CVSDKContractCallScreen.m */,
-				3A5C96E12806B45300D8F6D9 /* CVSDKContractCallModel.h */,
-				3A5C96E22806B45300D8F6D9 /* CVSDKContractCallModel.m */,
-			);
-			path = Confirm;
 			sourceTree = "<group>";
 		};
 		3A85DE6A27FD852F0095C229 /* Internal */ = {
@@ -1196,23 +1184,10 @@
 			isa = PBXGroup;
 			children = (
 				3A06AC9927FE9A3100319070 /* Contract */,
-				3A85DE6D27FD852F0095C229 /* ConnectWallet */,
 				3A85DE7327FD852F0095C229 /* Signer */,
 				3A85DE7A27FD85300095C229 /* Wallet */,
 			);
 			path = Screen;
-			sourceTree = "<group>";
-		};
-		3A85DE6D27FD852F0095C229 /* ConnectWallet */ = {
-			isa = PBXGroup;
-			children = (
-				3A85DE6E27FD852F0095C229 /* CVSDKConnectWalletView.h */,
-				3A85DE6F27FD852F0095C229 /* CVSDKConnectWalletDialog.h */,
-				3A85DE7027FD852F0095C229 /* CVSDKConnectWalletView.xib */,
-				3A85DE7127FD852F0095C229 /* CVSDKConnectWalletDialog.m */,
-				3A85DE7227FD852F0095C229 /* CVSDKConnectWalletView.m */,
-			);
-			path = ConnectWallet;
 			sourceTree = "<group>";
 		};
 		3A85DE7327FD852F0095C229 /* Signer */ = {
@@ -2457,6 +2432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A85E0B027FD85300095C229 /* CVSDKBaseBlocks.h in Headers */,
+				3A023836281110B300696C2C /* CVSDKContractConfirmView.h in Headers */,
 				3A85E1BD27FD85310095C229 /* JSONValueTransformer.h in Headers */,
 				3A85E1BC27FD85310095C229 /* JSONKeyMapper.h in Headers */,
 				3A85E1C827FD85310095C229 /* JSONModelError.h in Headers */,
@@ -2464,6 +2440,7 @@
 				3A85E0A427FD85300095C229 /* CVSDKBaseObject.h in Headers */,
 				3A85E07C27FD85300095C229 /* ChainverseNFTAuction.h in Headers */,
 				3A85E08727FD85300095C229 /* ChainverseNFTCategory.h in Headers */,
+				3A023832281110B300696C2C /* CVSDKContractConfirmInput.h in Headers */,
 				3A85E07927FD85300095C229 /* ChainverseNFTNetwork.h in Headers */,
 				3A85E07327FD85300095C229 /* ChainverseNFTCurrency.h in Headers */,
 				3A85E07227FD85300095C229 /* ChainverseNFTType.h in Headers */,
@@ -2490,11 +2467,9 @@
 				3A85E03127FD85300095C229 /* CVSDKWalletConnectScreen.h in Headers */,
 				3A85E1CF27FD85310095C229 /* JSONHTTPClient.h in Headers */,
 				3A85E1C427FD85310095C229 /* JSONModelClassProperty.h in Headers */,
-				3A85DFF927FD85300095C229 /* CVSDKConnectWalletView.h in Headers */,
 				3A85E02827FD85300095C229 /* CVSDKWalletBackupView.h in Headers */,
 				3A85E0AF27FD85300095C229 /* CVSDKBaseViewDialog.h in Headers */,
 				3A85E05327FD85300095C229 /* CVSDKABI.h in Headers */,
-				3A06AC9C27FE9A5D00319070 /* CVSDKContractCallScreen.h in Headers */,
 				3A85E05C27FD85300095C229 /* CVSDKRPCClient.h in Headers */,
 				3A85E05A27FD85300095C229 /* CVSDKRESTfulClient.h in Headers */,
 				3A85E09727FD85300095C229 /* CVSDKService.h in Headers */,
@@ -2506,7 +2481,6 @@
 				3A85E00B27FD85300095C229 /* CVSDKPhraseVerifyViewCell.h in Headers */,
 				3A85E01827FD85300095C229 /* CVSDKWalletInfoScreen.h in Headers */,
 				3A85E03B27FD85300095C229 /* CVSDKWalletCreateView.h in Headers */,
-				3A85DFFA27FD85300095C229 /* CVSDKConnectWalletDialog.h in Headers */,
 				3A85E1CE27FD85310095C229 /* JSONModel+networking.h in Headers */,
 				3A85E04927FD85300095C229 /* CVSDKUserDefault.h in Headers */,
 				3A85E0A127FD85300095C229 /* CVSDKBaseSocketIO.h in Headers */,
@@ -2527,7 +2501,6 @@
 				3A85E02427FD85300095C229 /* CVSDKPhraseViewCell.h in Headers */,
 				3A85E0A727FD85300095C229 /* CVSDKBaseView.h in Headers */,
 				3A85E08E27FD85300095C229 /* CVSDKNFTData.h in Headers */,
-				3A06ACA227FE9A8700319070 /* CVSDKContractCallView.h in Headers */,
 				3A85E0AC27FD85300095C229 /* CVSDKBaseResource.h in Headers */,
 				3A85E04427FD85300095C229 /* CVSDKChainverseAppResult.h in Headers */,
 				3A85E1C927FD85310095C229 /* JSONModelLib.h in Headers */,
@@ -2540,7 +2513,7 @@
 				3A85E01927FD85300095C229 /* CVSDKWalletExportScreen.h in Headers */,
 				3A85E1A527FD85310095C229 /* Chainverse-SDK-Bridging-Header.h in Headers */,
 				3A85E01427FD85300095C229 /* CVSDKWalletInfoView.h in Headers */,
-				3A5C96E32806B45300D8F6D9 /* CVSDKContractCallModel.h in Headers */,
+				3A023833281110B300696C2C /* CVSDKContractConfirmScreen.h in Headers */,
 				3A85E01F27FD85300095C229 /* CVSDKWalletExportView.h in Headers */,
 				3A85E00227FD85300095C229 /* CVSDKSignMessageScreen.h in Headers */,
 				3A85E03627FD85300095C229 /* CVSDKWalletImportView.h in Headers */,
@@ -2727,7 +2700,6 @@
 				3A85E26C27FD8BF80095C229 /* chainverse_checkbox_uncheck.png in Resources */,
 				3A85E24827FD8BF80095C229 /* chainverse_checkbox_uncheck@3x.png in Resources */,
 				3A85E14727FD85310095C229 /* wk.bridge.min.js in Resources */,
-				3A06ACA627FE9AB300319070 /* CVSDKContractCallView.xib in Resources */,
 				3A85E25227FD8BF80095C229 /* chainverse_checkbox_uncheck@2x.png in Resources */,
 				3A85E02527FD85300095C229 /* CVSDKPhraseViewCell.xib in Resources */,
 				3A85E26627FD8BF80095C229 /* chainverse_icon_close@3x.png in Resources */,
@@ -2738,8 +2710,8 @@
 				3A85E25627FD8BF80095C229 /* chainverse_ic_back@2x.png in Resources */,
 				3A85E00A27FD85300095C229 /* CVSDKWalletVerifyView.xib in Resources */,
 				3A85E25827FD8BF80095C229 /* chainverse_icon_close@2x.png in Resources */,
+				3A023837281110B300696C2C /* CVSDKContractConfirmView.xib in Resources */,
 				3A85E27027FD8BF80095C229 /* chainverse_icon_trustwallet@2x.png in Resources */,
-				3A85DFFB27FD85300095C229 /* CVSDKConnectWalletView.xib in Resources */,
 				3A85E00E27FD85300095C229 /* CVSDKPhraseVerifyViewCell.xib in Resources */,
 				3A85E25427FD8BF80095C229 /* chainverse_logo@2x.png in Resources */,
 				3A85E25027FD8BF80095C229 /* chainverse_checkbox_checked.png in Resources */,
@@ -2817,7 +2789,6 @@
 				3A85E25327FD8BF80095C229 /* chainverse_checkbox_uncheck@2x.png in Resources */,
 				3A85E25527FD8BF80095C229 /* chainverse_logo@2x.png in Resources */,
 				3A85E24927FD8BF80095C229 /* chainverse_checkbox_uncheck@3x.png in Resources */,
-				3A06ACA727FE9AB300319070 /* CVSDKContractCallView.xib in Resources */,
 				3A85E25727FD8BF80095C229 /* chainverse_ic_back@2x.png in Resources */,
 				3A85E26327FD8BF80095C229 /* chainverse_modal_top@3x.png in Resources */,
 				3A85E24727FD8BF80095C229 /* chainverse_logo@3x.png in Resources */,
@@ -2825,6 +2796,7 @@
 				3A85E26B27FD8BF80095C229 /* chainverse_icon_trustwallet@3x.png in Resources */,
 				3A2898D0280914E6009C04C1 /* CVSDKWalletExportView.xib in Resources */,
 				3A2898D3280914F6009C04C1 /* CVSDKWalletConnectView.xib in Resources */,
+				3A02383A281110C300696C2C /* CVSDKContractConfirmView.xib in Resources */,
 				3A2898CE280914D8009C04C1 /* CVSDKPhraseVerifyViewCell.xib in Resources */,
 				3A85E26727FD8BF80095C229 /* chainverse_icon_close@3x.png in Resources */,
 				3A85E25D27FD8BF80095C229 /* chainverse_modal_top@2x.png in Resources */,
@@ -2918,12 +2890,12 @@
 				3A85E0DF27FD85300095C229 /* Web3+Utils.swift in Sources */,
 				3A85E06027FD85300095C229 /* CVSDKBridgingWeb3.m in Sources */,
 				3A85E17E27FD85310095C229 /* Web3+ERC721x.swift in Sources */,
-				3A5C96E42806B45300D8F6D9 /* CVSDKContractCallModel.m in Sources */,
 				3A85E07F27FD85300095C229 /* CVSDKNFTDetail.m in Sources */,
 				3A85E06227FD85300095C229 /* CVSDKBridgingWallet.m in Sources */,
 				3A85E05627FD85300095C229 /* CVSDKConvert.m in Sources */,
 				3A85E0CB27FD85300095C229 /* EthereumContract.swift in Sources */,
 				3A85E1BE27FD85310095C229 /* JSONKeyMapper.m in Sources */,
+				3A023838281110B300696C2C /* CVSDKContractConfirmInput.m in Sources */,
 				3A85E0D327FD85300095C229 /* Web3.swift in Sources */,
 				3A85E13F27FD85310095C229 /* Promise+Web3+Eth+Call.swift in Sources */,
 				3A85E0ED27FD85310095C229 /* Web3+Protocols.swift in Sources */,
@@ -2954,6 +2926,7 @@
 				3A85E0AD27FD85300095C229 /* CVSDKBaseViewDialog.m in Sources */,
 				3A85E10527FD85310095C229 /* ENSBaseRegistrar.swift in Sources */,
 				3A85E18C27FD85310095C229 /* Web3+ST20.swift in Sources */,
+				3A023834281110B300696C2C /* CVSDKContractConfirmView.m in Sources */,
 				3A85E08127FD85300095C229 /* ChainverseNFT.m in Sources */,
 				3A85E14127FD85310095C229 /* Web3+Wallet.swift in Sources */,
 				3A85E0C927FD85300095C229 /* EthereumFilterEncodingExtensions.swift in Sources */,
@@ -2970,6 +2943,7 @@
 				3A85E07627FD85300095C229 /* ChainverseNFTCategory.m in Sources */,
 				3A85E18A27FD85310095C229 /* Web3+SecurityToken.swift in Sources */,
 				3A85E0E527FD85300095C229 /* Web3+Instance.swift in Sources */,
+				3A023830281110B300696C2C /* CVSDKContractConfirmScreen.m in Sources */,
 				3A85E16427FD85310095C229 /* BigUInt+Extensions.swift in Sources */,
 				3A85E16A27FD85310095C229 /* Encodable+Extensions.swift in Sources */,
 				3A85E08C27FD85300095C229 /* ChainverseNFTNetwork.m in Sources */,
@@ -2999,7 +2973,6 @@
 				3A85E0DB27FD85300095C229 /* Web3+Eventloop.swift in Sources */,
 				3A85E10F27FD85310095C229 /* NonceMiddleware.swift in Sources */,
 				3A85E1D127FD85310095C229 /* JSONModel+networking.m in Sources */,
-				3A06AC9D27FE9A5D00319070 /* CVSDKContractCallScreen.m in Sources */,
 				3A85E0E727FD85300095C229 /* Web3+Contract.swift in Sources */,
 				3A85E0B127FD85300095C229 /* ABIDecoding.swift in Sources */,
 				3A85E0FD27FD85310095C229 /* EthereumAddress.swift in Sources */,
@@ -3030,7 +3003,6 @@
 				3A85E12327FD85310095C229 /* Promise+Web3+Eth+SendTransaction.swift in Sources */,
 				3A85E21327FD87E40095C229 /* DetailMarketViewController.m in Sources */,
 				3A85E15627FD85310095C229 /* BIP32Keystore.swift in Sources */,
-				3A06ACA327FE9A8700319070 /* CVSDKContractCallView.m in Sources */,
 				3A85E15227FD85310095C229 /* BIP32HDNode.swift in Sources */,
 				3A85E16627FD85310095C229 /* Decodable+Extensions.swift in Sources */,
 				3A85E17627FD85310095C229 /* NativeTypesEncoding+Extensions.swift in Sources */,
@@ -3070,7 +3042,6 @@
 				3A85E0A827FD85300095C229 /* CVSDKBaseView.m in Sources */,
 				3A85E0BD27FD85300095C229 /* ABIParsing.swift in Sources */,
 				3A85E09427FD85300095C229 /* CVSDKServiceGame.m in Sources */,
-				3A85DFFE27FD85300095C229 /* CVSDKConnectWalletView.m in Sources */,
 				3A85E11327FD85310095C229 /* EIP67Code.swift in Sources */,
 				3A85E17A27FD85310095C229 /* Array+Extension.swift in Sources */,
 				3A85E09C27FD85300095C229 /* ChainverseItem.m in Sources */,
@@ -3082,7 +3053,6 @@
 				3A85E08327FD85300095C229 /* ChainverseNFTCurrency.m in Sources */,
 				3A85E09F27FD85300095C229 /* CVSDKBaseCollectionViewCell.m in Sources */,
 				3A85E02D27FD85300095C229 /* CVSDKWalletConnectView.m in Sources */,
-				3A85DFFC27FD85300095C229 /* CVSDKConnectWalletDialog.m in Sources */,
 				3A85E0FF27FD85310095C229 /* ENS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3144,8 +3114,8 @@
 				3A85E1AB27FD85310095C229 /* AFURLResponseSerialization.m in Sources */,
 				3A85E13827FD85310095C229 /* Promise+Web3+TxPool.swift in Sources */,
 				3A85E0CA27FD85300095C229 /* EthereumFilterEncodingExtensions.swift in Sources */,
+				3A023835281110B300696C2C /* CVSDKContractConfirmView.m in Sources */,
 				3A85E06C27FD85300095C229 /* CVSDKTransferItemManager.m in Sources */,
-				3A85DFFF27FD85300095C229 /* CVSDKConnectWalletView.m in Sources */,
 				3A85E04F27FD85300095C229 /* CVSDKUtils.m in Sources */,
 				3A85E0EA27FD85300095C229 /* Web3+EventParser.swift in Sources */,
 				3A85E0BA27FD85300095C229 /* ABI.swift in Sources */,
@@ -3223,11 +3193,11 @@
 				3A85E19727FD85310095C229 /* Web3+ERC165.swift in Sources */,
 				3A85E13427FD85310095C229 /* Promise+Web3+Eth+GetTransactionCount.swift in Sources */,
 				3A85E05927FD85300095C229 /* CVSDKRESTfulClient.m in Sources */,
+				3A023839281110B300696C2C /* CVSDKContractConfirmInput.m in Sources */,
 				3A85E09527FD85300095C229 /* CVSDKServiceGame.m in Sources */,
 				3A85E11227FD85310095C229 /* EIP712.swift in Sources */,
 				3A85E0AE27FD85300095C229 /* CVSDKBaseViewDialog.m in Sources */,
 				3A85E04B27FD85300095C229 /* CVSDKUserDefault.m in Sources */,
-				3A06AC9E27FE9A5D00319070 /* CVSDKContractCallScreen.m in Sources */,
 				3A85E15727FD85310095C229 /* BIP32Keystore.swift in Sources */,
 				3A85E17527FD85310095C229 /* Data+Extension.swift in Sources */,
 				3A85E12627FD85310095C229 /* Promise+Web3+Eth+GetBalance.swift in Sources */,
@@ -3262,12 +3232,10 @@
 				3A85E15F27FD85310095C229 /* PathAddressStorage.swift in Sources */,
 				3A85E0B427FD85300095C229 /* ABIElements.swift in Sources */,
 				3A85E0C627FD85300095C229 /* EventFiltering.swift in Sources */,
-				3A06ACA427FE9A8700319070 /* CVSDKContractCallView.m in Sources */,
 				3A85E0C227FD85300095C229 /* TransactionSigner.swift in Sources */,
 				3A85E08627FD85300095C229 /* CVSDKNFTResult.m in Sources */,
 				3A85E09327FD85300095C229 /* CVSDKService.m in Sources */,
 				3A85E1BF27FD85310095C229 /* JSONKeyMapper.m in Sources */,
-				3A5C96E52806B45300D8F6D9 /* CVSDKContractCallModel.m in Sources */,
 				3A85E11827FD85310095C229 /* Promise+Web3+Eth+GetBlockNumber.swift in Sources */,
 				3A85E0EC27FD85300095C229 /* Web3+ReadingTransaction.swift in Sources */,
 				3A85E12C27FD85310095C229 /* Promise+Web3+Eth+EstimateGas.swift in Sources */,
@@ -3305,7 +3273,6 @@
 				3A85E03427FD85300095C229 /* CVSDKWalletImportScreen.m in Sources */,
 				3A85E12227FD85310095C229 /* Promise+HttpProvider.swift in Sources */,
 				3A85E1A427FD85310095C229 /* CVWeb3.swift in Sources */,
-				3A85DFFD27FD85300095C229 /* CVSDKConnectWalletDialog.m in Sources */,
 				3A85E09127FD85300095C229 /* CVSDKPhrase.m in Sources */,
 				3A85E06727FD85300095C229 /* CVSDKContractManager.m in Sources */,
 				3A85E08927FD85300095C229 /* CVSDKTokenURI.m in Sources */,
@@ -3316,6 +3283,7 @@
 				3A85E1C127FD85310095C229 /* JSONModel.m in Sources */,
 				3A85E17127FD85310095C229 /* SECP256k1.swift in Sources */,
 				3A85E02727FD85300095C229 /* CVSDKPhraseViewCell.m in Sources */,
+				3A023831281110B300696C2C /* CVSDKContractConfirmScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

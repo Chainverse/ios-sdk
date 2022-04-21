@@ -6,11 +6,11 @@
 //
 
 #import "CVSDKBaseView.h"
-#import "CVSDKContractCallModel.h"
+#import "CVSDKContractConfirmInput.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CVSDKContractCallView : CVSDKBaseView
-- (instancetype)initView:(CVSDKContractCallModel *)input;
+@interface CVSDKContractConfirmView : CVSDKBaseView
+- (instancetype)initView:(CVSDKContractConfirmInput *)input;
 @property (weak, nonatomic) IBOutlet UIView *viewContainer;
 @property (weak, nonatomic) IBOutlet UIView *viewHeader;
 @property (weak, nonatomic) IBOutlet UIView *viewMain;
@@ -25,6 +25,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lblTotal;
 @property (weak, nonatomic) IBOutlet UILabel *lblContract;
 @property (weak, nonatomic) IBOutlet UILabel *lblValue;
+@property (weak, nonatomic) IBOutlet UILabel *lblAsset;
+@property (weak, nonatomic) IBOutlet UILabel *lblHeadTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblTitleTo;
+@property (weak, nonatomic) IBOutlet UIView *viewAsset;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightViewFrom;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewFromMarginTop;
 
 @end
 

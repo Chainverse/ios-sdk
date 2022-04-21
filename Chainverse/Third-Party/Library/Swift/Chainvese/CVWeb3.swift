@@ -272,7 +272,8 @@ import UIKit
         return result.transaction.txhash!
     }
     
-    @objc public func approveToken(walletAddress: String, token: String, spender: String, value: String) -> String{
+    //---Approve Token----
+    private func writeTXApproveToken(walletAddress: String, token: String, spender: String, value: String) -> WriteTransaction{
         setKeystoreManager()
         let contract = _web3client!.contract(Web3.Utils.erc20ABI, at: EthereumAddress(token)!, abiVersion: 2)!
         let amount = Web3.Utils.parseToBigUInt(value, units: .eth)
@@ -286,17 +287,58 @@ import UIKit
             parameters: parameters,
             extraData: Data(),
             transactionOptions: options)!
-        guard let result = try? tx.send(password: _password) else {
-            return ""
+        return tx
+    }
+    
+    private func gasEstimateApproveToken(walletAddress: String, token: String, spender: String, value: String) -> BigUInt {
+        let tx = writeTXApproveToken(walletAddress: walletAddress, token: token, spender: spender, value: value)
+        
+        if(_DEBUG){
+            _ = try! tx.estimateGasPromise().wait()
+        }else{
+            guard let estimate = try? tx.estimateGasPromise().wait() else {
+                return 0
+            }
+            return estimate
         }
+        return 0
+    }
+    
+    @objc public func approveToken(walletAddress: String, token: String, spender: String, value: String) -> String{
+        let estimate = gasEstimateApproveToken(walletAddress: walletAddress, token: token, spender: spender, value: value)
+        if(estimate == 0){
+            return "0x"
+        }
+        
+        let tx = writeTXApproveToken(walletAddress: walletAddress, token: token, spender: spender, value: value)
+        guard let result = try? tx.send(password: _password) else {
+            return "0x"
+        }
+        
         return result.transaction.txhash!
     }
     
+    @objc public func feeApproveToken(walletAddress: String, token: String, spender: String, value: String) -> String {
+        let estimate = gasEstimateApproveToken(walletAddress: walletAddress, token: token, spender: spender, value: value)
+        if(estimate == 0){
+            return "0x"
+        }
+        
+        let gasPrice = try! _web3client!.eth.getGasPrice()
+        let tmp = gasPrice * estimate
+        let fees = Web3.Utils.formatToEthereumUnits(tmp , toUnits: .eth, decimals: 10)!
+        print ("nampv_gasPrice3 \(tmp).")
+        return fees
+        
+    }
+    
+    //---End Approve Token----
     private func getConnectType() -> String {
         return UserDefaults.standard.string(forKey: "CHAINVERSE_SDK_KEY_3")!
     }
     
-    @objc public func getFeeApproveNFT(service: String, abi: String,walletAddress: String, nft: String, tokenId: Int) -> String{
+    //----Approve NFT----
+    private func writeTXApproveNFT(service: String, abi: String,walletAddress: String, nft: String, tokenId: Int) -> WriteTransaction{
         setKeystoreManager()
         let contract = _web3client!.contract(abi, at: EthereumAddress(nft)!, abiVersion: 2)!
         let tokenId = BigUInt(tokenId)
@@ -310,15 +352,54 @@ import UIKit
             parameters: parameters,
             extraData: Data(),
             transactionOptions: options)!
-        let estimate = try! tx.estimateGasPromise().wait()
-        let gasPrice = try! _web3client!.eth.getGasPrice()
-        let fees = gasPrice * estimate
-        let feeString = Web3.Utils.formatToEthereumUnits(fees, toUnits: .eth, decimals: 10)!
-        print ("nampv_gasPrice3 \(feeString).")
-        return feeString
+        return tx
+    }
+    
+    private func gasEstimateApproveNFT(service: String, abi: String,walletAddress: String, nft: String, tokenId: Int) -> BigUInt {
+        let tx = writeTXApproveNFT(service: service, abi: abi, walletAddress: walletAddress, nft: nft, tokenId: tokenId)
+        
+        if(_DEBUG){
+            _ = try! tx.estimateGasPromise().wait()
+        }else{
+            guard let estimate = try? tx.estimateGasPromise().wait() else {
+                return 0
+            }
+            return estimate
+        }
+        return 0
     }
     
     @objc public func approveNFT(service: String, abi: String,walletAddress: String, nft: String, tokenId: Int) -> String{
+        let estimate = gasEstimateApproveNFT(service: service, abi: abi, walletAddress: walletAddress, nft: nft, tokenId: tokenId)
+        if(estimate == 0){
+            return "0x"
+        }
+        
+        let tx = writeTXApproveNFT(service: service, abi: abi, walletAddress: walletAddress, nft: nft, tokenId: tokenId)
+        guard let result = try? tx.send(password: _password) else {
+            return "0x"
+        }
+        
+        return result.transaction.txhash!
+        
+    }
+    
+    @objc public func feeApproveNFT(service: String, abi: String,walletAddress: String, nft: String, tokenId: Int) -> String {
+        let estimate = gasEstimateApproveNFT(service: service, abi: abi, walletAddress: walletAddress, nft: nft, tokenId: tokenId)
+        if(estimate == 0){
+            return "0x"
+        }
+        
+        let gasPrice = try! _web3client!.eth.getGasPrice()
+        let tmp = gasPrice * estimate
+        let fees = Web3.Utils.formatToEthereumUnits(tmp , toUnits: .eth, decimals: 10)!
+        return fees
+        
+    }
+    
+    //----End Approve NFT----
+    
+    /*@objc public func approveNFT(service: String, abi: String,walletAddress: String, nft: String, tokenId: Int) -> String{
         if(getConnectType() == "ChainverseSDK"){
             setKeystoreManager()
         }
@@ -352,7 +433,7 @@ import UIKit
             sendTransaction(action: "approveNFT", to: nft, from: walletAddress, data: encodeFunction, value: "0", gasLimit: "100000", gasPrice: "10000000", nonce: "10000")
         }
         return ""
-    }
+    }*/
     
     private func sendTransaction(action: String, to: String ,from: String, data: String, value: String, gasLimit: String, gasPrice: String, nonce: String) -> Void {
         var components = URLComponents()
@@ -430,6 +511,18 @@ import UIKit
             return "0x"
         }
         return result.transaction.txhash!
+    }
+    
+    @objc public func feeSellNFT(marketService: String, abi: String, walletAddress: String, nft: String, tokenId: Int, price: String, currency: String) -> String {
+        let estimate = gasEstimateSellNFT(marketService: marketService, abi: abi, walletAddress: walletAddress, nft: nft, tokenId: tokenId, price: price, currency: currency)
+        if(estimate == 0){
+            return "0x"
+        }
+        
+        let gasPrice = try! _web3client!.eth.getGasPrice()
+        let tmp = gasPrice * estimate
+        let fees = Web3.Utils.formatToEthereumUnits(tmp , toUnits: .eth, decimals: 10)!
+        return fees
     }
     //----End Sell NFT----
     
@@ -518,7 +611,8 @@ import UIKit
         return allowenceString
     }
     
-    @objc public func transferItem(walletAddress: String, to: String, nft: String, tokenId: Int) -> String {
+    //----Transfer Item----
+    private func writeTxTransferItem(walletAddress: String, to: String, nft: String, tokenId: Int) -> WriteTransaction {
         setKeystoreManager()
         let from = EthereumAddress(walletAddress)!
         let contract = _web3client!.contract(Web3.Utils.erc721ABI, at: EthereumAddress(nft)!, abiVersion: 2)!
@@ -532,11 +626,46 @@ import UIKit
             parameters: parameters,
             extraData: Data(),
             transactionOptions: options)!
+        return tx
+    }
+    
+    private func gasEstimateTransferItem(walletAddress: String, to: String, nft: String, tokenId: Int) -> BigUInt {
+        let tx = writeTxTransferItem(walletAddress: walletAddress, to: to, nft: nft, tokenId: tokenId)
+        if(_DEBUG){
+            _ = try! tx.estimateGasPromise().wait()
+        }else{
+            guard let estimate = try? tx.estimateGasPromise().wait() else {
+                return 0
+            }
+            return estimate
+        }
+        return 0
+    }
+    
+    @objc public func transferItem(walletAddress: String, to: String, nft: String, tokenId: Int) -> String {
+        let estimate = gasEstimateTransferItem(walletAddress: walletAddress, to: to, nft: nft, tokenId: tokenId)
+        if(estimate == 0){
+            return "0x"
+        }
+        
+        let tx = writeTxTransferItem(walletAddress: walletAddress, to: to, nft: nft, tokenId: tokenId)
         guard let result = try? tx.send(password: _password) else {
             return ""
         }
         return result.transaction.txhash!
     }
+    
+    @objc public func feeTransferItem(walletAddress: String, to: String, nft: String, tokenId: Int) -> String {
+        let estimate = gasEstimateTransferItem(walletAddress: walletAddress, to: to, nft: nft, tokenId: tokenId)
+        if(estimate == 0){
+            return "0x"
+        }
+        let gasPrice = try! _web3client!.eth.getGasPrice()
+        let tmp = gasPrice * estimate
+        let fees = Web3.Utils.formatToEthereumUnits(tmp , toUnits: .eth, decimals: 10)!
+        return fees
+    }
+    //----End Transfer Item----
     
     @objc public func withdrawNFT(walletAddress: String,gameAddress: String,abi: String, nft: String, tokenId: Int) -> String {
         setKeystoreManager()

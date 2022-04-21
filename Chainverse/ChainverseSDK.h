@@ -117,7 +117,6 @@ getUserInfo: Return user info
 */
 - (ChainverseUser *) getUser;
 
-- (void)testPurchase;
 
 /*
  showConnectWalletView: Hàm này sử dụng để hiển thị màn hình tạo, import ví
@@ -180,7 +179,7 @@ getUserInfo: Return user info
  @param NSString token
  @param NSString amount
  */
-- (NSString *)approveToken:(NSString *)token amount:(NSString *)amount;
+- (void)approveToken:(NSString *)token amount:(NSString *)amount;
 
 /*
  sellNFT: Hàm này sử dụng để bán item lên chợ
@@ -189,14 +188,14 @@ getUserInfo: Return user info
  @param NSString price
  @param NSString currency
  */
-- (NSString *)sellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency;
+- (void)sellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency;
 
 /*
  approveNFT: Hàm này sử dụng để approve NFT trước khi bán lên chợ
  @param NSString nft
  @param NSInteger tokenId
  */
-- (NSString *)approveNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (void)approveNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
 
 - (NSString *)approveNFTForGame:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)approveNFTForService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
@@ -250,7 +249,7 @@ getUserInfo: Return user info
  @param NSString nft
  @param NSInteger tokenId
  */
-- (NSString *)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (void)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 
 - (NSString *)withdrawNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)moveItemToGame:(NSString *)nft tokenId:(NSInteger )tokenId;

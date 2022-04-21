@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)isScreenLandcape;
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 + (NSArray*)shuffleArray:(NSArray*)array;
++ (NSString *)getCurrency:(NSString *)token;
 @end
 
 NS_ASSUME_NONNULL_END

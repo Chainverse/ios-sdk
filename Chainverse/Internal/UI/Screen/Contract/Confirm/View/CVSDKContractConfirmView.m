@@ -5,22 +5,22 @@
 //  Created by pham nam on 07/04/2022.
 //
 
-#import "CVSDKContractCallView.h"
+#import "CVSDKContractConfirmView.h"
 #import "CVSDKCallbackToGame.h"
 #import "CVSDKUtils.h"
 #import "CVSDKUserDefault.h"
 #import "CVSDKBridgingWeb3.h"
 #import "CVSDKContractManager.h"
 #import "CVSDKDefine.h"
-@interface CVSDKContractCallView(){
+@interface CVSDKContractConfirmView(){
     BOOL isLayoutSubview;
-    CVSDKContractCallModel *_input;
+    CVSDKContractConfirmInput *_input;
 }
 @end
 
-@implementation CVSDKContractCallView
+@implementation CVSDKContractConfirmView
 
-- (instancetype)initView:(CVSDKContractCallModel *)input{
+- (instancetype)initView:(CVSDKContractConfirmInput *)input{
     if(self = [super initViewFromNib]){
         _input = input;
     }
@@ -68,31 +68,72 @@
 }
 
 - (void)initData{
+    self.lblHeadTitle.text = _input.headTitle;
+    self.lblValue.text = _input.name;
+    self.lblAsset.text = _input.asset;
     self.lblFrom.text = [self handleAddress:_input.from];
-    self.lblTo.text = [self handleAddress:_input.to];
+    self.lblTo.text = [self handleAddress:_input.granted_to];
     self.lblContract.text = [self handleAddress:_input.contract];
     self.lblFee.text = [NSString stringWithFormat:@"%f BNB",[_input.fee floatValue]];
     self.lblTotal.text = [NSString stringWithFormat:@"%f BNB",[_input.fee floatValue]];
     
-    NSMutableDictionary *params = _input.params;
-    NSString *currency = [params objectForKey:@"currency"];
-    if([currency isEqualToString:@"0x0000000000000000000000000000000000000000"]){
-        NSString *price = [params objectForKey:@"price"];
-        float total = [price floatValue] + [_input.fee floatValue];
-        self.lblValue.text = [NSString stringWithFormat:@" - %@ BNB",price];
-        self.lblTotal.text = [NSString stringWithFormat:@"%f BNB",total];
+    if([_input.asset isEqualToString:@""]){
+        self.viewAsset.hidden = YES;
+        self.heightViewFrom.constant = 140;
+        self.viewFromMarginTop.constant = -30;
     }
+    
+    if([_input.function isEqualToString:@"buyNFT"]){
+        NSMutableDictionary *params = _input.params;
+        NSString *currency = [params objectForKey:@"currency"];
+        if([currency isEqualToString:@"0x0000000000000000000000000000000000000000"]){
+            NSString *price = [params objectForKey:@"price"];
+            float total = [price floatValue] + [_input.fee floatValue];
+            self.lblTotal.text = [NSString stringWithFormat:@"%f BNB",total];
+        }
+    }
+    
 }
 
+
 - (void)doConfirm:(id)sender{
-    if([_input.type isEqualToString:@"buyNFT"]){
+    if([_input.function isEqualToString:@"approveNFT"]){
+        NSMutableDictionary *params = _input.params;
+        NSString *nft = [params objectForKey:@"nft"];
+        NSNumber *tokenId = [params objectForKey:@"tokenId"];
+        NSString *tx = [[CVSDKContractManager shared] approveNFT:nft tokenId:[tokenId integerValue]];
+        [CVSDKCallbackToGame didTransact:approveNFT tx:tx];
+    }else if([_input.function isEqualToString:@"transferItem"]){
+        NSMutableDictionary *params = _input.params;
+        NSString *to = [params objectForKey:@"to"];
+        NSString *nft = [params objectForKey:@"nft"];
+        NSNumber *tokenId = [params objectForKey:@"tokenId"];
+        NSString *tx = [[CVSDKContractManager shared] transferItem:to nft:nft tokenId:[tokenId integerValue]];
+        [CVSDKCallbackToGame didTransact:transferItem tx:tx];
+    }else if([_input.function isEqualToString:@"approveToken"]){
+        NSMutableDictionary *params = _input.params;
+        NSString *token = [params objectForKey:@"token"];
+        NSString *amount = [params objectForKey:@"amount"];
+        NSString *tx = [[CVSDKContractManager shared] approveToken:token spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564" amount:[NSString stringWithFormat:@"%@",amount]];
+        [CVSDKCallbackToGame didTransact:approveToken tx:tx];
+    }else if([_input.function isEqualToString:@"buyNFT"]){
         NSMutableDictionary *params = _input.params;
         NSString *currency = [params objectForKey:@"currency"];
         NSNumber *listingId = [params objectForKey:@"listingId"];
         NSString *price = [params objectForKey:@"price"];
         NSString *tx = [[CVSDKContractManager shared] buyNFT:currency listingId:[listingId integerValue] price:price];
         [CVSDKCallbackToGame didTransact:buyNFT tx:tx];
+    }else if([_input.function isEqualToString:@"sellNFT"]){
+        NSMutableDictionary *params = _input.params;
+        NSString *NFT = [params objectForKey:@"NFT"];
+        NSNumber *tokenId = [params objectForKey:@"tokenId"];
+        NSString *price = [params objectForKey:@"price"];
+        NSString *currency = [params objectForKey:@"currency"];
+        
+        NSString *tx = [[CVSDKContractManager shared] sellNFT:NFT tokenId:[tokenId integerValue] price:price currency:currency];
+        [CVSDKCallbackToGame didTransact:sellNFT tx:tx];
     }
+    
     
     [self doClose];
 }

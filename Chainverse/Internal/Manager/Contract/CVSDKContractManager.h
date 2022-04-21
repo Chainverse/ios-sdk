@@ -17,8 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)bidNFT:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price;
 - (NSString *)approveToken:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount;
+- (NSString *)feeApproveToken:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount;
 - (NSString *)sellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency;
+- (NSString *)feeSellNFT:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency;
 - (NSString *)approveNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)feeApproveNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)approveNFTForGame:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)approveNFTForService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)cancelSellNFT: (NSInteger )listingId;
@@ -26,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)isApproved:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)isApproved:(NSString *)token owner:(NSString* )owner spender:(NSString *)spender;
 - (NSString *)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)feeTransferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)withdrawNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)moveItemToGame:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)moveItemToService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;

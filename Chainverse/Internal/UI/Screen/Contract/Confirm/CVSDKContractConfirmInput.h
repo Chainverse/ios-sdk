@@ -8,15 +8,18 @@
 #import "JSONModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol CVSDKContractCallModel
+@protocol CVSDKContractApproveModel
 
 @end
-@interface CVSDKContractCallModel : JSONModel
+@interface CVSDKContractConfirmInput : JSONModel
+@property (nonatomic, strong) NSString *headTitle;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *asset;
 @property (nonatomic, strong) NSString *from;
-@property (nonatomic, strong) NSString *to;
+@property (nonatomic, strong) NSString *granted_to;
 @property (nonatomic, strong) NSString *contract;
 @property (nonatomic, strong) NSString *fee;
-@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *function;
 @property (nonatomic, strong) NSMutableDictionary *params;
 @end
 

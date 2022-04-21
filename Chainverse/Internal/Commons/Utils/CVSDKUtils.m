@@ -7,6 +7,7 @@
 
 #import "CVSDKUtils.h"
 #import "UIKit/UIKit.h"
+#import "ChainverseTokenSupport.h"
 @implementation CVSDKUtils
 + (NSString *)getValueFromQueryParam:(NSURL *)url withParam:(NSString *)param{
     NSLog(@"CVSDK_getValueFromQueryParam %@",url);
@@ -87,5 +88,15 @@
         return false;
     }
     return false;
+}
+
++ (NSString *)getCurrency:(NSString *)token{
+    NSString *currency = @"CVT";
+    if([token isEqualToString:TOKEN_CVT]){
+        currency = @"CVT";
+    }else if([token isEqualToString:TOKEN_USDT]){
+        currency = @"USDT";
+    }
+    return currency;
 }
 @end

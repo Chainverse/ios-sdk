@@ -28,14 +28,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)bidNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress currency:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price;
 - (NSString *)sellNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency;
+- (NSString *)feeSellNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency;
 - (NSString *)approveToken:(NSString*)walletAddress token:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount;
+- (NSString *)feeApproveToken:(NSString*)walletAddress token:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount;
 - (NSString *)approveNFT:(NSString *)service abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)feeApproveNFT:(NSString *)service abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)cancelSellNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress listing:(NSInteger )listingId;
 - (NSMutableDictionary *)getByNFT:(NSString *)serviceAddress abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)getTokenUri:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)isApproved:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)isApproved:(NSString *)token owner:(NSString* )owner spender:(NSString *)spender;
 - (NSString *)transferItem:(NSString *)walletAddress to:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (NSString *)feeTransferItem:(NSString *)walletAddress to:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)withdrawNFT:(NSString *)walletAddress gameAddress:(NSString *)gameAddress abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)moveService:(NSString *)walletAddress serviceAddress:(NSString *)serviceAddress abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSInteger)getBlockNumber:(NSString *)rpc;

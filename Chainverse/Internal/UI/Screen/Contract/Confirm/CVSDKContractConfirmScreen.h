@@ -6,11 +6,11 @@
 //
 
 #import "CVSDKBaseViewDialog.h"
-#import "CVSDKContractCallModel.h"
+#import "CVSDKContractConfirmInput.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CVSDKContractCallScreen : CVSDKBaseViewDialog
-+ (instancetype)show:(CVSDKContractCallModel *)input;
+@interface CVSDKContractConfirmScreen: CVSDKBaseViewDialog
++ (instancetype)show:(CVSDKContractConfirmInput *)input;
 @end
 
 NS_ASSUME_NONNULL_END

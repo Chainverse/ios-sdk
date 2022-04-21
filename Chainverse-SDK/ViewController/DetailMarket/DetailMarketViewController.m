@@ -189,6 +189,48 @@
         [alertvc addAction:cancel];
         
         [self presentViewController: alertvc animated: true completion: nil];
+    }else if (function == 2){
+        NSString *message = [NSString stringWithFormat:@"Bạn muốn bán %@",_nft];
+        UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Sell Action"
+                                                                                          message: message
+                                                                                      preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.placeholder = @"Input amount";
+                textField.textColor = [UIColor blueColor];
+                textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                textField.borderStyle = UITextBorderStyleRoundedRect;
+            }];
+        
+            [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.placeholder = @"Input currency (CVT, USDT, tBNB)";
+                textField.textColor = [UIColor blueColor];
+                textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                textField.borderStyle = UITextBorderStyleRoundedRect;
+            }];
+            
+            
+            [alertController addAction:[UIAlertAction actionWithTitle:@"SELL" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                NSArray * textfields = alertController.textFields;
+                UITextField * price = textfields[0];
+                UITextField * currency = textfields[1];
+                NSString *cr = TOKEN_CVT;
+                if([currency.text isEqualToString:@"CVT"]){
+                    cr = TOKEN_CVT;
+                }else if([currency.text isEqualToString:@"USDT"]){
+                    cr = TOKEN_USDT;
+                }else if([currency.text isEqualToString:@"tBNB"]){
+                    cr = TOKEN_BNB;
+                }
+                
+                NSLog(@"nampv_currency %@",cr);
+                [[ChainverseSDK shared] sellNFT:_nft tokenId:self.tokenId price:price.text currency:cr];
+                
+            }]];
+        
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+            [alertController addAction:cancel];
+        
+            [self presentViewController:alertController animated:YES completion:nil];
     }
     
 }
@@ -269,16 +311,7 @@
     
     if([NFT.status isEqualToString:@"PUBLISH"]){
         self.btnPublish.hidden = YES;
-        
-        /*if([self.type isEqualToString:@"myasset"]){
-            self.btnTransfer.hidden = NO;
-        }*/
     }else if([NFT.status isEqualToString:@"PRE_PUBLISH"]){
-        //self.btnPublish.hidden = NO;
-        
-        /*if([self.type isEqualToString:@"myasset"]){
-            self.btnTransfer.hidden = NO;
-        }*/
         
     }
     
@@ -292,6 +325,7 @@
         [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
             textField.placeholder = @"Receiver address";
             textField.textColor = [UIColor blueColor];
+            textField.text = @"0x808CBa49319A95A84aD3f86b18FACB1Daf33eBc8";
             textField.clearButtonMode = UITextFieldViewModeWhileEditing;
             textField.borderStyle = UITextBorderStyleRoundedRect;
         }];
@@ -302,8 +336,8 @@
             
             BOOL isAddress = [[ChainverseSDK shared] isAddress:namefield.text];
             if(isAddress){
-                NSString *tx = [[ChainverseSDK shared] transferItem:namefield.text nft:_nft tokenId:self.tokenId];
-                NSLog(@"nampv_transfer%@",tx);
+                [[ChainverseSDK shared] transferItem:namefield.text nft:_nft tokenId:self.tokenId];
+                
             }else{
                 UIAlertController * alertvc = [UIAlertController alertControllerWithTitle: @ "Alert"
                                                  message: @"Address is Invalid" preferredStyle: UIAlertControllerStyleAlert
@@ -349,50 +383,7 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Approve" message:@"I agree to Chainverse's Terms of Service" preferredStyle:UIAlertControllerStyleAlert];
 
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Approve" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSString *tx = [[ChainverseSDK shared] approveNFT:_nft tokenId:self.tokenId];
-        
-        NSString *message = [NSString stringWithFormat:@"Bạn muốn bán %@",_nft];
-        UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Sell Action"
-                                                                                          message: message
-                                                                                      preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-                textField.placeholder = @"Input amount";
-                textField.textColor = [UIColor blueColor];
-                textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-                textField.borderStyle = UITextBorderStyleRoundedRect;
-            }];
-        
-            [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-                textField.placeholder = @"Input currency (CVT, USDT, tBNB)";
-                textField.textColor = [UIColor blueColor];
-                textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-                textField.borderStyle = UITextBorderStyleRoundedRect;
-            }];
-            
-            
-            [alertController addAction:[UIAlertAction actionWithTitle:@"SELL" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                NSArray * textfields = alertController.textFields;
-                UITextField * price = textfields[0];
-                UITextField * currency = textfields[1];
-                NSString *cr = TOKEN_CVT;
-                if([currency.text isEqualToString:@"CVT"]){
-                    cr = TOKEN_CVT;
-                }else if([currency.text isEqualToString:@"USDT"]){
-                    cr = TOKEN_USDT;
-                }else if([currency.text isEqualToString:@"tBNB"]){
-                    cr = TOKEN_BNB;
-                }
-                
-                NSLog(@"nampv_currency %@",cr);
-                [[ChainverseSDK shared] sellNFT:_nft tokenId:self.tokenId price:price.text currency:cr];
-                
-            }]];
-        
-            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
-            [alertController addAction:cancel];
-        
-            [self presentViewController:alertController animated:YES completion:nil];
-        
+        [[ChainverseSDK shared] approveNFT:_nft tokenId:self.tokenId];
     }];
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
@@ -410,8 +401,7 @@
     return currency;
 }
 - (void)doApprove:(id)sender {
-    NSString *tx = [[ChainverseSDK shared] approveToken:[self getCurrency] amount:_price];
-    NSLog(@"nampv_appsampe_approve %@",tx);
+    [[ChainverseSDK shared] approveToken:[self getCurrency] amount:_price];
     [self checkApprove];
 }
 

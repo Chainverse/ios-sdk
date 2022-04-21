@@ -5,9 +5,9 @@
 //  Created by pham nam on 13/04/2022.
 //
 
-#import "CVSDKContractCallModel.h"
+#import "CVSDKContractConfirmInput.h"
 
-@implementation CVSDKContractCallModel
+@implementation CVSDKContractConfirmInput
 + (BOOL)propertyIsOptional:(NSString *)propertyName{
     return YES;
 }
