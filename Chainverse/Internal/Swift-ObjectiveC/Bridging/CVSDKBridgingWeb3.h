@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Chainverse-Swift.h"
+#import "Chainverse_SDK-Swift.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CVSDKBridgingWeb3 : NSObject
@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)approveNFT:(NSString *)service abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)feeApproveNFT:(NSString *)service abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)cancelSellNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress listing:(NSInteger )listingId;
+- (NSString *)feeCancelSellNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress listing:(NSInteger )listingId;
 - (NSMutableDictionary *)getByNFT:(NSString *)serviceAddress abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)getTokenUri:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)isApproved:(NSString *)nft tokenId:(NSInteger )tokenId;
@@ -43,6 +44,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)withdrawNFT:(NSString *)walletAddress gameAddress:(NSString *)gameAddress abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)moveService:(NSString *)walletAddress serviceAddress:(NSString *)serviceAddress abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSInteger)getBlockNumber:(NSString *)rpc;
+
+//Chainverse App
+- (void)approveNFTWithChainverseApp:(NSString *)service abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (void)approveTokenWithChainverseApp:(NSString*)walletAddress token:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount;
+- (void)buyNFTWithChainverseApp:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress currency:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price;
+- (void)sellNFTWithChainverseApp:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency;
+- (void)cancelSellNFTWithChainverseApp:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress listing:(NSInteger )listingId;
 @end
 
 NS_ASSUME_NONNULL_END

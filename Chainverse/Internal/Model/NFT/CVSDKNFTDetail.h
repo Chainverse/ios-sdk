@@ -6,13 +6,13 @@
 //
 
 #import "JSONModel.h"
-#import "ChainverseNFT.h"
+#import "NFT.h"
 NS_ASSUME_NONNULL_BEGIN
 @protocol CVSDKNFTDetail
 
 @end
 @interface CVSDKNFTDetail : JSONModel
-@property(nonatomic, strong) ChainverseNFT *data;
+@property(nonatomic, strong) NFT *data;
 @end
 
 NS_ASSUME_NONNULL_END

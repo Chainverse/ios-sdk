@@ -10,7 +10,7 @@
 #import "ChainverseSDKCallback.h"
 #import "ChainverseSDKError.h"
 #import "ChainverseItem.h"
-#import "ChainverseNFT.h"
+#import "NFT.h"
 @interface AppDelegate ()<ChainverseSDKCallback>
 
 @end
@@ -32,7 +32,8 @@
 }
 
 - (void)didInitSDKSuccess{
-    
+    NSMutableArray<Currency> *currencies = [[ChainverseSDK shared] getListCurrencies];
+    NSLog(@"nampv_listcurrencies %@",currencies);
 }
 
 - (void)didConnectSuccess:(NSString *)address{
@@ -67,7 +68,8 @@
 }
 
 
-- (void)didGetDetailItem:(ChainverseNFT*)item{
+- (void)didGetDetailItem:(NFT*)item{
+    [item toJSONString];
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:item forKey:@"GetDetailNFT"];
     [[NSNotificationCenter defaultCenter] postNotificationName:
                            @"didGetDetailItem" object:nil userInfo:userInfo];
@@ -90,13 +92,26 @@
     NSLog(@"ChainverseSDKCallback_didSignMessage %@",signedMessage);
 }
 
-- (void)didGetListItemMarket:(NSArray<ChainverseNFT> *) items{
+- (void)didGetListItemMarket:(NSMutableArray<NFT> *) items{
+    //NSArray *myModels;
+    //NSLog(@"nampv_didGetListItemMarket %@",items);
+    NSArray *dictionaries = [NFT arrayOfDictionariesFromModels:items];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionaries options:0 error:nil];
+    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"nampv_tojson1 %@",string);
+    
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:items forKey:@"marketItems"];
     [[NSNotificationCenter defaultCenter] postNotificationName:
                            @"SampleMarketItem" object:nil userInfo:userInfo];
 }
 
-- (void)didGetMyAssets:(NSArray<ChainverseNFT> *) items{
+- (void)didGetMyAssets:(NSMutableArray<NFT> *) items{
+    
+    NSArray *dictionaries = [NFT arrayOfDictionariesFromModels:items];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionaries options:0 error:nil];
+    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"nampv_tojson %@",string);
+    
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:items forKey:@"myAssetItems"];
     [[NSNotificationCenter defaultCenter] postNotificationName:
                            @"SampleMyAssetItem" object:nil userInfo:userInfo];

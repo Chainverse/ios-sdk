@@ -72,8 +72,8 @@
 }
 
 - (void)handleConnect:(id)sender {
-    [[ChainverseSDK shared] showConnectWalletView];
-    //[[ChainverseSDK shared] connectWithChainverse];
+    //[[ChainverseSDK shared] showConnectWalletView];
+    [[ChainverseSDK shared] connectWithChainverse];
 }
 
 - (void)handleWalletInfo:(id)sender {
@@ -86,13 +86,18 @@
 
 - (void)handleMarket:(id)sender {
     MarketViewController * object = [[MarketViewController alloc] init];
-    [[ChainverseSDK shared] getDetailNFT:@"sdsdsd" tokenId:87867];
+    //[[ChainverseSDK shared] getDetailNFT:@"sdsdsd" tokenId:87867];
     [self presentViewController:object animated:YES completion:nil];
     //[[ChainverseSDK shared] signMessage:@"ChainVerse"];
     //[[ChainverseSDK shared] signTransaction:@"" gasPrice:@"" gasLimit:@"" toAddress:@"" amount:@"" chainID:@"" templateData:nil];
     //[[ChainverseSDK shared] signTransaction:@"" gasPrice:@"" gasLimit:<#(nonnull NSString *)#> toAddress:<#(nonnull NSString *)#> amount:<#(nonnull NSString *)#> chainID:<#(nonnull NSString *)#> templateData:<#(nonnull NSData *)#>]
     
+    //[[ChainverseSDK shared] approveToken:@"0x672021e3c741910896cad6D6121446a328ba5634" amount:@"1000"];
+    //[[ChainverseSDK shared] buyNFT:@"0x672021e3c741910896cad6D6121446a328ba5634" listingId:1000 price:@"100"];
     
+    /*NSNumber *test = [NSNumber numberWithLong:364];
+    [test integerValue];
+    [[ChainverseSDK shared] approveNFT:@"0x7eAdaF22D3a4C10E0bA1aC692654b80954084bdD" tokenId:[test integerValue]];*/
 }
 
 @end

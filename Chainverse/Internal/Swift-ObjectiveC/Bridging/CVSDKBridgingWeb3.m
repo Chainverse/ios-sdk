@@ -111,6 +111,9 @@
     return [self.web3 cancelSellNFTWithMarketService:marketService abi:abi walletAddress:walletAddress listingId:listingId];
 }
 
+- (NSString *)feeCancelSellNFT:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress listing:(NSInteger )listingId{
+    return [self.web3 feeCancelSellNFTWithMarketService:marketService abi:abi walletAddress:walletAddress listingId:listingId];
+}
 - (NSMutableDictionary *)getByNFT:(NSString *)serviceAddress abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId{
     NSMutableDictionary *result = [self.web3 getByNFTWithMarketService:serviceAddress abi:abi nft:nft tokenId:tokenId];
     return result;
@@ -146,5 +149,26 @@
 
 - (NSInteger)getBlockNumber:(NSString *)rpc{
     return [self.web3 getBlockNumberWithRpc:rpc];
+}
+
+//Chainverse App
+- (void)approveNFTWithChainverseApp:(NSString *)service abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId{
+    [self.web3 approveNFTWithChainverseAppWithService:service abi:abi walletAddress:walletAddress nft:nft tokenId:tokenId];
+}
+
+- (void)approveTokenWithChainverseApp:(NSString*)walletAddress token:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount{
+    [self.web3 approveTokenWithChainverseAppWithWalletAddress:walletAddress token:token spender:spender value:amount];
+}
+
+- (void)buyNFTWithChainverseApp:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress currency:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price{
+    [self.web3 buyNFTWithChainverseAppWithMarketService:marketService abi:abi walletAddress:walletAddress currency:currency listingId:listingId price:[NSString stringWithFormat:@"%@",price]];
+}
+
+- (void)sellNFTWithChainverseApp:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress nft:(NSString *)nft tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
+    [self.web3 sellNFTWithChainverseAppWithMarketService:marketService abi:abi walletAddress:walletAddress nft:nft tokenId:tokenId price:price currency:currency];
+}
+
+- (void)cancelSellNFTWithChainverseApp:(NSString *)marketService abi:(NSString *)abi walletAddress:(NSString*)walletAddress listing:(NSInteger )listingId{
+    [self.web3 cancelSellNFTWithChainverseAppWithMarketService:marketService abi:abi walletAddress:walletAddress listingId:listingId];
 }
 @end

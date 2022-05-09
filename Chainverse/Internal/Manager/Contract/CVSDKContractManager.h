@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)approveNFTForGame:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)approveNFTForService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)cancelSellNFT: (NSInteger )listingId;
+- (NSString *)feeCancelSellNFT: (NSInteger )listingId;
 - (void)getNFT:(NSString *)nft tokenId:(NSInteger )tokenId complete:(CVSDKGetNFTBlock) complete;
 - (NSString *)isApproved:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)isApproved:(NSString *)token owner:(NSString* )owner spender:(NSString *)spender;
@@ -33,6 +34,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)withdrawNFT:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)moveItemToGame:(NSString *)nft tokenId:(NSInteger )tokenId;
 - (NSString *)moveItemToService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId;
+
+//Chainverse App
+- (void)approveNFTWithChainverseApp:(NSString *)nft tokenId:(NSInteger )tokenId;
+- (void)approveTokenWithChainverseApp:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount;
+- (void)buyNFTWithChainverseApp:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price;
+- (void)sellNFTWithChainverseApp:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency;
+- (void)cancelSellNFTWithChainverseApp: (NSInteger )listingId;
 @end
 
 NS_ASSUME_NONNULL_END

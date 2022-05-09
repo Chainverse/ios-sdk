@@ -14,6 +14,7 @@ NSString *const KEY_5 = @"CHAINVERSE_SDK_KEY_5";
 NSString *const KEY_6 = @"CHAINVERSE_SDK_KEY_6";
 NSString *const KEY_7 = @"CHAINVERSE_SDK_KEY_7";
 NSString *const KEY_8 = @"CHAINVERSE_SDK_KEY_8";
+NSString *const KEY_9 = @"CHAINVERSE_SDK_KEY_9";
 @implementation CVSDKUserDefault
 + (void) setXUserAddress: (NSString *) value{
     [[NSUserDefaults standardUserDefaults] setValue:value forKey:KEY_1];
@@ -115,5 +116,20 @@ NSString *const KEY_8 = @"CHAINVERSE_SDK_KEY_8";
 }
 + (NSString *)getRPC{
     return [[NSUserDefaults standardUserDefaults] stringForKey:KEY_8];
+}
+
++ (void) setGameService: (CVSDKGameServiceData *) value{
+    //[[NSUserDefaults standardUserDefaults] setValue:value forKey:KEY_9];
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:value];
+    [[NSUserDefaults standardUserDefaults] setObject:encodedObject forKey:KEY_9];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
++ (CVSDKGameServiceData *)getGameService{
+    //CVSDKGameServiceData *data = [[NSUserDefaults standardUserDefaults] objectForKey:KEY_9];
+    //return data;
+    NSData *encodedObject = [[NSUserDefaults standardUserDefaults] objectForKey:KEY_9];
+    CVSDKGameServiceData *object = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    return object;
+    
 }
 @end

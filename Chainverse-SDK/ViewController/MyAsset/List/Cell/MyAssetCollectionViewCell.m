@@ -8,7 +8,7 @@
 #import "MyAssetCollectionViewCell.h"
 #import "CVSDKTokenURI.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "ChainverseNFT.h"
+#import "NFT.h"
 @interface MyAssetCollectionViewCell ()
 
 @property (assign, nonatomic) BOOL alreadyLayout;
@@ -32,10 +32,10 @@
 }
 
 - (void)setupData:(id)item atIndexPath:(NSIndexPath *)indexPath{
-    ChainverseNFT *NFT = (ChainverseNFT *)item;
-    self.lblNFT.text = [NSString stringWithFormat:@"%@ %@",NFT.name,NFT.token_id] ;
+    NFT *nft = (NFT *)item;
+    self.lblNFT.text = [NSString stringWithFormat:@"%@ %@",nft.name,nft.token_id] ;
     
-    [self.imageView setImageWithURL:[NSURL URLWithString: NFT.image] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    [self.imageView setImageWithURL:[NSURL URLWithString: nft.image] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
 }
 
 - (void)awakeFromNib {

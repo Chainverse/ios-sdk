@@ -41,4 +41,8 @@
 + (NSString *)getAction: (NSURL *)url{
     return [CVSDKUtils getValueFromQueryParam:url withParam:@"action"];
 }
+
++ (NSString *)getData: (NSURL *)url{
+    return [CVSDKUtils getValueFromQueryParam:url withParam:@"data"];
+}
 @end

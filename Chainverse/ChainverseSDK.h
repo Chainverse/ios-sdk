@@ -98,11 +98,6 @@ typedef enum : int {
 - (NSString *)getVersion;
 
 /**
- showConnectView: Show screen choose wallet
- */
-- (void)showConnectView;
-
-/**
  connectWithChainverse: Connect with Chainverse
  */
 - (void)connectWithChainverse;
@@ -137,6 +132,11 @@ getUserInfo: Return user info
  getBalance: Hàm này sử dụng để lấy số dư của token
  */
 - (NSString *)getBalance:(NSString *)contractAddress;
+
+/*
+ getListCurrencies: Trả về danh sách Currency game được hỗ trợ.
+ */
+- (NSMutableArray<Currency> *)getListCurrencies;
 
 /*
  signMessage: Hàm này sử dụng để sign message
@@ -204,7 +204,7 @@ getUserInfo: Return user info
  cancelSellNFT: Hàm này sử dụng để đừng bán NFT trên chợ
  @param NSInteger listingId
  */
-- (NSString *)cancelSellNFT: (NSInteger )listingId;
+- (void)cancelSellNFT: (NSInteger )listingId;
 
 /*
  getNFT: Hàm này sử dụng để lấy thông tin chi tiết của một NFT (dữ liệu onchain)

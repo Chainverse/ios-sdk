@@ -8,7 +8,8 @@
 #import "MarketCollectionViewCell.h"
 #import "CVSDKTokenURI.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "ChainverseNFT.h"
+#import "NFT.h"
+#import "InfoSell.h"
 @interface MarketCollectionViewCell ()
 
 @property (assign, nonatomic) BOOL alreadyLayout;
@@ -41,13 +42,15 @@
 }
 
 - (void)setupData:(id)item atIndexPath:(NSIndexPath *)indexPath type:(NSString *)type{
-    ChainverseNFT *NFT = (ChainverseNFT *)item;
-    self.lblName.text = [NSString stringWithFormat:@"%@ %@",NFT.name,NFT.token_id] ;
+    NFT *nft = (NFT *)item;
+    self.lblName.text = [NSString stringWithFormat:@"%@ %@",nft.name,nft.token_id] ;
     
-    ChainverseNFTAuction *auction = NFT.auctions.firstObject;
-    self.lblPrice.text = [NSString stringWithFormat:@"%@",auction.price];
+    //ChainverseNFTAuction *auction = NFT.auctions.firstObject;
     
-    ChainverseNFTCurrency *currency = auction.currency_info;
+    InfoSell *infoSell = nft.infoSell;
+    self.lblPrice.text = [NSString stringWithFormat:@"%@",infoSell.price];
+    
+    Currency *currency = infoSell.currency_info;
     if([currency.symbol isEqualToString:@"tBNB"]){
         [self.iconSymbol setImage:[UIImage imageNamed:@"bnb.png"]];
     }else if([currency.symbol isEqualToString:@"USDT"]){
@@ -61,7 +64,7 @@
         self.lblCategory.text = category.name;
     }*/
     
-    [self.imageView setImageWithURL:[NSURL URLWithString: NFT.image] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    [self.imageView setImageWithURL:[NSURL URLWithString: nft.image] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     
 }
 @end

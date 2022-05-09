@@ -91,7 +91,9 @@ import UIKit
             parameters: [] as [AnyObject],
             extraData: Data(),
             transactionOptions: options)!
-        let result = try! tx.call()
+        guard let result = try? tx.call() else {
+            return false
+        }
         let data: Int? = result["0"] as? Int
         return isChecked(result: data!)
     }
@@ -106,7 +108,9 @@ import UIKit
             parameters: [] as [AnyObject],
             extraData: Data(),
             transactionOptions: options)!
-        let result = try! tx.call()
+        guard let result = try? tx.call() else {
+            return false
+        }
         let data: Int? = result["0"] as? Int
         return isChecked(result: data!)
     }
@@ -121,7 +125,9 @@ import UIKit
             parameters: [EthereumAddress(gameAddress)] as [AnyObject],
             extraData: Data(),
             transactionOptions: options)!
-        let result = try! tx.call()
+        guard let result = try? tx.call() else {
+            return false
+        }
         let data: Int? = result["0"] as? Int
         return isChecked(result: data!)
     }
@@ -136,7 +142,9 @@ import UIKit
             parameters: [EthereumAddress(gameAddress)] as [AnyObject],
             extraData: Data(),
             transactionOptions: options)!
-        let result = try! tx.call()
+        guard let result = try? tx.call() else {
+            return false
+        }
         let data: Int? = result["0"] as? Int
         return isChecked(result: data!)
     }
@@ -242,13 +250,36 @@ import UIKit
         if(estimate == 0){
             return "0x"
         }
+        return getFee(estimate: estimate)
+    }
+    
+    @objc public func buyNFTWithChainverseApp(marketService: String, abi: String,walletAddress: String, currency: String, listingId: Int, price: String){
+        setKeystoreManager()
+        let contract = _web3client!.contract(abi, at: EthereumAddress(marketService)!, abiVersion: 2)!
+        let amount = Web3.Utils.parseToBigUInt(price, units: .eth)
+        let parameters: [AnyObject] = [BigUInt(listingId),amount!] as [AnyObject]
+        var options = TransactionOptions.defaultOptions
+        if(currency.lowercased() == "0x0000000000000000000000000000000000000000".lowercased()){
+            options.value = amount
+        }
+        options.from = EthereumAddress(walletAddress)!
+        options.gasPrice = .automatic
+        options.gasLimit = .automatic
+        let encodeFunction = contract.encodeFunction(
+            "buy",
+            parameters: parameters,
+            extraData: Data(),
+            transactionOptions: options
+        )
         
+        var value = "0"
+        if(currency.lowercased() == "0x0000000000000000000000000000000000000000".lowercased()){
+            value = String(amount!)
+        }
+        let gasLimit = gasEstimateBuyNFT(marketService: marketService, abi: abi, walletAddress: walletAddress, currency: currency, listingId: listingId, price: price)
         let gasPrice = try! _web3client!.eth.getGasPrice()
-        let tmp = gasPrice * estimate
-        let fees = Web3.Utils.formatToEthereumUnits(tmp , toUnits: .eth, decimals: 10)!
-        print ("nampv_gasPrice3 \(tmp).")
-        return fees
-        
+        let nonce = getNonce()
+        sendTransaction(action: "buyNFT", to: marketService, from: walletAddress, data: String(format: "0x%@", encodeFunction), value: value, gasLimit: String(gasLimit), gasPrice: String(gasPrice), nonce: String(nonce))
     }
     //----End Buy NFT----
     
@@ -323,13 +354,31 @@ import UIKit
         if(estimate == 0){
             return "0x"
         }
+        return getFee(estimate: estimate)
+    }
+    
+    @objc public func approveTokenWithChainverseApp(walletAddress: String, token: String, spender: String, value: String){
+        setKeystoreManager()
+        let contract = _web3client!.contract(Web3.Utils.erc20ABI, at: EthereumAddress(token)!, abiVersion: 2)!
+        let amount = Web3.Utils.parseToBigUInt(value, units: .eth)
+        let parameters: [AnyObject] = [EthereumAddress(spender)!, amount!] as [AnyObject]
+        var options = TransactionOptions.defaultOptions
+        options.from = EthereumAddress(walletAddress)
+        options.gasPrice = .automatic
+        options.gasLimit = .automatic
         
+        let encodeFunction = contract.encodeFunction(
+            "approve",
+            parameters: parameters,
+            extraData: Data(),
+            transactionOptions: options
+        )
+        
+        let gasLimit = gasEstimateApproveToken(walletAddress: walletAddress, token: token, spender: spender, value: value)
         let gasPrice = try! _web3client!.eth.getGasPrice()
-        let tmp = gasPrice * estimate
-        let fees = Web3.Utils.formatToEthereumUnits(tmp , toUnits: .eth, decimals: 10)!
-        print ("nampv_gasPrice3 \(tmp).")
-        return fees
-        
+        let nonce = getNonce()
+        sendTransaction(action: "approveToken", to: token, from: walletAddress, data: String(format: "0x%@", encodeFunction), value: "0", gasLimit: String(gasLimit), gasPrice: String(gasPrice), nonce: String(nonce))
+       
     }
     
     //---End Approve Token----
@@ -389,51 +438,33 @@ import UIKit
         if(estimate == 0){
             return "0x"
         }
-        
-        let gasPrice = try! _web3client!.eth.getGasPrice()
-        let tmp = gasPrice * estimate
-        let fees = Web3.Utils.formatToEthereumUnits(tmp , toUnits: .eth, decimals: 10)!
-        return fees
-        
+        return getFee(estimate: estimate)
     }
     
-    //----End Approve NFT----
     
-    /*@objc public func approveNFT(service: String, abi: String,walletAddress: String, nft: String, tokenId: Int) -> String{
-        if(getConnectType() == "ChainverseSDK"){
-            setKeystoreManager()
-        }
-        
+    @objc public func approveNFTWithChainverseApp(service: String, abi: String,walletAddress: String, nft: String, tokenId: Int){
         let contract = _web3client!.contract(abi, at: EthereumAddress(nft)!, abiVersion: 2)!
-        let tokenId = BigUInt(tokenId)
-        let parameters: [AnyObject] = [EthereumAddress(service)!, tokenId] as [AnyObject]
+        let parameters: [AnyObject] = [EthereumAddress(service)!, BigUInt(tokenId)] as [AnyObject]
         var options = TransactionOptions.defaultOptions
         options.from = EthereumAddress(walletAddress)
         options.gasPrice = .automatic
         options.gasLimit = .automatic
         
-        if(getConnectType() == "ChainverseSDK"){
-            let tx = contract.write(
-                "approve",
-                parameters: parameters,
-                extraData: Data(),
-                transactionOptions: options)!
-            guard let result = try? tx.send(password: _password) else {
-                return ""
-            }
-            return result.transaction.txhash!
-        }else{
-            let encodeFunction = contract.encodeFunction(
-                "approve",
-                parameters: parameters,
-                extraData: Data(),
-                transactionOptions: options
-            )
-            print ("nampv_encodefunction2 \(encodeFunction).")
-            sendTransaction(action: "approveNFT", to: nft, from: walletAddress, data: encodeFunction, value: "0", gasLimit: "100000", gasPrice: "10000000", nonce: "10000")
-        }
-        return ""
-    }*/
+        let encodeFunction = contract.encodeFunction(
+            "approve",
+            parameters: parameters,
+            extraData: Data(),
+            transactionOptions: options
+        )
+        
+        let gasLimit = gasEstimateApproveNFT(service: service, abi: abi, walletAddress: walletAddress, nft: nft, tokenId: tokenId)
+        let gasPrice = try! _web3client!.eth.getGasPrice()
+        let nonce = getNonce()
+        sendTransaction(action: "approveNFT", to: nft, from: walletAddress, data: String(format: "0x%@", encodeFunction), value: "0", gasLimit: String(gasLimit), gasPrice: String(gasPrice), nonce: String(nonce))
+       
+    }
+    
+    //----End Approve NFT----
     
     private func sendTransaction(action: String, to: String ,from: String, data: String, value: String, gasLimit: String, gasPrice: String, nonce: String) -> Void {
         var components = URLComponents()
@@ -449,7 +480,7 @@ import UIKit
             URLQueryItem(name: "nonce", value: nonce),
             URLQueryItem(name: "fee_price", value: gasPrice),
             URLQueryItem(name: "fee_limit", value: gasLimit),
-            URLQueryItem(name: "app", value: gasLimit),
+            URLQueryItem(name: "app", value: "flappy-bird-nft://"),
             URLQueryItem(name: "callback", value: "tx_callback"),
             URLQueryItem(name: "confirm_type", value: "send"),
             URLQueryItem(name: "id", value: "2"),
@@ -458,6 +489,7 @@ import UIKit
         
         let url = components.url
         
+        print ("nampv_cheme \(url?.absoluteURL)")
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url!, options: [:], completionHandler: nil)
         } else {
@@ -519,10 +551,30 @@ import UIKit
             return "0x"
         }
         
+        return getFee(estimate: estimate)
+    }
+    
+    @objc public func sellNFTWithChainverseApp(marketService: String, abi: String, walletAddress: String, nft: String, tokenId: Int, price: String, currency: String) {
+        setKeystoreManager()
+        let contract = _web3client!.contract(abi, at: EthereumAddress(marketService)!, abiVersion: 2)!
+        let amount = Web3.Utils.parseToBigUInt(price, units: .eth)
+        let parameters: [AnyObject] = [EthereumAddress(nft)!,BigUInt(tokenId),amount!, EthereumAddress(currency)!] as [AnyObject]
+        var options = TransactionOptions.defaultOptions
+        options.from = EthereumAddress(walletAddress)!
+        options.gasPrice = .automatic
+        options.gasLimit = .automatic
+        
+        let encodeFunction = contract.encodeFunction(
+            "list",
+            parameters: parameters,
+            extraData: Data(),
+            transactionOptions: options
+        )
+        
+        let gasLimit = gasEstimateSellNFT(marketService: marketService, abi: abi, walletAddress: walletAddress, nft: nft, tokenId: tokenId, price: price, currency: currency)
         let gasPrice = try! _web3client!.eth.getGasPrice()
-        let tmp = gasPrice * estimate
-        let fees = Web3.Utils.formatToEthereumUnits(tmp , toUnits: .eth, decimals: 10)!
-        return fees
+        let nonce = getNonce()
+        sendTransaction(action: "sellNFT", to: marketService, from: walletAddress, data: String(format: "0x%@", encodeFunction), value: "0", gasLimit: String(gasLimit), gasPrice: String(gasPrice), nonce: String(nonce))
     }
     //----End Sell NFT----
     
@@ -571,6 +623,43 @@ import UIKit
             return ""
         }
         return result.transaction.txhash!
+    }
+    
+    @objc public func feeCancelSellNFT(marketService: String, abi: String,walletAddress: String, listingId: Int) -> String {
+        let estimate = gasEstimateCancelSellNFT(marketService: marketService, abi: abi, walletAddress: walletAddress, listingId: listingId)
+        if(estimate == 0){
+            return "0x"
+        }
+        return getFee(estimate: estimate)
+    }
+    
+    private func getFee(estimate: BigUInt) -> String {
+        let gasPrice = try! _web3client!.eth.getGasPrice()
+        let tmp = gasPrice * estimate
+        let fees = Web3.Utils.formatToEthereumUnits(tmp , toUnits: .eth, decimals: 10)!
+        return fees
+    }
+    
+    @objc public func cancelSellNFTWithChainverseApp(marketService: String, abi: String,walletAddress: String, listingId: Int) {
+        setKeystoreManager()
+        let contract = _web3client!.contract(abi, at: EthereumAddress(marketService)!, abiVersion: 2)!
+        let parameters: [AnyObject] = [BigUInt(listingId)] as [AnyObject]
+        var options = TransactionOptions.defaultOptions
+        options.from = EthereumAddress(walletAddress)!
+        options.gasPrice = .automatic
+        options.gasLimit = .automatic
+        
+        let encodeFunction = contract.encodeFunction(
+            "unList",
+            parameters: parameters,
+            extraData: Data(),
+            transactionOptions: options
+        )
+        
+        let gasLimit = gasEstimateCancelSellNFT(marketService: marketService, abi: abi, walletAddress: walletAddress, listingId: listingId)
+        let gasPrice = try! _web3client!.eth.getGasPrice()
+        let nonce = getNonce()
+        sendTransaction(action: "cancelSell", to: marketService, from: walletAddress, data: String(format: "0x%@", encodeFunction), value: "0", gasLimit: String(gasLimit), gasPrice: String(gasPrice), nonce: String(nonce))
     }
     
     //----End Cancel Sell NFT----
@@ -759,16 +848,17 @@ import UIKit
         let ownerAddress = listing[3] as! EthereumAddress
         let TKID = listing[4]
         let fee = listing[5]
-        let price = listing[6]
+        let price = listing[6] as! BigUInt
         let listingId = listing[7]
         
+        let priceString = Web3.Utils.formatToEthereumUnits(price, toUnits: .eth, decimals: 10)!
         let dictParams: NSMutableDictionary? = [
             "is_auction": listing[0],
             "nft" : nftaddress.address,
             "owner" : ownerAddress.address,
             "token_id" : TKID,
             "fee" : fee,
-            "price" : price,
+            "price" : priceString,
             "listing_id": listingId
         ]
         return dictParams!;
@@ -788,7 +878,9 @@ import UIKit
             extraData: Data(),
             transactionOptions: options)!
         
-        let result = try! tx.call()
+        guard let result = try? tx.call() else {
+            return ""
+        }
         let uri: String? = result["0"] as? String
         return uri!;
     }

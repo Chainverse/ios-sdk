@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getTime: (NSURL *)url;
 + (NSString *)getNonce: (NSURL *)url;
 + (NSString *)getAction: (NSURL *)url;
++ (NSString *)getData: (NSURL *)url;
 @end
 
 NS_ASSUME_NONNULL_END

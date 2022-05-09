@@ -37,4 +37,4 @@ typedef enum : int {
     transferItem = 9
 } EFunction;
 
-#define DEBUG_CHAINVERSE_BUNDLE NO
+#define DEBUG_CHAINVERSE_BUNDLE YES

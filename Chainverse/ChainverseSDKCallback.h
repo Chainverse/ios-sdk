@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ChainverseItem.h"
-#import "ChainverseNFT.h"
+#import "NFT.h"
 @protocol ChainverseSDKCallback <NSObject>
 
 @required
@@ -16,10 +16,10 @@
 - (void)didConnectSuccess:(NSString *) address;
 - (void)didLogout:(NSString *) address;
 - (void)didItemUpdate:(ChainverseItem *)item type:(int)type;
-- (void)didGetDetailItem:(ChainverseNFT*)item;
+- (void)didGetDetailItem:(NFT*)item;
 - (void)didSignMessage:(NSString *) signedMessage;
-- (void)didGetListItemMarket:(NSArray<ChainverseNFT> *) items;
-- (void)didGetMyAssets:(NSArray<ChainverseNFT> *) items;
+- (void)didGetListItemMarket:(NSMutableArray<NFT> *) items;
+- (void)didGetMyAssets:(NSMutableArray<NFT> *) items;
 - (void)didTransact:(int)function tx:(NSString *)tx;
 @end
 

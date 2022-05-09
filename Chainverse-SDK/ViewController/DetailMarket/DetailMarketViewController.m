@@ -10,12 +10,15 @@
 #import "CVSDKTokenURI.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ChainverseTokenSupport.h"
-#import "ChainverseNFT.h" 
+#import "NFT.h"
+#import "InfoSell.h"
+#import "Network.h"
+#import "Currency.h"
 @interface DetailMarketViewController (){
     NSString *_price;
     NSString *_nft;
     NSInteger _listingId;
-    ChainverseNFTCurrency *_currency;
+    Currency *_currency;
     NSString *_currencyLabel;
 }
 
@@ -38,7 +41,7 @@
     
     [[ChainverseSDK shared] getDetailNFT:self.nft tokenId:self.tokenId];
     
-    [[ChainverseSDK shared] getNFT:self.nft tokenId:self.tokenId complete:^(ChainverseNFT *item){
+    [[ChainverseSDK shared] getNFT:self.nft tokenId:self.tokenId complete:^(NFT *item){
         [self.imageView setImageWithURL:[NSURL URLWithString: item.image] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
         self.des.text = item.description;
         
@@ -149,7 +152,7 @@
         self.btnCancelSell.hidden = NO;
         self.btnPublish.hidden = NO;
         
-        [[ChainverseSDK shared] getNFT:self.nft tokenId:self.tokenId complete:^(ChainverseNFT *item){
+        [[ChainverseSDK shared] getNFT:self.nft tokenId:self.tokenId complete:^(NFT *item){
             [self.imageView setImageWithURL:[NSURL URLWithString: item.image] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
             self.des.text = item.description;
             
@@ -239,19 +242,20 @@
 - (void) didGetDetailItem:(NSNotification *) notification
 {
     NSDictionary *userInfo = notification.userInfo;
-    ChainverseNFT *NFT = [userInfo objectForKey:@"GetDetailNFT"];
+    NFT *nft = [userInfo objectForKey:@"GetDetailNFT"];
    
-    _nft = NFT.nft;
+    _nft = nft.nft;
     
-    self.name.text = [NSString stringWithFormat:@"%@ %@",NFT.name,NFT.token_id] ;
-    self.lblAddress.text = [NSString stringWithFormat:@"Contract Address: %@", NFT.nft];
-    self.lblTokenId.text = [NSString stringWithFormat:@"Token ID: %@", NFT.token_id];;
-    self.owner.text = [NSString stringWithFormat:@"Owner by %@", NFT.owner];
+    self.name.text = [NSString stringWithFormat:@"%@ %@",nft.name,nft.token_id] ;
+    self.lblAddress.text = [NSString stringWithFormat:@"Contract Address: %@", nft.nft];
+    self.lblTokenId.text = [NSString stringWithFormat:@"Token ID: %@", nft.token_id];;
+    self.owner.text = [NSString stringWithFormat:@"Owner by %@", nft.owner];
     
-    ChainverseNFTAuction *auction = NFT.auctions.firstObject;
-    self.lblPrice.text = [NSString stringWithFormat:@"%@",auction.price];
-    _price = auction.price;
-    _listingId = [auction.listing_id integerValue];
+    InfoSell *infoSell = nft.infoSell;
+    self.lblPrice.text = [NSString stringWithFormat:@"%@",infoSell.price];
+
+    _price = infoSell.price;
+    _listingId = [infoSell.listing_id integerValue];
     NSLog(@"listing_id %ld",_listingId);
     if(_listingId > 0){
         self.btnPublish.hidden = NO;
@@ -267,7 +271,7 @@
         self.btnTransfer.hidden = NO;
     }
     
-    _currency = auction.currency_info;
+    _currency = infoSell.currency_info;
     _currencyLabel = @"CVT";
     if([_currency.symbol isEqualToString:@"tBNB"]){
         [self.icon setImage:[UIImage imageNamed:@"bnb.png"]];
@@ -291,9 +295,9 @@
     [self.btnApprove setTitle:[NSString stringWithFormat:@"Approve %@",_currencyLabel] forState:UIControlStateNormal];
     
 
-    ChainverseNFTNetwork *network = NFT.network_info;
+    Network *network = nft.network_info;
     self.lblBlockchain.text = network.name;
-    [self.imageView setImageWithURL:[NSURL URLWithString: NFT.image] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    [self.imageView setImageWithURL:[NSURL URLWithString: nft.image] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     
     [self checkApprove];
     [self.btnApprove addTarget:self action:@selector(doApprove:) forControlEvents:UIControlEventTouchUpInside];
@@ -309,11 +313,11 @@
     [self.btnPublish addTarget:self action:@selector(doPublish:) forControlEvents:UIControlEventTouchUpInside];
     [self.btnCancelSell addTarget:self action:@selector(doCancelSell:) forControlEvents:UIControlEventTouchUpInside];
     
-    if([NFT.status isEqualToString:@"PUBLISH"]){
+    /*if([NFT.status isEqualToString:@"PUBLISH"]){
         self.btnPublish.hidden = YES;
     }else if([NFT.status isEqualToString:@"PRE_PUBLISH"]){
         
-    }
+    }*/
     
     [self.btnTransfer addTarget:self action:@selector(doTransfer:) forControlEvents:UIControlEventTouchUpInside];
 }

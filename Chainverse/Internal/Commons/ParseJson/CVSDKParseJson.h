@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSMutableArray *) parseItems:(id)responseObject;
 + (ChainverseItem *) parseItem:(NSArray*) data;
 + (CVSDKTokenURI *) parseTokenUri:(id)responseObject;
-+ (NSMutableArray *)parseServices:(NSMutableArray *)data;
 + (NSArray *)parseRPC:(NSString *)rpcs;
 @end
 

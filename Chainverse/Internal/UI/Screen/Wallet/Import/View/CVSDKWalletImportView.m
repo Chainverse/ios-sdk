@@ -63,7 +63,7 @@
     [self.btnPaste addTarget:self action:@selector(pastePhrase:) forControlEvents:UIControlEventTouchUpInside];
     [self handleHideKeyboard];
     [self.inputPhrase becomeFirstResponder];
-    self.inputPhrase.text = @"shoot team crush innocent sword wagon loud simple pig month degree melt";
+    //self.inputPhrase.text = @"shoot team crush innocent sword wagon loud simple pig month degree melt";
     
     if (@available( iOS 11.0, * )) {
         if ([[[UIApplication sharedApplication] keyWindow] safeAreaInsets].bottom > 0) {

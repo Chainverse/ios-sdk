@@ -132,6 +132,11 @@
         
         NSString *tx = [[CVSDKContractManager shared] sellNFT:NFT tokenId:[tokenId integerValue] price:price currency:currency];
         [CVSDKCallbackToGame didTransact:sellNFT tx:tx];
+    }else if([_input.function isEqualToString:@"cancelSellNFT"]){
+        NSMutableDictionary *params = _input.params;
+        NSNumber *listingId = [params objectForKey:@"listingId"];
+        NSString *tx = [[CVSDKContractManager shared] cancelSellNFT:[listingId integerValue]];
+        [CVSDKCallbackToGame didTransact:cancelSell tx:tx];
     }
     
     

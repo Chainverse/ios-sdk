@@ -12,9 +12,10 @@
 #import "MyAssetViewController.h"
 #import "DetailMarketViewController.h"
 #import "ChainverseTokenSupport.h"
+#import "NFT.h"
 @interface MarketViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>{
     NSMutableArray *_marketItems;
-    NSArray<ChainverseNFT> *_items;
+    NSMutableArray<NFT> *_items;
 }
 @end
 
@@ -48,18 +49,14 @@
     _items = [userInfo objectForKey:@"marketItems"];
     
     NSLog(@"didGetListItemMarket %@",_items);
-    for(ChainverseNFT *itemx in _items){
+    /*for(ChainverseNFT *itemx in _items){
         
         NSArray<ChainverseNFTAuction> *autions = itemx.auctions;
         for(ChainverseNFTAuction *auction in autions){
             NSLog(@"nampv_test %ld",auction.listing_id);
         }
         
-        /*NSArray<ChainverseNFTCategory> *categories = itemx.categories;
-        for(ChainverseNFTCategory *category in categories){
-            NSLog(@"nampv_test_category %@",category.name);
-        }*/
-    }
+    }*/
     
     //_marketItems = items;
     [self.collectionView reloadData];
@@ -100,7 +97,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    ChainverseNFT *marketItem =  _items[indexPath.row];
+    NFT *marketItem =  _items[indexPath.row];
     
     //NSString *tx = [[ChainverseSDK shared] approveToken:@"0x672021e3c741910896cad6D6121446a328ba5634" spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564" amount:@"1000"];
     //NSLog(@"nampv_approve_token %@",tx);
@@ -134,8 +131,8 @@
 
 - (void)setupNFTImage{
     for(int  i = 0; i < _items.count; i++){
-        ChainverseNFT *itemMarket =  _items[i];
-        [[ChainverseSDK shared] getNFT:itemMarket.nft tokenId:[itemMarket.token_id integerValue] complete:^(ChainverseNFT *item){
+        NFT *itemMarket =  _items[i];
+        [[ChainverseSDK shared] getNFT:itemMarket.nft tokenId:[itemMarket.token_id integerValue] complete:^(NFT *item){
             itemMarket.image = item.image;
             [self.collectionView reloadData];
         }];

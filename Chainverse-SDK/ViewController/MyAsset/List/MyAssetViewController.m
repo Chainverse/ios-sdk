@@ -11,7 +11,7 @@
 #import "DetailMarketViewController.h"
 @interface MyAssetViewController() <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>{
     NSMutableArray *_myAssetItems;
-    NSArray<ChainverseNFT> *_items;
+    NSMutableArray<NFT> *_items;
 }
 @end
 
@@ -33,10 +33,10 @@
     _items = [userInfo objectForKey:@"myAssetItems"];
     
     
-    for(ChainverseNFT *itemx in _items){
+    /*for(ChainverseNFT *itemx in _items){
         NSLog(@"nampv_nft %@",itemx.token_id);
         NSLog(@"nampv_nft_ownder %@",itemx.owner);
-    }
+    }*/
     
     [self.collectionView reloadData];
     
@@ -77,7 +77,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    ChainverseNFT *item =  _items[indexPath.row];
+    NFT *item =  _items[indexPath.row];
     //[[ChainverseSDK shared] sellNFT:@"0x7eAdaF22D3a4C10E0bA1aC692654b80954084bdD" tokenId:347 price:@"10.5" currency:@"0x672021e3c741910896cad6D6121446a328ba5634"];
     //NSString *tx = [[ChainverseSDK shared] cancelSellNFT:1032];
     //NSLog(@"nampv_cancel %@",tx);
@@ -111,8 +111,8 @@
 - (void)setupNFTImage{
     for(int  i = 0; i < _items.count; i++){
         
-        ChainverseNFT *itemMarket =  _items[i];
-        [[ChainverseSDK shared] getNFT:itemMarket.nft tokenId:[itemMarket.token_id integerValue] complete:^(ChainverseNFT *item){
+        NFT *itemMarket =  _items[i];
+        [[ChainverseSDK shared] getNFT:itemMarket.nft tokenId:[itemMarket.token_id integerValue] complete:^(NFT *item){
             itemMarket.image = item.image;
             itemMarket.name = item.name;
             [self.collectionView reloadData];

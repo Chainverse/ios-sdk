@@ -59,6 +59,39 @@
 		3A4EAA76280A80040079EC47 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4EAA74280A80040079EC47 /* Starscream.xcframework */; };
 		3A4EAAFF280AA4280079EC47 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4EAA74280A80040079EC47 /* Starscream.xcframework */; };
 		3A4EAB00280AA4280079EC47 /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4EAA74280A80040079EC47 /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A7A4CB92823DC8D00A98DA5 /* ChainverseGameService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CB72823DC8D00A98DA5 /* ChainverseGameService.h */; };
+		3A7A4CBA2823DC8D00A98DA5 /* ChainverseGameService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CB82823DC8D00A98DA5 /* ChainverseGameService.m */; };
+		3A7A4CBB2823DC8D00A98DA5 /* ChainverseGameService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CB82823DC8D00A98DA5 /* ChainverseGameService.m */; };
+		3A7A4CBF2823DE7A00A98DA5 /* ChainverseService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CBD2823DE7A00A98DA5 /* ChainverseService.h */; };
+		3A7A4CC02823DE7A00A98DA5 /* ChainverseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CBE2823DE7A00A98DA5 /* ChainverseService.m */; };
+		3A7A4CC12823DE7A00A98DA5 /* ChainverseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CBE2823DE7A00A98DA5 /* ChainverseService.m */; };
+		3A7A4CC42823DEFB00A98DA5 /* ChainverseToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CC22823DEFB00A98DA5 /* ChainverseToken.h */; };
+		3A7A4CC52823DEFB00A98DA5 /* ChainverseToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CC32823DEFB00A98DA5 /* ChainverseToken.m */; };
+		3A7A4CC62823DEFB00A98DA5 /* ChainverseToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CC32823DEFB00A98DA5 /* ChainverseToken.m */; };
+		3A7A4CC92823E0B500A98DA5 /* CVSDKGameServiceData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CC72823E0B500A98DA5 /* CVSDKGameServiceData.h */; };
+		3A7A4CCA2823E0B600A98DA5 /* CVSDKGameServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CC82823E0B500A98DA5 /* CVSDKGameServiceData.m */; };
+		3A7A4CCB2823E0B600A98DA5 /* CVSDKGameServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CC82823E0B500A98DA5 /* CVSDKGameServiceData.m */; };
+		3A7A4CD32824DA9D00A98DA5 /* InfoSell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CD12824DA9D00A98DA5 /* InfoSell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A7A4CD42824DA9D00A98DA5 /* InfoSell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CD22824DA9D00A98DA5 /* InfoSell.m */; };
+		3A7A4CD52824DA9D00A98DA5 /* InfoSell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CD22824DA9D00A98DA5 /* InfoSell.m */; };
+		3A7A4CD92824DD0E00A98DA5 /* Currency.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CD72824DD0E00A98DA5 /* Currency.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A7A4CDA2824DD0E00A98DA5 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CD82824DD0E00A98DA5 /* Currency.m */; };
+		3A7A4CDB2824DD0E00A98DA5 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CD82824DD0E00A98DA5 /* Currency.m */; };
+		3A7A4CDE2824DD6B00A98DA5 /* NFT.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CDC2824DD6B00A98DA5 /* NFT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A7A4CDF2824DD6B00A98DA5 /* NFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CDD2824DD6B00A98DA5 /* NFT.m */; };
+		3A7A4CE02824DD6B00A98DA5 /* NFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CDD2824DD6B00A98DA5 /* NFT.m */; };
+		3A7A4CE328250AAE00A98DA5 /* Auction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CE128250AAE00A98DA5 /* Auction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A7A4CE428250AAE00A98DA5 /* Auction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CE228250AAE00A98DA5 /* Auction.m */; };
+		3A7A4CE528250AAE00A98DA5 /* Auction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CE228250AAE00A98DA5 /* Auction.m */; };
+		3A7A4CE828250B5400A98DA5 /* Type.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CE628250B5400A98DA5 /* Type.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A7A4CE928250B5400A98DA5 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CE728250B5400A98DA5 /* Type.m */; };
+		3A7A4CEA28250B5400A98DA5 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CE728250B5400A98DA5 /* Type.m */; };
+		3A7A4CED28250BCE00A98DA5 /* Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CEB28250BCE00A98DA5 /* Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A7A4CEE28250BCE00A98DA5 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CEC28250BCE00A98DA5 /* Categories.m */; };
+		3A7A4CEF28250BCE00A98DA5 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CEC28250BCE00A98DA5 /* Categories.m */; };
+		3A7A4CF228250C0C00A98DA5 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A4CF028250C0C00A98DA5 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A7A4CF328250C0C00A98DA5 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CF128250C0C00A98DA5 /* Network.m */; };
+		3A7A4CF428250C0C00A98DA5 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A4CF128250C0C00A98DA5 /* Network.m */; };
 		3A85DFF327FD85300095C229 /* ChainverseVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE6527FD852F0095C229 /* ChainverseVersion.h */; };
 		3A85DFF427FD85300095C229 /* ChainverseSDKCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE6627FD852F0095C229 /* ChainverseSDKCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A85DFF527FD85300095C229 /* Chainverse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DE6727FD852F0095C229 /* Chainverse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -168,9 +201,6 @@
 		3A85E06527FD85300095C229 /* CVSDKContractManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEDD27FD85300095C229 /* CVSDKContractManager.h */; };
 		3A85E06627FD85300095C229 /* CVSDKContractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEDE27FD85300095C229 /* CVSDKContractManager.m */; };
 		3A85E06727FD85300095C229 /* CVSDKContractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEDE27FD85300095C229 /* CVSDKContractManager.m */; };
-		3A85E06827FD85300095C229 /* CVSDKServiceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEE027FD85300095C229 /* CVSDKServiceManager.h */; };
-		3A85E06927FD85300095C229 /* CVSDKServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEE127FD85300095C229 /* CVSDKServiceManager.m */; };
-		3A85E06A27FD85300095C229 /* CVSDKServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEE127FD85300095C229 /* CVSDKServiceManager.m */; };
 		3A85E06B27FD85300095C229 /* CVSDKTransferItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEE327FD85300095C229 /* CVSDKTransferItemManager.m */; };
 		3A85E06C27FD85300095C229 /* CVSDKTransferItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEE327FD85300095C229 /* CVSDKTransferItemManager.m */; };
 		3A85E06D27FD85300095C229 /* CVSDKTransferItemManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEE427FD85300095C229 /* CVSDKTransferItemManager.h */; };
@@ -178,44 +208,20 @@
 		3A85E06F27FD85300095C229 /* CVSDKNonce.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEE727FD85300095C229 /* CVSDKNonce.m */; };
 		3A85E07027FD85300095C229 /* CVSDKNonce.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEE827FD85300095C229 /* CVSDKNonce.h */; };
 		3A85E07127FD85300095C229 /* CVSDKNFTDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEEA27FD85300095C229 /* CVSDKNFTDetail.h */; };
-		3A85E07227FD85300095C229 /* ChainverseNFTType.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEEB27FD85300095C229 /* ChainverseNFTType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A85E07327FD85300095C229 /* ChainverseNFTCurrency.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEEC27FD85300095C229 /* ChainverseNFTCurrency.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A85E07427FD85300095C229 /* ChainverseNFT.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEED27FD85300095C229 /* ChainverseNFT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A85E07527FD85300095C229 /* CVSDKTokenURI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEEE27FD85300095C229 /* CVSDKTokenURI.h */; };
-		3A85E07627FD85300095C229 /* ChainverseNFTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEEF27FD85300095C229 /* ChainverseNFTCategory.m */; };
-		3A85E07727FD85300095C229 /* ChainverseNFTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEEF27FD85300095C229 /* ChainverseNFTCategory.m */; };
 		3A85E07827FD85300095C229 /* CVSDKNFTResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEF027FD85300095C229 /* CVSDKNFTResult.h */; };
-		3A85E07927FD85300095C229 /* ChainverseNFTNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEF127FD85300095C229 /* ChainverseNFTNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A85E07A27FD85300095C229 /* CVSDKNFTData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF227FD85300095C229 /* CVSDKNFTData.m */; };
 		3A85E07B27FD85300095C229 /* CVSDKNFTData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF227FD85300095C229 /* CVSDKNFTData.m */; };
-		3A85E07C27FD85300095C229 /* ChainverseNFTAuction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEF327FD85300095C229 /* ChainverseNFTAuction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A85E07D27FD85300095C229 /* ChainverseNFTType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF427FD85300095C229 /* ChainverseNFTType.m */; };
-		3A85E07E27FD85300095C229 /* ChainverseNFTType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF427FD85300095C229 /* ChainverseNFTType.m */; };
 		3A85E07F27FD85300095C229 /* CVSDKNFTDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF527FD85300095C229 /* CVSDKNFTDetail.m */; };
 		3A85E08027FD85300095C229 /* CVSDKNFTDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF527FD85300095C229 /* CVSDKNFTDetail.m */; };
-		3A85E08127FD85300095C229 /* ChainverseNFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF627FD85300095C229 /* ChainverseNFT.m */; };
-		3A85E08227FD85300095C229 /* ChainverseNFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF627FD85300095C229 /* ChainverseNFT.m */; };
-		3A85E08327FD85300095C229 /* ChainverseNFTCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF727FD85300095C229 /* ChainverseNFTCurrency.m */; };
-		3A85E08427FD85300095C229 /* ChainverseNFTCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF727FD85300095C229 /* ChainverseNFTCurrency.m */; };
 		3A85E08527FD85300095C229 /* CVSDKNFTResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF827FD85300095C229 /* CVSDKNFTResult.m */; };
 		3A85E08627FD85300095C229 /* CVSDKNFTResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEF827FD85300095C229 /* CVSDKNFTResult.m */; };
-		3A85E08727FD85300095C229 /* ChainverseNFTCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEF927FD85300095C229 /* ChainverseNFTCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A85E08827FD85300095C229 /* CVSDKTokenURI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEFA27FD85300095C229 /* CVSDKTokenURI.m */; };
 		3A85E08927FD85300095C229 /* CVSDKTokenURI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEFA27FD85300095C229 /* CVSDKTokenURI.m */; };
-		3A85E08A27FD85300095C229 /* ChainverseNFTAuction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEFB27FD85300095C229 /* ChainverseNFTAuction.m */; };
-		3A85E08B27FD85300095C229 /* ChainverseNFTAuction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEFB27FD85300095C229 /* ChainverseNFTAuction.m */; };
-		3A85E08C27FD85300095C229 /* ChainverseNFTNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEFC27FD85300095C229 /* ChainverseNFTNetwork.m */; };
-		3A85E08D27FD85300095C229 /* ChainverseNFTNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DEFC27FD85300095C229 /* ChainverseNFTNetwork.m */; };
 		3A85E08E27FD85300095C229 /* CVSDKNFTData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEFD27FD85300095C229 /* CVSDKNFTData.h */; };
 		3A85E08F27FD85300095C229 /* CVSDKPhrase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DEFF27FD85300095C229 /* CVSDKPhrase.h */; };
 		3A85E09027FD85300095C229 /* CVSDKPhrase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DF0027FD85300095C229 /* CVSDKPhrase.m */; };
 		3A85E09127FD85300095C229 /* CVSDKPhrase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DF0027FD85300095C229 /* CVSDKPhrase.m */; };
-		3A85E09227FD85300095C229 /* CVSDKService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DF0227FD85300095C229 /* CVSDKService.m */; };
-		3A85E09327FD85300095C229 /* CVSDKService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DF0227FD85300095C229 /* CVSDKService.m */; };
-		3A85E09427FD85300095C229 /* CVSDKServiceGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DF0327FD85300095C229 /* CVSDKServiceGame.m */; };
-		3A85E09527FD85300095C229 /* CVSDKServiceGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DF0327FD85300095C229 /* CVSDKServiceGame.m */; };
-		3A85E09627FD85300095C229 /* CVSDKServiceGame.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DF0427FD85300095C229 /* CVSDKServiceGame.h */; };
-		3A85E09727FD85300095C229 /* CVSDKService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DF0527FD85300095C229 /* CVSDKService.h */; };
 		3A85E09827FD85300095C229 /* ChainverseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DF0727FD85300095C229 /* ChainverseUser.m */; };
 		3A85E09927FD85300095C229 /* ChainverseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85DF0727FD85300095C229 /* ChainverseUser.m */; };
 		3A85E09A27FD85300095C229 /* ChainverseUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A85DF0827FD85300095C229 /* ChainverseUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -693,6 +699,28 @@
 		3A4EAA58280A7A6F0079EC47 /* PromiseKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromiseKit.xcframework; sourceTree = "<group>"; };
 		3A4EAA62280A7C4E0079EC47 /* SocketIO.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SocketIO.xcframework; sourceTree = "<group>"; };
 		3A4EAA74280A80040079EC47 /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Starscream.xcframework; sourceTree = "<group>"; };
+		3A7A4CB72823DC8D00A98DA5 /* ChainverseGameService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainverseGameService.h; sourceTree = "<group>"; };
+		3A7A4CB82823DC8D00A98DA5 /* ChainverseGameService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainverseGameService.m; sourceTree = "<group>"; };
+		3A7A4CBD2823DE7A00A98DA5 /* ChainverseService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainverseService.h; sourceTree = "<group>"; };
+		3A7A4CBE2823DE7A00A98DA5 /* ChainverseService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainverseService.m; sourceTree = "<group>"; };
+		3A7A4CC22823DEFB00A98DA5 /* ChainverseToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainverseToken.h; sourceTree = "<group>"; };
+		3A7A4CC32823DEFB00A98DA5 /* ChainverseToken.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainverseToken.m; sourceTree = "<group>"; };
+		3A7A4CC72823E0B500A98DA5 /* CVSDKGameServiceData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSDKGameServiceData.h; sourceTree = "<group>"; };
+		3A7A4CC82823E0B500A98DA5 /* CVSDKGameServiceData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSDKGameServiceData.m; sourceTree = "<group>"; };
+		3A7A4CD12824DA9D00A98DA5 /* InfoSell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoSell.h; sourceTree = "<group>"; };
+		3A7A4CD22824DA9D00A98DA5 /* InfoSell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoSell.m; sourceTree = "<group>"; };
+		3A7A4CD72824DD0E00A98DA5 /* Currency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
+		3A7A4CD82824DD0E00A98DA5 /* Currency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
+		3A7A4CDC2824DD6B00A98DA5 /* NFT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFT.h; sourceTree = "<group>"; };
+		3A7A4CDD2824DD6B00A98DA5 /* NFT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFT.m; sourceTree = "<group>"; };
+		3A7A4CE128250AAE00A98DA5 /* Auction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Auction.h; sourceTree = "<group>"; };
+		3A7A4CE228250AAE00A98DA5 /* Auction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Auction.m; sourceTree = "<group>"; };
+		3A7A4CE628250B5400A98DA5 /* Type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		3A7A4CE728250B5400A98DA5 /* Type.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
+		3A7A4CEB28250BCE00A98DA5 /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		3A7A4CEC28250BCE00A98DA5 /* Categories.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		3A7A4CF028250C0C00A98DA5 /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		3A7A4CF128250C0C00A98DA5 /* Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
 		3A85DE6527FD852F0095C229 /* ChainverseVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseVersion.h; sourceTree = "<group>"; };
 		3A85DE6627FD852F0095C229 /* ChainverseSDKCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseSDKCallback.h; sourceTree = "<group>"; };
 		3A85DE6727FD852F0095C229 /* Chainverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chainverse.h; sourceTree = "<group>"; };
@@ -771,38 +799,20 @@
 		3A85DEDA27FD85300095C229 /* CVSDKBridgingWeb3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKBridgingWeb3.h; sourceTree = "<group>"; };
 		3A85DEDD27FD85300095C229 /* CVSDKContractManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKContractManager.h; sourceTree = "<group>"; };
 		3A85DEDE27FD85300095C229 /* CVSDKContractManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKContractManager.m; sourceTree = "<group>"; };
-		3A85DEE027FD85300095C229 /* CVSDKServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKServiceManager.h; sourceTree = "<group>"; };
-		3A85DEE127FD85300095C229 /* CVSDKServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKServiceManager.m; sourceTree = "<group>"; };
 		3A85DEE327FD85300095C229 /* CVSDKTransferItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKTransferItemManager.m; sourceTree = "<group>"; };
 		3A85DEE427FD85300095C229 /* CVSDKTransferItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKTransferItemManager.h; sourceTree = "<group>"; };
 		3A85DEE727FD85300095C229 /* CVSDKNonce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKNonce.m; sourceTree = "<group>"; };
 		3A85DEE827FD85300095C229 /* CVSDKNonce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKNonce.h; sourceTree = "<group>"; };
 		3A85DEEA27FD85300095C229 /* CVSDKNFTDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKNFTDetail.h; sourceTree = "<group>"; };
-		3A85DEEB27FD85300095C229 /* ChainverseNFTType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseNFTType.h; sourceTree = "<group>"; };
-		3A85DEEC27FD85300095C229 /* ChainverseNFTCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseNFTCurrency.h; sourceTree = "<group>"; };
-		3A85DEED27FD85300095C229 /* ChainverseNFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseNFT.h; sourceTree = "<group>"; };
 		3A85DEEE27FD85300095C229 /* CVSDKTokenURI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKTokenURI.h; sourceTree = "<group>"; };
-		3A85DEEF27FD85300095C229 /* ChainverseNFTCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainverseNFTCategory.m; sourceTree = "<group>"; };
 		3A85DEF027FD85300095C229 /* CVSDKNFTResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKNFTResult.h; sourceTree = "<group>"; };
-		3A85DEF127FD85300095C229 /* ChainverseNFTNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseNFTNetwork.h; sourceTree = "<group>"; };
 		3A85DEF227FD85300095C229 /* CVSDKNFTData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKNFTData.m; sourceTree = "<group>"; };
-		3A85DEF327FD85300095C229 /* ChainverseNFTAuction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseNFTAuction.h; sourceTree = "<group>"; };
-		3A85DEF427FD85300095C229 /* ChainverseNFTType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainverseNFTType.m; sourceTree = "<group>"; };
 		3A85DEF527FD85300095C229 /* CVSDKNFTDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKNFTDetail.m; sourceTree = "<group>"; };
-		3A85DEF627FD85300095C229 /* ChainverseNFT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainverseNFT.m; sourceTree = "<group>"; };
-		3A85DEF727FD85300095C229 /* ChainverseNFTCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainverseNFTCurrency.m; sourceTree = "<group>"; };
 		3A85DEF827FD85300095C229 /* CVSDKNFTResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKNFTResult.m; sourceTree = "<group>"; };
-		3A85DEF927FD85300095C229 /* ChainverseNFTCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseNFTCategory.h; sourceTree = "<group>"; };
 		3A85DEFA27FD85300095C229 /* CVSDKTokenURI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKTokenURI.m; sourceTree = "<group>"; };
-		3A85DEFB27FD85300095C229 /* ChainverseNFTAuction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainverseNFTAuction.m; sourceTree = "<group>"; };
-		3A85DEFC27FD85300095C229 /* ChainverseNFTNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainverseNFTNetwork.m; sourceTree = "<group>"; };
 		3A85DEFD27FD85300095C229 /* CVSDKNFTData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKNFTData.h; sourceTree = "<group>"; };
 		3A85DEFF27FD85300095C229 /* CVSDKPhrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKPhrase.h; sourceTree = "<group>"; };
 		3A85DF0027FD85300095C229 /* CVSDKPhrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKPhrase.m; sourceTree = "<group>"; };
-		3A85DF0227FD85300095C229 /* CVSDKService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKService.m; sourceTree = "<group>"; };
-		3A85DF0327FD85300095C229 /* CVSDKServiceGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVSDKServiceGame.m; sourceTree = "<group>"; };
-		3A85DF0427FD85300095C229 /* CVSDKServiceGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKServiceGame.h; sourceTree = "<group>"; };
-		3A85DF0527FD85300095C229 /* CVSDKService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVSDKService.h; sourceTree = "<group>"; };
 		3A85DF0727FD85300095C229 /* ChainverseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainverseUser.m; sourceTree = "<group>"; };
 		3A85DF0827FD85300095C229 /* ChainverseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseUser.h; sourceTree = "<group>"; };
 		3A85DF0A27FD85300095C229 /* ChainverseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainverseItem.h; sourceTree = "<group>"; };
@@ -1155,6 +1165,50 @@
 				3A02382728110C4600696C2C /* Confirm */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		3A7A4CBC2823DCB800A98DA5 /* GameService */ = {
+			isa = PBXGroup;
+			children = (
+				3A7A4CB72823DC8D00A98DA5 /* ChainverseGameService.h */,
+				3A7A4CB82823DC8D00A98DA5 /* ChainverseGameService.m */,
+				3A7A4CBD2823DE7A00A98DA5 /* ChainverseService.h */,
+				3A7A4CBE2823DE7A00A98DA5 /* ChainverseService.m */,
+				3A7A4CC22823DEFB00A98DA5 /* ChainverseToken.h */,
+				3A7A4CC32823DEFB00A98DA5 /* ChainverseToken.m */,
+				3A7A4CC72823E0B500A98DA5 /* CVSDKGameServiceData.h */,
+				3A7A4CC82823E0B500A98DA5 /* CVSDKGameServiceData.m */,
+			);
+			path = GameService;
+			sourceTree = "<group>";
+		};
+		3A7A4CD62824DCD400A98DA5 /* NFT */ = {
+			isa = PBXGroup;
+			children = (
+				3A85DEEE27FD85300095C229 /* CVSDKTokenURI.h */,
+				3A85DEFA27FD85300095C229 /* CVSDKTokenURI.m */,
+				3A85DEEA27FD85300095C229 /* CVSDKNFTDetail.h */,
+				3A85DEF527FD85300095C229 /* CVSDKNFTDetail.m */,
+				3A85DEF027FD85300095C229 /* CVSDKNFTResult.h */,
+				3A85DEF827FD85300095C229 /* CVSDKNFTResult.m */,
+				3A85DEF227FD85300095C229 /* CVSDKNFTData.m */,
+				3A85DEFD27FD85300095C229 /* CVSDKNFTData.h */,
+				3A7A4CD12824DA9D00A98DA5 /* InfoSell.h */,
+				3A7A4CD22824DA9D00A98DA5 /* InfoSell.m */,
+				3A7A4CD72824DD0E00A98DA5 /* Currency.h */,
+				3A7A4CD82824DD0E00A98DA5 /* Currency.m */,
+				3A7A4CDC2824DD6B00A98DA5 /* NFT.h */,
+				3A7A4CDD2824DD6B00A98DA5 /* NFT.m */,
+				3A7A4CE128250AAE00A98DA5 /* Auction.h */,
+				3A7A4CE228250AAE00A98DA5 /* Auction.m */,
+				3A7A4CE628250B5400A98DA5 /* Type.h */,
+				3A7A4CE728250B5400A98DA5 /* Type.m */,
+				3A7A4CEB28250BCE00A98DA5 /* Categories.h */,
+				3A7A4CEC28250BCE00A98DA5 /* Categories.m */,
+				3A7A4CF028250C0C00A98DA5 /* Network.h */,
+				3A7A4CF128250C0C00A98DA5 /* Network.m */,
+			);
+			path = NFT;
 			sourceTree = "<group>";
 		};
 		3A85DE6A27FD852F0095C229 /* Internal */ = {
@@ -1524,18 +1578,8 @@
 			children = (
 				3A85DEDD27FD85300095C229 /* CVSDKContractManager.h */,
 				3A85DEDE27FD85300095C229 /* CVSDKContractManager.m */,
-				3A85DEDF27FD85300095C229 /* Service */,
 			);
 			path = Contract;
-			sourceTree = "<group>";
-		};
-		3A85DEDF27FD85300095C229 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				3A85DEE027FD85300095C229 /* CVSDKServiceManager.h */,
-				3A85DEE127FD85300095C229 /* CVSDKServiceManager.m */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		3A85DEE227FD85300095C229 /* TransferItem */ = {
@@ -1550,10 +1594,10 @@
 		3A85DEE527FD85300095C229 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3A7A4CD62824DCD400A98DA5 /* NFT */,
+				3A7A4CBC2823DCB800A98DA5 /* GameService */,
 				3A85DEE627FD85300095C229 /* Nonce */,
-				3A85DEE927FD85300095C229 /* NFT */,
 				3A85DEFE27FD85300095C229 /* Phrase */,
-				3A85DF0127FD85300095C229 /* ServiceGame */,
 				3A85DF0627FD85300095C229 /* User */,
 				3A85DF0927FD85300095C229 /* NFTItem */,
 			);
@@ -1569,33 +1613,6 @@
 			path = Nonce;
 			sourceTree = "<group>";
 		};
-		3A85DEE927FD85300095C229 /* NFT */ = {
-			isa = PBXGroup;
-			children = (
-				3A85DEEA27FD85300095C229 /* CVSDKNFTDetail.h */,
-				3A85DEEB27FD85300095C229 /* ChainverseNFTType.h */,
-				3A85DEEC27FD85300095C229 /* ChainverseNFTCurrency.h */,
-				3A85DEED27FD85300095C229 /* ChainverseNFT.h */,
-				3A85DEEE27FD85300095C229 /* CVSDKTokenURI.h */,
-				3A85DEEF27FD85300095C229 /* ChainverseNFTCategory.m */,
-				3A85DEF027FD85300095C229 /* CVSDKNFTResult.h */,
-				3A85DEF127FD85300095C229 /* ChainverseNFTNetwork.h */,
-				3A85DEF227FD85300095C229 /* CVSDKNFTData.m */,
-				3A85DEF327FD85300095C229 /* ChainverseNFTAuction.h */,
-				3A85DEF427FD85300095C229 /* ChainverseNFTType.m */,
-				3A85DEF527FD85300095C229 /* CVSDKNFTDetail.m */,
-				3A85DEF627FD85300095C229 /* ChainverseNFT.m */,
-				3A85DEF727FD85300095C229 /* ChainverseNFTCurrency.m */,
-				3A85DEF827FD85300095C229 /* CVSDKNFTResult.m */,
-				3A85DEF927FD85300095C229 /* ChainverseNFTCategory.h */,
-				3A85DEFA27FD85300095C229 /* CVSDKTokenURI.m */,
-				3A85DEFB27FD85300095C229 /* ChainverseNFTAuction.m */,
-				3A85DEFC27FD85300095C229 /* ChainverseNFTNetwork.m */,
-				3A85DEFD27FD85300095C229 /* CVSDKNFTData.h */,
-			);
-			path = NFT;
-			sourceTree = "<group>";
-		};
 		3A85DEFE27FD85300095C229 /* Phrase */ = {
 			isa = PBXGroup;
 			children = (
@@ -1603,17 +1620,6 @@
 				3A85DF0027FD85300095C229 /* CVSDKPhrase.m */,
 			);
 			path = Phrase;
-			sourceTree = "<group>";
-		};
-		3A85DF0127FD85300095C229 /* ServiceGame */ = {
-			isa = PBXGroup;
-			children = (
-				3A85DF0227FD85300095C229 /* CVSDKService.m */,
-				3A85DF0327FD85300095C229 /* CVSDKServiceGame.m */,
-				3A85DF0427FD85300095C229 /* CVSDKServiceGame.h */,
-				3A85DF0527FD85300095C229 /* CVSDKService.h */,
-			);
-			path = ServiceGame;
 			sourceTree = "<group>";
 		};
 		3A85DF0627FD85300095C229 /* User */ = {
@@ -2431,6 +2437,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7A4CF228250C0C00A98DA5 /* Network.h in Headers */,
+				3A7A4CED28250BCE00A98DA5 /* Categories.h in Headers */,
+				3A7A4CD92824DD0E00A98DA5 /* Currency.h in Headers */,
+				3A7A4CE328250AAE00A98DA5 /* Auction.h in Headers */,
+				3A7A4CDE2824DD6B00A98DA5 /* NFT.h in Headers */,
+				3A7A4CE828250B5400A98DA5 /* Type.h in Headers */,
+				3A7A4CD32824DA9D00A98DA5 /* InfoSell.h in Headers */,
 				3A85E0B027FD85300095C229 /* CVSDKBaseBlocks.h in Headers */,
 				3A023836281110B300696C2C /* CVSDKContractConfirmView.h in Headers */,
 				3A85E1BD27FD85310095C229 /* JSONValueTransformer.h in Headers */,
@@ -2438,13 +2451,8 @@
 				3A85E1C827FD85310095C229 /* JSONModelError.h in Headers */,
 				3A85E1C527FD85310095C229 /* JSONModel.h in Headers */,
 				3A85E0A427FD85300095C229 /* CVSDKBaseObject.h in Headers */,
-				3A85E07C27FD85300095C229 /* ChainverseNFTAuction.h in Headers */,
-				3A85E08727FD85300095C229 /* ChainverseNFTCategory.h in Headers */,
 				3A023832281110B300696C2C /* CVSDKContractConfirmInput.h in Headers */,
-				3A85E07927FD85300095C229 /* ChainverseNFTNetwork.h in Headers */,
-				3A85E07327FD85300095C229 /* ChainverseNFTCurrency.h in Headers */,
-				3A85E07227FD85300095C229 /* ChainverseNFTType.h in Headers */,
-				3A85E07427FD85300095C229 /* ChainverseNFT.h in Headers */,
+				3A7A4CBF2823DE7A00A98DA5 /* ChainverseService.h in Headers */,
 				3A85E09B27FD85300095C229 /* ChainverseItem.h in Headers */,
 				3A85E1E327FD85310095C229 /* ChainverseSDKError.h in Headers */,
 				3A85E09A27FD85300095C229 /* ChainverseUser.h in Headers */,
@@ -2470,9 +2478,9 @@
 				3A85E02827FD85300095C229 /* CVSDKWalletBackupView.h in Headers */,
 				3A85E0AF27FD85300095C229 /* CVSDKBaseViewDialog.h in Headers */,
 				3A85E05327FD85300095C229 /* CVSDKABI.h in Headers */,
+				3A7A4CC42823DEFB00A98DA5 /* ChainverseToken.h in Headers */,
 				3A85E05C27FD85300095C229 /* CVSDKRPCClient.h in Headers */,
 				3A85E05A27FD85300095C229 /* CVSDKRESTfulClient.h in Headers */,
-				3A85E09727FD85300095C229 /* CVSDKService.h in Headers */,
 				3A85E09E27FD85300095C229 /* CVSDKBaseCollectionViewCell.h in Headers */,
 				3A85E03227FD85300095C229 /* CVSDKWalletImportScreen.h in Headers */,
 				3A85E00727FD85300095C229 /* CVSDKWalletVerifyScreen.h in Headers */,
@@ -2500,15 +2508,15 @@
 				3A85E07527FD85300095C229 /* CVSDKTokenURI.h in Headers */,
 				3A85E02427FD85300095C229 /* CVSDKPhraseViewCell.h in Headers */,
 				3A85E0A727FD85300095C229 /* CVSDKBaseView.h in Headers */,
+				3A7A4CC92823E0B500A98DA5 /* CVSDKGameServiceData.h in Headers */,
 				3A85E08E27FD85300095C229 /* CVSDKNFTData.h in Headers */,
 				3A85E0AC27FD85300095C229 /* CVSDKBaseResource.h in Headers */,
 				3A85E04427FD85300095C229 /* CVSDKChainverseAppResult.h in Headers */,
 				3A85E1C927FD85310095C229 /* JSONModelLib.h in Headers */,
-				3A85E09627FD85300095C229 /* CVSDKServiceGame.h in Headers */,
-				3A85E06827FD85300095C229 /* CVSDKServiceManager.h in Headers */,
 				3A85E07127FD85300095C229 /* CVSDKNFTDetail.h in Headers */,
 				3A85E1B927FD85310095C229 /* AFHTTPSessionManager.h in Headers */,
 				3A85E05F27FD85300095C229 /* CVSDKBridgingWallet.h in Headers */,
+				3A7A4CB92823DC8D00A98DA5 /* ChainverseGameService.h in Headers */,
 				3A85E1E427FD85310095C229 /* ChainverseTokenSupport.h in Headers */,
 				3A85E01927FD85300095C229 /* CVSDKWalletExportScreen.h in Headers */,
 				3A85E1A527FD85310095C229 /* Chainverse-SDK-Bridging-Header.h in Headers */,
@@ -2866,8 +2874,8 @@
 				3A85E0B327FD85300095C229 /* ABIElements.swift in Sources */,
 				3A85E21627FD87E40095C229 /* MyAssetCollectionViewCell.m in Sources */,
 				3A85E01027FD85300095C229 /* CVSDKWalletVerifyScreen.m in Sources */,
+				3A7A4CD42824DA9D00A98DA5 /* InfoSell.m in Sources */,
 				3A85E05027FD85300095C229 /* CVSDKCallbackToGame.m in Sources */,
-				3A85E06927FD85300095C229 /* CVSDKServiceManager.m in Sources */,
 				3A85E0F127FD85310095C229 /* Web3+Methods.swift in Sources */,
 				3A85E10127FD85310095C229 /* PublicKey.swift in Sources */,
 				3A85E08827FD85300095C229 /* CVSDKTokenURI.m in Sources */,
@@ -2886,7 +2894,6 @@
 				3A85E16227FD85310095C229 /* RIPEMD160+StackOveflow.swift in Sources */,
 				3A85E06B27FD85300095C229 /* CVSDKTransferItemManager.m in Sources */,
 				3A85E21527FD87E40095C229 /* MyAssetViewController.m in Sources */,
-				3A85E08A27FD85300095C229 /* ChainverseNFTAuction.m in Sources */,
 				3A85E0DF27FD85300095C229 /* Web3+Utils.swift in Sources */,
 				3A85E06027FD85300095C229 /* CVSDKBridgingWeb3.m in Sources */,
 				3A85E17E27FD85310095C229 /* Web3+ERC721x.swift in Sources */,
@@ -2924,10 +2931,10 @@
 				3A85E04027FD85300095C229 /* CVSDKChainverseAppResult.m in Sources */,
 				3A85E17027FD85310095C229 /* SECP256k1.swift in Sources */,
 				3A85E0AD27FD85300095C229 /* CVSDKBaseViewDialog.m in Sources */,
+				3A7A4CCA2823E0B600A98DA5 /* CVSDKGameServiceData.m in Sources */,
 				3A85E10527FD85310095C229 /* ENSBaseRegistrar.swift in Sources */,
 				3A85E18C27FD85310095C229 /* Web3+ST20.swift in Sources */,
 				3A023834281110B300696C2C /* CVSDKContractConfirmView.m in Sources */,
-				3A85E08127FD85300095C229 /* ChainverseNFT.m in Sources */,
 				3A85E14127FD85310095C229 /* Web3+Wallet.swift in Sources */,
 				3A85E0C927FD85300095C229 /* EthereumFilterEncodingExtensions.swift in Sources */,
 				3A85E11F27FD85310095C229 /* Promise+Web3+Eth+GetTransactionDetails.swift in Sources */,
@@ -2937,16 +2944,13 @@
 				3A85E0F927FD85310095C229 /* Web3+Options.swift in Sources */,
 				3A85E0C727FD85300095C229 /* ComparisonExtensions.swift in Sources */,
 				3A85E12727FD85310095C229 /* Promise+Batching.swift in Sources */,
-				3A85E09227FD85300095C229 /* CVSDKService.m in Sources */,
 				3A85E18427FD85310095C229 /* Web3+ERC1633.swift in Sources */,
-				3A85E07D27FD85300095C229 /* ChainverseNFTType.m in Sources */,
-				3A85E07627FD85300095C229 /* ChainverseNFTCategory.m in Sources */,
 				3A85E18A27FD85310095C229 /* Web3+SecurityToken.swift in Sources */,
 				3A85E0E527FD85300095C229 /* Web3+Instance.swift in Sources */,
 				3A023830281110B300696C2C /* CVSDKContractConfirmScreen.m in Sources */,
 				3A85E16427FD85310095C229 /* BigUInt+Extensions.swift in Sources */,
+				3A7A4CDF2824DD6B00A98DA5 /* NFT.m in Sources */,
 				3A85E16A27FD85310095C229 /* Encodable+Extensions.swift in Sources */,
-				3A85E08C27FD85300095C229 /* ChainverseNFTNetwork.m in Sources */,
 				3A85E02B27FD85300095C229 /* CVSDKWalletConnectScreen.m in Sources */,
 				3A85E0AA27FD85300095C229 /* CVSDKBaseResource.m in Sources */,
 				3A85E08527FD85300095C229 /* CVSDKNFTResult.m in Sources */,
@@ -2972,6 +2976,7 @@
 				3A85E13527FD85310095C229 /* Promise+Web3+Contract+GetIndexedEvents.swift in Sources */,
 				3A85E0DB27FD85300095C229 /* Web3+Eventloop.swift in Sources */,
 				3A85E10F27FD85310095C229 /* NonceMiddleware.swift in Sources */,
+				3A7A4CBA2823DC8D00A98DA5 /* ChainverseGameService.m in Sources */,
 				3A85E1D127FD85310095C229 /* JSONModel+networking.m in Sources */,
 				3A85E0E727FD85300095C229 /* Web3+Contract.swift in Sources */,
 				3A85E0B127FD85300095C229 /* ABIDecoding.swift in Sources */,
@@ -2981,6 +2986,7 @@
 				3A85E15027FD85310095C229 /* BIP39.swift in Sources */,
 				3A85E0C127FD85300095C229 /* TransactionSigner.swift in Sources */,
 				3A85E0CF27FD85300095C229 /* RLP.swift in Sources */,
+				3A7A4CE928250B5400A98DA5 /* Type.m in Sources */,
 				3A85E16027FD85310095C229 /* KeystoreParams.swift in Sources */,
 				3A85E0FB27FD85310095C229 /* Extensions.swift in Sources */,
 				3A9F00DC26730259008F4C1B /* main.m in Sources */,
@@ -2997,12 +3003,14 @@
 				3A85E12F27FD85310095C229 /* Promise+Web3+Eth+GetBlockByNumber.swift in Sources */,
 				3A85E1CA27FD85310095C229 /* JSONHTTPClient.m in Sources */,
 				3A85E00C27FD85300095C229 /* CVSDKPhraseVerifyViewCell.m in Sources */,
+				3A7A4CC52823DEFB00A98DA5 /* ChainverseToken.m in Sources */,
 				3A85E02127FD85300095C229 /* CVSDKWalletBackupView.m in Sources */,
 				3A85E19227FD85310095C229 /* Web3+ERC777.swift in Sources */,
 				3A85E14C27FD85310095C229 /* KeystoreManager.swift in Sources */,
 				3A85E12327FD85310095C229 /* Promise+Web3+Eth+SendTransaction.swift in Sources */,
 				3A85E21327FD87E40095C229 /* DetailMarketViewController.m in Sources */,
 				3A85E15627FD85310095C229 /* BIP32Keystore.swift in Sources */,
+				3A7A4CC02823DE7A00A98DA5 /* ChainverseService.m in Sources */,
 				3A85E15227FD85310095C229 /* BIP32HDNode.swift in Sources */,
 				3A85E16627FD85310095C229 /* Decodable+Extensions.swift in Sources */,
 				3A85E17627FD85310095C229 /* NativeTypesEncoding+Extensions.swift in Sources */,
@@ -3010,6 +3018,7 @@
 				3A85E1AF27FD85310095C229 /* AFURLSessionManager.m in Sources */,
 				3A85E1C227FD85310095C229 /* JSONModelError.m in Sources */,
 				3A85E13927FD85310095C229 /* Promise+Web3+Eth+GetAccounts.swift in Sources */,
+				3A7A4CEE28250BCE00A98DA5 /* Categories.m in Sources */,
 				3A85E0EB27FD85300095C229 /* Web3+ReadingTransaction.swift in Sources */,
 				3A85E05827FD85300095C229 /* CVSDKRESTfulClient.m in Sources */,
 				3A85E17427FD85310095C229 /* Data+Extension.swift in Sources */,
@@ -3021,6 +3030,7 @@
 				3A85E16827FD85310095C229 /* CryptoExtensions.swift in Sources */,
 				3A85E01227FD85300095C229 /* CVSDKWalletInfoScreen.m in Sources */,
 				3A85E0F527FD85310095C229 /* Web3+TxPool.swift in Sources */,
+				3A7A4CDA2824DD0E00A98DA5 /* Currency.m in Sources */,
 				3A85E0D927FD85300095C229 /* Web3+Constants.swift in Sources */,
 				3A85E00827FD85300095C229 /* CVSDKWalletVerifyView.m in Sources */,
 				3A85E03927FD85300095C229 /* CVSDKWalletCreateScreen.m in Sources */,
@@ -3030,18 +3040,19 @@
 				3A85E1AC27FD85310095C229 /* AFHTTPSessionManager.m in Sources */,
 				3A85E15A27FD85310095C229 /* PlainKeystore.swift in Sources */,
 				3A85E10727FD85310095C229 /* ETHRegistrarController.swift in Sources */,
+				3A7A4CE428250AAE00A98DA5 /* Auction.m in Sources */,
 				3A85E20827FD87E40095C229 /* SceneDelegate.m in Sources */,
 				3A85E12127FD85310095C229 /* Promise+HttpProvider.swift in Sources */,
 				3A85E19C27FD85310095C229 /* Web3+ERC1155.swift in Sources */,
 				3A85E18227FD85310095C229 /* Web3+ERC1376.swift in Sources */,
 				3A85E0D527FD85300095C229 /* Web3+InfuraProviders.swift in Sources */,
+				3A7A4CF328250C0C00A98DA5 /* Network.m in Sources */,
 				3A85E17227FD85310095C229 /* Dictionary+Extension.swift in Sources */,
 				3A85E17827FD85310095C229 /* Base58.swift in Sources */,
 				3A85E03C27FD85300095C229 /* CVSDKWalletCreateView.m in Sources */,
 				3A85E13D27FD85310095C229 /* Promise+Web3+Personal+CreateAccount.swift in Sources */,
 				3A85E0A827FD85300095C229 /* CVSDKBaseView.m in Sources */,
 				3A85E0BD27FD85300095C229 /* ABIParsing.swift in Sources */,
-				3A85E09427FD85300095C229 /* CVSDKServiceGame.m in Sources */,
 				3A85E11327FD85310095C229 /* EIP67Code.swift in Sources */,
 				3A85E17A27FD85310095C229 /* Array+Extension.swift in Sources */,
 				3A85E09C27FD85300095C229 /* ChainverseItem.m in Sources */,
@@ -3050,7 +3061,6 @@
 				3A85E15427FD85310095C229 /* BIP39+WordLists.swift in Sources */,
 				3A85E1C627FD85310095C229 /* JSONModelClassProperty.m in Sources */,
 				3A85E06E27FD85300095C229 /* CVSDKNonce.m in Sources */,
-				3A85E08327FD85300095C229 /* ChainverseNFTCurrency.m in Sources */,
 				3A85E09F27FD85300095C229 /* CVSDKBaseCollectionViewCell.m in Sources */,
 				3A85E02D27FD85300095C229 /* CVSDKWalletConnectView.m in Sources */,
 				3A85E0FF27FD85310095C229 /* ENS.swift in Sources */,
@@ -3130,6 +3140,7 @@
 				3A85E0A327FD85300095C229 /* CVSDKBaseSocketIO.m in Sources */,
 				3A85E0AB27FD85300095C229 /* CVSDKBaseResource.m in Sources */,
 				3A85E14027FD85310095C229 /* Promise+Web3+Eth+Call.swift in Sources */,
+				3A7A4CF428250C0C00A98DA5 /* Network.m in Sources */,
 				3A85E17D27FD85310095C229 /* Web3+ERC820.swift in Sources */,
 				3A85E13E27FD85310095C229 /* Promise+Web3+Personal+CreateAccount.swift in Sources */,
 				3A85E0FE27FD85310095C229 /* EthereumAddress.swift in Sources */,
@@ -3141,7 +3152,6 @@
 				3A85E1B027FD85310095C229 /* AFURLSessionManager.m in Sources */,
 				3A85E11E27FD85310095C229 /* Promise+Web3+Eth+GetBlockByHash.swift in Sources */,
 				3A85E18B27FD85310095C229 /* Web3+SecurityToken.swift in Sources */,
-				3A85E08B27FD85300095C229 /* ChainverseNFTAuction.m in Sources */,
 				3A85E11427FD85310095C229 /* EIP67Code.swift in Sources */,
 				3A85E17327FD85310095C229 /* Dictionary+Extension.swift in Sources */,
 				3A85E10E27FD85310095C229 /* ENSResolver.swift in Sources */,
@@ -3157,7 +3167,8 @@
 				3A85E0F827FD85310095C229 /* Web3+Structures.swift in Sources */,
 				3A85E01627FD85300095C229 /* CVSDKWalletInfoView.m in Sources */,
 				3A85E18527FD85310095C229 /* Web3+ERC1633.swift in Sources */,
-				3A85E08D27FD85300095C229 /* ChainverseNFTNetwork.m in Sources */,
+				3A7A4CCB2823E0B600A98DA5 /* CVSDKGameServiceData.m in Sources */,
+				3A7A4CE02824DD6B00A98DA5 /* NFT.m in Sources */,
 				3A85E14427FD85310095C229 /* Web3+BrowserFunctions.swift in Sources */,
 				3A85E0D627FD85300095C229 /* Web3+InfuraProviders.swift in Sources */,
 				3A85E1B527FD85310095C229 /* AFNetworkReachabilityManager.m in Sources */,
@@ -3165,17 +3176,19 @@
 				3A85E0B827FD85300095C229 /* ABIParameterTypes.swift in Sources */,
 				3A85E02A27FD85300095C229 /* CVSDKWalletBackupScreen.m in Sources */,
 				3A85E18327FD85310095C229 /* Web3+ERC1376.swift in Sources */,
+				3A7A4CEA28250B5400A98DA5 /* Type.m in Sources */,
 				3A85E06127FD85300095C229 /* CVSDKBridgingWeb3.m in Sources */,
 				3A85E15927FD85310095C229 /* EthereumKeystoreV3.swift in Sources */,
 				3A85E13227FD85310095C229 /* Promise+Web3+Eth+SendRawTransaction.swift in Sources */,
+				3A7A4CBB2823DC8D00A98DA5 /* ChainverseGameService.m in Sources */,
 				3A85E16D27FD85310095C229 /* String+Extension.swift in Sources */,
 				3A85E11C27FD85310095C229 /* Promise+Web3+Eth+GetGasPrice.swift in Sources */,
 				3A85E13A27FD85310095C229 /* Promise+Web3+Eth+GetAccounts.swift in Sources */,
 				3A85E1B227FD85310095C229 /* AFURLRequestSerialization.m in Sources */,
 				3A85E14627FD85310095C229 /* Bridge.swift in Sources */,
 				3A85E04127FD85300095C229 /* CVSDKChainverseAppResult.m in Sources */,
-				3A85E07727FD85300095C229 /* ChainverseNFTCategory.m in Sources */,
 				3A85E12427FD85310095C229 /* Promise+Web3+Eth+SendTransaction.swift in Sources */,
+				3A7A4CC62823DEFB00A98DA5 /* ChainverseToken.m in Sources */,
 				3A85E0E227FD85300095C229 /* Web3+MutatingTransaction.swift in Sources */,
 				3A85E15127FD85310095C229 /* BIP39.swift in Sources */,
 				3A85E11A27FD85310095C229 /* Promise+Web3+Personal+Sign.swift in Sources */,
@@ -3187,21 +3200,18 @@
 				3A85E15B27FD85310095C229 /* PlainKeystore.swift in Sources */,
 				3A85E04827FD85300095C229 /* CVSDKParseJson.m in Sources */,
 				3A85E0D427FD85300095C229 /* Web3.swift in Sources */,
-				3A85E06A27FD85300095C229 /* CVSDKServiceManager.m in Sources */,
 				3A85E0FC27FD85310095C229 /* Extensions.swift in Sources */,
 				3A85E03A27FD85300095C229 /* CVSDKWalletCreateScreen.m in Sources */,
 				3A85E19727FD85310095C229 /* Web3+ERC165.swift in Sources */,
 				3A85E13427FD85310095C229 /* Promise+Web3+Eth+GetTransactionCount.swift in Sources */,
 				3A85E05927FD85300095C229 /* CVSDKRESTfulClient.m in Sources */,
 				3A023839281110B300696C2C /* CVSDKContractConfirmInput.m in Sources */,
-				3A85E09527FD85300095C229 /* CVSDKServiceGame.m in Sources */,
 				3A85E11227FD85310095C229 /* EIP712.swift in Sources */,
 				3A85E0AE27FD85300095C229 /* CVSDKBaseViewDialog.m in Sources */,
 				3A85E04B27FD85300095C229 /* CVSDKUserDefault.m in Sources */,
 				3A85E15727FD85310095C229 /* BIP32Keystore.swift in Sources */,
 				3A85E17527FD85310095C229 /* Data+Extension.swift in Sources */,
 				3A85E12627FD85310095C229 /* Promise+Web3+Eth+GetBalance.swift in Sources */,
-				3A85E08227FD85300095C229 /* ChainverseNFT.m in Sources */,
 				3A85E11627FD85310095C229 /* EIP681.swift in Sources */,
 				3A85E13027FD85310095C229 /* Promise+Web3+Eth+GetBlockByNumber.swift in Sources */,
 				3A85E03827FD85300095C229 /* CVSDKWalletImportView.m in Sources */,
@@ -3211,7 +3221,6 @@
 				3A85E1A227FD85310095C229 /* CVWallet.swift in Sources */,
 				3A85E0C827FD85300095C229 /* ComparisonExtensions.swift in Sources */,
 				3A85E0D227FD85300095C229 /* Web3+HttpProvider.swift in Sources */,
-				3A85E07E27FD85300095C229 /* ChainverseNFTType.m in Sources */,
 				3A85E02227FD85300095C229 /* CVSDKWalletBackupView.m in Sources */,
 				3A85E16B27FD85310095C229 /* Encodable+Extensions.swift in Sources */,
 				3A85E00127FD85300095C229 /* CVSDKSignMessageScreen.m in Sources */,
@@ -3234,7 +3243,6 @@
 				3A85E0C627FD85300095C229 /* EventFiltering.swift in Sources */,
 				3A85E0C227FD85300095C229 /* TransactionSigner.swift in Sources */,
 				3A85E08627FD85300095C229 /* CVSDKNFTResult.m in Sources */,
-				3A85E09327FD85300095C229 /* CVSDKService.m in Sources */,
 				3A85E1BF27FD85310095C229 /* JSONKeyMapper.m in Sources */,
 				3A85E11827FD85310095C229 /* Promise+Web3+Eth+GetBlockNumber.swift in Sources */,
 				3A85E0EC27FD85300095C229 /* Web3+ReadingTransaction.swift in Sources */,
@@ -3244,7 +3252,7 @@
 				3A85E06327FD85300095C229 /* CVSDKBridgingWallet.m in Sources */,
 				3A85E12827FD85310095C229 /* Promise+Batching.swift in Sources */,
 				3A85E0DA27FD85300095C229 /* Web3+Constants.swift in Sources */,
-				3A85E08427FD85300095C229 /* ChainverseNFTCurrency.m in Sources */,
+				3A7A4CDB2824DD0E00A98DA5 /* Currency.m in Sources */,
 				3A85E19327FD85310095C229 /* Web3+ERC777.swift in Sources */,
 				3A85E01B27FD85300095C229 /* CVSDKWalletExportScreen.m in Sources */,
 				3A85E0FA27FD85310095C229 /* Web3+Options.swift in Sources */,
@@ -3267,10 +3275,12 @@
 				3A85E05E27FD85300095C229 /* CVSDKRPCClient.m in Sources */,
 				3A85E0A027FD85300095C229 /* CVSDKBaseCollectionViewCell.m in Sources */,
 				3A85E0CC27FD85300095C229 /* EthereumContract.swift in Sources */,
+				3A7A4CD52824DA9D00A98DA5 /* InfoSell.m in Sources */,
 				3A85E16527FD85310095C229 /* BigUInt+Extensions.swift in Sources */,
 				3A85E0EE27FD85310095C229 /* Web3+Protocols.swift in Sources */,
 				3A85E10A27FD85310095C229 /* NameHash.swift in Sources */,
 				3A85E03427FD85300095C229 /* CVSDKWalletImportScreen.m in Sources */,
+				3A7A4CE528250AAE00A98DA5 /* Auction.m in Sources */,
 				3A85E12227FD85310095C229 /* Promise+HttpProvider.swift in Sources */,
 				3A85E1A427FD85310095C229 /* CVWeb3.swift in Sources */,
 				3A85E09127FD85300095C229 /* CVSDKPhrase.m in Sources */,
@@ -3278,10 +3288,12 @@
 				3A85E08927FD85300095C229 /* CVSDKTokenURI.m in Sources */,
 				3A85E1C727FD85310095C229 /* JSONModelClassProperty.m in Sources */,
 				3A85E17927FD85310095C229 /* Base58.swift in Sources */,
+				3A7A4CEF28250BCE00A98DA5 /* Categories.m in Sources */,
 				3A85E0C027FD85300095C229 /* BloomFilter.swift in Sources */,
 				3A85E10C27FD85310095C229 /* ENSRegistry.swift in Sources */,
 				3A85E1C127FD85310095C229 /* JSONModel.m in Sources */,
 				3A85E17127FD85310095C229 /* SECP256k1.swift in Sources */,
+				3A7A4CC12823DE7A00A98DA5 /* ChainverseService.m in Sources */,
 				3A85E02727FD85300095C229 /* CVSDKPhraseViewCell.m in Sources */,
 				3A023831281110B300696C2C /* CVSDKContractConfirmScreen.m in Sources */,
 			);

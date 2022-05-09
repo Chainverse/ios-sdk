@@ -180,7 +180,7 @@ Bạn sẽ xử lý NFT trong chợ của bạn ở callback này.
 
 ##### Objective C
 ```
-- (void)didGetListItemMarket:(NSArray<ChainverseNFT> *) items{
+- (void)didGetListItemMarket:(NSMutableArray<NFT> *) items{
     
 }
 ```
@@ -193,7 +193,7 @@ Bạn sẽ xử lý NFT trong chợ của bạn ở callback này.
 
 ##### Objective C
 ```
-- (void)didGetDetailItem:(ChainverseNFT*)item{
+- (void)didGetDetailItem:(NFT*)item{
     
 }
 ```
@@ -207,7 +207,7 @@ Bạn sẽ xử lý NFT của bạn ở callback này.
 
 ##### Objective C
 ```
-- (void)didGetMyAssets:(NSArray<ChainverseNFT> *) items{
+- (void)didGetMyAssets:(NSMutableArray<NFT>  *) items{
     
 }
 ```
@@ -327,7 +327,7 @@ Khi gọi hàm  `[[ChainverseSDK shared] signMessage:@"message_can_ki"]` Callbac
 }
 
 
-- (void)didGetDetailItem:(ChainverseNFT*)item{
+- (void)didGetDetailItem:(NFT*)item{
    
 }
 
@@ -348,11 +348,11 @@ Khi gọi hàm  `[[ChainverseSDK shared] signMessage:@"message_can_ki"]` Callbac
     
 }
 
-- (void)didGetListItemMarket:(NSArray<ChainverseNFT> *) items{
+- (void)didGetListItemMarket:(NSMutableArray<NFT> *) items{
     
 }
 
-- (void)didGetMyAssets:(NSArray<ChainverseNFT> *) items{
+- (void)didGetMyAssets:(NSMutableArray<NFT> *) items{
     
 }
 
@@ -506,7 +506,7 @@ Sử dụng hàm này để lấy danh sách ITEM trong chợ. Danh sách item s
 [[ChainverseSDK shared] getListItemOnMarket:page pageSize:pageSize];
 
 //Callback delegate
-- (void)didGetListItemMarket:(NSArray<ChainverseNFT> *) items{
+- (void)didGetListItemMarket:(NSMutableArray<NFT> *) items{
     
 }
 
@@ -525,7 +525,7 @@ Sử dụng hàm này để lấy thông tin chi tiết của 1 item (Thông tin
 [[ChainverseSDK shared] getDetailNFT:@"nft" tokenId:tokenId];
 
 //Callback delegate
-- (void)didGetDetailItem:(ChainverseNFT*)item{
+- (void)didGetDetailItem:(NFT*)item{
    
 }
 
@@ -556,7 +556,7 @@ Sử dụng hàm này để lấy danh sách item user đang sở hữu (Kể c�
 [[ChainverseSDK shared] getMyAsset];
 
 //Callback delegate
-- (void)didGetMyAssets:(NSArray<ChainverseNFT> *) items{
+- (void)didGetMyAssets:(NSMutableArray<NFT> *) items{
    
 }
 
@@ -752,7 +752,7 @@ Sử dụng hàm này để chuyển item sang địa chỉ ví khác. Thông ti
 
 ```
 ## Data Model
-#### 1. ChainverseNFT
+#### 1. NFT
 Dữ liệu NFT
 
 | Name  | Type | Description | 
@@ -766,13 +766,13 @@ Dữ liệu NFT
 | image_preview | String  | Ảnh đại diện NFT |
 | name | String  | Tên NFT |
 | attributes | String  | attributes của NFT |
-| auctions | NSArray<ChainverseNFTAuction>  | Thông tin auctions |
-| type | ChainverseNFTType  | Developer đang bị pause | 
-| network_info | ChainverseNFTNetwork  | Thông tin mạng NFT |
+| infoSell | InfoSell  | Thông tin bán NFT |
+| type | Type  | Developer đang bị pause | 
+| network_info | Network  | Thông tin mạng NFT |
 
 
-#### 2. ChainverseNFTAuction
-Dữ liệu Auction
+#### 2. InfoSell
+Dữ liệu InfoSell
 
 | Name  | Type | Description | 
 | ------------- | ------------- | ------------- | 
@@ -781,7 +781,7 @@ Dữ liệu Auction
 | is_auction  | Bool  | Trạng thái auction | 
 | currency_info  | ChainverseNFTCurrency  | Thông tin về currency |
 
-#### 3. ChainverseNFTCurrency
+#### 3. Currency
 Dữ liệu Currency
 
 | Name  | Type | Description | 
@@ -790,7 +790,7 @@ Dữ liệu Currency
 | decimal  | String  | decimal |
 | symbol  | String  | symbol | 
 
-#### 4. ChainverseNFTNetwork
+#### 4. Network
 Dữ liệu Network
 
 | Name  | Type | Description | 

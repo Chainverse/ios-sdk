@@ -45,13 +45,13 @@
     }
 }
 
-+ (void)didGetListItemMarket:(NSArray<ChainverseNFT> *) items{
++ (void)didGetListItemMarket:(NSMutableArray<NFT> *) items{
     if([[ChainverseSDK shared].delegate respondsToSelector:@selector(didGetListItemMarket:)]){
         [[ChainverseSDK shared].delegate didGetListItemMarket:items];
     }
 }
 
-+ (void)didGetMyAssets:(NSArray<ChainverseNFT> *) items{
++ (void)didGetMyAssets:(NSMutableArray<NFT> *) items{
     if([[ChainverseSDK shared].delegate respondsToSelector:@selector(didGetMyAssets:)]){
         [[ChainverseSDK shared].delegate didGetMyAssets:items];
     }
@@ -60,7 +60,7 @@
 + (void)didTransact:(int)function tx:(NSString *)tx{
     [[ChainverseSDK shared].delegate didTransact:function tx:tx];
 }
-+ (void)didGetDetailItem:(ChainverseNFT*)item{
++ (void)didGetDetailItem:(NFT*)item{
     [[ChainverseSDK shared].delegate didGetDetailItem:item];
 }
 

@@ -18,12 +18,10 @@
 #import "CVSDKBridgingWeb3.h"
 #import "CVSDKABI.h"
 #import "CVSDKUserDefault.h"
-#import "CVSDKServiceManager.h"
-#import "CVSDKService.h"
 #import "CVSDKRESTfulClient.h"
 #import "CVSDKParseJson.h"
-#import "ChainverseNFT.h"
-#import "ChainverseNFTAuction.h"
+#import "NFT.h"
+#import "Auction.h"
 @implementation CVSDKContractManager
 + (CVSDKContractManager *)shared{
     static CVSDKContractManager *_shared = nil;
@@ -133,6 +131,10 @@
     return [[CVSDKBridgingWeb3 shared] cancelSellNFT:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] listing:listingId];
 }
 
+- (NSString *)feeCancelSellNFT: (NSInteger )listingId{
+    return [[CVSDKBridgingWeb3 shared] feeCancelSellNFT:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] listing:listingId];
+}
+
 
 - (void)getNFT:(NSString *)nft tokenId:(NSInteger )tokenId complete:(CVSDKGetNFTBlock) complete{
     
@@ -153,15 +155,21 @@
         CVSDKTokenURI *respone  = (CVSDKTokenURI *)[responseObject objectAtIndex:0];
         NSDictionary *itemDict = (NSDictionary *)[responseObject objectAtIndex:1];
         
-        ChainverseNFTAuction *auction = [[ChainverseNFTAuction alloc] init];
+        Auction *auction = [[Auction alloc] init];
         auction.listing_id = [[itemDict allKeys] containsObject:@"listing_id"] ? [itemDict objectForKey:@"listing_id"] : 0;
         auction.price = [[itemDict allKeys] containsObject:@"price"] ? [itemDict objectForKey:@"price"] : @"";
         auction.is_auction = [[itemDict allKeys] containsObject:@"is_ended"] ? [itemDict objectForKey:@"is_ended"] : false;
         
-        NSArray<ChainverseNFTAuction> *auctions;
-        [auctions arrayByAddingObject:auction];
+        InfoSell *infoSell = [[InfoSell alloc] init];
+        infoSell.listing_id = auction.listing_id;
+        infoSell.price = auction.price;
+        infoSell.is_auction = auction.is_auction;
+        infoSell.currency_info = auction.currency_info;
+        NSMutableArray<Auction> *auctions = [NSMutableArray<Auction> array] ;
         
-        ChainverseNFT *item = [[ChainverseNFT alloc] init];
+        [auctions addObject:auction];
+        
+        NFT *item = [[NFT alloc] init];
         item.token_id = [[itemDict allKeys] containsObject:@"token_id"] ? [itemDict objectForKey:@"token_id"] : 0;
         item.owner = [[itemDict allKeys] containsObject:@"owner"] ? [itemDict objectForKey:@"owner"] : @"";
         item.nft = [[itemDict allKeys] containsObject:@"nft"] ? [itemDict objectForKey:@"nft"] : @"";
@@ -170,6 +178,7 @@
         item.name = respone.name ? respone.name : @"";
         item.attributes = respone.attributes ? respone.attributes : @"";
         item.auctions = auctions;
+        item.infoSell = infoSell;
         
         complete(item);
     }
@@ -224,5 +233,26 @@
 
 - (NSString *)moveItemToService:(NSString*)service abi:(NSString *)abi nft:(NSString *)nft tokenId:(NSInteger )tokenId{
     return [[CVSDKBridgingWeb3 shared] moveService:[CVSDKUserDefault getXUserAdress] serviceAddress:service abi:abi nft:nft tokenId:tokenId];
+}
+
+//Chainverse App
+- (void)approveNFTWithChainverseApp:(NSString *)nft tokenId:(NSInteger )tokenId{
+    [[CVSDKBridgingWeb3 shared] approveNFTWithChainverseApp:marketServiceAddress abi:ABI_ERC721 walletAddress:[CVSDKUserDefault getXUserAdress] nft:nft tokenId:tokenId];
+}
+
+- (void)approveTokenWithChainverseApp:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount{
+    [[CVSDKBridgingWeb3 shared] approveTokenWithChainverseApp:[CVSDKUserDefault getXUserAdress] token:token spender:spender amount:amount];
+}
+
+- (void)buyNFTWithChainverseApp:(NSString *)currency listingId:(NSInteger )listingId price:(NSString *)price{
+    [[CVSDKBridgingWeb3 shared] buyNFTWithChainverseApp:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] currency:currency listingId:listingId price:price];
+}
+
+- (void)sellNFTWithChainverseApp:(NSString *)NFT tokenId:(NSInteger )tokenId price:(NSString *)price currency:(NSString *)currency{
+    [[CVSDKBridgingWeb3 shared] sellNFTWithChainverseApp:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] nft:NFT tokenId:tokenId price:price currency:currency];
+}
+
+- (void)cancelSellNFTWithChainverseApp: (NSInteger )listingId{
+    [[CVSDKBridgingWeb3 shared] cancelSellNFTWithChainverseApp:marketServiceAddress abi:ABI_MarketService walletAddress:[CVSDKUserDefault getXUserAdress] listing:listingId];
 }
 @end

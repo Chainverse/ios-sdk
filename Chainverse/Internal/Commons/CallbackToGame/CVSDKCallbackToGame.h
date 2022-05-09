@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "ChainverseItem.h"
 #import "CVSDKTokenURI.h"
-#import "ChainverseNFT.h"
+#import "NFT.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CVSDKCallbackToGame : NSObject
@@ -18,10 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)didError:(int) error;
 + (void)didItemUpdate:(ChainverseItem *)item type:(int)type;
 + (void)didSignMessage:(NSString *) signedMessage;
-+ (void)didGetListItemMarket:(NSArray<ChainverseNFT> *) items;
-+ (void)didGetMyAssets:(NSArray<ChainverseNFT> *) items;
++ (void)didGetListItemMarket:(NSMutableArray<NFT> *) items;
++ (void)didGetMyAssets:(NSMutableArray<NFT> *) items;
 + (void)didTransact:(int)function tx:(NSString *)tx;
-+ (void)didGetDetailItem:(ChainverseNFT*)item;
++ (void)didGetDetailItem:(NFT*)item;
 @end
 
 NS_ASSUME_NONNULL_END

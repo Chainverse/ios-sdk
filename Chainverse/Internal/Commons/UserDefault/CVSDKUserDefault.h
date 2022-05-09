@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CVSDKGameServiceData.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CVSDKUserDefault : NSUserDefaults
@@ -40,6 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void) setRPC: (NSString *) value;
 + (NSString *)getRPC;
+
++ (void) setGameService: (CVSDKGameServiceData *) value;
++ (CVSDKGameServiceData *)getGameService;
 @end
 
 NS_ASSUME_NONNULL_END
