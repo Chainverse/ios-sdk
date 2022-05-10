@@ -38,12 +38,12 @@
 #import "CVSDKContractConfirmScreen.h"
 #import "CVSDKContractConfirmInput.h"
 #import "ChainverseTokenSupport.h"
-#import "CVSDKGameServiceData.h"
+
 
 #import "NFT.h"
 #import "InfoSell.h"
 #import "Currency.h"
-
+#import "CVSDKServiceGame.h"
 @interface ChainverseSDK(){
     BOOL isInitSDK;
     
@@ -78,9 +78,8 @@
         
         if([CVSDKParseJson errorCode:responseObject] == 0){
             if (responseObject[@"data"]){
-                CVSDKGameServiceData *data = [[CVSDKGameServiceData alloc] initWithDictionary:responseObject error:nil];
-                [CVSDKUserDefault setGameService:data];
-                NSArray *arrayRpcs = [CVSDKParseJson parseRPC:[[[data data] network_info] rpcs]];
+                CVSDKServiceGame *serviceGame = [[CVSDKServiceGame alloc] initWithObjectDict:responseObject[@"data"]];
+                NSArray *arrayRpcs = serviceGame.rpcs;
                 if(arrayRpcs.count > 0){
                     NSString *rpc = arrayRpcs.firstObject;
                     //initSDK
@@ -88,6 +87,8 @@
                     [[CVSDKBridgingWeb3 shared] initialize:rpc];
                     [self checkInitSDK];
                     [self doInitialize];
+                    [CVSDKServiceGame archiveObject:serviceGame];
+                    
                     [self checkRPC];
                 }else{
                     [CVSDKCallbackToGame didError:ERROR_SERVICE_NOT_FOUND];
@@ -96,6 +97,7 @@
             }else{
                 [CVSDKCallbackToGame didError:ERROR_SERVICE_NOT_FOUND];
             }
+
         }else{
             [CVSDKCallbackToGame didError:ERROR_SERVICE_NOT_FOUND];
         }
@@ -108,8 +110,8 @@
     dispatch_queue_t backgroundQueue = dispatch_queue_create("com.chainverse.check.rpc", NULL);
     dispatch_async(backgroundQueue, ^{
         
-        CVSDKGameServiceData *data = [CVSDKUserDefault getGameService];
-        NSArray *arrayRpcs = [CVSDKParseJson parseRPC:[[[data data] network_info] rpcs]];
+        CVSDKServiceGame *serviceGame = [CVSDKServiceGame getArchivedObjectWithClass:[CVSDKServiceGame class]];
+        NSArray *arrayRpcs = serviceGame.rpcs;
         NSInteger block = 0;
         if(arrayRpcs.count > 0){
             for(int i = 0;i < arrayRpcs.count ; i++){
@@ -130,6 +132,7 @@
        
     });
 }
+
 
 - (void) connectSuccessNotification:(NSNotification *) notification
 {
@@ -314,9 +317,9 @@
 }
 
 - (NSMutableArray<Currency> *)getListCurrencies{
-    CVSDKGameServiceData *data = [CVSDKUserDefault getGameService];
+    //CVSDKGameServiceData *data = [CVSDKUserDefault getGameService];
     NSMutableArray<Currency> *currencies = [NSMutableArray<Currency> array] ;
-    if([[data data] tokens].count > 0){
+    /*if([[data data] tokens].count > 0){
         for(ChainverseToken *item in [[data data] tokens]){
             Currency *currency = [[Currency alloc] init];
             currency.currency = item.address;
@@ -327,7 +330,7 @@
             [currencies addObject:currency];
             
         }
-    }
+    }*/
     return currencies;
 }
 

@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *image_preview;
 @property (nonatomic, strong) InfoSell *infoSell;
 @property (nonatomic, strong) Type *type;
-@property (nonatomic, strong) NSMutableArray<Categories> *categories;
+//@property (nonatomic, strong) NSMutableArray<Categories> *categories;
 @property (nonatomic, strong) Network *network_info;
 @property (nonatomic, strong) NSMutableArray<Auction> *auctions;
 @end
