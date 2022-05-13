@@ -295,8 +295,7 @@
 - (ChainverseUser *)getUser{
     if([self isUserConnected]){
         NSDictionary *dict = @{ @"address" : [CVSDKUserDefault getXUserAdress], @"signature" : [CVSDKUserDefault getXUserSignature]};
-        ChainverseUser *user = [[ChainverseUser alloc] initWithObjectDict:dict];
-        [ChainverseUser archiveObject:user];
+        ChainverseUser *user = [[ChainverseUser alloc] initWithDictionary:dict error:nil];
         return user;
     }
     return nil;
@@ -486,12 +485,12 @@
 
 
 
-- (void)approveToken:(NSString *)token amount:(NSString *)amount{
+- (void)approveToken:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount{
     if([[CVSDKUserDefault getConnectWallet] isEqualToString:@"ChainverseSDK"]){
         NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
         [params setObject:token forKey:@"token"];
         [params setObject:amount forKey:@"amount"];
-        NSString *fee = [[CVSDKContractManager shared] feeApproveToken:token spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564" amount:amount];
+        NSString *fee = [[CVSDKContractManager shared] feeApproveToken:token spender:spender amount:amount];
         CVSDKContractConfirmInput *input = [[CVSDKContractConfirmInput alloc] init];
         input.headTitle = @"Approve";
         input.name = [NSString stringWithFormat:@"Give permission to access your %@?",[CVSDKUtils getCurrency:token]];
@@ -647,8 +646,8 @@
     return false;
 }
 
-- (NSString *)isApproved:(NSString *)token owner:(NSString*)owner{
-    return [[CVSDKContractManager shared] isApproved:token owner:owner spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564"];
+- (NSString *)isApproved:(NSString *)token owner:(NSString*)owner spender:(NSString *)spender{
+    return [[CVSDKContractManager shared] isApproved:token owner:owner spender:spender];
 }
 
 - (void)transferItem:(NSString *)to nft:(NSString *)nft tokenId:(NSInteger )tokenId{

@@ -5,8 +5,8 @@
 //  Created by pham nam on 10/05/2022.
 //
 
-#import <Chainverse/Chainverse.h>
-
+#import <Foundation/Foundation.h>
+#import "CVSDKBaseObject.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CVSDKService : CVSDKBaseObject

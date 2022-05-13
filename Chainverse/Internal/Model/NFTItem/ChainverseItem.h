@@ -6,14 +6,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CVSDKBaseObject.h"
+#import "JSONModel.h"
 NS_ASSUME_NONNULL_BEGIN
+@protocol ChainverseItem
 
-@interface ChainverseItem : CVSDKBaseObject
-- (NSString*) item_id;
-- (NSString*) category_id;
-- (NSString*) game_address;
-- (NSString*) attributes;
+@end
+@interface ChainverseItem : JSONModel
+@property (nonatomic, strong) NSString *item_id;
+@property (nonatomic, strong) NSString *category_id;
+@property (nonatomic, strong) NSString *game_address;
+@property (nonatomic, strong) NSString *attributes;
 
 @end
 

@@ -8,19 +8,7 @@
 #import "ChainverseItem.h"
 
 @implementation ChainverseItem
-- (NSString *)item_id {
-    return [self.objectDict objectForKey:@"item_id"];
-}
-
-- (NSString *)category_id {
-    return [self.objectDict objectForKey:@"category_id"];
-}
-
-- (NSString *)game_address {
-    return [self.objectDict objectForKey:@"game_address"];
-}
-
-- (NSString *)attributes {
-    return [self.objectDict objectForKey:@"attributes"];
++ (BOOL)propertyIsOptional:(NSString *)propertyName{
+    return YES;
 }
 @end

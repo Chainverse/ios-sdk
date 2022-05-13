@@ -405,7 +405,8 @@
     return currency;
 }
 - (void)doApprove:(id)sender {
-    [[ChainverseSDK shared] approveToken:[self getCurrency] amount:_price];
+    //[[ChainverseSDK shared] approveToken:[self getCurrency] amount:_price];
+    [[ChainverseSDK shared] approveToken:[self getCurrency] spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564" amount:_price];
     [self checkApprove];
 }
 
@@ -445,7 +446,7 @@
 
 - (void)checkApprove{
     ChainverseUser *info = [[ChainverseSDK shared] getUser];
-    NSString * allowence = [[ChainverseSDK shared] isApproved:TOKEN_USDT owner:info.address];
+    NSString * allowence = [[ChainverseSDK shared] isApproved:TOKEN_USDT owner:info.address spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564"];
     
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;

@@ -43,7 +43,8 @@
                            @"didConnectSuccess" object:nil userInfo:userInfo];
     
     ChainverseUser *info = [[ChainverseSDK shared] getUser];
-    NSLog(@"nampv_caddress %@",[info address]);
+    
+    NSLog(@"nampv_caddress %@",[info toJSONString]);
     NSLog(@"nampv_csign %@",[info signature]);
 }
 
@@ -76,6 +77,7 @@
 }
 
 - (void)didItemUpdate:(ChainverseItem *)item type:(int)type{
+    NSLog(@"nampv_diditemupdate %@",[item toJSONString]);
     switch (type) {
         case TRANSFER_ITEM_TO_USER:
             //Xử lý item trong game khi item NFT chuyển tới tài khoản của bạn

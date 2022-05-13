@@ -572,7 +572,7 @@ Hàm này sử dụng để approve token cho một địa chỉ. Thông tin tra
  @param NSString token
  @param NSString amount
  */
-[[ChainverseSDK shared] approveToken:@"token" amount:@"amount"]
+[[ChainverseSDK shared] approveToken:token spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564" amount:amount];
 
 //Callback delegate
 - (void)didTransact:(int)function tx:(NSString *)tx{
@@ -594,7 +594,7 @@ Chú ý: Trước khi muốn mua item trên chợ, bạn cần phải approve m�
  @param NSString token
  @param NSString owner
  */
-NSString * allowence = [[ChainverseSDK shared] isApproved:TOKEN_USDT owner:info.address];
+NSString * allowence = [[ChainverseSDK shared] isApproved:token owner:info.address spender:@"0x2ccA92F66BeA2A7fA2119B75F3e5CB698C252564"];
 ```
 
 #### 6. Hàm buyNFT

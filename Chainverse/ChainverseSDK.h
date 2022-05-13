@@ -179,7 +179,7 @@ getUserInfo: Return user info
  @param NSString token
  @param NSString amount
  */
-- (void)approveToken:(NSString *)token amount:(NSString *)amount;
+- (void)approveToken:(NSString *)token spender:(NSString *)spender amount:(NSString *)amount;
 
 /*
  sellNFT: Hàm này sử dụng để bán item lên chợ
@@ -239,7 +239,7 @@ getUserInfo: Return user info
  @param NSString token
  @param NSString owner
  */
-- (NSString *)isApproved:(NSString *)token owner:(NSString* )owner;
+- (NSString *)isApproved:(NSString *)token owner:(NSString*)owner spender:(NSString *)spender;
 
 - (BOOL)isApprovedForService:(NSString *)nft service:(NSString*)service tokenId:(NSInteger )tokenId;
 

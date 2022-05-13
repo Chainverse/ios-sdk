@@ -156,8 +156,10 @@
         NSDictionary *itemDict = (NSDictionary *)[responseObject objectAtIndex:1];
         
         Auction *auction = [[Auction alloc] init];
-        auction.listing_id = [[itemDict allKeys] containsObject:@"listing_id"] ? [itemDict objectForKey:@"listing_id"] : 0;
-        auction.price = [[itemDict allKeys] containsObject:@"price"] ? [itemDict objectForKey:@"price"] : @"";
+        NSString *listingId = [[itemDict allKeys] containsObject:@"listing_id"] ? [NSString stringWithFormat:@"%@",[itemDict objectForKey:@"listing_id"]] : @"0";
+        NSString *price = [[itemDict allKeys] containsObject:@"price"] ? [NSString stringWithFormat:@"%@",[itemDict objectForKey:@"price"]] : @"0";
+        auction.listing_id = listingId;
+        auction.price = price;
         auction.is_auction = [[itemDict allKeys] containsObject:@"is_ended"] ? [itemDict objectForKey:@"is_ended"] : false;
         
         InfoSell *infoSell = [[InfoSell alloc] init];
@@ -170,16 +172,17 @@
         [auctions addObject:auction];
         
         NFT *item = [[NFT alloc] init];
-        item.token_id = [[itemDict allKeys] containsObject:@"token_id"] ? [itemDict objectForKey:@"token_id"] : 0;
+        NSString *tokenId = [[itemDict allKeys] containsObject:@"token_id"] ? [NSString stringWithFormat:@"%@",[itemDict objectForKey:@"token_id"]] : @"0";
+        item.ownerOnChain = @"";
+        item.token_id = tokenId;
         item.owner = [[itemDict allKeys] containsObject:@"owner"] ? [itemDict objectForKey:@"owner"] : @"";
         item.nft = [[itemDict allKeys] containsObject:@"nft"] ? [itemDict objectForKey:@"nft"] : @"";
         item.image = respone.image ? respone.image : @"";
         item.image_preview = respone.image ? respone.image : @"";
         item.name = respone.name ? respone.name : @"";
-        item.attributes = respone.attributes ? respone.attributes : @"";
+        item.attributes = respone.attributes ? [NSString stringWithFormat:@"%@",respone.attributes] : @"";
         item.auctions = auctions;
         item.infoSell = infoSell;
-        
         complete(item);
     }
 

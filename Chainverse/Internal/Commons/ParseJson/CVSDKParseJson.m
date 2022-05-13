@@ -20,8 +20,8 @@
         NSArray *dataItems = (NSArray *) result[@"items"];
         if([dataItems count] > 0){
             for(NSDictionary *itemDict in dataItems){
-                ChainverseItem *item = [[ChainverseItem alloc] initWithObjectDict:itemDict];
-                [items addObject:item];
+                //ChainverseItem *item = [[ChainverseItem alloc] initWithObjectDict:itemDict];
+                //[items addObject:item];
             }
         }
     }
@@ -30,8 +30,8 @@
 
 + (ChainverseItem *) parseItem:(NSArray*) data{
     NSDictionary *res = (NSDictionary *)[data objectAtIndex:0];
-    ChainverseItem *item = [[ChainverseItem alloc] initWithObjectDict:res];
-    [ChainverseItem archiveObject:item];
+    ChainverseItem *item = [[ChainverseItem alloc] initWithDictionary:res error:nil];
+    //[ChainverseItem archiveObject:item];
     return item;
 }
 

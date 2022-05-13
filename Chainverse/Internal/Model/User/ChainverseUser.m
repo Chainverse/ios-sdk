@@ -8,11 +8,7 @@
 #import "ChainverseUser.h"
 
 @implementation ChainverseUser
-- (NSString *)address {
-    return [self.objectDict objectForKey:@"address"];
-}
-
-- (NSString *)signature {
-    return [self.objectDict objectForKey:@"signature"];
++ (BOOL)propertyIsOptional:(NSString *)propertyName{
+    return YES;
 }
 @end
